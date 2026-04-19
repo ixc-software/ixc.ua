@@ -99,6 +99,126 @@
   gap: 1rem;
 }
 
+/* Trust Banner & Marquee */
+.trust-banner {
+  padding: 3rem 0;
+  background: var(--bg-card);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.trust-stats {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.trust-stats h3 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.trust-stats strong {
+  color: var(--accent-color);
+}
+
+.trust-stats p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.marquee-wrapper {
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  width: 100%;
+  overflow: hidden;
+}
+
+.marquee-container {
+  display: flex;
+  width: max-content;
+  animation: scroll-left 150s linear infinite;
+  align-items: center;
+}
+
+.marquee-container:hover {
+  animation-play-state: paused;
+}
+
+.marquee-item {
+  padding: 0 2.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  transition: opacity 0.2s, color 0.2s;
+}
+
+.marquee-item:hover {
+  opacity: 1;
+  color: var(--accent-color);
+}
+
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Alternating section background */
+.section-alt {
+  background: var(--bg-card);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  padding: 1rem 0;
+}
+
+/* Platform Features Section */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 1rem;
+}
+
+.feature-card {
+  padding: 1.25rem 1.5rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.feature-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-color);
+}
+
+.feature-card-icon {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  border-radius: 10px;
+  background: rgba(79, 124, 172, 0.15);
+  color: var(--accent-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-card h4 {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.feature-card p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
 /* Products Section */
 .products-grid {
   display: grid;
@@ -191,20 +311,394 @@
   color: var(--text-secondary);
 }
 
-/* Media Queries */
+/* Product Card Link */
+.product-card-link {
+  color: var(--accent-color);
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-top: auto;
+  transition: gap 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.product-card:hover .product-card-link {
+  gap: 0.5rem;
+}
+
+/* ============================================
+   Interior Page Styles
+   ============================================ */
+
+.page-content {
+  padding-top: 80px;
+}
+
+/* Page Hero */
+.page-hero {
+  padding: 5rem 0 3rem 0;
+  text-align: center;
+  background: linear-gradient(
+    180deg,
+    var(--bg-card) 0%,
+    var(--bg-color) 100%
+  );
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 2rem;
+}
+
+.page-breadcrumb {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.page-breadcrumb a {
+  color: var(--text-secondary);
+  transition: color 0.2s;
+}
+
+.page-breadcrumb a:hover {
+  color: var(--accent-color);
+}
+
+.page-hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.page-hero-subtitle {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* About Us - Mission */
+.mission-banner {
+  padding: 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  border-radius: 16px;
+}
+
+.mission-icon {
+  width: 72px;
+  height: 72px;
+  min-width: 72px;
+  border-radius: 16px;
+  background: rgba(79, 124, 172, 0.15);
+  color: var(--accent-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mission-banner h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.mission-banner p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* About Us - Capabilities */
+.capabilities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.capability-card {
+  padding: 2rem;
+  border-radius: 16px;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.capability-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent-color);
+}
+
+.capability-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(79, 124, 172, 0.15);
+  color: var(--accent-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.capability-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.capability-card p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* About Us - Strengths */
+.strengths-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.strength-card {
+  padding: 2rem;
+  border-radius: 16px;
+  text-align: center;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.strength-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent-color);
+}
+
+.strength-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(79, 124, 172, 0.15);
+  color: var(--accent-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem auto;
+}
+
+.strength-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+}
+
+.strength-card p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* CTA Block */
+.cta-block {
+  padding: 3rem;
+  border-radius: 16px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.cta-block h2 {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.cta-block p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Product Detail Page */
+.product-hero-layout {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.product-hero-icon {
+  width: 80px;
+  height: 80px;
+  min-width: 80px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-color);
+}
+
+.product-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.product-description h2 {
+  font-size: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.product-description p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.product-features {
+  padding: 2rem;
+  border-radius: 16px;
+}
+
+.product-features h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.feature-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.feature-list li svg {
+  min-width: 18px;
+  margin-top: 3px;
+}
+
+/* Product Navigation */
+.product-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.product-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.2s, transform 0.2s;
+  min-width: 200px;
+}
+
+.product-nav-link:hover {
+  border-color: var(--accent-color);
+  transform: translateY(-2px);
+}
+
+.product-nav-next {
+  margin-left: auto;
+  text-align: right;
+}
+
+.product-nav-label {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.product-nav-title {
+  display: block;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* Footer links */
+.footer a {
+  color: var(--text-secondary);
+  transition: color 0.2s;
+}
+
+.footer a:hover {
+  color: var(--accent-color);
+}
+
+/* ============================================
+   Media Queries
+   ============================================ */
 @media (max-width: 768px) {
-  .nav-links, .d-none-mobile {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+    background: var(--header-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 2rem;
+    gap: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    z-index: 999;
+  }
+
+  .nav-links.nav-open {
+    display: flex;
+  }
+
+  .d-none-mobile {
     display: none;
   }
+
   .menu-toggle {
     display: flex;
   }
+
   .hero h1 {
     font-size: 2.5rem;
   }
+
   .news-item {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5rem;
   }
+
+  .page-hero h1 {
+    font-size: 2.25rem;
+  }
+
+  .product-detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mission-banner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .product-hero-layout {
+    flex-direction: column;
+  }
+
+  .product-nav {
+    flex-direction: column;
+  }
+
+  .product-nav-next {
+    text-align: left;
+    margin-left: 0;
+  }
 }
+

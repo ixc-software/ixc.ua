@@ -1,13 +1,23 @@
 import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import { createRoot, hydrateRoot } from 'react-dom/client'
+import { BrowserRouter } from 'react-router-dom'
 import './index.css'
 import App from './App.tsx'
 import { ThemeProvider } from './ThemeProvider.tsx'
 
-createRoot(document.getElementById('root')!).render(
+const container = document.getElementById('root')!
+const app = (
   <StrictMode>
     <ThemeProvider>
-      <App />
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
     </ThemeProvider>
-  </StrictMode>,
+  </StrictMode>
 )
+
+if (container.innerHTML === '<!--app-html-->' || container.innerHTML === '') {
+  createRoot(container).render(app)
+} else {
+  hydrateRoot(container, app)
+}
