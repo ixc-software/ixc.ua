@@ -39,6 +39,7 @@ export interface Translations {
     aboutUs: string;
     contactUs: string;
     tryItNow: string;
+    bannerAnnouncement: string;
   };
   hero: {
     title: string;
@@ -122,7 +123,8 @@ const en: Translations = {
     products: 'Products',
     aboutUs: 'About Us',
     contactUs: 'Contact Us',
-    tryItNow: 'Try it Now'
+    tryItNow: 'Try it Now',
+    bannerAnnouncement: 'Version 6 are coming... With AI business assistant'
   },
   hero: {
     title: 'High Performance All-In-One Solution for VoIP Business',
@@ -247,7 +249,8 @@ const ru: Translations = {
     products: 'Продукты',
     aboutUs: 'О нас',
     contactUs: 'Контакты',
-    tryItNow: 'Попробовать'
+    tryItNow: 'Попробовать',
+    bannerAnnouncement: 'Скоро версия 6... С ИИ бизнес-ассистентом'
   },
   hero: {
     title: 'Высокопроизводительное решение «всё в одном» для VoIP бизнеса',
@@ -372,7 +375,8 @@ const uk: Translations = {
     products: 'Продукти',
     aboutUs: 'Про нас',
     contactUs: 'Контакти',
-    tryItNow: 'Спробувати'
+    tryItNow: 'Спробувати',
+    bannerAnnouncement: 'Скоро версія 6... З ШІ бізнес-асистентом'
   },
   hero: {
     title: 'Високопродуктивне рішення «все в одному» для VoIP бізнесу',

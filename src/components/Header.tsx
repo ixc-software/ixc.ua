@@ -63,6 +63,22 @@ export const Header: React.FC = () => {
           </button>
         </div>
       </div>
+      <div className="announcement-banner" style={{
+        position: 'absolute',
+        top: '100%',
+        left: 0,
+        right: 0,
+        backgroundColor: 'var(--accent-color)',
+        color: '#ffffff',
+        textAlign: 'center',
+        padding: '6px 16px',
+        fontSize: '0.85rem',
+        fontWeight: 500,
+        boxShadow: '0 4px 6px rgba(0,0,0,0.05)',
+        borderTop: '1px solid rgba(255,255,255,0.1)'
+      }}>
+        {t.nav.bannerAnnouncement}
+      </div>
     </header>
   );
 };
