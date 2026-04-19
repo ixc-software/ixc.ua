@@ -37,10 +37,10 @@ export const NewsArticle = () => {
             <Link to="/">{t.nav.home}</Link> / <Link to="/#news">News</Link> / {article.en.title}
           </p>
           <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-            <h1 style={{ fontSize: '2.5rem', marginBottom: '1rem', color: '#1f2937' }}>
+            <h1 style={{ fontSize: '2.5rem', marginBottom: '1rem', color: 'var(--text-primary)' }}>
               {(article as any)[language]?.title || article.en.title}
             </h1>
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', color: '#6b7280' }}>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', color: 'var(--text-secondary)' }}>
               <Calendar size={18} />
               <span>{article.date}</span>
             </div>
@@ -62,7 +62,7 @@ export const NewsArticle = () => {
           <div style={{ 
             fontSize: '1.125rem', 
             lineHeight: '1.8', 
-            color: '#374151',
+            color: 'var(--text-primary)',
             whiteSpace: 'pre-wrap'
           }}>
             {(article as any)[language]?.content || article.en.content}
