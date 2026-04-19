@@ -5,7 +5,7 @@ import { useLanguage } from '../i18n/LanguageProvider';
 import newsData from '../newsData.json';
 
 export const News: React.FC = () => {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
   const carouselRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
@@ -68,7 +68,12 @@ export const News: React.FC = () => {
             <Link key={i} to={`/news/${item.slug}`} className="news-card glass">
               <div className="news-image-wrapper">
                 {item.local_image ? (
-                  <img src={item.local_image} alt={item.title} className="news-image" loading="lazy" />
+                  <img 
+                    src={`${import.meta.env.BASE_URL}${item.local_image.startsWith('/') ? item.local_image.slice(1) : item.local_image}`} 
+                    alt={item.en.title} 
+                    className="news-image" 
+                    loading="lazy" 
+                  />
                 ) : (
                   <div className="news-image-placeholder">
                     <h2>IXC</h2>
@@ -80,7 +85,7 @@ export const News: React.FC = () => {
                   <Calendar size={14} />
                   <span>{item.date}</span>
                 </div>
-                <h3>{item.title}</h3>
+                <h3>{(item as any)[language]?.title || item.en.title}</h3>
                 <span className="news-read-more">
                   {t.news.readMore} <ArrowRight size={14} />
                 </span>

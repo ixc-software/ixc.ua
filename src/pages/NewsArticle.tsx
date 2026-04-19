@@ -7,7 +7,7 @@ import newsData from '../newsData.json';
 
 export const NewsArticle = () => {
   const { slug } = useParams<{ slug: string }>();
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
   const article = newsData.find(n => n.slug === slug);
 
   if (!article) {
@@ -26,8 +26,7 @@ export const NewsArticle = () => {
     );
   }
 
-  // Generate safe HTML paragraphs
-  const paragraphs = article.content.split('\n\n').filter(p => p.trim());
+
 
   return (
     <div className="page-content">
@@ -35,12 +34,16 @@ export const NewsArticle = () => {
       <section className="page-hero">
         <div className="container">
           <p className="page-breadcrumb">
-            <Link to="/">{t.nav.home}</Link> / <Link to="/#news">News</Link> / {article.title}
+            <Link to="/">{t.nav.home}</Link> / <Link to="/#news">News</Link> / {article.en.title}
           </p>
-          <h1 style={{ maxWidth: '800px' }}>{article.title}</h1>
-          <div className="news-date-badge" style={{ marginTop: '1.5rem', color: 'var(--text-secondary)' }}>
-            <Calendar size={16} style={{ marginRight: '0.4rem', verticalAlign: 'middle' }} />
-            <span>{article.date}</span>
+          <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+            <h1 style={{ fontSize: '2.5rem', marginBottom: '1rem', color: '#1f2937' }}>
+              {(article as any)[language]?.title || article.en.title}
+            </h1>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', color: '#6b7280' }}>
+              <Calendar size={18} />
+              <span>{article.date}</span>
+            </div>
           </div>
         </div>
       </section>
@@ -50,16 +53,19 @@ export const NewsArticle = () => {
         <div style={{ maxWidth: '800px', margin: '0 auto' }}>
           {article.local_image && (
             <img 
-              src={article.local_image} 
-              alt={article.title}
+              src={`${import.meta.env.BASE_URL}${article.local_image.startsWith('/') ? article.local_image.slice(1) : article.local_image}`} 
+              alt={article.en.title}
               style={{ width: '100%', borderRadius: '16px', marginBottom: '3rem', maxHeight: '500px', objectFit: 'cover' }}
             />
           )}
 
-          <div className="article-body" style={{ fontSize: '1.1rem', lineHeight: '1.8', color: 'var(--text-primary)' }}>
-            {paragraphs.map((para, i) => (
-              <p key={i} style={{ marginBottom: '1.5rem' }}>{para}</p>
-            ))}
+          <div style={{ 
+            fontSize: '1.125rem', 
+            lineHeight: '1.8', 
+            color: '#374151',
+            whiteSpace: 'pre-wrap'
+          }}>
+            {(article as any)[language]?.content || article.en.content}
           </div>
           
           <div style={{ marginTop: '4rem', paddingTop: '2rem', borderTop: '1px solid var(--border-color)', textAlign: 'center' }}>

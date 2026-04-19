@@ -10,7 +10,7 @@ export function render(url = '/') {
     <StrictMode>
       <ThemeProvider>
         <LanguageProvider>
-          <StaticRouter location={url}>
+          <StaticRouter location={`${import.meta.env.BASE_URL}${url.startsWith('/') ? url.slice(1) : url}`} basename={import.meta.env.BASE_URL}>
             <App />
           </StaticRouter>
         </LanguageProvider>

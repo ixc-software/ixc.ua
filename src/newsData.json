@@ -1,227 +1,477 @@
 [
   {
-    "title": "Daily minutes in RT and TD",
+    "slug": "daily-minutes",
     "date": "2026-03-12",
     "link": "https://interexc.com/daily-minutes",
     "image": "https://res2.weblium.site/res/5cc2b5b2688dc2002415d08c/69b29aa185d4ea9f245cb1d0_optimized_1602_c1602x674-0x0",
     "local_image": "/news/news_3.jpg",
-    "slug": "daily-minutes",
-    "content": "Daily Minutes Statistics in Route Tables and Traffic Distribution Rules\n\nWe have introduced a new monitoring feature in IXC Softswitch that allows operators to see daily traffic volume (in minutes) directly within the routing interface.\n\nThis update improves visibility of routing performance and helps operators quickly evaluate how traffic is distributed across routes and terminators.\n\nDaily Minutes in Route Tables\n\nThe Route Tables main page now displays the total number of minutes routed during the current day for each route table. This allows administrators to instantly identify which routing configurations are actively carrying traffic.\n\nInside each Route Table, the system now shows daily minutes per route and terminator, making it easier to analyze traffic distribution and determine which vendors or destinations are handling the most traffic.\n\nThis information is updated automatically throughout the day and reflects real routing activity.\n\nDaily Minutes in Traffic Distribution Rules\n\nThe same statistics have also been added to Traffic Distribution Rules.\n\nOperators can now view the daily routed minutes for each rule, providing immediate insight into how traffic is being balanced between available routes.\n\nBenefits\n\nThis feature provides several operational advantages:\n\n\u2022 Quick visibility of active routes and vendors\n\n\u2022 Easier troubleshooting of routing decisions\n\n\u2022 Better monitoring of traffic distribution\n\n\u2022 Faster verification of routing changes\n\n\u2022 Improved operational awareness without running reports\n\nAvailable Immediately\n\nThe Daily Minutes statistics are now available in the latest version of IXC Softswitch and require no additional configuration."
+    "en": {
+      "title": "Daily minutes in RT and TD",
+      "content": "Daily Minutes Statistics in Route Tables and Traffic Distribution Rules\n\nWe have introduced a new monitoring feature in IXC Softswitch that allows operators to see daily traffic volume (in minutes) directly within the routing interface.\n\nThis update improves visibility of routing performance and helps operators quickly evaluate how traffic is distributed across routes and terminators.\n\nDaily Minutes in Route Tables\n\nThe Route Tables main page now displays the total number of minutes routed during the current day for each route table. This allows administrators to instantly identify which routing configurations are actively carrying traffic.\n\nInside each Route Table, the system now shows daily minutes per route and terminator, making it easier to analyze traffic distribution and determine which vendors or destinations are handling the most traffic.\n\nThis information is updated automatically throughout the day and reflects real routing activity.\n\nDaily Minutes in Traffic Distribution Rules\n\nThe same statistics have also been added to Traffic Distribution Rules.\n\nOperators can now view the daily routed minutes for each rule, providing immediate insight into how traffic is being balanced between available routes.\n\nBenefits\n\nThis feature provides several operational advantages:\n\n• Quick visibility of active routes and vendors\n\n• Easier troubleshooting of routing decisions\n\n• Better monitoring of traffic distribution\n\n• Faster verification of routing changes\n\n• Improved operational awareness without running reports\n\nAvailable Immediately\n\nThe Daily Minutes statistics are now available in the latest version of IXC Softswitch and require no additional configuration."
+    },
+    "ru": {
+      "title": "Ежедневные минуты в RT и TD",
+      "content": "Статистика ежедневных минут в таблицах маршрутов и правилах распределения трафика\n\nМы представили новую функцию мониторинга в IXC Softswitch, которая позволяет операторам видеть ежедневный объем трафика (в минутах) непосредственно в интерфейсе маршрутизации.\n\nЭто обновление улучшает видимость производительности маршрутизации и помогает операторам быстро оценить, как трафик распределяется по маршрутам и терминаторам.\n\nЕжедневные минуты в таблицах маршрутов\n\nНа главной странице таблиц маршрутов теперь отображается общее количество минут, маршрутизированных в течение текущего дня для каждой таблицы маршрутов. Это позволяет администраторам мгновенно определить, какие конфигурации маршрутизации активно передают трафик.\n\nВнутри каждой таблицы маршрутов система теперь показывает ежедневные минуты для каждого маршрута и терминатора, что упрощает анализ распределения трафика и определение того, какие поставщики или пункты назначения обрабатывают больше всего трафика.\n\nЭта информация обновляется автоматически в течение дня и отражает реальную активность маршрутизации.\n\nЕжедневные минуты в правилах распределения трафика\n\nТакая же статистика добавлена и в Правила распределения трафика.\n\nТеперь операторы могут просматривать ежедневные минуты маршрутизации для каждого правила, предоставляя немедленное представление о том, как балансируется трафик между доступными маршрутами.\n\nПреимущества\n\nЭта функция обеспечивает несколько эксплуатационных преимуществ:\n\n• Быстрая видимость активных маршрутов и поставщиков.\n\n• Упрощенное устранение неполадок при принятии решений о маршрутизации.\n\n• Улучшение мониторинга распределения трафика.\n\n• Ускоренная проверка изменений маршрутизации.\n\n• Улучшена оперативная осведомленность без создания отчетов.\n\nДоступно немедленно\n\nСтатистика ежедневных минут теперь доступна в последней версии IXC Softswitch и не требует дополнительной настройки."
+    },
+    "uk": {
+      "title": "Щоденні хвилини в RT і TD",
+      "content": "Щоденна статистика хвилин у таблицях маршрутів і правилах розподілу трафіку\n\nМи запровадили нову функцію моніторингу в IXC Softswitch, яка дозволяє операторам бачити щоденний обсяг трафіку (у хвилинах) безпосередньо в інтерфейсі маршрутизації.\n\nЦе оновлення покращує видимість ефективності маршрутизації та допомагає операторам швидко оцінювати, як трафік розподіляється між маршрутами та кінцевими пунктами.\n\nЩоденні хвилини в таблицях маршрутів\n\nНа головній сторінці таблиць маршрутів тепер відображається загальна кількість хвилин, маршрутизованих протягом поточного дня для кожної таблиці маршрутів. Це дозволяє адміністраторам миттєво визначати, які конфігурації маршрутизації активно передають трафік.\n\nУ кожній таблиці маршрутів система тепер показує щоденні хвилини для кожного маршруту та термінатора, що полегшує аналіз розподілу трафіку та визначення того, які постачальники чи пункти призначення обробляють найбільше трафіку.\n\nЦя інформація автоматично оновлюється протягом дня та відображає реальну активність маршрутизації.\n\nЩоденні хвилини в правилах розподілу трафіку\n\nТаку саму статистику додано до Правил розподілу трафіку.\n\nОператори тепер можуть переглядати щоденні хвилини для кожного правила, надаючи миттєве уявлення про те, як трафік балансується між доступними маршрутами.\n\nПереваги\n\nЦя функція забезпечує кілька експлуатаційних переваг:\n\n• Швидка видимість активних маршрутів і постачальників\n\n• Простіше усунення несправностей рішень щодо маршрутизації\n\n• Кращий моніторинг розподілу трафіку\n\n• Швидша перевірка змін маршруту\n\n• Покращена оперативна обізнаність без створення звітів\n\nДоступний негайно\n\nСтатистика щоденних хвилин тепер доступна в останній версії IXC Softswitch і не потребує додаткового налаштування."
+    }
   },
   {
-    "title": "Anum/Bnum routing improvements",
+    "slug": "anum-bnum-routing",
     "date": "2025-11-17",
     "link": "https://interexc.com/anum-bnum-routing",
     "image": "https://res2.weblium.site/res/5cc2b5b2688dc2002415d08c/691b33c1d084bfa3a510e1b3_optimized_1731_c1731x503-0x0",
     "local_image": "/news/news_4.jpg",
-    "slug": "anum-bnum-routing",
-    "content": "Anum/Bnum routing improvements\n\nWe\u2019ve redesigned the A-number/B-number routing so it\u2019s simpler and more flexible. Since IXC Softswitch 6.1.7, you don\u2019t need separate \u201cspecial\u201d trunks or prefix-pair manipulation to apply different routes, perform A-number translations, or assign tariff plans by origin or destination country. Everything is now managed from one page in the main trunk settings - fewer objects to maintain, faster changes, and a cleaner topology."
+    "en": {
+      "title": "Anum/Bnum routing improvements",
+      "content": "Anum/Bnum routing improvements\n\nWe’ve redesigned the A-number/B-number routing so it’s simpler and more flexible. Since IXC Softswitch 6.1.7, you don’t need separate “special” trunks or prefix-pair manipulation to apply different routes, perform A-number translations, or assign tariff plans by origin or destination country. Everything is now managed from one page in the main trunk settings - fewer objects to maintain, faster changes, and a cleaner topology."
+    },
+    "ru": {
+      "title": "Улучшения маршрутизации Anum/Bnum",
+      "content": "Улучшения маршрутизации Anum/Bnum\n\nМы изменили маршрутизацию номеров A и B, сделав ее более простой и гибкой. Начиная с версии IXC Softswitch 6.1.7, вам не нужны отдельные «специальные» соединительные линии или манипуляции с парами префиксов для применения разных маршрутов, выполнения трансляции номеров A или назначения тарифных планов по стране отправления или назначения. Теперь все управляется с одной страницы в основных настройках магистрали — меньше объектов для обслуживания, более быстрые изменения и более чистая топология."
+    },
+    "uk": {
+      "title": "Покращення маршрутизації Anum/Bnum",
+      "content": "Покращення маршрутизації Anum/Bnum\n\nМи переробили маршрутизацію номерів А/номерів B, щоб вони стали простішими та гнучкішими. Починаючи з версії IXC Softswitch 6.1.7, вам не потрібні окремі «спеціальні» канали або маніпуляції префіксними парами для застосування різних маршрутів, виконання перекладів номерів A або призначення тарифних планів за країною походження чи призначення. Тепер усім можна керувати з однієї сторінки в налаштуваннях основного стовбура — менше об’єктів для обслуговування, швидші зміни та чистіша топологія."
+    }
   },
   {
-    "title": "IXC Softswitch New Release",
+    "slug": "ixc-softswitch-6-1-6",
     "date": "2025-08-30",
     "link": "https://interexc.com/ixc-softswitch-6-1-6",
     "image": "https://res2.weblium.site/res/5cc2b5b2688dc2002415d08c/68ef6fc72e683f8e225c8168_optimized_710_c710x309-0x0",
     "local_image": "/news/news_5.jpg",
-    "slug": "ixc-softswitch-6-1-6",
-    "content": "IXC Softswitch 6.1.6\n\nThis release rolls up everything since 6.1.5 into a single update. It brings faster CDR processing, richer analytics, stronger routing controls, and many UX improvements.\n\nPerformance &amp; Reliability:\n\nSignificant speed-up in CDR converters and Terminators list loading (5232).\n\nCall path output optimized under heavy reporting load (5150).\n\nCDRs &amp; Call Views:\n\nDisconnect reason in CDRs (4701).\n\nIDs and corresponding IDs added to CDR File/Excel exports (5123).\n\nOriginator/Terminator name shown in calls even without \u201cshow operator\u201d (5134).\n\nSearch CDRs by multiple\n\nbnumber LIKE\n\nmasks (5174).\n\nCDR templates per user (5135).\n\nOutput format/alignment improvements in Originator/Terminator Calls &amp; Traffic Flow Report (5126).\n\nReports &amp; Analytics:\n\nCodes count displayed in Destinations and Route Table (5118).\n\nDisconnect Causes Report:\n\n\u201cLast 20 rejected calls by CPS limit\u201d (5147).\n\nNew \u201crejected by anumber/prefix\u201d type (5178).\n\nOriginator Calls now include rejected by anumber/prefix (5184).\n\nTraffic Flow Report (TFR):\n\nConfigurable rounding for charge/outcost, independent of invoice data (5169).\n\nOption to show only profit &amp; reverse price based on user settings (5167).\n\nProfit Dynamics handles negative values correctly (fix 5221).\n\nRouting &amp; Access Control:\n\nMulti-select terminators and destinations when adding route rules (5129).\n\nAccess Lists:\n\nShow how many numbers were auto-added.\n\nNow applicable to Originators (5219).\n\nRate Management &amp; Notifications:\n\nRate notification previews before sending (5175, 5183).\n\nFormatting controls: font, size, font color, header color (5084).\n\nAdd a custom text block into XLS before rates (5185).\n\nOption to delete codes from customer/vendor rates when removed from Countries (5235).\n\nSupport x/x/x billing increment format with smart/auto upload (5200).\n\nBills:\n\nredesign, new features, and automatic bill generation (5206).\n\nTelegram Tools:\n\nRefill customer balance and reopen Originators (5124).\n\nAccept/reject immediate increases from rate auto-import (5125).\n\nUI/UX &amp; Configuration:\n\nPer-user color templates for calls and TFR (5127) with easier assignment (5186).\n\nNotes on Originators and Terminators.\n\nShow Route Table name in the Build Rules tab (5209).\n\nTemplates, currencies, interfaces moved under System Configuration (5188).\n\nCustomer Portal cosmetic improvements (5190).\n\nMailing tool:\n\nset your own From address (5216).\n\nImport/Export:\n\nExport Originator addresses to Excel (5139).\n\nBug Fixes:\n\n5138 \u2013 IP validation too slow on large Originator Address lists.\n\n5142 \u2013 Single quote in display-name caused CDR insert errors.\n\n5180 \u2013 Missing ACK on 487 for some calls.\n\n5221 \u2013 Profit not shown when negative values present in Profit Dynamics.\n\n5224 \u2013 Customer balance could briefly become 0 when modifying the last payment amount.\n\nUpgrade to 6.1.6 to get all features and fixes above in one package. If you\u2019d like this text adapted to your site\u2019s house style (short/long version, bullets vs. prose), say the word and I\u2019ll format it accordingly."
+    "en": {
+      "title": "IXC Softswitch New Release",
+      "content": "IXC Softswitch 6.1.6\n\nThis release rolls up everything since 6.1.5 into a single update. It brings faster CDR processing, richer analytics, stronger routing controls, and many UX improvements.\n\nPerformance &amp; Reliability:\n\nSignificant speed-up in CDR converters and Terminators list loading (5232).\n\nCall path output optimized under heavy reporting load (5150).\n\nCDRs &amp; Call Views:\n\nDisconnect reason in CDRs (4701).\n\nIDs and corresponding IDs added to CDR File/Excel exports (5123).\n\nOriginator/Terminator name shown in calls even without “show operator” (5134).\n\nSearch CDRs by multiple\n\nbnumber LIKE\n\nmasks (5174).\n\nCDR templates per user (5135).\n\nOutput format/alignment improvements in Originator/Terminator Calls &amp; Traffic Flow Report (5126).\n\nReports &amp; Analytics:\n\nCodes count displayed in Destinations and Route Table (5118).\n\nDisconnect Causes Report:\n\n“Last 20 rejected calls by CPS limit” (5147).\n\nNew “rejected by anumber/prefix” type (5178).\n\nOriginator Calls now include rejected by anumber/prefix (5184).\n\nTraffic Flow Report (TFR):\n\nConfigurable rounding for charge/outcost, independent of invoice data (5169).\n\nOption to show only profit &amp; reverse price based on user settings (5167).\n\nProfit Dynamics handles negative values correctly (fix 5221).\n\nRouting &amp; Access Control:\n\nMulti-select terminators and destinations when adding route rules (5129).\n\nAccess Lists:\n\nShow how many numbers were auto-added.\n\nNow applicable to Originators (5219).\n\nRate Management &amp; Notifications:\n\nRate notification previews before sending (5175, 5183).\n\nFormatting controls: font, size, font color, header color (5084).\n\nAdd a custom text block into XLS before rates (5185).\n\nOption to delete codes from customer/vendor rates when removed from Countries (5235).\n\nSupport x/x/x billing increment format with smart/auto upload (5200).\n\nBills:\n\nredesign, new features, and automatic bill generation (5206).\n\nTelegram Tools:\n\nRefill customer balance and reopen Originators (5124).\n\nAccept/reject immediate increases from rate auto-import (5125).\n\nUI/UX &amp; Configuration:\n\nPer-user color templates for calls and TFR (5127) with easier assignment (5186).\n\nNotes on Originators and Terminators.\n\nShow Route Table name in the Build Rules tab (5209).\n\nTemplates, currencies, interfaces moved under System Configuration (5188).\n\nCustomer Portal cosmetic improvements (5190).\n\nMailing tool:\n\nset your own From address (5216).\n\nImport/Export:\n\nExport Originator addresses to Excel (5139).\n\nBug Fixes:\n\n5138 – IP validation too slow on large Originator Address lists.\n\n5142 – Single quote in display-name caused CDR insert errors.\n\n5180 – Missing ACK on 487 for some calls.\n\n5221 – Profit not shown when negative values present in Profit Dynamics.\n\n5224 – Customer balance could briefly become 0 when modifying the last payment amount.\n\nUpgrade to 6.1.6 to get all features and fixes above in one package. If you’d like this text adapted to your site’s house style (short/long version, bullets vs. prose), say the word and I’ll format it accordingly."
+    },
+    "ru": {
+      "title": "Новая версия программного переключателя IXC",
+      "content": "Программный переключатель IXC 6.1.6\n\nВ этом выпуске все, начиная с версии 6.1.5, объединено в одно обновление. Он обеспечивает более быструю обработку CDR, более обширную аналитику, более строгий контроль маршрутизации и множество улучшений пользовательского интерфейса.\n\nПроизводительность и усилитель; Надежность:\n\nЗначительное ускорение конвертеров CDR и загрузки списка терминаторов (5232).\n\nВывод пути вызова оптимизирован при большой нагрузке на отчетность (5150).\n\nCDR и усилители; Просмотры вызовов:\n\nПричина отключения в CDR (4701).\n\nИдентификаторы и соответствующие идентификаторы добавлены в экспорт файлов CDR/Excel (5123).\n\nИмя отправителя/терминатора отображается в вызовах даже без «показать оператора» (5134).\n\nПоиск CDR по нескольким\n\nномер НРАВИТСЯ\n\nмаски (5174).\n\nШаблоны CDR на пользователя (5135).\n\nУлучшения формата вывода/выравнивания в вызовах Originator/Terminator &amp; Отчет о движении транспорта (5126).\n\nОтчеты и усилители; Аналитика:\n\nКоличество кодов отображается в таблицах пунктов назначения и маршрутов (5118).\n\nОтчет о причинах отключения:\n\n«Последние 20 отклоненных вызовов по лимиту CPS» (5147).\n\nНовый тип «отклонено по номеру/префиксу» (5178).\n\nВызовы отправителя теперь включают отклоненные по номеру/префиксу (5184).\n\nОтчет о транспортных потоках (TFR):\n\nНастраиваемое округление начисления/исходных затрат независимо от данных счета (5169).\n\nВозможность отображать только прибыль и обратная цена на основе настроек пользователя (5167).\n\nProfit Dynamics правильно обрабатывает отрицательные значения (исправление 5221).\n\nМаршрутизация и усиление; Контроль доступа:\n\nМножественный выбор терминаторов и пунктов назначения при добавлении правил маршрута (5129).\n\nСписки доступа:\n\nПоказать, сколько номеров было добавлено автоматически.\n\nТеперь применимо к Создателям (5219).\n\nУправление тарифами и усиление; Уведомления:\n\nОцените предварительный просмотр уведомлений перед отправкой (5175, 5183).\n\nЭлементы управления форматированием: шрифт, размер, цвет шрифта, цвет заголовка (5084).\n\nДобавьте собственный текстовый блок в XLS перед ставками (5185).\n\nВозможность удаления кодов из тарифов клиентов/поставщиков при удалении из стран (5235).\n\nПоддержка формата увеличения выставления счетов x/x/x с интеллектуальной/автоматической загрузкой (5200).\n\nСчета:\n\nредизайн, новые функции и автоматическое формирование счетов (5206).\n\nИнструменты Телеграммы:\n\nПополните баланс клиента и заново откройте Оригинаторы (5124).\n\nПринять/отклонить немедленное повышение ставки при автоимпорте (5125).\n\nUI/UX и Конфигурация:\n\nИндивидуальные цветовые шаблоны для вызовов и TFR (5127) с более простым назначением (5186).\n\nЗаметки о оригинаторах и терминаторах.\n\nПоказывать имя таблицы маршрутов на вкладке «Правила сборки» (5209).\n\nШаблоны, валюты, интерфейсы перемещены в раздел «Конфигурация системы» (5188).\n\nКосметические улучшения клиентского портала (5190).\n\nИнструмент рассылки:\n\nустановите свой собственный адрес отправителя (5216).\n\nИмпорт/Экспорт:\n\nЭкспортировать адреса отправителя в Excel (5139).\n\nИсправления ошибок:\n\n5138 – Проверка IP-адресов слишком медленная в больших списках адресов отправителей.\n\n5142 – Одиночная кавычка в отображаемом имени вызывала ошибки вставки CDR.\n\n5180 – отсутствует подтверждение на номер 487 для некоторых вызовов.\n\n5221 – Прибыль не отображается при наличии отрицательных значений в динамике прибыли.\n\n5224 – Баланс клиента может на короткое время стать равным 0 при изменении суммы последнего платежа.\n\nОбновите версию до 6.1.6, чтобы получить все вышеперечисленные функции и исправления в одном пакете. Если вы хотите, чтобы этот текст был адаптирован к стилю вашего сайта (короткая/длинная версия, маркеры или проза), скажите слово, и я отформатирую его соответствующим образом."
+    },
+    "uk": {
+      "title": "Нова версія програмного комутатора IXC",
+      "content": "Програмний перемикач IXC 6.1.6\n\nЦей випуск об’єднує все, починаючи з версії 6.1.5, в одне оновлення. Він забезпечує швидшу обробку CDR, багатшу аналітику, ефективніші засоби керування маршрутизацією та багато покращень UX.\n\nПродуктивність &amp; Надійність:\n\nЗначне прискорення завантаження списку конвертерів CDR і термінаторів (5232).\n\nВиведення маршруту виклику, оптимізоване під великим навантаженням звітів (5150).\n\nCDR &amp; Перегляди дзвінків:\n\nПричина відключення в CDR (4701).\n\nІдентифікатори та відповідні ідентифікатори, додані до експорту CDR-файлу/Excel (5123).\n\nІм'я ініціатора/термінатора відображається у викликах навіть без «показати оператора» (5134).\n\nПошук CDR за кількома\n\nbчисло LIKE\n\nмаски (5174).\n\nШаблони CDR на користувача (5135).\n\nПокращення формату виводу/вирівнювання в Originator/Terminator Calls &amp; Звіт про дорожній рух (5126).\n\nЗвіти &amp; Аналітика:\n\nКількість кодів, що відображається в пунктах призначення та таблиці маршрутів (5118).\n\nЗвіт про причини відключення:\n\n«Останні 20 відхилених викликів за лімітом CPS» (5147).\n\nНовий тип «відхилено номером/префіксом» (5178).\n\nВиклики відправника тепер включають відхилені за номером/префіксом (5184).\n\nЗвіт про рух транспорту (TFR):\n\nНастроюване округлення для нарахування/витрати, незалежно від даних рахунку (5169).\n\nМожливість відображати лише прибуток &amp; зворотна ціна на основі налаштувань користувача (5167).\n\nProfit Dynamics правильно обробляє від’ємні значення (виправлення 5221).\n\nМаршрутизація &amp; Контроль доступу:\n\nВибір кінцевих пунктів і пунктів призначення під час додавання правил маршруту (5129).\n\nСписки доступу:\n\nПоказати, скільки чисел було додано автоматично.\n\nТепер застосовно до Оригінаторів (5219).\n\nУправління тарифами &amp; Сповіщення:\n\nОцініть попередній перегляд сповіщень перед надсиланням (5175, 5183).\n\nЕлементи керування форматуванням: шрифт, розмір, колір шрифту, колір заголовка (5084).\n\nДодайте спеціальний текстовий блок у XLS перед ставками (5185).\n\nОпція видалення кодів зі ставок клієнта/постачальника, якщо вилучено з країн (5235).\n\nПідтримка x/x/x платіжного формату з інтелектуальним/автоматичним завантаженням (5200).\n\nРахунки:\n\nоновлений дизайн, нові функції та автоматичне формування рахунків (5206).\n\nІнструменти Telegram:\n\nПоповніть баланс клієнта та знову відкрийте Оригінатори (5124).\n\nПрийняти/відхилити негайне збільшення від автоімпорту швидкості (5125).\n\nUI/UX &amp; Конфігурація:\n\nКолірні шаблони для кожного користувача для дзвінків і TFR (5127) зі спрощеним призначенням (5186).\n\nПримітки щодо творців і термінаторів.\n\nПоказати назву таблиці маршрутів на вкладці «Правила побудови» (5209).\n\nШаблони, валюти, інтерфейси переміщено в розділ «Конфігурація системи» (5188).\n\nКосметичні вдосконалення порталу клієнтів (5190).\n\nІнструмент розсилки:\n\nвстановіть власну адресу відправника (5216).\n\nІмпорт/Експорт:\n\nЕкспортувати адреси джерела в Excel (5139).\n\nВиправлення помилок:\n\n5138 – перевірка IP-адреси занадто повільна у великих списках адрес джерела.\n\n5142 – одинарні лапки у відображуваному імені викликали помилки вставки CDR.\n\n5180 – відсутній ACK на номері 487 для деяких викликів.\n\n5221 – Прибуток не відображається, якщо в динаміці прибутку присутні від’ємні значення.\n\n5224 – під час зміни суми останнього платежу баланс клієнта може на короткий час стати нульовим.\n\nОновіть до 6.1.6, щоб отримати всі функції та виправлення вище в одному пакеті. Якщо ви хочете, щоб цей текст адаптувався до домашнього стилю вашого сайту (коротка/довга версія, маркери чи проза), скажіть слово, і я відформатую його відповідно."
+    }
   },
   {
-    "title": "Telegram bot new features",
+    "slug": "ixc-telegram-credit-add",
     "date": "2025-07-12",
     "link": "https://interexc.com/ixc-telegram-credit-add",
     "image": "https://res2.weblium.site/res/5cc2b5b2688dc2002415d08c/687502175044aa5677f5def2_optimized_641_c641x186-0x0",
     "local_image": "/news/news_6.jpg",
-    "slug": "ixc-telegram-credit-add",
-    "content": "New Feature: Balance Limit Alerts &amp; Manual Top-Up via Telegram Bot\n\nWe\u2019re pleased to announce a powerful new feature in IXC Softswitch \u2014 integration with Telegram Bot for real-time balance monitoring and manual credit top-ups.\n\n\ud83d\udd14 What it does:\n\nWhen a customer\u2019s account is automatically blocked due to reaching the balance limit, the Telegram bot immediately notifies the softswitch administrator or operator. Right from the chat, the admin is given an option to:\n\n\ud83d\udd39 View customer details\n\n\ud83d\udd39 Check the reason for block\n\n\ud83d\udd39 Manually assign additional credit\n\n\ud83d\udd39 Unblock the customer with one click\n\nThis eliminates the need to log in to the admin interface or react to complaints \u2014 the entire process can be handled on the go via Telegram.\n\n\u2705 Key Benefits:\n\nInstant response to credit-related service blocks.\n\nMinimizes downtime for valuable customers.\n\nEmpowers operators to manage customer balances on-the-fly.\n\nFully logged and auditable within IXC Softswitch.\n\nWhether you're managing dozens or thousands of customers, this feature brings real-time visibility and operational efficiency right to your mobile de\n\nvice."
+    "en": {
+      "title": "Telegram bot new features",
+      "content": "New Feature: Balance Limit Alerts &amp; Manual Top-Up via Telegram Bot\n\nWe’re pleased to announce a powerful new feature in IXC Softswitch — integration with Telegram Bot for real-time balance monitoring and manual credit top-ups.\n\n🔔 What it does:\n\nWhen a customer’s account is automatically blocked due to reaching the balance limit, the Telegram bot immediately notifies the softswitch administrator or operator. Right from the chat, the admin is given an option to:\n\n🔹 View customer details\n\n🔹 Check the reason for block\n\n🔹 Manually assign additional credit\n\n🔹 Unblock the customer with one click\n\nThis eliminates the need to log in to the admin interface or react to complaints — the entire process can be handled on the go via Telegram.\n\n✅ Key Benefits:\n\nInstant response to credit-related service blocks.\n\nMinimizes downtime for valuable customers.\n\nEmpowers operators to manage customer balances on-the-fly.\n\nFully logged and auditable within IXC Softswitch.\n\nWhether you're managing dozens or thousands of customers, this feature brings real-time visibility and operational efficiency right to your mobile de\n\nvice."
+    },
+    "ru": {
+      "title": "Новые возможности Telegram-бота",
+      "content": "Новая функция: оповещения об ограничении баланса и усиление; Ручное пополнение через Telegram-бот\n\nМы рады объявить о новой мощной функции в IXC Softswitch — интеграции с Telegram Bot для мониторинга баланса в реальном времени и ручного пополнения баланса.\n\n🔔 Что он делает:\n\nКогда учетная запись клиента автоматически блокируется из-за достижения лимита баланса, бот Telegram немедленно уведомляет об этом администратора или оператора софтсвитча. Прямо из чата администратору предоставляется возможность:\n\n🔹 Просмотр сведений о клиенте\n\n🔹 Проверьте причину блокировки\n\n🔹 Назначить дополнительный кредит вручную\n\n🔹 Разблокируйте клиента одним кликом\n\nЭто избавляет от необходимости входить в интерфейс администратора или реагировать на жалобы — весь процесс можно выполнять на ходу через Telegram.\n\n✅ Ключевые преимущества:\n\nМгновенное реагирование на блокировку услуг, связанных с кредитом.\n\nМинимизирует время простоя для ценных клиентов.\n\nПозволяет операторам оперативно управлять балансами клиентов.\n\nПолная регистрация и доступность аудита в IXC Softswitch.\n\nНезависимо от того, управляете ли вы десятками или тысячами клиентов, эта функция обеспечивает видимость и эффективность работы в режиме реального времени прямо на вашем мобильном телефоне.\n\nпорок."
+    },
+    "uk": {
+      "title": "Нові функції телеграм-бота",
+      "content": "Нова функція: сповіщення про ліміт балансу &amp; Ручне поповнення через Telegram Bot\n\nМи раді повідомити про нову потужну функцію в IXC Softswitch — інтеграцію з Telegram Bot для моніторингу балансу в реальному часі та ручного поповнення кредиту.\n\n🔔 Що він робить:\n\nКоли обліковий запис клієнта автоматично блокується через досягнення ліміту балансу, Telegram-бот негайно повідомляє про це адміністратора або оператора софтсвіча. Прямо з чату адміністратор має можливість:\n\n🔹 Переглянути інформацію про клієнта\n\n🔹 Перевірте причину блокування\n\n🔹 Призначити додатковий кредит вручну\n\n🔹 Розблокуйте клієнта одним кліком\n\nЦе позбавляє від необхідності входити в інтерфейс адміністратора або реагувати на скарги — весь процес можна обробляти на ходу через Telegram.\n\n✅ Ключові переваги:\n\nМиттєве реагування на блокування послуг, пов'язаних з кредитуванням.\n\nМінімізує час простою для цінних клієнтів.\n\nДозволяє операторам керувати балансами клієнтів на льоту.\n\nПовністю реєструється та перевіряється в IXC Softswitch.\n\nНезалежно від того, чи керуєте ви десятками чи тисячами клієнтів, ця функція забезпечує видимість у режимі реального часу та ефективність роботи безпосередньо на вашому мобільному пристрої\n\nпорок."
+    }
   },
   {
-    "title": "IXC Softswitch New Release!",
+    "slug": "ixc-softswitch-6.1.4",
     "date": "2025-05-12",
     "link": "https://interexc.com/ixc-softswitch-6.1.4",
     "image": "https://res2.weblium.site/res/5cc2b5b2688dc2002415d08c/682b2dfecae892434e34ea58_optimized_687_c687x298-0x0",
     "local_image": "/news/news_7.jpg",
-    "slug": "ixc-softswitch-6.1.4",
-    "content": "IXC Softswitch 6.1.4\n\nIXC Softswitch 6.1.4 Released \u2014 Major Performance Upgrades, Smarter Call Management, and UX Improvements\n\nWe're proud to introduce IXC Softswitch 6.1.4, a powerful update packed with performance boosts, new call control features, deeper analytics, and a smoother, more intuitive interface. This version builds significantly on prior releases to offer a faster, smarter, and more user-friendly experience.\n\n\ud83d\ude80 Performance &amp; System Enhancements\n\n10x Faster Configuration Reloads \u2014 Optimized backend eliminates fast/full reload triggers for much quicker reload times.\n\nLive CDR Auto-refresh \u2014 Whole Discreteness CDRs now support real-time updating.\n\nCPS Limiter \u2014 Real-time Calls Per Second counters and limiters on originating IPs prevent overload and maintain system stability.\n\n\ud83d\udcde Call Handling Improvements\n\nCall Repeat Timeout \u2014 Prevents repeated attempts to unreachable terminators, saving system resources.\n\nRouting History in CDRs \u2014 See which terminators were tried and rejected, plus originator name in terminator reports.\n\nDisplay-Name as Anumber \u2014 Anumber in reports now reflects th\n\ne Fro\n\nm: header for more accurate call tracking.\n\nRing Time Visibility \u2014 Ring time is now shown in CDRs and call paths for more granular call analysis.\n\nSIP Checks in Call Path \u2014 New diagnostics to help with SIP signaling flow transparency.\n\n\ud83d\udcca Reporting &amp; Analytics\n\nDetailed Call Path Stats \u2014 See ASR, ACD, length, and last 10 call history per destination/terminator.\n\nCross-linked Call Views \u2014 Jump between originator/terminator views of the same call.\n\nInvoice &amp; Traffic Report Precision \u2014 Adjustable decimal rounding for cost and charge display.\n\nRouting Position in CDR Templates \u2014 Know exactly where the call was in the routing chain.\n\nCountry Filter in Current Routes \u2014 Easier targeting and filtering by geographic location.\n\n\ud83c\udf10 Web Interface &amp; Usability Upgrades\n\nDark/Light Theme Support \u2014 Optional per-user setting or automatic based on OS.\n\nVisual Tweaks:\n\nLarger fonts in menu for better readability.\n\nGray and dashed rows for zero-duration calls.\n\nCleaner color layouts in traffic reports.\n\nMain Page Additions:\n\n\"Balance Running Out\" alert.\n\nTop daily traffic (in/out/total) in USD.\n\nSmart Drop-down Lists \u2014 Originator/terminator fields show rule counts and turn red if empty.\n\nQuick Links &amp; Navigation:\n\nDirect links to originators from call path.\n\nCDRs now include softswitch IP and user roles.\n\nBrowser tab now shows opened menu title.\n\n\ud83d\udd27 Tools, Filters &amp; Controls\n\nAdvanced Search Filters \u2014 Use *, =, and multiple masks for more powerful filtering.\n\nEditable Access Lists \u2014 Modify number/record entries on the fly.\n\n\"incr60\" Rate Filter \u2014 Search by increments for rate management.\n\nForm Visibility Controls \u2014 Toggle form display in reports for cleaner views.\n\nAuto Theme Sync \u2014 Interface theme follows OS light/dark mode.\n\nCommitment Data Refresh \u2014 Option to refill past data in changed commitments.\n\n\ud83d\udee0\ufe0f Bug Fixes &amp; Stability Improvements\n\nCall Linking &amp; Duplication Fixes:\n\nResolved call linking issues when customers resend calls with the same call ID.\n\nFixed wrong links for calls with the same timestamp and A/B numbers.\n\nCDR Export Fixes:\n\nCorrected Excel format issues.\n\nXLS/PDF export of selected invoices now functional.\n\nCall Handling Corrections:\n\nProper SIP 503 response to overflow CPS.\n\nFixed late connect responses and incorrect early BYEs.\n\nUI &amp; Logic Tweaks:\n\nFixed display of prices in future ratesheets via code manager.\n\nCleaned up temporary web files.\n\nImproved routing table stability for destinations with many codes.\n\n2FA issue in Telegram integration resolved.\n\nProfit calculation accuracy improved in reports.\n\nUpgrade Now to take advantage of the smarter, faster, and more insightful IXC Softswitch 6.1.4."
+    "en": {
+      "title": "IXC Softswitch New Release!",
+      "content": "IXC Softswitch 6.1.4\n\nIXC Softswitch 6.1.4 Released — Major Performance Upgrades, Smarter Call Management, and UX Improvements\n\nWe're proud to introduce IXC Softswitch 6.1.4, a powerful update packed with performance boosts, new call control features, deeper analytics, and a smoother, more intuitive interface. This version builds significantly on prior releases to offer a faster, smarter, and more user-friendly experience.\n\n🚀 Performance &amp; System Enhancements\n\n10x Faster Configuration Reloads — Optimized backend eliminates fast/full reload triggers for much quicker reload times.\n\nLive CDR Auto-refresh — Whole Discreteness CDRs now support real-time updating.\n\nCPS Limiter — Real-time Calls Per Second counters and limiters on originating IPs prevent overload and maintain system stability.\n\n📞 Call Handling Improvements\n\nCall Repeat Timeout — Prevents repeated attempts to unreachable terminators, saving system resources.\n\nRouting History in CDRs — See which terminators were tried and rejected, plus originator name in terminator reports.\n\nDisplay-Name as Anumber — Anumber in reports now reflects th\n\ne Fro\n\nm: header for more accurate call tracking.\n\nRing Time Visibility — Ring time is now shown in CDRs and call paths for more granular call analysis.\n\nSIP Checks in Call Path — New diagnostics to help with SIP signaling flow transparency.\n\n📊 Reporting &amp; Analytics\n\nDetailed Call Path Stats — See ASR, ACD, length, and last 10 call history per destination/terminator.\n\nCross-linked Call Views — Jump between originator/terminator views of the same call.\n\nInvoice &amp; Traffic Report Precision — Adjustable decimal rounding for cost and charge display.\n\nRouting Position in CDR Templates — Know exactly where the call was in the routing chain.\n\nCountry Filter in Current Routes — Easier targeting and filtering by geographic location.\n\n🌐 Web Interface &amp; Usability Upgrades\n\nDark/Light Theme Support — Optional per-user setting or automatic based on OS.\n\nVisual Tweaks:\n\nLarger fonts in menu for better readability.\n\nGray and dashed rows for zero-duration calls.\n\nCleaner color layouts in traffic reports.\n\nMain Page Additions:\n\n\"Balance Running Out\" alert.\n\nTop daily traffic (in/out/total) in USD.\n\nSmart Drop-down Lists — Originator/terminator fields show rule counts and turn red if empty.\n\nQuick Links &amp; Navigation:\n\nDirect links to originators from call path.\n\nCDRs now include softswitch IP and user roles.\n\nBrowser tab now shows opened menu title.\n\n🔧 Tools, Filters &amp; Controls\n\nAdvanced Search Filters — Use *, =, and multiple masks for more powerful filtering.\n\nEditable Access Lists — Modify number/record entries on the fly.\n\n\"incr60\" Rate Filter — Search by increments for rate management.\n\nForm Visibility Controls — Toggle form display in reports for cleaner views.\n\nAuto Theme Sync — Interface theme follows OS light/dark mode.\n\nCommitment Data Refresh — Option to refill past data in changed commitments.\n\n🛠️ Bug Fixes &amp; Stability Improvements\n\nCall Linking &amp; Duplication Fixes:\n\nResolved call linking issues when customers resend calls with the same call ID.\n\nFixed wrong links for calls with the same timestamp and A/B numbers.\n\nCDR Export Fixes:\n\nCorrected Excel format issues.\n\nXLS/PDF export of selected invoices now functional.\n\nCall Handling Corrections:\n\nProper SIP 503 response to overflow CPS.\n\nFixed late connect responses and incorrect early BYEs.\n\nUI &amp; Logic Tweaks:\n\nFixed display of prices in future ratesheets via code manager.\n\nCleaned up temporary web files.\n\nImproved routing table stability for destinations with many codes.\n\n2FA issue in Telegram integration resolved.\n\nProfit calculation accuracy improved in reports.\n\nUpgrade Now to take advantage of the smarter, faster, and more insightful IXC Softswitch 6.1.4."
+    },
+    "ru": {
+      "title": "Новая версия IXC Softswitch!",
+      "content": "Программный переключатель IXC 6.1.4\n\nВыпущена версия IXC Softswitch 6.1.4 — значительные улучшения производительности, более интеллектуальное управление вызовами и улучшения пользовательского интерфейса\n\nМы с гордостью представляем IXC Softswitch 6.1.4, мощное обновление, обеспечивающее повышение производительности, новые функции управления вызовами, более глубокую аналитику и более плавный и интуитивно понятный интерфейс. Эта версия во многом основана на предыдущих выпусках и предлагает более быстрый, интеллектуальный и удобный для пользователя интерфейс.\n\n🚀 Производительность и усиление; Улучшения системы\n\nВ 10 раз более быстрая перезагрузка конфигурации. Оптимизированная серверная часть устраняет триггеры быстрой/полной перезагрузки, что позволяет значительно сократить время перезагрузки.\n\nАвтоматическое обновление Live CDR — CDR с полной дискретностью теперь поддерживают обновление в реальном времени.\n\nОграничитель CPS — счетчики вызовов в секунду и ограничители исходящих IP-адресов в реальном времени предотвращают перегрузку и поддерживают стабильность системы.\n\n📞 Улучшения обработки вызовов\n\nТайм-аут повтора вызова — предотвращает повторные попытки недоступных терминаторов, экономя системные ресурсы.\n\nИстория маршрутизации в CDR — посмотрите, какие терминаторы были опробованы и отклонены, а также имя отправителя в отчетах о терминаторах.\n\nОтображаемое имя как номер — номер в отчетах теперь отражает\n\nи оттуда\n\nm: заголовок для более точного отслеживания звонков.\n\nВидимость времени звонка — время звонка теперь отображается в CDR и путях вызова для более детального анализа вызовов.\n\nПроверки SIP в пути вызова — новая диагностика, помогающая обеспечить прозрачность потока сигнализации SIP.\n\n📊 Отчетность и усиление; Аналитика\n\nПодробная статистика маршрута вызова — см. ASR, ACD, длину и историю последних 10 вызовов для каждого пункта назначения/терминатора.\n\nПерекрестные представления вызовов — переход между представлениями инициатора и терминатора одного и того же вызова.\n\nСчет и amp; Точность отчета о трафике — регулируемое десятичное округление для отображения стоимости и сборов.\n\nПозиция маршрутизации в шаблонах CDR. Точно знайте, где находился вызов в цепочке маршрутизации.\n\nФильтр по странам в текущих маршрутах. Упрощен таргетинг и фильтрация по географическому местоположению.\n\n🌐 Веб-интерфейс и усиление; Обновления удобства использования\n\nПоддержка темных/светлых тем — дополнительная настройка для каждого пользователя или автоматическая в зависимости от ОС.\n\nВизуальные настройки:\n\nУвеличенный шрифт в меню для лучшей читаемости.\n\nСерые и пунктирные строки для вызовов нулевой длительности.\n\nБолее чистые цветовые макеты в отчетах о дорожном движении.\n\nДополнения на главной странице:\n\nОповещение «Баланс исчерпан».\n\nМаксимальный дневной трафик (входящий/исходящий/общий) в долларах США.\n\nИнтеллектуальные раскрывающиеся списки — поля инициатора/терминатора показывают количество правил и становятся красными, если они пусты.\n\nБыстрые ссылки и Навигация:\n\nПрямые ссылки на отправителей из пути вызова.\n\nCDR теперь включают IP-адрес программного коммутатора и роли пользователей.\n\nНа вкладке браузера теперь отображается заголовок открытого меню.\n\n🔧 Инструменты, фильтры и усилители; Элементы управления\n\nФильтры расширенного поиска. Используйте *, = и несколько масок для более эффективной фильтрации.\n\nРедактируемые списки доступа — оперативное изменение номеров/записей.\n\n«incr60» Фильтр скорости — Поиск по приращениям для управления ставками.\n\nЭлементы управления видимостью формы — переключение отображения формы в отчетах для более четкого просмотра.\n\nАвтоматическая синхронизация тем — тема интерфейса соответствует светлому/темному режиму ОС.\n\nОбновление данных о обязательствах — возможность пополнить прошлые данные в измененных обязательствах.\n\n🛠️ Исправления ошибок и усиление; Улучшения стабильности\n\nСвязывание вызовов и усиление; Исправления дублирования:\n\nРешены проблемы привязки вызовов, когда клиенты повторно отправляют вызовы с тем же идентификатором вызова.\n\nИсправлены неправильные ссылки для звонков с одинаковой меткой времени и номерами A/B.\n\nИсправления экспорта CDR:\n\nИсправлены проблемы с форматом Excel.\n\nЭкспорт выбранных счетов в XLS/PDF теперь доступен.\n\nИсправления в обработке вызовов:\n\nПравильный ответ SIP 503 на переполнение CPS.\n\nИсправлены поздние ответы на подключение и неправильные ранние сообщения BYE.\n\nПользовательский интерфейс и усилитель; Логические настройки:\n\nИсправлено отображение цен в будущих прейскурантах через менеджер кодов.\n\nОчистил временные веб-файлы.\n\nУлучшена стабильность таблицы маршрутизации для пунктов назначения с большим количеством кодов.\n\nПроблема 2FA в интеграции Telegram решена.\n\nПовышена точность расчета прибыли в отчетах.\n\nОбновите сейчас, чтобы воспользоваться преимуществами более умного, быстрого и продуманного IXC Softswitch 6.1.4."
+    },
+    "uk": {
+      "title": "Нова версія програмного комутатора IXC!",
+      "content": "Програмний перемикач IXC 6.1.4\n\nВипущено програмний комутатор IXC 6.1.4 — суттєві оновлення продуктивності, розумніше керування викликами та покращення UX\n\nМи з гордістю представляємо IXC Softswitch 6.1.4, потужне оновлення, яке забезпечує підвищення продуктивності, нові функції керування дзвінками, глибшу аналітику та більш плавний, інтуїтивно зрозумілий інтерфейс. Ця версія значною мірою базується на попередніх версіях, щоб запропонувати швидшу, розумнішу та зручнішу роботу.\n\n🚀 Продуктивність &amp; Покращення системи\n\nУ 10 разів швидше перезавантаження конфігурації — оптимізована серверна частина усуває тригери швидкого/повного перезавантаження для значно швидшого часу перезавантаження.\n\nАвтоматичне оновлення CDR у реальному часі — CDR із повною дискретністю тепер підтримують оновлення в реальному часі.\n\nCPS Limiter — лічильники викликів за секунду в реальному часі та обмежувачі вихідних IP-адрес запобігають перевантаженню та підтримують стабільність системи.\n\n📞 Покращення обробки викликів\n\nЧас очікування повтору виклику — запобігає повторним спробам недоступних термінаторів, заощаджуючи системні ресурси.\n\nІсторія маршрутизації в CDR — подивіться, які термінатори були випробувані та відхилені, а також ім’я автора у звітах про термінатор.\n\nDisplay-Name as Anumber — Anumber у звітах тепер відображає th\n\ne Fro\n\nm: заголовок для більш точного відстеження дзвінків.\n\nВидимість часу дзвінка — час дзвінка тепер відображається в CDR і шляхах виклику для більш детального аналізу викликів.\n\nПеревірки SIP у шляху виклику — нова діагностика для забезпечення прозорості потоку сигналів SIP.\n\n📊 Звітність &amp; Аналітика\n\nДетальна статистика маршруту виклику — див. ASR, ACD, довжину та історію останніх 10 викликів для кожного адресата/термінатора.\n\nПерехресні перегляди викликів — перехід між переглядами ініціатора/завершення одного виклику.\n\nРахунок-фактура &amp; Точність звіту про дорожній рух — регульоване десяткове округлення для відображення вартості та плати.\n\nПозиція маршрутизації в шаблонах CDR — точно знайте, де був виклик у ланцюжку маршрутизації.\n\nФільтр країни в поточних маршрутах — простіше націлювання та фільтрація за географічним розташуванням.\n\n🌐 Веб-інтерфейс &amp; Оновлення зручності використання\n\nПідтримка темної/світлої теми — необов’язкове налаштування для кожного користувача або автоматичне на основі ОС.\n\nВізуальні налаштування:\n\nБільші шрифти в меню для кращої читабельності.\n\nСірі та пунктирні рядки для викликів із нульовою тривалістю.\n\nЧистіші кольорові макети у звітах про дорожній рух.\n\nДоповнення до головної сторінки:\n\nСповіщення \"Закінчується баланс\".\n\nНайбільший щоденний трафік (вхід/вихід/загальний) у доларах США.\n\nРозумні розкривні списки — поля ініціатора/завершення показують кількість правил і стають червоними, якщо пусті.\n\nШвидкі посилання &amp; Навігація:\n\nПрямі посилання на авторів із шляху виклику.\n\nCDR тепер включають IP програмного комутатора та ролі користувачів.\n\nНа вкладці браузера тепер відображається заголовок відкритого меню.\n\n🔧 Інструменти, фільтри &amp; Елементи управління\n\nРозширені фільтри пошуку — використовуйте *, = і кілька масок для більш потужної фільтрації.\n\nРедаговані списки доступу — змінюйте номери/записи на льоту.\n\n\"incr60\" Rate Filter — пошук за кроком для керування швидкістю.\n\nЕлементи керування видимістю форм — перемкніть відображення форм у звітах для чіткішого перегляду.\n\nАвтоматична синхронізація теми — тема інтерфейсу відповідає світлому/темному режиму ОС.\n\nОновлення даних зобов’язань — можливість поповнення минулих даних у змінених зобов’язаннях.\n\n🛠️ Виправлення помилок &amp; Покращення стабільності\n\nЗв'язування викликів &amp; Виправлення копій:\n\nВирішено проблеми зі зв’язуванням викликів, коли клієнти повторно надсилають виклики з тим самим ідентифікатором виклику.\n\nВиправлено неправильні посилання для дзвінків з однаковою міткою часу та номерами A/B.\n\nВиправлення експорту CDR:\n\nВиправлено проблеми формату Excel.\n\nТепер функціонує експорт вибраних рахунків у форматі XLS/PDF.\n\nВиправлення обробки викликів:\n\nПравильна відповідь SIP 503 на переповнення CPS.\n\nВиправлено пізні відповіді на підключення та неправильні ранні BYE.\n\nUI &amp; Логічні налаштування:\n\nВиправлено відображення цін у майбутніх тарифах через менеджер кодів.\n\nОчистив тимчасові веб-файли.\n\nПокращена стабільність таблиці маршрутизації для пунктів призначення з багатьма кодами.\n\nВирішено проблему 2FA в інтеграції Telegram.\n\nПідвищено точність розрахунку прибутку у звітах.\n\nОновіть зараз, щоб скористатися перевагами розумнішого, швидшого та інтелектуальнішого IXC Softswitch 6.1.4."
+    }
   },
   {
-    "title": "Access List Enhancement",
+    "slug": "access-list-disconenct-codes",
     "date": "2024-10-20",
     "link": "https://interexc.com/access-list-disconenct-codes",
     "image": "https://res2.weblium.site/res/5cc2b5b2688dc2002415d08c/672263b506d97213d4b9a35e_optimized_1019_c1019x424-0x0",
     "local_image": "/news/news_8.jpg",
-    "slug": "access-list-disconenct-codes",
-    "content": "Access List Enhancement\n\nThe IXC Access List module in IXC Softswitch has introduced an efficient new feature: the ability to automatically blacklist numbers based on disconnect codes.\n\nNow, apart from the duration and call counts triggers it is possible to specify the SIP disconnect code to search for when selecting the number to block by adding into the black list."
+    "en": {
+      "title": "Access List Enhancement",
+      "content": "Access List Enhancement\n\nThe IXC Access List module in IXC Softswitch has introduced an efficient new feature: the ability to automatically blacklist numbers based on disconnect codes.\n\nNow, apart from the duration and call counts triggers it is possible to specify the SIP disconnect code to search for when selecting the number to block by adding into the black list."
+    },
+    "ru": {
+      "title": "Улучшение списка доступа",
+      "content": "Улучшение списка доступа\n\nМодуль списка доступа IXC в IXC Softswitch представил новую эффективную функцию: возможность автоматического внесения номеров в черный список на основе кодов отключения.\n\nТеперь помимо триггеров длительности и количества звонков можно указать код отключения SIP для поиска при выборе номера для блокировки путем добавления в черный список."
+    },
+    "uk": {
+      "title": "Розширення списку доступу",
+      "content": "Розширення списку доступу\n\nМодуль IXC Access List в IXC Softswitch представив нову ефективну функцію: можливість автоматичного чорного списку номерів на основі кодів відключення.\n\nТепер, окрім тригерів тривалості та підрахунку дзвінків, можна вказати код відключення SIP для пошуку під час вибору номера для блокування шляхом додавання в чорний список."
+    }
   },
   {
-    "title": "SIP loop detection",
+    "slug": "sip-loop-detection",
     "date": "2024-09-12",
     "link": "https://interexc.com/sip-loop-detection",
     "image": "https://res2.weblium.site/res/5cc2b5b2688dc2002415d08c/66ed7c8761d8dff3d16ebaa6_optimized_542_c542x292-0x0",
     "local_image": "/news/news_9.jpg",
-    "slug": "sip-loop-detection",
-    "content": "SIP Loop Detection\n\nIXC Softswitch has introduced a new feature that enhances call management\u2014SIP Loop Detection.\n\nLoop calls occur when a call enters a loop within the SIP signaling network. Essentially, the same call is continuously routed between two or more devices/providers without being terminated, leading to network congestion, resource waste, and potential service degradation.\n\nIXC Softswitch\u2019s SIP Loop Detection feature automatically identifies calls that may be entering a loop and terminates them before they can cause harm to the network. This not only improves system performance but also enhances the quality of service provided to customers."
+    "en": {
+      "title": "SIP loop detection",
+      "content": "SIP Loop Detection\n\nIXC Softswitch has introduced a new feature that enhances call management—SIP Loop Detection.\n\nLoop calls occur when a call enters a loop within the SIP signaling network. Essentially, the same call is continuously routed between two or more devices/providers without being terminated, leading to network congestion, resource waste, and potential service degradation.\n\nIXC Softswitch’s SIP Loop Detection feature automatically identifies calls that may be entering a loop and terminates them before they can cause harm to the network. This not only improves system performance but also enhances the quality of service provided to customers."
+    },
+    "ru": {
+      "title": "Обнаружение SIP-петли",
+      "content": "Обнаружение SIP-петли\n\nIXC Softswitch представила новую функцию, улучшающую управление вызовами — обнаружение петель SIP.\n\nПетлевые вызовы происходят, когда вызов попадает в петлю внутри сигнальной сети SIP. По сути, один и тот же вызов постоянно маршрутизируется между двумя или более устройствами/провайдерами без прерывания, что приводит к перегрузке сети, растрате ресурсов и потенциальному ухудшению качества обслуживания.\n\nФункция обнаружения петель SIP в IXC Softswitch автоматически определяет вызовы, которые могут попасть в петлю, и завершает их, прежде чем они смогут нанести вред сети. Это не только повышает производительность системы, но и повышает качество обслуживания клиентов."
+    },
+    "uk": {
+      "title": "Виявлення петлі SIP",
+      "content": "Виявлення SIP Loop\n\nIXC Softswitch представила нову функцію, яка покращує керування викликами — виявлення циклу SIP.\n\nЦиклічні виклики виникають, коли виклик потрапляє в петлю в межах мережі сигналізації SIP. По суті, той самий дзвінок безперервно маршрутизується між двома або більше пристроями/провайдерами без завершення, що призводить до перевантаження мережі, втрати ресурсів і потенційного погіршення якості обслуговування.\n\nФункція SIP Loop Detection від IXC Softswitch автоматично визначає виклики, які можуть входити в цикл, і завершує їх, перш ніж вони можуть завдати шкоди мережі. Це не тільки покращує продуктивність системи, але й покращує якість послуг, що надаються клієнтам."
+    }
   },
   {
-    "title": "Last Price Change Feature",
+    "slug": "last-price-change",
     "date": "2024-03-12",
     "link": "https://interexc.com/last-price-change",
     "image": "https://res2.weblium.site/res/5cc2b5b2688dc2002415d08c/663377103a02a0b0136f4a72_optimized_1367_c1367x820-0x0",
     "local_image": "/news/news_10.jpg",
-    "slug": "last-price-change",
-    "content": "Last Price Change feature\n\nWe'are glad to introduce Last Price Changes Feature in IXC Softswitch: Enhancing Transparency and Control.\n\nYou will find a new report in main page - Last Customer Price Change and Last Vendor Price Change accordingly. These two reports will show you everything about latest changes in rates: who made those changes (username or auto-imported from email), how many rows affected, are there any conflicts like immediate increase/codes duplicates. Moreover, you can directly download the file which was used during the rates import/upload.\n\nLast Price Changes enhances transparency, accountability, and control in telecom pricing, reinforcing IXC Softswitch's commitment to empowering providers with advanced, user-centric solutions."
+    "en": {
+      "title": "Last Price Change Feature",
+      "content": "Last Price Change feature\n\nWe'are glad to introduce Last Price Changes Feature in IXC Softswitch: Enhancing Transparency and Control.\n\nYou will find a new report in main page - Last Customer Price Change and Last Vendor Price Change accordingly. These two reports will show you everything about latest changes in rates: who made those changes (username or auto-imported from email), how many rows affected, are there any conflicts like immediate increase/codes duplicates. Moreover, you can directly download the file which was used during the rates import/upload.\n\nLast Price Changes enhances transparency, accountability, and control in telecom pricing, reinforcing IXC Softswitch's commitment to empowering providers with advanced, user-centric solutions."
+    },
+    "ru": {
+      "title": "Функция последнего изменения цены",
+      "content": "Функция последнего изменения цены\n\nМы рады представить функцию последнего изменения цен в IXC Softswitch: повышение прозрачности и контроля.\n\nНа главной странице вы найдете новый отчет — «Последнее изменение цены клиента» и «Последнее изменение цены поставщика» соответственно. Эти два отчета покажут вам все о последних изменениях ставок: кто внес эти изменения (имя пользователя или автоматически импортирован из электронной почты), сколько затронутых строк, есть ли какие-либо конфликты, такие как немедленное увеличение/дубликаты кодов. Более того, вы можете напрямую скачать файл, который использовался при импорте/загрузке ставок.\n\nLast Price Changes повышает прозрачность, подотчетность и контроль ценообразования в сфере телекоммуникаций, подкрепляя стремление IXC Softswitch предоставлять провайдерам передовые, ориентированные на пользователя решения."
+    },
+    "uk": {
+      "title": "Функція останньої зміни ціни",
+      "content": "Функція «Остання зміна ціни».\n\nМи раді представити функцію останніх змін ціни в IXC Softswitch: підвищення прозорості та контролю.\n\nВи знайдете новий звіт на головній сторінці - Остання зміна ціни клієнта та Остання зміна ціни постачальника відповідно. Ці два звіти покажуть вам усе про останні зміни ставок: хто вніс ці зміни (ім’я користувача чи автоматично імпортовано з електронної пошти), скільки рядків зазнало впливу, чи є якісь конфлікти, як-от негайне підвищення/дублювання кодів. Крім того, ви можете безпосередньо завантажити файл, який використовувався під час імпорту/завантаження ставок.\n\nОстанні зміни цін підвищують прозорість, підзвітність і контроль у ціноутворенні телекомунікацій, зміцнюючи прагнення IXC Softswitch надавати постачальникам передові рішення, орієнтовані на користувача."
+    }
   },
   {
-    "title": "Data export to xls/pdf",
+    "slug": "data-export-pdf-xls",
     "date": "2023-12-15",
     "link": "https://interexc.com/data-export-pdf-xls",
     "image": "https://res2.weblium.site/res/5cc2b5b2688dc2002415d08c/65b9007619f99c000f25bec1_optimized_656_c656x452-0x0",
     "local_image": "/news/news_11.jpg",
-    "slug": "data-export-pdf-xls",
-    "content": "Data Management with IXC Softswitch's New Export Feature\n\nWe're excited to announce a new addition to the IXC Softswitch \u2014 the ability to export on-screen data directly into Excel (XLS) or Portable Document Format (PDF). This feature puts users in control, offering a swift and efficient way to manage, share, and collaborate on critical information.\n\nEffortless Export\n\nNow, users can bid farewell to manual data transcription and screenshots. With just a few clicks, any data visible on the IXC Softswitch interface can be exported, saving time and eliminating the need for cumbersome processes.\n\nChoose Your Format\n\nWhether you need to perform further analysis in Excel or share information securely in PDF format, IXC Softswitch caters to your needs. The versatility of exporting options ensures compatibility with various user preferences and business requirements."
+    "en": {
+      "title": "Data export to xls/pdf",
+      "content": "Data Management with IXC Softswitch's New Export Feature\n\nWe're excited to announce a new addition to the IXC Softswitch — the ability to export on-screen data directly into Excel (XLS) or Portable Document Format (PDF). This feature puts users in control, offering a swift and efficient way to manage, share, and collaborate on critical information.\n\nEffortless Export\n\nNow, users can bid farewell to manual data transcription and screenshots. With just a few clicks, any data visible on the IXC Softswitch interface can be exported, saving time and eliminating the need for cumbersome processes.\n\nChoose Your Format\n\nWhether you need to perform further analysis in Excel or share information securely in PDF format, IXC Softswitch caters to your needs. The versatility of exporting options ensures compatibility with various user preferences and business requirements."
+    },
+    "ru": {
+      "title": "Экспорт данных в xls/pdf",
+      "content": "Управление данными с помощью новой функции экспорта IXC Softswitch\n\nМы рады объявить о новом дополнении к IXC Softswitch — возможности экспорта экранных данных непосредственно в Excel (XLS) или формат переносимых документов (PDF). Эта функция дает пользователям полный контроль, предлагая быстрый и эффективный способ управления, обмена и совместной работы над важной информацией.\n\nЛегкий экспорт\n\nТеперь пользователи могут попрощаться с ручной транскрипцией данных и созданием снимков экрана. Всего несколькими щелчками мыши можно экспортировать любые данные, видимые в интерфейсе IXC Softswitch, что экономит время и устраняет необходимость в громоздких процессах.\n\nВыберите свой формат\n\nЕсли вам нужно выполнить дальнейший анализ в Excel или безопасно поделиться информацией в формате PDF, IXC Softswitch удовлетворит ваши потребности. Универсальность параметров экспорта обеспечивает совместимость с различными предпочтениями пользователей и требованиями бизнеса."
+    },
+    "uk": {
+      "title": "Експорт даних у формат xls/pdf",
+      "content": "Управління даними за допомогою нової функції експорту від IXC Softswitch\n\nМи раді оголосити про нове доповнення до IXC Softswitch — можливість експортувати дані на екрані безпосередньо в Excel (XLS) або Portable Document Format (PDF). Ця функція надає користувачам контроль, пропонуючи швидкий і ефективний спосіб керування важливою інформацією, обміну нею та спільної роботи над нею.\n\nЕкспорт без зусиль\n\nТепер користувачі можуть попрощатися з ручною транскрипцією даних і знімками екрана. Лише кількома клацаннями миші можна експортувати будь-які дані, видимі в інтерфейсі IXC Softswitch, заощаджуючи час і усуваючи потребу в громіздких процесах.\n\nВиберіть свій формат\n\nНезалежно від того, чи потрібно вам виконати подальший аналіз у Excel чи безпечно обмінюватися інформацією у форматі PDF, IXC Softswitch задовольнить ваші потреби. Універсальність опцій експорту забезпечує сумісність із різними уподобаннями користувачів і бізнес-вимогами."
+    }
   },
   {
-    "title": "Caller number replacement",
+    "slug": "anumber-replace",
     "date": "2023-05-24",
     "link": "https://interexc.com/anumber-replace",
     "image": "https://res2.weblium.site/res/5cc2b5b2688dc2002415d08c/646dffc64dd68a000fee793a_optimized_900_c900x600-0x0",
     "local_image": "/news/news_12.jpg",
-    "slug": "anumber-replace",
-    "content": "A- to B- Number replacement\n\nThe IXC Softswitch introduces a groundbreaking feature that replaces the original A-number with the B-number, revolutionizing communication processes. This new capability empowers businesses and individuals with enhanced control, flexibility, and security, opening up new possibilities for efficient and streamlined telecommunications.\n\nEnhanced Control and Flexibility:\n\nWith the A-to-B number replacement feature, users can redirect calls to specific destinations or alternative numbers, enabling seamless call routing and virtual number masking. This flexibility improves customer experience and facilitates intelligent call management for organizations with multiple locations or call centers.\n\nImproved Security and Privacy:\n\nBusinesses can enhance the security and privacy of their communication operations by masking the original A-number. Virtual number masking protects sensitive information, reduces the risk of fraud, and ensures consistent branding and identity.\n\nThe IXC Softswitch's A-to-B number replacement feature transforms communication by providing greater control, flexibility, and security. This innovative functionality allows businesses to optimize call routing, protect privacy, and improve customer experience, setting new standards for efficient telecommunications in the digital age."
+    "en": {
+      "title": "Caller number replacement",
+      "content": "A- to B- Number replacement\n\nThe IXC Softswitch introduces a groundbreaking feature that replaces the original A-number with the B-number, revolutionizing communication processes. This new capability empowers businesses and individuals with enhanced control, flexibility, and security, opening up new possibilities for efficient and streamlined telecommunications.\n\nEnhanced Control and Flexibility:\n\nWith the A-to-B number replacement feature, users can redirect calls to specific destinations or alternative numbers, enabling seamless call routing and virtual number masking. This flexibility improves customer experience and facilitates intelligent call management for organizations with multiple locations or call centers.\n\nImproved Security and Privacy:\n\nBusinesses can enhance the security and privacy of their communication operations by masking the original A-number. Virtual number masking protects sensitive information, reduces the risk of fraud, and ensures consistent branding and identity.\n\nThe IXC Softswitch's A-to-B number replacement feature transforms communication by providing greater control, flexibility, and security. This innovative functionality allows businesses to optimize call routing, protect privacy, and improve customer experience, setting new standards for efficient telecommunications in the digital age."
+    },
+    "ru": {
+      "title": "Замена номера звонящего",
+      "content": "Замена номера A- на B-\n\nIXC Softswitch представляет революционную функцию, которая заменяет исходный номер A на номер B, что революционизирует процессы связи. Эта новая возможность предоставляет предприятиям и частным лицам улучшенный контроль, гибкость и безопасность, открывая новые возможности для эффективных и оптимизированных телекоммуникаций.\n\nУлучшенный контроль и гибкость:\n\nБлагодаря функции замены номеров A-на-B пользователи могут перенаправлять вызовы на определенные пункты назначения или на альтернативные номера, обеспечивая плавную маршрутизацию вызовов и маскирование виртуального номера. Такая гибкость улучшает качество обслуживания клиентов и упрощает интеллектуальное управление вызовами для организаций с несколькими офисами или колл-центрами.\n\nУлучшенная безопасность и конфиденциальность:\n\nПредприятия могут повысить безопасность и конфиденциальность своих коммуникационных операций, замаскировав исходный номер A. Маскировка виртуального номера защищает конфиденциальную информацию, снижает риск мошенничества и обеспечивает единообразие бренда и индивидуальности.\n\nФункция замены номеров A на B в IXC Softswitch преобразует связь, обеспечивая больший контроль, гибкость и безопасность. Эта инновационная функциональность позволяет предприятиям оптимизировать маршрутизацию вызовов, защищать конфиденциальность и улучшать качество обслуживания клиентов, устанавливая новые стандарты эффективных телекоммуникаций в эпоху цифровых технологий."
+    },
+    "uk": {
+      "title": "Заміна номера абонента",
+      "content": "Заміна номера з A на B\n\nSoftswitch IXC представляє новаторську функцію, яка замінює оригінальне число A на число B, революціонізуючи комунікаційні процеси. Ця нова можливість надає підприємствам і окремим особам покращений контроль, гнучкість і безпеку, відкриваючи нові можливості для ефективних і спрощених телекомунікацій.\n\nПокращений контроль і гнучкість:\n\nЗа допомогою функції заміни номерів A-B користувачі можуть перенаправляти дзвінки на певні адресати або альтернативні номери, забезпечуючи безперебійну маршрутизацію викликів і маскування віртуального номера. Ця гнучкість покращує взаємодію з клієнтами та полегшує інтелектуальне керування викликами для організацій із кількома локаціями або кол-центрами.\n\nПокращена безпека та конфіденційність:\n\nПідприємства можуть підвищити безпеку та конфіденційність своїх комунікаційних операцій, маскуючи оригінальний номер А. Віртуальне маскування номерів захищає конфіденційну інформацію, знижує ризик шахрайства та забезпечує послідовне брендування та ідентифікацію.\n\nФункція заміни номерів A-B в програмному комутаторі IXC перетворює зв'язок, забезпечуючи більший контроль, гнучкість і безпеку. Ця інноваційна функція дозволяє компаніям оптимізувати маршрутизацію викликів, захистити конфіденційність і покращити взаємодію з клієнтами, встановлюючи нові стандарти для ефективних телекомунікацій в епоху цифрових технологій."
+    }
   },
   {
-    "title": "Monitoring tool enhanced",
+    "slug": "monitoring-tool-enhanced",
     "date": "2023-02-24",
     "link": "https://interexc.com/monitoring-tool-enhanced",
     "image": "https://res2.weblium.site/res/5cc2b5b2688dc2002415d08c/63f8b5f5400748000c3e18d4_optimized_1160_c1160x485-0x0",
     "local_image": "/news/news_13.jpg",
-    "slug": "monitoring-tool-enhanced",
-    "content": "IXC Monitoring Tool enhancements\n\nEnsuring consistent call quality is essential for any business that relies on VoIP communication. That's why we're proud to introduce our re-defined IXC Monitoring Tool, which offers a range of powerful features to help users monitor the quality of their calls.\n\nWith our new Monitoring Profiles feature, users can easily create customized monitoring profiles for each of their routes. They can set individual Email Patterns for each profile, which ensures that the right people are notified of any issues as soon as they arise. This feature provides users with greater flexibility and control over their monitoring process, making it easier to identify and address call quality issues before they become serious problems.\n\nIn addition to these enhancements, we've also added the PDD (Post Dial Delay) parameter to our monitoring tool. PDD is a key indicator of call quality, measuring the time it takes for a call to connect after the user has dialed. By monitoring this parameter, users can identify issues with their routes and take proactive steps to ensure consistent call quality.\n\nOur IXC Monitoring Tool has already helped countless businesses improve their call quality and enhance their VoIP communication. With these latest enhancements, we're confident that it will continue to be a valuable asset for anyone who relies on VoIP technology."
+    "en": {
+      "title": "Monitoring tool enhanced",
+      "content": "IXC Monitoring Tool enhancements\n\nEnsuring consistent call quality is essential for any business that relies on VoIP communication. That's why we're proud to introduce our re-defined IXC Monitoring Tool, which offers a range of powerful features to help users monitor the quality of their calls.\n\nWith our new Monitoring Profiles feature, users can easily create customized monitoring profiles for each of their routes. They can set individual Email Patterns for each profile, which ensures that the right people are notified of any issues as soon as they arise. This feature provides users with greater flexibility and control over their monitoring process, making it easier to identify and address call quality issues before they become serious problems.\n\nIn addition to these enhancements, we've also added the PDD (Post Dial Delay) parameter to our monitoring tool. PDD is a key indicator of call quality, measuring the time it takes for a call to connect after the user has dialed. By monitoring this parameter, users can identify issues with their routes and take proactive steps to ensure consistent call quality.\n\nOur IXC Monitoring Tool has already helped countless businesses improve their call quality and enhance their VoIP communication. With these latest enhancements, we're confident that it will continue to be a valuable asset for anyone who relies on VoIP technology."
+    },
+    "ru": {
+      "title": "Улучшен инструмент мониторинга",
+      "content": "Улучшения инструмента мониторинга IXC\n\nОбеспечение стабильного качества связи имеет важное значение для любого бизнеса, который полагается на связь VoIP. Вот почему мы с гордостью представляем наш обновленный инструмент мониторинга IXC, который предлагает ряд мощных функций, помогающих пользователям контролировать качество своих звонков.\n\nБлагодаря нашей новой функции «Профили мониторинга» пользователи могут легко создавать индивидуальные профили мониторинга для каждого из своих маршрутов. Они могут установить отдельные шаблоны электронной почты для каждого профиля, что гарантирует, что нужные люди будут уведомлены о любых проблемах, как только они возникнут. Эта функция предоставляет пользователям большую гибкость и контроль над процессом мониторинга, что упрощает выявление и устранение проблем с качеством связи до того, как они станут серьезными проблемами.\n\nВ дополнение к этим улучшениям мы также добавили в наш инструмент мониторинга параметр PDD (задержка после набора). PDD — это ключевой индикатор качества звонка, измеряющий время, необходимое для установления соединения после того, как пользователь набрал номер. Отслеживая этот параметр, пользователи могут выявлять проблемы со своими маршрутами и принимать упреждающие меры для обеспечения стабильного качества связи.\n\nНаш инструмент мониторинга IXC уже помог бесчисленному количеству компаний улучшить качество звонков и улучшить VoIP-связь. Мы уверены, что благодаря этим последним улучшениям он по-прежнему будет ценным активом для всех, кто полагается на технологию VoIP."
+    },
+    "uk": {
+      "title": "Покращено засіб моніторингу",
+      "content": "Покращення засобу моніторингу IXC\n\nЗабезпечення незмінної якості зв’язку має важливе значення для будь-якого бізнесу, який покладається на зв’язок VoIP. Ось чому ми з гордістю представляємо наш оновлений інструмент моніторингу IXC, який пропонує низку потужних функцій, які допомагають користувачам контролювати якість їхніх дзвінків.\n\nЗавдяки нашій новій функції профілів моніторингу користувачі можуть легко створювати індивідуальні профілі моніторингу для кожного свого маршруту. Вони можуть установлювати індивідуальні шаблони електронної пошти для кожного профілю, що гарантує сповіщення потрібних людей про будь-які проблеми, як тільки вони виникають. Ця функція надає користувачам більшу гнучкість і контроль над процесом моніторингу, полегшуючи виявлення та вирішення проблем із якістю викликів, перш ніж вони стануть серйозними проблемами.\n\nОкрім цих удосконалень, ми також додали параметр PDD (Post Dial Delay) до нашого інструменту моніторингу. PDD є ключовим індикатором якості виклику, вимірюючи час, який потрібен для підключення виклику після того, як користувач набере номер. Відстежуючи цей параметр, користувачі можуть виявляти проблеми зі своїми маршрутами та вживати профілактичних заходів для забезпечення стабільної якості зв’язку.\n\nНаш інструмент моніторингу IXC вже допоміг багатьом компаніям покращити якість зв’язку та покращити зв’язок VoIP. Завдяки цим останнім удосконаленням ми впевнені, що він і надалі залишатиметься цінним надбанням для всіх, хто покладається на технологію VoIP."
+    }
   },
   {
-    "title": "Dynamic graphs",
+    "slug": "dynamic-graphs",
     "date": "2022-12-20",
     "link": "https://interexc.com/dynamic-graphs",
     "image": "https://res2.weblium.site/res/5cc2b5b2688dc2002415d08c/63b6c04fa61d73000dc0e5e9_optimized_1092_c1092x800-0x0",
     "local_image": "/news/news_14.jpg",
-    "slug": "dynamic-graphs",
-    "content": "Dynamic graphs\n\nNew Dymamic graphs of active calls allows you to get many kinds of data in one click.\n\nSupports zooming, grouping, exporting and many others  things.\n\nThese graphs available on per-customer basis as well which provide you a simple track of traffic volumes."
+    "en": {
+      "title": "Dynamic graphs",
+      "content": "Dynamic graphs\n\nNew Dymamic graphs of active calls allows you to get many kinds of data in one click.\n\nSupports zooming, grouping, exporting and many others  things.\n\nThese graphs available on per-customer basis as well which provide you a simple track of traffic volumes."
+    },
+    "ru": {
+      "title": "Динамические графики",
+      "content": "Динамические графики\n\nНовые графики активных вызовов Dymamic позволяют получать множество видов данных в один клик.\n\nПоддерживает масштабирование, группировку, экспорт и многое другое.\n\nЭти графики также доступны для каждого клиента и позволяют легко отслеживать объемы трафика."
+    },
+    "uk": {
+      "title": "Динамічні графіки",
+      "content": "Динамічні графіки\n\nНові графіки активних викликів Dymamic дозволяють отримувати багато видів даних в один клік.\n\nПідтримує масштабування, групування, експорт та багато іншого.\n\nЦі графіки також доступні для кожного клієнта, що забезпечує просте відстеження обсягів трафіку."
+    }
   },
   {
-    "title": "Email parser is now available!",
+    "slug": "email-parser",
     "date": "2022-06-29",
     "link": "https://interexc.com/email-parser",
     "image": "https://res2.weblium.site/res/5cc2b5b2688dc2002415d08c/62bc3f64a04cd4000d8a4549_optimized",
     "local_image": "/news/news_15.jpg",
-    "slug": "email-parser",
-    "content": "Email parser is now available!\n\nAre you  tired from routine jobs during rates uploads?\n\nIXC Softswitch is now able to interconnect with your mail service provider  to parse incoming emails!\n\nEvery time when your supplier is sending  rate notification - IXC Softswitch will do everything for you.\n\nIt will parse that email, get the actual rates from attachment and upload it to billing accordingly.\n\nNow it is all fully automated so you will save a lot of time to grow and expand your business!"
+    "en": {
+      "title": "Email parser is now available!",
+      "content": "Email parser is now available!\n\nAre you  tired from routine jobs during rates uploads?\n\nIXC Softswitch is now able to interconnect with your mail service provider  to parse incoming emails!\n\nEvery time when your supplier is sending  rate notification - IXC Softswitch will do everything for you.\n\nIt will parse that email, get the actual rates from attachment and upload it to billing accordingly.\n\nNow it is all fully automated so you will save a lot of time to grow and expand your business!"
+    },
+    "ru": {
+      "title": "Парсер электронной почты теперь доступен!",
+      "content": "Парсер электронной почты теперь доступен!\n\nВы устали от рутинной работы во время загрузки ставок?\n\nIXC Softswitch теперь может подключаться к вашему поставщику почтовых услуг для анализа входящих писем!\n\nКаждый раз, когда ваш поставщик отправляет уведомление о тарифах, IXC Softswitch сделает все за вас.\n\nОн проанализирует это электронное письмо, получит фактические тарифы из вложения и соответствующим образом загрузит их в систему выставления счетов.\n\nТеперь все это полностью автоматизировано, поэтому вы сэкономите много времени на росте и расширении своего бизнеса!"
+    },
+    "uk": {
+      "title": "Парсер електронної пошти тепер доступний!",
+      "content": "Парсер електронної пошти тепер доступний!\n\nВи втомилися від рутинної роботи під час завантаження ставок?\n\nIXC Softswitch тепер може підключатися до вашого постачальника поштових послуг для аналізу вхідних електронних листів!\n\nКожного разу, коли ваш постачальник надсилає сповіщення про курс - IXC Softswitch зробить все за вас.\n\nВін проаналізує цю електронну пошту, отримає фактичні тарифи з вкладених файлів і відповідно завантажить їх до виставлення рахунків.\n\nТепер усе повністю автоматизовано, тож ви заощадите багато часу для розвитку та розширення свого бізнесу!"
+    }
   },
   {
-    "title": "Routing scenarios implemented!",
+    "slug": "routing-scenarios",
     "date": "2022-04-15",
     "link": "https://interexc.com/routing-scenarios",
     "image": "https://res2.weblium.site/res/5cc2b5b2688dc2002415d08c/62948f19a68aa600225ce547_optimized_1432_c1432x618-0x0",
     "local_image": "/news/news_16.jpg",
-    "slug": "routing-scenarios",
-    "content": "Routing scenarios implemented!\n\nWe added few more options in Route Table to make it even more flexible. You can now quickly enable/disable any route in Route Table with checkmark, and moreover - you have an option to set time-based Scenario to enable/disable some routes automatically on time schedule."
+    "en": {
+      "title": "Routing scenarios implemented!",
+      "content": "Routing scenarios implemented!\n\nWe added few more options in Route Table to make it even more flexible. You can now quickly enable/disable any route in Route Table with checkmark, and moreover - you have an option to set time-based Scenario to enable/disable some routes automatically on time schedule."
+    },
+    "ru": {
+      "title": "Сценарии маршрутизации реализованы!",
+      "content": "Сценарии маршрутизации реализованы!\n\nМы добавили еще несколько опций в таблицу маршрутов, чтобы сделать ее еще более гибкой. Теперь вы можете быстро включить/отключить любой маршрут в таблице маршрутов, установив флажок, и, более того, у вас есть возможность установить сценарий на основе времени, чтобы автоматически включать/отключать некоторые маршруты по расписанию."
+    },
+    "uk": {
+      "title": "Сценарії маршрутизації реалізовано!",
+      "content": "Сценарії маршрутизації реалізовано!\n\nМи додали ще кілька параметрів у таблицю маршрутів, щоб зробити її ще більш гнучкою. Тепер ви можете швидко ввімкнути/вимкнути будь-який маршрут у таблиці маршрутів, поставивши галочку, і, крім того, у вас є можливість встановити сценарій на основі часу, щоб автоматично ввімкнути/вимкнути деякі маршрути за розкладом."
+    }
   },
   {
-    "title": "PDD measure re-defined!",
+    "slug": "pdd-measure",
     "date": "2022-01-12",
     "link": "https://interexc.com/pdd-measure",
     "image": "https://res2.weblium.site/res/5cc2b5b2688dc2002415d08c/61dee2295f52dc0023defc32_optimized_1000_c1000x500-0x0",
     "local_image": "/news/news_17.jpg",
-    "slug": "pdd-measure",
-    "content": "PDD measure re-defined!\n\nWe are glad to inform that Post Dial Delay (PDD) measuring has been re-defined in IXC Softswitch.\n\nNow you can see non-zero PDD value even for rejected calls where 18x was not received at all.\n\nIt gives you benefit to easily track terminators who are holding a call for a long time without proper release."
+    "en": {
+      "title": "PDD measure re-defined!",
+      "content": "PDD measure re-defined!\n\nWe are glad to inform that Post Dial Delay (PDD) measuring has been re-defined in IXC Softswitch.\n\nNow you can see non-zero PDD value even for rejected calls where 18x was not received at all.\n\nIt gives you benefit to easily track terminators who are holding a call for a long time without proper release."
+    },
+    "ru": {
+      "title": "Измерение PDD пересмотрено!",
+      "content": "Измерение PDD пересмотрено!\n\nМы рады сообщить, что измерение задержки после набора номера (PDD) было переопределено в IXC Softswitch.\n\nТеперь вы можете увидеть ненулевое значение PDD даже для отклоненных вызовов, где 18x вообще не было получено.\n\nЭто дает вам возможность легко отслеживать терминаторов, которые удерживают вызов в течение длительного времени без надлежащего освобождения."
+    },
+    "uk": {
+      "title": "Захід ПТД перевизначено!",
+      "content": "Захід ПТД перевизначено!\n\nМи раді повідомити, що вимірювання затримки після набору номера (PDD) було перевизначено в IXC Softswitch.\n\nТепер ви можете побачити ненульове значення PDD навіть для відхилених викликів, коли 18x не було отримано взагалі.\n\nЦе дає вам перевагу для легкого відстеження термінаторів, які утримують виклик протягом тривалого часу без належного відключення."
+    }
   },
   {
-    "title": "IXC Telegram bot",
+    "slug": "ixc-telegram-bot",
     "date": "2021-09-30",
     "link": "https://interexc.com/ixc-telegram-bot",
     "image": "https://res2.weblium.site/res/5cc2b5b2688dc2002415d08c/61558c25da1874002234f9ac_optimized_690_c690x426-0x0",
     "local_image": "/news/news_18.jpg",
-    "slug": "ixc-telegram-bot",
-    "content": "IXC Telegram bot is now available!\n\nWe are glad to introduce you new feature of IXC Softswitch!\n\nOur billing system can now be integrated with Telegram messenger via telegram bot. It can be used both for import and export commands, like Two-factor user authorization, balance alerts, monitoring stats notifications and many other cool stuff!\n\nPlease feel free to contact us for purchasing IXC Softswitch platform for your VoIP business!"
+    "en": {
+      "title": "IXC Telegram bot",
+      "content": "IXC Telegram bot is now available!\n\nWe are glad to introduce you new feature of IXC Softswitch!\n\nOur billing system can now be integrated with Telegram messenger via telegram bot. It can be used both for import and export commands, like Two-factor user authorization, balance alerts, monitoring stats notifications and many other cool stuff!\n\nPlease feel free to contact us for purchasing IXC Softswitch platform for your VoIP business!"
+    },
+    "ru": {
+      "title": "Telegram-бот IXC",
+      "content": "Telegram-бот IXC уже доступен!\n\nМы рады представить вам новую функцию IXC Softswitch!\n\nНашу биллинговую систему теперь можно интегрировать с мессенджером Telegram через Telegram-бот. Его можно использовать как для команд импорта, так и для экспорта, таких как двухфакторная авторизация пользователя, оповещения о балансе, мониторинг уведомлений о статистике и многие другие интересные вещи!\n\nПожалуйста, свяжитесь с нами для приобретения платформы IXC Softswitch для вашего VoIP-бизнеса!"
+    },
+    "uk": {
+      "title": "IXC Telegram бот",
+      "content": "Telegram-бот IXC тепер доступний!\n\nМи раді представити вам нову функцію IXC Softswitch!\n\nНашу білінгову систему тепер можна інтегрувати з месенджером Telegram за допомогою телеграм-бота. Його можна використовувати як для команд імпорту, так і для експорту, як-от двофакторна авторизація користувача, сповіщення про баланс, сповіщення про моніторинг статистики та багато інших цікавих речей!\n\nБудь ласка, не соромтеся звертатися до нас, щоб придбати платформу IXC Softswitch для вашого VoIP-бізнесу!"
+    }
   },
   {
-    "title": "Safe Routing with GSM termination!",
+    "slug": "safe-routing-gsm-termination",
     "date": "2021-04-23",
     "link": "https://interexc.com/safe-routing-gsm-termination",
     "image": "https://res2.weblium.site/res/5cc2b5b2688dc2002415d08c/6082bf72bfd1950022f1d300_optimized_1396_c1396x930-0x0",
     "local_image": "/news/news_19.jpg",
-    "slug": "safe-routing-gsm-termination",
-    "content": "Safe Routing with GSM termination!\n\nHow many times your clients complained about \"dead call\" when they receive SIP 503 after SIP 183? How many tickets they raised?\n\nThat fake SIP 183 is coming from the GSM Gateway as a response on call INVITE, then if GSM can not handle that call the GW will release SIP 503.\n\nYour client will be unable to re-route such call to another provider/supplier as hunting/routing stopped once SIP 183 received.\n\nWe have a solution for that! Our new feature makes Safe Routing, it can delay SIP 183 and release it to client only if call can be handled by GSM side, otherwise we pass SIP 503 (without SIP 183) to let your client make re-routing further.\n\nLet the call be alive! Contact us to get latest IXC Softswitch release."
+    "en": {
+      "title": "Safe Routing with GSM termination!",
+      "content": "Safe Routing with GSM termination!\n\nHow many times your clients complained about \"dead call\" when they receive SIP 503 after SIP 183? How many tickets they raised?\n\nThat fake SIP 183 is coming from the GSM Gateway as a response on call INVITE, then if GSM can not handle that call the GW will release SIP 503.\n\nYour client will be unable to re-route such call to another provider/supplier as hunting/routing stopped once SIP 183 received.\n\nWe have a solution for that! Our new feature makes Safe Routing, it can delay SIP 183 and release it to client only if call can be handled by GSM side, otherwise we pass SIP 503 (without SIP 183) to let your client make re-routing further.\n\nLet the call be alive! Contact us to get latest IXC Softswitch release."
+    },
+    "ru": {
+      "title": "Безопасная маршрутизация с GSM терминацией!",
+      "content": "Безопасная маршрутизация с GSM терминацией!\n\nСколько раз ваши клиенты жаловались на «мертвый вызов», когда они получали SIP 503 после SIP 183? Сколько билетов они собрали?\n\nЭтот поддельный SIP 183 поступает от шлюза GSM в ответ на вызов INVITE, затем, если GSM не может обработать этот вызов, шлюз GW высвободит SIP 503.\n\nВаш клиент не сможет перенаправить такой вызов другому провайдеру/поставщику, поскольку поиск/маршрутизация прекращается после получения SIP 183.\n\nУ нас есть решение для этой проблемы! Наша новая функция обеспечивает безопасную маршрутизацию. Она может задерживать SIP 183 и передавать его клиенту только в том случае, если вызов может быть обработан со стороны GSM, в противном случае мы передаем SIP 503 (без SIP 183), чтобы позволить вашему клиенту выполнить дальнейшую перемаршрутизацию.\n\nПусть звонок будет живым! Свяжитесь с нами, чтобы получить последнюю версию IXC Softswitch."
+    },
+    "uk": {
+      "title": "Безпечна маршрутизація з термінацією GSM!",
+      "content": "Безпечна маршрутизація з термінацією GSM!\n\nСкільки разів ваші клієнти скаржилися на \"мертвий виклик\", коли вони отримують SIP 503 після SIP 183? Скільки квитків зібрали?\n\nЦей фальшивий SIP 183 надходить від шлюзу GSM як відповідь на виклик INVITE, тоді, якщо GSM не зможе обробити цей виклик, GW видасть SIP 503.\n\nВаш клієнт не зможе перенаправити такий дзвінок до іншого провайдера/постачальника, оскільки пошук/маршрутизація зупинена після отримання SIP 183.\n\nУ нас є для цього рішення! Наша нова функція забезпечує безпечну маршрутизацію, вона може затримувати SIP 183 і передавати його клієнту, лише якщо виклик може бути оброблений стороною GSM, інакше ми передаємо SIP 503 (без SIP 183), щоб ваш клієнт міг перемаршрутизувати далі.\n\nХай живе поклик! Зв’яжіться з нами, щоб отримати останню версію IXC Softswitch."
+    }
   },
   {
-    "title": "Get .pcap of any call!",
+    "slug": "pcap-of-any-call",
     "date": "2021-02-15",
     "link": "https://interexc.com/pcap-of-any-call",
     "image": "https://res2.weblium.site/res/5cc2b5b2688dc2002415d08c/602a396a232a49002105aa9c_optimized_1408_c1408x786-0x0",
     "local_image": "/news/news_20.jpg",
-    "slug": "pcap-of-any-call",
-    "content": "Get .pcap of any call!\n\nIn latest IXC Softswitch release we added option to get .pcap of any call with simple click! This feature is very useful in terms of call troubleshooting and debug. Contact us to get an update!"
+    "en": {
+      "title": "Get .pcap of any call!",
+      "content": "Get .pcap of any call!\n\nIn latest IXC Softswitch release we added option to get .pcap of any call with simple click! This feature is very useful in terms of call troubleshooting and debug. Contact us to get an update!"
+    },
+    "ru": {
+      "title": "Получите .pcap любого звонка!",
+      "content": "Получите .pcap любого звонка!\n\nВ последней версии IXC Softswitch мы добавили возможность получать .pcap любого вызова простым щелчком мыши! Эта функция очень полезна с точки зрения устранения неполадок и отладки вызовов. Свяжитесь с нами, чтобы получить обновления!"
+    },
+    "uk": {
+      "title": "Отримайте .pcap будь-якого дзвінка!",
+      "content": "Отримайте .pcap будь-якого дзвінка!\n\nВ останньому випуску IXC Softswitch ми додали можливість отримати .pcap будь-якого виклику простим клацанням! Ця функція дуже корисна для усунення несправностей викликів і налагодження. Зв’яжіться з нами, щоб отримати оновлення!"
+    }
   },
   {
-    "title": "Keep your system clean",
+    "slug": "keep-your-system-clean",
     "date": "2020-08-13",
     "link": "https://interexc.com/keep-your-system-clean",
     "image": "https://res2.weblium.site/res/5cc2b5b2688dc2002415d08c/5f354e828d08e90021e1c82f_optimized_1019_c1019x675-0x0",
     "local_image": "/news/news_21.jpg",
-    "slug": "keep-your-system-clean",
-    "content": "Keep your system clean\n\nNow its easy to keep your system clean for optimal performance! We added new function which allows system automatically delete old unused rates to save your time. Manage your workflow more efficiently with IXC Softswitch!"
+    "en": {
+      "title": "Keep your system clean",
+      "content": "Keep your system clean\n\nNow its easy to keep your system clean for optimal performance! We added new function which allows system automatically delete old unused rates to save your time. Manage your workflow more efficiently with IXC Softswitch!"
+    },
+    "ru": {
+      "title": "Держите вашу систему в чистоте",
+      "content": "Держите вашу систему в чистоте\n\nТеперь поддерживать чистоту вашей системы для достижения оптимальной производительности легко! Мы добавили новую функцию, которая позволяет системе автоматически удалять старые неиспользованные тарифы, чтобы сэкономить ваше время. Управляйте своим рабочим процессом более эффективно с помощью IXC Softswitch!"
+    },
+    "uk": {
+      "title": "Тримайте свою систему в чистоті",
+      "content": "Тримайте свою систему в чистоті\n\nТепер легко підтримувати систему в чистоті для оптимальної продуктивності! Ми додали нову функцію, яка дозволяє системі автоматично видаляти старі невикористані тарифи, щоб заощадити ваш час. Керуйте робочим процесом ефективніше за допомогою IXC Softswitch!"
+    }
   },
   {
-    "title": "Media IP address added to CDR info!",
+    "slug": "media-ip-added-to-cdr",
     "date": "2020-06-12",
     "link": "https://interexc.com/media-ip-added-to-cdr",
     "image": "https://res2.weblium.site/res/5cc2b5b2688dc2002415d08c/5ee36eadb94ace0021355a81_optimized_1687_c1687x769-0x0",
     "local_image": "/news/news_22.jpg",
-    "slug": "media-ip-added-to-cdr",
-    "content": "Media IP address added to CDR info!\n\nWe added new option so you check media IP address of originator or terminator in the CDRs!"
+    "en": {
+      "title": "Media IP address added to CDR info!",
+      "content": "Media IP address added to CDR info!\n\nWe added new option so you check media IP address of originator or terminator in the CDRs!"
+    },
+    "ru": {
+      "title": "IP-адрес носителя добавлен в информацию о CDR!",
+      "content": "IP-адрес носителя добавлен в информацию о CDR!\n\nМы добавили новую опцию, позволяющую проверять IP-адрес носителя инициатора или терминатора в CDR!"
+    },
+    "uk": {
+      "title": "IP-адресу носія додано до інформації CDR!",
+      "content": "IP-адресу носія додано до інформації CDR!\n\nМи додали нову опцію, щоб ви перевіряли IP-адресу джерела або кінцевика в CDR!"
+    }
   },
   {
-    "title": "Your company logo in rate notifications!",
+    "slug": "company-logo-in-rn",
     "date": "2020-05-20",
     "link": "https://interexc.com/company-logo-in-rn",
     "image": "https://res2.weblium.site/res/5cc2b5b2688dc2002415d08c/5e824a9ef89f6c00234fa6d8_optimized",
     "local_image": "/news/news_23.jpg",
-    "slug": "company-logo-in-rn",
-    "content": "Add your logo to RN!\n\nNow we have an option to place your company logo in rate notification! Get latest IXC Softswitch release!"
+    "en": {
+      "title": "Your company logo in rate notifications!",
+      "content": "Add your logo to RN!\n\nNow we have an option to place your company logo in rate notification! Get latest IXC Softswitch release!"
+    },
+    "ru": {
+      "title": "Логотип вашей компании в уведомлениях о тарифах!",
+      "content": "Добавьте свой логотип в RN!\n\nТеперь у нас есть возможность разместить логотип вашей компании в уведомлении о тарифах! Получите последнюю версию IXC Softswitch!"
+    },
+    "uk": {
+      "title": "Логотип вашої компанії в тарифних повідомленнях!",
+      "content": "Додайте свій логотип до RN!\n\nТепер у нас є можливість розмістити логотип вашої компанії в повідомленні про тарифи! Отримайте останню версію IXC Softswitch!"
+    }
   },
   {
-    "title": "How to get SIP trace from IXC Softswtich",
+    "slug": "sip-trace-from-web-1",
     "date": "2020-01-13",
     "link": "https://interexc.com/sip-trace-from-web-1",
     "image": "https://res2.weblium.site/res/5ce3f865b84b1a002410e88e/5cfe563efd026b0023448d3f_optimized_1766",
     "local_image": "/news/news_24.jpg",
-    "slug": "sip-trace-from-web-1",
-    "content": "Check out our new video of getting SIP trace from the web\n\nIn this video you will find how to get SIP trace from the web."
+    "en": {
+      "title": "How to get SIP trace from IXC Softswtich",
+      "content": "Check out our new video of getting SIP trace from the web\n\nIn this video you will find how to get SIP trace from the web."
+    },
+    "ru": {
+      "title": "Как получить трассировку SIP от IXC Softswtich",
+      "content": "Посмотрите наше новое видео о получении трассировки SIP из Интернета.\n\nВ этом видео вы узнаете, как получить трассировку SIP из Интернета."
+    },
+    "uk": {
+      "title": "Як отримати трасування SIP від ​​IXC Softswtich",
+      "content": "Перегляньте наше нове відео про отримання трасування SIP з Інтернету\n\nУ цьому відео ви дізнаєтеся, як отримати трасування SIP з Інтернету."
+    }
   },
   {
-    "title": "Meet IXC at ITW 2019",
+    "slug": "meet-ixc-at-itw-2019",
     "date": "2019-06-10",
     "link": "https://interexc.com/meet-ixc-at-itw-2019",
     "image": "https://res2.weblium.site/res/5ce3f865b84b1a002410e88e/5cfe563efd026b0023448d3f_optimized_1766",
     "local_image": "/news/news_0.jpg",
-    "slug": "meet-ixc-at-itw-2019",
-    "content": "Meet IXC at ITW 2019\n\nWhich is taking place at the Hyatt Regency and Marriott Marquis hotels on June 23-26, 2019. At Marriot Marquis, Marquis Ballroom, Table number M-B7025."
+    "en": {
+      "title": "Meet IXC at ITW 2019",
+      "content": "Meet IXC at ITW 2019\n\nWhich is taking place at the Hyatt Regency and Marriott Marquis hotels on June 23-26, 2019. At Marriot Marquis, Marquis Ballroom, Table number M-B7025."
+    },
+    "ru": {
+      "title": "Встречайте IXC на ITW 2019",
+      "content": "Встречайте IXC на ITW 2019\n\nКоторая проходит в отелях Hyatt Regency и Marriott Marquis 23-26 июня 2019 года. В Marriot Marquis, Marquis Ballroom, Стол номер M-B7025."
+    },
+    "uk": {
+      "title": "Зустрічайте IXC на ITW 2019",
+      "content": "Зустрічайте IXC на ITW 2019\n\nЯкий відбудеться в готелях Hyatt Regency та Marriott Marquis 23-26 червня 2019 року. У Marriot Marquis, Marquis Ballroom, номер столу M-B7025."
+    }
   },
   {
-    "title": "IXC Softswitch 5.7.1 released!",
+    "slug": "ixc-softswitch-5-7-1-released",
     "date": "2019-05-15",
     "link": "https://interexc.com/ixc-softswitch-5-7-1-released",
     "image": "https://res2.weblium.site/res/5ce3f865b84b1a002410e88e/5cfe5641473aa80023f3e067_optimized_1564",
     "local_image": "/news/news_1.jpg",
-    "slug": "ixc-softswitch-5-7-1-released",
-    "content": "IXC Softswitch 5.7.1 released!\n\nNew design of main page, new improved web engine, new options and google API support!"
+    "en": {
+      "title": "IXC Softswitch 5.7.1 released!",
+      "content": "IXC Softswitch 5.7.1 released!\n\nNew design of main page, new improved web engine, new options and google API support!"
+    },
+    "ru": {
+      "title": "Выпущена версия IXC Softswitch 5.7.1!",
+      "content": "Выпущена версия IXC Softswitch 5.7.1!\n\nНовый дизайн главной страницы, новый улучшенный веб-движок, новые опции и поддержка Google API!"
+    },
+    "uk": {
+      "title": "IXC Softswitch 5.7.1 випущено!",
+      "content": "IXC Softswitch 5.7.1 випущено!\n\nНовий дизайн головної сторінки, новий вдосконалений веб-движок, нові опції та підтримка google API!"
+    }
   },
   {
-    "title": "White/black list module improved!",
+    "slug": "white-black-list-module-imporved",
     "date": "2019-04-12",
     "link": "https://interexc.com/white-black-list-module-imporved",
     "image": "https://res2.weblium.site/res/5ce3f865b84b1a002410e88e/5cfe563c9e6fb20023cdcc9b_optimized_688_c688x383-0x0",
     "local_image": "/news/news_2.jpg",
-    "slug": "white-black-list-module-imporved",
-    "content": "White/black list module imporved!\n\nNow  you can create white/black list profiles and assign them to terminators accordingly. It's also applied to CLI/ANI numbers!"
+    "en": {
+      "title": "White/black list module improved!",
+      "content": "White/black list module imporved!\n\nNow  you can create white/black list profiles and assign them to terminators accordingly. It's also applied to CLI/ANI numbers!"
+    },
+    "ru": {
+      "title": "Улучшен модуль белого/черного списка!",
+      "content": "Улучшен модуль белого/черного списка!\n\nТеперь вы можете создавать профили белых/черных списков и соответствующим образом назначать их терминаторам. Это также применимо к номерам CLI/ANI!"
+    },
+    "uk": {
+      "title": "Покращено модуль білого/чорного списку!",
+      "content": "Покращено модуль білого/чорного списку!\n\nТепер ви можете створювати профілі білого/чорного списків і відповідним чином призначати їх термінаторам. Це також застосовується до номерів CLI/ANI!"
+    }
   }
 ]

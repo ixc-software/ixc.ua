@@ -13,7 +13,7 @@ export const Team: React.FC = () => {
 
       <div className="glass" style={{ padding: '2rem', display: 'flex', flexWrap: 'wrap', gap: '2rem', alignItems: 'center', borderRadius: '16px' }}>
         <img 
-          src="/founder.jpeg" 
+          src={`${import.meta.env.BASE_URL}founder.jpeg`} 
           alt="Oleksii Vinogradov" 
           style={{ 
             width: '150px', 

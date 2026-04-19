@@ -17,7 +17,7 @@ export const Header: React.FC = () => {
     <header className="header glass">
       <div className="container header-content">
         <Link to="/" className="logo" style={{ display: 'flex', alignItems: 'center', gap: '12px', textDecoration: 'none' }}>
-          <img src="/logo.png" alt="IXC Softswitch Logo" style={{ height: '40px', width: 'auto', borderRadius: '8px' }} />
+          <img src={`${import.meta.env.BASE_URL}logo.png`} alt="IXC Softswitch Logo" style={{ height: '40px', width: 'auto', borderRadius: '8px' }} />
           <h2>IXC Softswitch</h2>
         </Link>
         
