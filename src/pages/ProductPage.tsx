@@ -3,6 +3,7 @@ import {
   Server, Shield, Activity, Bot, MessageSquare, Code,
   ArrowRight, CheckCircle2, ArrowLeft
 } from 'lucide-react';
+import { useLanguage } from '../i18n/LanguageProvider';
 
 interface ProductData {
   slug: string;
@@ -130,6 +131,7 @@ const products: ProductData[] = [
 
 export const ProductPage = () => {
   const { slug } = useParams<{ slug: string }>();
+  const { t } = useLanguage();
   const product = products.find(p => p.slug === slug);
 
   if (!product) {
@@ -137,10 +139,10 @@ export const ProductPage = () => {
       <div className="page-content">
         <section className="page-hero">
           <div className="container" style={{ textAlign: 'center' }}>
-            <h1>Product Not Found</h1>
-            <p className="page-hero-subtitle">The product you're looking for doesn't exist.</p>
+            <h1>{t.productPage.notFoundTitle}</h1>
+            <p className="page-hero-subtitle">{t.productPage.notFoundText}</p>
             <Link to="/" className="btn btn-primary" style={{ marginTop: '2rem' }}>
-              <ArrowLeft size={18} /> Back to Home
+              <ArrowLeft size={18} /> {t.productPage.backHome}
             </Link>
           </div>
         </section>
@@ -159,7 +161,7 @@ export const ProductPage = () => {
       <section className="page-hero">
         <div className="container">
           <p className="page-breadcrumb">
-            <Link to="/">Home</Link> / <Link to="/#products">Products</Link> / {product.title}
+            <Link to="/">{t.nav.home}</Link> / <Link to="/#products">{t.nav.products}</Link> / {product.title}
           </p>
           <div className="product-hero-layout">
             <div className="product-hero-icon glass">
@@ -177,20 +179,20 @@ export const ProductPage = () => {
       <section className="section container">
         <div className="product-detail-grid">
           <div className="product-description">
-            <h2>Overview</h2>
+            <h2>{t.productPage.overview}</h2>
             <p>{product.description}</p>
             <div style={{ display: 'flex', gap: '1rem', marginTop: '2rem', flexWrap: 'wrap' }}>
               <a href="mailto:sales@ixc.ua" className="btn btn-primary">
-                Request a Demo <ArrowRight size={18} />
+                {t.productPage.requestDemo} <ArrowRight size={18} />
               </a>
               <a href="mailto:sales@ixc.ua" className="btn btn-outline">
-                Contact Sales
+                {t.productPage.contactSales}
               </a>
             </div>
           </div>
 
           <div className="product-features glass">
-            <h3>Key Features</h3>
+            <h3>{t.productPage.keyFeatures}</h3>
             <ul className="feature-list">
               {product.features.map((f, i) => (
                 <li key={i}>
@@ -210,7 +212,7 @@ export const ProductPage = () => {
             <Link to={`/products/${prevProduct.slug}`} className="product-nav-link glass">
               <ArrowLeft size={18} />
               <div>
-                <span className="product-nav-label">Previous</span>
+                <span className="product-nav-label">{t.productPage.previous}</span>
                 <span className="product-nav-title">{prevProduct.title}</span>
               </div>
             </Link>
@@ -218,7 +220,7 @@ export const ProductPage = () => {
           {nextProduct ? (
             <Link to={`/products/${nextProduct.slug}`} className="product-nav-link product-nav-next glass">
               <div>
-                <span className="product-nav-label">Next</span>
+                <span className="product-nav-label">{t.productPage.next}</span>
                 <span className="product-nav-title">{nextProduct.title}</span>
               </div>
               <ArrowRight size={18} />

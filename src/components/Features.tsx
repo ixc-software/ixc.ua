@@ -5,6 +5,7 @@ import {
   Upload, Activity, Route, UserCircle, Beaker,
   Database, Headphones
 } from 'lucide-react';
+import { useLanguage } from '../i18n/LanguageProvider';
 
 const features = [
   {
@@ -105,25 +106,29 @@ const features = [
 ];
 
 export const Features: React.FC = () => {
+  const { t } = useLanguage();
   return (
-    <section id="features" className="section container">
+    <section id="features" className="section container section-glow section-glow-left">
       <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-        <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>Platform Features</h2>
+        <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>{t.features.title}</h2>
         <p style={{ color: 'var(--text-secondary)', maxWidth: '650px', margin: '0 auto' }}>
-          A comprehensive set of capabilities engineered for the demands of modern wholesale and retail VoIP operations.
+          {t.features.subtitle}
         </p>
       </div>
 
       <div className="features-grid">
-        {features.map((f, i) => (
+        {features.map((f, i) => {
+          const item = t.features.items[i];
+          return (
           <div key={i} className="feature-card glass">
             <div className="feature-card-icon">{f.icon}</div>
             <div>
-              <h4>{f.title}</h4>
-              <p>{f.desc}</p>
+              <h4>{item?.title || f.title}</h4>
+              <p>{item?.desc || f.desc}</p>
             </div>
           </div>
-        ))}
+          );
+        })}
       </div>
     </section>
   );

@@ -4,14 +4,17 @@ import { BrowserRouter } from 'react-router-dom'
 import './index.css'
 import App from './App.tsx'
 import { ThemeProvider } from './ThemeProvider.tsx'
+import { LanguageProvider } from './i18n/LanguageProvider.tsx'
 
 const container = document.getElementById('root')!
 const app = (
   <StrictMode>
     <ThemeProvider>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
+      <LanguageProvider>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </LanguageProvider>
     </ThemeProvider>
   </StrictMode>
 )

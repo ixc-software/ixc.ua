@@ -8,6 +8,8 @@ const toAbsolute = (p) => path.resolve(__dirname, p)
 const template = fs.readFileSync(toAbsolute('dist/index.html'), 'utf-8')
 const { render } = await import('./dist/server/entry-server.js')
 
+import newsData from './src/newsData.json' assert { type: 'json' }
+
 // Routes to prerender for SEO
 const routes = [
   '/',
@@ -18,6 +20,7 @@ const routes = [
   '/products/ixc-autotester',
   '/products/sms-platform',
   '/products/google-api',
+  ...newsData.map(n => `/news/${n.slug}`)
 ]
 
 for (const route of routes) {

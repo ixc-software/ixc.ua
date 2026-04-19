@@ -1,0 +1,227 @@
+[
+  {
+    "title": "Daily minutes in RT and TD",
+    "date": "2026-03-12",
+    "link": "https://interexc.com/daily-minutes",
+    "image": "https://res2.weblium.site/res/5cc2b5b2688dc2002415d08c/69b29aa185d4ea9f245cb1d0_optimized_1602_c1602x674-0x0",
+    "local_image": "/news/news_3.jpg",
+    "slug": "daily-minutes",
+    "content": "Daily Minutes Statistics in Route Tables and Traffic Distribution Rules\n\nWe have introduced a new monitoring feature in IXC Softswitch that allows operators to see daily traffic volume (in minutes) directly within the routing interface.\n\nThis update improves visibility of routing performance and helps operators quickly evaluate how traffic is distributed across routes and terminators.\n\nDaily Minutes in Route Tables\n\nThe Route Tables main page now displays the total number of minutes routed during the current day for each route table. This allows administrators to instantly identify which routing configurations are actively carrying traffic.\n\nInside each Route Table, the system now shows daily minutes per route and terminator, making it easier to analyze traffic distribution and determine which vendors or destinations are handling the most traffic.\n\nThis information is updated automatically throughout the day and reflects real routing activity.\n\nDaily Minutes in Traffic Distribution Rules\n\nThe same statistics have also been added to Traffic Distribution Rules.\n\nOperators can now view the daily routed minutes for each rule, providing immediate insight into how traffic is being balanced between available routes.\n\nBenefits\n\nThis feature provides several operational advantages:\n\n\u2022 Quick visibility of active routes and vendors\n\n\u2022 Easier troubleshooting of routing decisions\n\n\u2022 Better monitoring of traffic distribution\n\n\u2022 Faster verification of routing changes\n\n\u2022 Improved operational awareness without running reports\n\nAvailable Immediately\n\nThe Daily Minutes statistics are now available in the latest version of IXC Softswitch and require no additional configuration."
+  },
+  {
+    "title": "Anum/Bnum routing improvements",
+    "date": "2025-11-17",
+    "link": "https://interexc.com/anum-bnum-routing",
+    "image": "https://res2.weblium.site/res/5cc2b5b2688dc2002415d08c/691b33c1d084bfa3a510e1b3_optimized_1731_c1731x503-0x0",
+    "local_image": "/news/news_4.jpg",
+    "slug": "anum-bnum-routing",
+    "content": "Anum/Bnum routing improvements\n\nWe\u2019ve redesigned the A-number/B-number routing so it\u2019s simpler and more flexible. Since IXC Softswitch 6.1.7, you don\u2019t need separate \u201cspecial\u201d trunks or prefix-pair manipulation to apply different routes, perform A-number translations, or assign tariff plans by origin or destination country. Everything is now managed from one page in the main trunk settings - fewer objects to maintain, faster changes, and a cleaner topology."
+  },
+  {
+    "title": "IXC Softswitch New Release",
+    "date": "2025-08-30",
+    "link": "https://interexc.com/ixc-softswitch-6-1-6",
+    "image": "https://res2.weblium.site/res/5cc2b5b2688dc2002415d08c/68ef6fc72e683f8e225c8168_optimized_710_c710x309-0x0",
+    "local_image": "/news/news_5.jpg",
+    "slug": "ixc-softswitch-6-1-6",
+    "content": "IXC Softswitch 6.1.6\n\nThis release rolls up everything since 6.1.5 into a single update. It brings faster CDR processing, richer analytics, stronger routing controls, and many UX improvements.\n\nPerformance &amp; Reliability:\n\nSignificant speed-up in CDR converters and Terminators list loading (5232).\n\nCall path output optimized under heavy reporting load (5150).\n\nCDRs &amp; Call Views:\n\nDisconnect reason in CDRs (4701).\n\nIDs and corresponding IDs added to CDR File/Excel exports (5123).\n\nOriginator/Terminator name shown in calls even without \u201cshow operator\u201d (5134).\n\nSearch CDRs by multiple\n\nbnumber LIKE\n\nmasks (5174).\n\nCDR templates per user (5135).\n\nOutput format/alignment improvements in Originator/Terminator Calls &amp; Traffic Flow Report (5126).\n\nReports &amp; Analytics:\n\nCodes count displayed in Destinations and Route Table (5118).\n\nDisconnect Causes Report:\n\n\u201cLast 20 rejected calls by CPS limit\u201d (5147).\n\nNew \u201crejected by anumber/prefix\u201d type (5178).\n\nOriginator Calls now include rejected by anumber/prefix (5184).\n\nTraffic Flow Report (TFR):\n\nConfigurable rounding for charge/outcost, independent of invoice data (5169).\n\nOption to show only profit &amp; reverse price based on user settings (5167).\n\nProfit Dynamics handles negative values correctly (fix 5221).\n\nRouting &amp; Access Control:\n\nMulti-select terminators and destinations when adding route rules (5129).\n\nAccess Lists:\n\nShow how many numbers were auto-added.\n\nNow applicable to Originators (5219).\n\nRate Management &amp; Notifications:\n\nRate notification previews before sending (5175, 5183).\n\nFormatting controls: font, size, font color, header color (5084).\n\nAdd a custom text block into XLS before rates (5185).\n\nOption to delete codes from customer/vendor rates when removed from Countries (5235).\n\nSupport x/x/x billing increment format with smart/auto upload (5200).\n\nBills:\n\nredesign, new features, and automatic bill generation (5206).\n\nTelegram Tools:\n\nRefill customer balance and reopen Originators (5124).\n\nAccept/reject immediate increases from rate auto-import (5125).\n\nUI/UX &amp; Configuration:\n\nPer-user color templates for calls and TFR (5127) with easier assignment (5186).\n\nNotes on Originators and Terminators.\n\nShow Route Table name in the Build Rules tab (5209).\n\nTemplates, currencies, interfaces moved under System Configuration (5188).\n\nCustomer Portal cosmetic improvements (5190).\n\nMailing tool:\n\nset your own From address (5216).\n\nImport/Export:\n\nExport Originator addresses to Excel (5139).\n\nBug Fixes:\n\n5138 \u2013 IP validation too slow on large Originator Address lists.\n\n5142 \u2013 Single quote in display-name caused CDR insert errors.\n\n5180 \u2013 Missing ACK on 487 for some calls.\n\n5221 \u2013 Profit not shown when negative values present in Profit Dynamics.\n\n5224 \u2013 Customer balance could briefly become 0 when modifying the last payment amount.\n\nUpgrade to 6.1.6 to get all features and fixes above in one package. If you\u2019d like this text adapted to your site\u2019s house style (short/long version, bullets vs. prose), say the word and I\u2019ll format it accordingly."
+  },
+  {
+    "title": "Telegram bot new features",
+    "date": "2025-07-12",
+    "link": "https://interexc.com/ixc-telegram-credit-add",
+    "image": "https://res2.weblium.site/res/5cc2b5b2688dc2002415d08c/687502175044aa5677f5def2_optimized_641_c641x186-0x0",
+    "local_image": "/news/news_6.jpg",
+    "slug": "ixc-telegram-credit-add",
+    "content": "New Feature: Balance Limit Alerts &amp; Manual Top-Up via Telegram Bot\n\nWe\u2019re pleased to announce a powerful new feature in IXC Softswitch \u2014 integration with Telegram Bot for real-time balance monitoring and manual credit top-ups.\n\n\ud83d\udd14 What it does:\n\nWhen a customer\u2019s account is automatically blocked due to reaching the balance limit, the Telegram bot immediately notifies the softswitch administrator or operator. Right from the chat, the admin is given an option to:\n\n\ud83d\udd39 View customer details\n\n\ud83d\udd39 Check the reason for block\n\n\ud83d\udd39 Manually assign additional credit\n\n\ud83d\udd39 Unblock the customer with one click\n\nThis eliminates the need to log in to the admin interface or react to complaints \u2014 the entire process can be handled on the go via Telegram.\n\n\u2705 Key Benefits:\n\nInstant response to credit-related service blocks.\n\nMinimizes downtime for valuable customers.\n\nEmpowers operators to manage customer balances on-the-fly.\n\nFully logged and auditable within IXC Softswitch.\n\nWhether you're managing dozens or thousands of customers, this feature brings real-time visibility and operational efficiency right to your mobile de\n\nvice."
+  },
+  {
+    "title": "IXC Softswitch New Release!",
+    "date": "2025-05-12",
+    "link": "https://interexc.com/ixc-softswitch-6.1.4",
+    "image": "https://res2.weblium.site/res/5cc2b5b2688dc2002415d08c/682b2dfecae892434e34ea58_optimized_687_c687x298-0x0",
+    "local_image": "/news/news_7.jpg",
+    "slug": "ixc-softswitch-6.1.4",
+    "content": "IXC Softswitch 6.1.4\n\nIXC Softswitch 6.1.4 Released \u2014 Major Performance Upgrades, Smarter Call Management, and UX Improvements\n\nWe're proud to introduce IXC Softswitch 6.1.4, a powerful update packed with performance boosts, new call control features, deeper analytics, and a smoother, more intuitive interface. This version builds significantly on prior releases to offer a faster, smarter, and more user-friendly experience.\n\n\ud83d\ude80 Performance &amp; System Enhancements\n\n10x Faster Configuration Reloads \u2014 Optimized backend eliminates fast/full reload triggers for much quicker reload times.\n\nLive CDR Auto-refresh \u2014 Whole Discreteness CDRs now support real-time updating.\n\nCPS Limiter \u2014 Real-time Calls Per Second counters and limiters on originating IPs prevent overload and maintain system stability.\n\n\ud83d\udcde Call Handling Improvements\n\nCall Repeat Timeout \u2014 Prevents repeated attempts to unreachable terminators, saving system resources.\n\nRouting History in CDRs \u2014 See which terminators were tried and rejected, plus originator name in terminator reports.\n\nDisplay-Name as Anumber \u2014 Anumber in reports now reflects th\n\ne Fro\n\nm: header for more accurate call tracking.\n\nRing Time Visibility \u2014 Ring time is now shown in CDRs and call paths for more granular call analysis.\n\nSIP Checks in Call Path \u2014 New diagnostics to help with SIP signaling flow transparency.\n\n\ud83d\udcca Reporting &amp; Analytics\n\nDetailed Call Path Stats \u2014 See ASR, ACD, length, and last 10 call history per destination/terminator.\n\nCross-linked Call Views \u2014 Jump between originator/terminator views of the same call.\n\nInvoice &amp; Traffic Report Precision \u2014 Adjustable decimal rounding for cost and charge display.\n\nRouting Position in CDR Templates \u2014 Know exactly where the call was in the routing chain.\n\nCountry Filter in Current Routes \u2014 Easier targeting and filtering by geographic location.\n\n\ud83c\udf10 Web Interface &amp; Usability Upgrades\n\nDark/Light Theme Support \u2014 Optional per-user setting or automatic based on OS.\n\nVisual Tweaks:\n\nLarger fonts in menu for better readability.\n\nGray and dashed rows for zero-duration calls.\n\nCleaner color layouts in traffic reports.\n\nMain Page Additions:\n\n\"Balance Running Out\" alert.\n\nTop daily traffic (in/out/total) in USD.\n\nSmart Drop-down Lists \u2014 Originator/terminator fields show rule counts and turn red if empty.\n\nQuick Links &amp; Navigation:\n\nDirect links to originators from call path.\n\nCDRs now include softswitch IP and user roles.\n\nBrowser tab now shows opened menu title.\n\n\ud83d\udd27 Tools, Filters &amp; Controls\n\nAdvanced Search Filters \u2014 Use *, =, and multiple masks for more powerful filtering.\n\nEditable Access Lists \u2014 Modify number/record entries on the fly.\n\n\"incr60\" Rate Filter \u2014 Search by increments for rate management.\n\nForm Visibility Controls \u2014 Toggle form display in reports for cleaner views.\n\nAuto Theme Sync \u2014 Interface theme follows OS light/dark mode.\n\nCommitment Data Refresh \u2014 Option to refill past data in changed commitments.\n\n\ud83d\udee0\ufe0f Bug Fixes &amp; Stability Improvements\n\nCall Linking &amp; Duplication Fixes:\n\nResolved call linking issues when customers resend calls with the same call ID.\n\nFixed wrong links for calls with the same timestamp and A/B numbers.\n\nCDR Export Fixes:\n\nCorrected Excel format issues.\n\nXLS/PDF export of selected invoices now functional.\n\nCall Handling Corrections:\n\nProper SIP 503 response to overflow CPS.\n\nFixed late connect responses and incorrect early BYEs.\n\nUI &amp; Logic Tweaks:\n\nFixed display of prices in future ratesheets via code manager.\n\nCleaned up temporary web files.\n\nImproved routing table stability for destinations with many codes.\n\n2FA issue in Telegram integration resolved.\n\nProfit calculation accuracy improved in reports.\n\nUpgrade Now to take advantage of the smarter, faster, and more insightful IXC Softswitch 6.1.4."
+  },
+  {
+    "title": "Access List Enhancement",
+    "date": "2024-10-20",
+    "link": "https://interexc.com/access-list-disconenct-codes",
+    "image": "https://res2.weblium.site/res/5cc2b5b2688dc2002415d08c/672263b506d97213d4b9a35e_optimized_1019_c1019x424-0x0",
+    "local_image": "/news/news_8.jpg",
+    "slug": "access-list-disconenct-codes",
+    "content": "Access List Enhancement\n\nThe IXC Access List module in IXC Softswitch has introduced an efficient new feature: the ability to automatically blacklist numbers based on disconnect codes.\n\nNow, apart from the duration and call counts triggers it is possible to specify the SIP disconnect code to search for when selecting the number to block by adding into the black list."
+  },
+  {
+    "title": "SIP loop detection",
+    "date": "2024-09-12",
+    "link": "https://interexc.com/sip-loop-detection",
+    "image": "https://res2.weblium.site/res/5cc2b5b2688dc2002415d08c/66ed7c8761d8dff3d16ebaa6_optimized_542_c542x292-0x0",
+    "local_image": "/news/news_9.jpg",
+    "slug": "sip-loop-detection",
+    "content": "SIP Loop Detection\n\nIXC Softswitch has introduced a new feature that enhances call management\u2014SIP Loop Detection.\n\nLoop calls occur when a call enters a loop within the SIP signaling network. Essentially, the same call is continuously routed between two or more devices/providers without being terminated, leading to network congestion, resource waste, and potential service degradation.\n\nIXC Softswitch\u2019s SIP Loop Detection feature automatically identifies calls that may be entering a loop and terminates them before they can cause harm to the network. This not only improves system performance but also enhances the quality of service provided to customers."
+  },
+  {
+    "title": "Last Price Change Feature",
+    "date": "2024-03-12",
+    "link": "https://interexc.com/last-price-change",
+    "image": "https://res2.weblium.site/res/5cc2b5b2688dc2002415d08c/663377103a02a0b0136f4a72_optimized_1367_c1367x820-0x0",
+    "local_image": "/news/news_10.jpg",
+    "slug": "last-price-change",
+    "content": "Last Price Change feature\n\nWe'are glad to introduce Last Price Changes Feature in IXC Softswitch: Enhancing Transparency and Control.\n\nYou will find a new report in main page - Last Customer Price Change and Last Vendor Price Change accordingly. These two reports will show you everything about latest changes in rates: who made those changes (username or auto-imported from email), how many rows affected, are there any conflicts like immediate increase/codes duplicates. Moreover, you can directly download the file which was used during the rates import/upload.\n\nLast Price Changes enhances transparency, accountability, and control in telecom pricing, reinforcing IXC Softswitch's commitment to empowering providers with advanced, user-centric solutions."
+  },
+  {
+    "title": "Data export to xls/pdf",
+    "date": "2023-12-15",
+    "link": "https://interexc.com/data-export-pdf-xls",
+    "image": "https://res2.weblium.site/res/5cc2b5b2688dc2002415d08c/65b9007619f99c000f25bec1_optimized_656_c656x452-0x0",
+    "local_image": "/news/news_11.jpg",
+    "slug": "data-export-pdf-xls",
+    "content": "Data Management with IXC Softswitch's New Export Feature\n\nWe're excited to announce a new addition to the IXC Softswitch \u2014 the ability to export on-screen data directly into Excel (XLS) or Portable Document Format (PDF). This feature puts users in control, offering a swift and efficient way to manage, share, and collaborate on critical information.\n\nEffortless Export\n\nNow, users can bid farewell to manual data transcription and screenshots. With just a few clicks, any data visible on the IXC Softswitch interface can be exported, saving time and eliminating the need for cumbersome processes.\n\nChoose Your Format\n\nWhether you need to perform further analysis in Excel or share information securely in PDF format, IXC Softswitch caters to your needs. The versatility of exporting options ensures compatibility with various user preferences and business requirements."
+  },
+  {
+    "title": "Caller number replacement",
+    "date": "2023-05-24",
+    "link": "https://interexc.com/anumber-replace",
+    "image": "https://res2.weblium.site/res/5cc2b5b2688dc2002415d08c/646dffc64dd68a000fee793a_optimized_900_c900x600-0x0",
+    "local_image": "/news/news_12.jpg",
+    "slug": "anumber-replace",
+    "content": "A- to B- Number replacement\n\nThe IXC Softswitch introduces a groundbreaking feature that replaces the original A-number with the B-number, revolutionizing communication processes. This new capability empowers businesses and individuals with enhanced control, flexibility, and security, opening up new possibilities for efficient and streamlined telecommunications.\n\nEnhanced Control and Flexibility:\n\nWith the A-to-B number replacement feature, users can redirect calls to specific destinations or alternative numbers, enabling seamless call routing and virtual number masking. This flexibility improves customer experience and facilitates intelligent call management for organizations with multiple locations or call centers.\n\nImproved Security and Privacy:\n\nBusinesses can enhance the security and privacy of their communication operations by masking the original A-number. Virtual number masking protects sensitive information, reduces the risk of fraud, and ensures consistent branding and identity.\n\nThe IXC Softswitch's A-to-B number replacement feature transforms communication by providing greater control, flexibility, and security. This innovative functionality allows businesses to optimize call routing, protect privacy, and improve customer experience, setting new standards for efficient telecommunications in the digital age."
+  },
+  {
+    "title": "Monitoring tool enhanced",
+    "date": "2023-02-24",
+    "link": "https://interexc.com/monitoring-tool-enhanced",
+    "image": "https://res2.weblium.site/res/5cc2b5b2688dc2002415d08c/63f8b5f5400748000c3e18d4_optimized_1160_c1160x485-0x0",
+    "local_image": "/news/news_13.jpg",
+    "slug": "monitoring-tool-enhanced",
+    "content": "IXC Monitoring Tool enhancements\n\nEnsuring consistent call quality is essential for any business that relies on VoIP communication. That's why we're proud to introduce our re-defined IXC Monitoring Tool, which offers a range of powerful features to help users monitor the quality of their calls.\n\nWith our new Monitoring Profiles feature, users can easily create customized monitoring profiles for each of their routes. They can set individual Email Patterns for each profile, which ensures that the right people are notified of any issues as soon as they arise. This feature provides users with greater flexibility and control over their monitoring process, making it easier to identify and address call quality issues before they become serious problems.\n\nIn addition to these enhancements, we've also added the PDD (Post Dial Delay) parameter to our monitoring tool. PDD is a key indicator of call quality, measuring the time it takes for a call to connect after the user has dialed. By monitoring this parameter, users can identify issues with their routes and take proactive steps to ensure consistent call quality.\n\nOur IXC Monitoring Tool has already helped countless businesses improve their call quality and enhance their VoIP communication. With these latest enhancements, we're confident that it will continue to be a valuable asset for anyone who relies on VoIP technology."
+  },
+  {
+    "title": "Dynamic graphs",
+    "date": "2022-12-20",
+    "link": "https://interexc.com/dynamic-graphs",
+    "image": "https://res2.weblium.site/res/5cc2b5b2688dc2002415d08c/63b6c04fa61d73000dc0e5e9_optimized_1092_c1092x800-0x0",
+    "local_image": "/news/news_14.jpg",
+    "slug": "dynamic-graphs",
+    "content": "Dynamic graphs\n\nNew Dymamic graphs of active calls allows you to get many kinds of data in one click.\n\nSupports zooming, grouping, exporting and many others  things.\n\nThese graphs available on per-customer basis as well which provide you a simple track of traffic volumes."
+  },
+  {
+    "title": "Email parser is now available!",
+    "date": "2022-06-29",
+    "link": "https://interexc.com/email-parser",
+    "image": "https://res2.weblium.site/res/5cc2b5b2688dc2002415d08c/62bc3f64a04cd4000d8a4549_optimized",
+    "local_image": "/news/news_15.jpg",
+    "slug": "email-parser",
+    "content": "Email parser is now available!\n\nAre you  tired from routine jobs during rates uploads?\n\nIXC Softswitch is now able to interconnect with your mail service provider  to parse incoming emails!\n\nEvery time when your supplier is sending  rate notification - IXC Softswitch will do everything for you.\n\nIt will parse that email, get the actual rates from attachment and upload it to billing accordingly.\n\nNow it is all fully automated so you will save a lot of time to grow and expand your business!"
+  },
+  {
+    "title": "Routing scenarios implemented!",
+    "date": "2022-04-15",
+    "link": "https://interexc.com/routing-scenarios",
+    "image": "https://res2.weblium.site/res/5cc2b5b2688dc2002415d08c/62948f19a68aa600225ce547_optimized_1432_c1432x618-0x0",
+    "local_image": "/news/news_16.jpg",
+    "slug": "routing-scenarios",
+    "content": "Routing scenarios implemented!\n\nWe added few more options in Route Table to make it even more flexible. You can now quickly enable/disable any route in Route Table with checkmark, and moreover - you have an option to set time-based Scenario to enable/disable some routes automatically on time schedule."
+  },
+  {
+    "title": "PDD measure re-defined!",
+    "date": "2022-01-12",
+    "link": "https://interexc.com/pdd-measure",
+    "image": "https://res2.weblium.site/res/5cc2b5b2688dc2002415d08c/61dee2295f52dc0023defc32_optimized_1000_c1000x500-0x0",
+    "local_image": "/news/news_17.jpg",
+    "slug": "pdd-measure",
+    "content": "PDD measure re-defined!\n\nWe are glad to inform that Post Dial Delay (PDD) measuring has been re-defined in IXC Softswitch.\n\nNow you can see non-zero PDD value even for rejected calls where 18x was not received at all.\n\nIt gives you benefit to easily track terminators who are holding a call for a long time without proper release."
+  },
+  {
+    "title": "IXC Telegram bot",
+    "date": "2021-09-30",
+    "link": "https://interexc.com/ixc-telegram-bot",
+    "image": "https://res2.weblium.site/res/5cc2b5b2688dc2002415d08c/61558c25da1874002234f9ac_optimized_690_c690x426-0x0",
+    "local_image": "/news/news_18.jpg",
+    "slug": "ixc-telegram-bot",
+    "content": "IXC Telegram bot is now available!\n\nWe are glad to introduce you new feature of IXC Softswitch!\n\nOur billing system can now be integrated with Telegram messenger via telegram bot. It can be used both for import and export commands, like Two-factor user authorization, balance alerts, monitoring stats notifications and many other cool stuff!\n\nPlease feel free to contact us for purchasing IXC Softswitch platform for your VoIP business!"
+  },
+  {
+    "title": "Safe Routing with GSM termination!",
+    "date": "2021-04-23",
+    "link": "https://interexc.com/safe-routing-gsm-termination",
+    "image": "https://res2.weblium.site/res/5cc2b5b2688dc2002415d08c/6082bf72bfd1950022f1d300_optimized_1396_c1396x930-0x0",
+    "local_image": "/news/news_19.jpg",
+    "slug": "safe-routing-gsm-termination",
+    "content": "Safe Routing with GSM termination!\n\nHow many times your clients complained about \"dead call\" when they receive SIP 503 after SIP 183? How many tickets they raised?\n\nThat fake SIP 183 is coming from the GSM Gateway as a response on call INVITE, then if GSM can not handle that call the GW will release SIP 503.\n\nYour client will be unable to re-route such call to another provider/supplier as hunting/routing stopped once SIP 183 received.\n\nWe have a solution for that! Our new feature makes Safe Routing, it can delay SIP 183 and release it to client only if call can be handled by GSM side, otherwise we pass SIP 503 (without SIP 183) to let your client make re-routing further.\n\nLet the call be alive! Contact us to get latest IXC Softswitch release."
+  },
+  {
+    "title": "Get .pcap of any call!",
+    "date": "2021-02-15",
+    "link": "https://interexc.com/pcap-of-any-call",
+    "image": "https://res2.weblium.site/res/5cc2b5b2688dc2002415d08c/602a396a232a49002105aa9c_optimized_1408_c1408x786-0x0",
+    "local_image": "/news/news_20.jpg",
+    "slug": "pcap-of-any-call",
+    "content": "Get .pcap of any call!\n\nIn latest IXC Softswitch release we added option to get .pcap of any call with simple click! This feature is very useful in terms of call troubleshooting and debug. Contact us to get an update!"
+  },
+  {
+    "title": "Keep your system clean",
+    "date": "2020-08-13",
+    "link": "https://interexc.com/keep-your-system-clean",
+    "image": "https://res2.weblium.site/res/5cc2b5b2688dc2002415d08c/5f354e828d08e90021e1c82f_optimized_1019_c1019x675-0x0",
+    "local_image": "/news/news_21.jpg",
+    "slug": "keep-your-system-clean",
+    "content": "Keep your system clean\n\nNow its easy to keep your system clean for optimal performance! We added new function which allows system automatically delete old unused rates to save your time. Manage your workflow more efficiently with IXC Softswitch!"
+  },
+  {
+    "title": "Media IP address added to CDR info!",
+    "date": "2020-06-12",
+    "link": "https://interexc.com/media-ip-added-to-cdr",
+    "image": "https://res2.weblium.site/res/5cc2b5b2688dc2002415d08c/5ee36eadb94ace0021355a81_optimized_1687_c1687x769-0x0",
+    "local_image": "/news/news_22.jpg",
+    "slug": "media-ip-added-to-cdr",
+    "content": "Media IP address added to CDR info!\n\nWe added new option so you check media IP address of originator or terminator in the CDRs!"
+  },
+  {
+    "title": "Your company logo in rate notifications!",
+    "date": "2020-05-20",
+    "link": "https://interexc.com/company-logo-in-rn",
+    "image": "https://res2.weblium.site/res/5cc2b5b2688dc2002415d08c/5e824a9ef89f6c00234fa6d8_optimized",
+    "local_image": "/news/news_23.jpg",
+    "slug": "company-logo-in-rn",
+    "content": "Add your logo to RN!\n\nNow we have an option to place your company logo in rate notification! Get latest IXC Softswitch release!"
+  },
+  {
+    "title": "How to get SIP trace from IXC Softswtich",
+    "date": "2020-01-13",
+    "link": "https://interexc.com/sip-trace-from-web-1",
+    "image": "https://res2.weblium.site/res/5ce3f865b84b1a002410e88e/5cfe563efd026b0023448d3f_optimized_1766",
+    "local_image": "/news/news_24.jpg",
+    "slug": "sip-trace-from-web-1",
+    "content": "Check out our new video of getting SIP trace from the web\n\nIn this video you will find how to get SIP trace from the web."
+  },
+  {
+    "title": "Meet IXC at ITW 2019",
+    "date": "2019-06-10",
+    "link": "https://interexc.com/meet-ixc-at-itw-2019",
+    "image": "https://res2.weblium.site/res/5ce3f865b84b1a002410e88e/5cfe563efd026b0023448d3f_optimized_1766",
+    "local_image": "/news/news_0.jpg",
+    "slug": "meet-ixc-at-itw-2019",
+    "content": "Meet IXC at ITW 2019\n\nWhich is taking place at the Hyatt Regency and Marriott Marquis hotels on June 23-26, 2019. At Marriot Marquis, Marquis Ballroom, Table number M-B7025."
+  },
+  {
+    "title": "IXC Softswitch 5.7.1 released!",
+    "date": "2019-05-15",
+    "link": "https://interexc.com/ixc-softswitch-5-7-1-released",
+    "image": "https://res2.weblium.site/res/5ce3f865b84b1a002410e88e/5cfe5641473aa80023f3e067_optimized_1564",
+    "local_image": "/news/news_1.jpg",
+    "slug": "ixc-softswitch-5-7-1-released",
+    "content": "IXC Softswitch 5.7.1 released!\n\nNew design of main page, new improved web engine, new options and google API support!"
+  },
+  {
+    "title": "White/black list module improved!",
+    "date": "2019-04-12",
+    "link": "https://interexc.com/white-black-list-module-imporved",
+    "image": "https://res2.weblium.site/res/5ce3f865b84b1a002410e88e/5cfe563c9e6fb20023cdcc9b_optimized_688_c688x383-0x0",
+    "local_image": "/news/news_2.jpg",
+    "slug": "white-black-list-module-imporved",
+    "content": "White/black list module imporved!\n\nNow  you can create white/black list profiles and assign them to terminators accordingly. It's also applied to CLI/ANI numbers!"
+  }
+]

@@ -1,8 +1,10 @@
 import { Hero } from '../components/Hero';
 import { Features } from '../components/Features';
 import { Products } from '../components/Products';
+import { Testimonials } from '../components/Testimonials';
 import { News } from '../components/News';
 import { Team } from '../components/Team';
+import { Contact } from '../components/Contact';
 
 export const Home = () => {
   return (
@@ -12,10 +14,12 @@ export const Home = () => {
       <div className="section-alt">
         <Features />
       </div>
-      <News />
+      <Testimonials />
       <div className="section-alt">
-        <Team />
+        <News />
       </div>
+      <Team />
+      <Contact />
     </>
   );
 };

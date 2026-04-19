@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, PhoneCall } from 'lucide-react';
+import { useLanguage } from '../i18n/LanguageProvider';
 
 const clients = [
   {
@@ -245,19 +246,18 @@ const clients = [
 ];
 
 export const Hero: React.FC = () => {
+  const { t } = useLanguage();
   return (
     <>
       <section className="hero container animate-fade-in">
-        <h1>High Performance All-In-One Solution for VoIP Business</h1>
-        <p>
-          Experience carrier-grade reliability with IXC Softswitch. Our platform provides everything you need to manage routing, billing, SMS, and monitoring securely and efficiently.
-        </p>
+        <h1>{t.hero.title}</h1>
+        <p>{t.hero.subtitle}</p>
         <div className="hero-actions">
           <a href="#products" className="btn btn-primary">
-            Explore Products <ArrowRight size={18} />
+            {t.hero.exploreProducts} <ArrowRight size={18} />
           </a>
-          <a href="#contact" className="btn btn-outline">
-            Contact Sales <PhoneCall size={18} />
+          <a href="mailto:sales@ixc.ua" className="btn btn-outline">
+            {t.hero.contactSales} <PhoneCall size={18} />
           </a>
         </div>
       </section>
@@ -265,8 +265,8 @@ export const Hero: React.FC = () => {
       <section className="trust-banner">
         <div className="container" style={{ width: '100%', padding: '0' }}>
           <div className="trust-stats">
-            <h3>Building Trust Since <strong>1999</strong></h3>
-            <p>Handling <strong>272</strong> clients globally in the wholesale VoIP business.</p>
+            <h3>{t.trust.since} <strong>1999</strong></h3>
+            <p><strong>272</strong> {t.trust.clients}</p>
           </div>
           
           <div className="marquee-wrapper">

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Server, Shield, Activity, Bot, MessageSquare, Code } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useLanguage } from '../i18n/LanguageProvider';
 
 const products = [
   {
@@ -42,28 +43,32 @@ const products = [
 ];
 
 export const Products: React.FC = () => {
+  const { t } = useLanguage();
   return (
-    <section id="products" className="section container">
+    <section id="products" className="section container section-glow section-glow-right">
       <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-        <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>Our Core Products</h2>
+        <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>{t.products.title}</h2>
         <p style={{ color: 'var(--text-secondary)', maxWidth: '600px', margin: '0 auto' }}>
-          Explore our suite of highly tuned telecommunication solutions built directly for modern wholesale and retail VoIP businesses.
+          {t.products.subtitle}
         </p>
       </div>
 
       <div className="products-grid">
-        {products.map((p, i) => (
+        {products.map((p, i) => {
+          const card = t.products.cards[i];
+          return (
           <Link to={`/products/${p.slug}`} key={i} className="product-card glass" style={{ textDecoration: 'none', color: 'inherit' }}>
             <div className="product-icon">
               {p.icon}
             </div>
-            <h3>{p.title}</h3>
-            <p style={{ color: 'var(--text-secondary)' }}>{p.description}</p>
+            <h3>{card?.title || p.title}</h3>
+            <p style={{ color: 'var(--text-secondary)' }}>{card?.description || p.description}</p>
             <span className="product-card-link">
-              Learn more →
+              {t.products.learnMore}
             </span>
           </Link>
-        ))}
+          );
+        })}
       </div>
     </section>
   );

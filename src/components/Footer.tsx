@@ -1,19 +1,34 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useLanguage } from '../i18n/LanguageProvider';
 
 export const Footer: React.FC = () => {
+  const { t } = useLanguage();
   return (
     <footer id="contact" className="footer">
       <div className="container">
         <div className="footer-content">
           <div>
             <h3 style={{ fontSize: '1.25rem', marginBottom: '1rem' }}>IXC Softswitch</h3>
-            <p style={{ color: 'var(--text-secondary)' }}>
-              High-performance all-in-one solution for your VoIP business operations.
+            <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem' }}>
+              {t.footer.description}
             </p>
+            <div className="footer-socials">
+              <a href="http://www.youtube.com/alexIXC" target="_blank" rel="noopener noreferrer" aria-label="YouTube" title="YouTube">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17" /><path d="m10 15 5-3-5-3z" /></svg>
+              </a>
+              <a href="http://twitter.com/alexIXC" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" title="X (Twitter)">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M4 4l11.733 16h4.267l-11.733 -16z" /><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
+                </svg>
+              </a>
+              <a href="http://www.facebook.com/ixc.ua" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              </a>
+            </div>
           </div>
           <div>
-            <h4 style={{ marginBottom: '1rem' }}>Products</h4>
+            <h4 style={{ marginBottom: '1rem' }}>{t.footer.productsTitle}</h4>
             <ul style={{ listStyle: 'none', color: 'var(--text-secondary)', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
               <li><Link to="/products/softswitch">Softswitch</Link></li>
               <li><Link to="/products/sms-platform">SMS Platform</Link></li>
@@ -24,24 +39,24 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
           <div>
-            <h4 style={{ marginBottom: '1rem' }}>Company</h4>
+            <h4 style={{ marginBottom: '1rem' }}>{t.footer.companyTitle}</h4>
             <ul style={{ listStyle: 'none', color: 'var(--text-secondary)', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-              <li><Link to="/about-us">About Us</Link></li>
-              <li><a href="mailto:sales@ixc.ua">Contact Us</a></li>
+              <li><Link to="/about-us">{t.nav.aboutUs}</Link></li>
+              <li><a href="mailto:sales@ixc.ua">{t.nav.contactUs}</a></li>
             </ul>
           </div>
           <div>
-            <h4 style={{ marginBottom: '1rem' }}>Contact</h4>
+            <h4 style={{ marginBottom: '1rem' }}>{t.footer.contactTitle}</h4>
             <p style={{ color: 'var(--text-secondary)' }}>
-              Got questions? Get in touch with our team.<br/><br/>
-              <strong>Email:</strong> <a href="mailto:info@ixc.ua">info@ixc.ua</a><br/>
+              {t.footer.contactText}<br/><br/>
               <strong>Sales:</strong> <a href="mailto:sales@ixc.ua">sales@ixc.ua</a>
             </p>
           </div>
         </div>
         
         <div className="footer-bottom">
-          <p>© IXC SOFTSWITCH {new Date().getFullYear()}. All rights Reserved.</p>
+          <p>© IXC Software Distribution Inc, 1999–{new Date().getFullYear()}. {t.footer.copyright}</p>
+          <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem', marginTop: '0.5rem' }}>7950 NW 53rd Street, Suite 337, Miami, Florida 33166</p>
         </div>
       </div>
     </footer>
