@@ -39,7 +39,7 @@ export const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact-form" className="section container section-glow section-glow-right">
+    <section id="get-in-touch" className="section container section-glow section-glow-right" style={{ scrollMarginTop: '6rem' }}>
       <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1rem' }}>
         <Mail size={32} color="var(--accent-color)" />
         <h2 style={{ fontSize: '2.5rem' }}>Get in Touch</h2>

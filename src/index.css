@@ -18,6 +18,10 @@
   --glow-1: rgba(79, 124, 172, 0.12);
   --glow-2: rgba(59, 101, 146, 0.08);
   --glow-3: rgba(100, 180, 220, 0.06);
+  --hero-ai-badge-bg: linear-gradient(145deg, #15803d 0%, #22c55e 100%);
+  --hero-ai-badge-text: #ffffff;
+  --hero-ai-badge-border: rgba(255, 255, 255, 0.45);
+  --hero-ai-badge-shadow: rgba(15, 80, 40, 0.35);
 }
 
 [data-theme='dark'] {
@@ -38,12 +42,35 @@
   --glow-1: rgba(114, 162, 207, 0.15);
   --glow-2: rgba(79, 124, 172, 0.12);
   --glow-3: rgba(130, 200, 240, 0.08);
+  --hero-ai-badge-bg: linear-gradient(145deg, #166534 0%, #22c55e 100%);
+  --hero-ai-badge-text: #f0fdf4;
+  --hero-ai-badge-border: rgba(255, 255, 255, 0.35);
+  --hero-ai-badge-shadow: rgba(0, 0, 0, 0.45);
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+html {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+#root {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-x: clip;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 body {
@@ -160,6 +187,8 @@ a:hover {
 /* Section glow accents */
 .section-glow {
   position: relative;
+  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 .section-glow::before {
@@ -199,7 +228,7 @@ a:hover {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: min(1200px, 100%);
   margin: 0 auto;
   padding: 0 2rem;
 }

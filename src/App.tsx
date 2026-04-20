@@ -10,12 +10,18 @@ import { ProductPage } from './pages/ProductPage';
 import { NewsArticle } from './pages/NewsArticle';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { hashToId, scrollToElementById } from './utils/scrollToElementId';
 
 function ScrollToTop() {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
   useEffect(() => {
+    const id = hashToId(hash);
+    if (id) {
+      scrollToElementById(id);
+      return;
+    }
     window.scrollTo(0, 0);
-  }, [pathname]);
+  }, [pathname, hash]);
   return null;
 }
 

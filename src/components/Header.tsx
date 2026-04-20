@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Moon, Sun, Menu, X, Globe } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { HashScrollLink } from './HashScrollLink';
 import { useTheme } from '../ThemeProvider';
 import { useLanguage } from '../i18n/LanguageProvider';
 import { Language, languageNames } from '../i18n/translations';
@@ -16,16 +17,17 @@ export const Header: React.FC = () => {
   return (
     <header className="header glass">
       <div className="container header-content">
-        <Link to="/" className="logo" style={{ display: 'flex', alignItems: 'center', gap: '12px', textDecoration: 'none' }}>
-          <img src={`${import.meta.env.BASE_URL}logo.png`} alt="IXC Softswitch Logo" style={{ height: '40px', width: 'auto', borderRadius: '8px' }} />
-          <h2>IXC Softswitch</h2>
+        <Link to="/" className="logo">
+          <img src={`${import.meta.env.BASE_URL}logo.png`} alt="IXC Softswitch Logo" className="logo-img" />
+          <h2 className="logo-text">IXC Softswitch</h2>
         </Link>
         
         <nav className={`nav-links ${menuOpen ? 'nav-open' : ''}`}>
           <Link to="/" onClick={() => setMenuOpen(false)}>{t.nav.home}</Link>
-          <Link to="/products/softswitch" onClick={() => setMenuOpen(false)}>{t.nav.products}</Link>
+          <HashScrollLink to={{ pathname: '/', hash: 'products' }} onClick={() => setMenuOpen(false)}>
+            {t.nav.products}
+          </HashScrollLink>
           <Link to="/about-us" onClick={() => setMenuOpen(false)}>{t.nav.aboutUs}</Link>
-          <a href="mailto:sales@ixc.ua" onClick={() => setMenuOpen(false)}>{t.nav.contactUs}</a>
         </nav>
 
         <div className="header-actions">
@@ -57,26 +59,19 @@ export const Header: React.FC = () => {
           <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle theme" title="Toggle Theme">
             {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
           </button>
-          <a href="mailto:sales@ixc.ua" className="btn btn-primary d-none-mobile">{t.nav.tryItNow}</a>
+          <HashScrollLink
+            to={{ pathname: '/', hash: 'get-in-touch' }}
+            className="btn btn-primary d-none-mobile"
+            onClick={() => setMenuOpen(false)}
+          >
+            {t.nav.getFreeDemo}
+          </HashScrollLink>
           <button className="menu-toggle" aria-label="Menu" onClick={() => setMenuOpen(!menuOpen)}>
             {menuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </div>
-      <div className="announcement-banner" style={{
-        position: 'absolute',
-        top: '100%',
-        left: 0,
-        right: 0,
-        backgroundColor: 'var(--accent-color)',
-        color: '#ffffff',
-        textAlign: 'center',
-        padding: '6px 16px',
-        fontSize: '0.85rem',
-        fontWeight: 500,
-        boxShadow: '0 4px 6px rgba(0,0,0,0.05)',
-        borderTop: '1px solid rgba(255,255,255,0.1)'
-      }}>
+      <div className="announcement-banner">
         {t.nav.bannerAnnouncement}
       </div>
     </header>

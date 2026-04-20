@@ -38,12 +38,13 @@ export interface Translations {
     products: string;
     aboutUs: string;
     contactUs: string;
-    tryItNow: string;
+    getFreeDemo: string;
     bannerAnnouncement: string;
   };
   hero: {
     title: string;
     subtitle: string;
+    aiStamp: string;
     exploreProducts: string;
     contactSales: string;
   };
@@ -123,12 +124,14 @@ const en: Translations = {
     products: 'Products',
     aboutUs: 'About Us',
     contactUs: 'Contact Us',
-    tryItNow: 'Try it Now',
+    getFreeDemo: 'Get free demo',
     bannerAnnouncement: 'Version 6 are coming... With AI business assistant'
   },
   hero: {
-    title: 'High Performance All-In-One Solution for VoIP Business',
-    subtitle: 'Experience carrier-grade reliability with IXC Softswitch. Our platform provides everything you need to manage routing, billing, SMS, and monitoring securely and efficiently.',
+    title: 'Carrier-style VoIP infrastructure—proven in production since 1999',
+    subtitle:
+      'Run wholesale and retail voice on a single high-capacity stack: advanced LCR and policy routing, automated billing, route testing and FAS detection, APIs and alerts—backed by 24/7 multilingual NOC support.',
+    aiStamp: 'Now with AI',
     exploreProducts: 'Explore Products',
     contactSales: 'Contact Sales'
   },
@@ -249,12 +252,14 @@ const ru: Translations = {
     products: 'Продукты',
     aboutUs: 'О нас',
     contactUs: 'Контакты',
-    tryItNow: 'Попробовать',
+    getFreeDemo: 'Бесплатное демо',
     bannerAnnouncement: 'Скоро версия 6... С ИИ бизнес-ассистентом'
   },
   hero: {
-    title: 'Высокопроизводительное решение «всё в одном» для VoIP бизнеса',
-    subtitle: 'Надёжность операторского класса с IXC Softswitch. Наша платформа предоставляет всё необходимое для управления маршрутизацией, биллингом, SMS и мониторингом.',
+    title: 'Инфраструктура VoIP операторского класса — в продакшене с 1999 года',
+    subtitle:
+      'Оптовый и розничный голос на одной высоконагруженной платформе: продвинутая LCR и маршрутизация на основе политик, автоматический биллинг, тест маршрутов и выявление FAS, API и оповещения — с круглосуточной многоязычной поддержкой NOC.',
+    aiStamp: 'Теперь с ИИ',
     exploreProducts: 'Наши продукты',
     contactSales: 'Связаться с нами'
   },
@@ -375,12 +380,14 @@ const uk: Translations = {
     products: 'Продукти',
     aboutUs: 'Про нас',
     contactUs: 'Контакти',
-    tryItNow: 'Спробувати',
+    getFreeDemo: 'Безкоштовне демо',
     bannerAnnouncement: 'Скоро версія 6... З ШІ бізнес-асистентом'
   },
   hero: {
-    title: 'Високопродуктивне рішення «все в одному» для VoIP бізнесу',
-    subtitle: 'Надійність операторського класу з IXC Softswitch. Наша платформа забезпечує все необхідне для управління маршрутизацією, білінгом, SMS та моніторингом.',
+    title: 'Інфраструктура VoIP операторського класу — у продакшені з 1999 року',
+    subtitle:
+      'Оптовий і роздрібний голос на одній високонавантаженій платформі: розширена LCR і маршрутизація на основі політик, автоматичний білінг, тест маршрутів і виявлення FAS, API та сповіщення — із цілодобовою багатомовною підтримкою NOC.',
+    aiStamp: 'Тепер з ШІ',
     exploreProducts: 'Наші продукти',
     contactSales: "Зв'язатися з нами"
   },
