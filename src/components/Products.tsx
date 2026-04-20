@@ -1,7 +1,8 @@
 import React from 'react';
-import { Server, Shield, Activity, Bot, MessageSquare, Code } from 'lucide-react';
+import { Server, Shield, Activity, Bot, MessageSquare, Code, Layers } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../i18n/LanguageProvider';
+import { SectionHeading } from './SectionHeading';
 
 const products = [
   {
@@ -46,12 +47,12 @@ export const Products: React.FC = () => {
   const { t } = useLanguage();
   return (
     <section id="products" className="section container section-glow section-glow-right" style={{ scrollMarginTop: '6rem' }}>
-      <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-        <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>{t.products.title}</h2>
-        <p style={{ color: 'var(--text-secondary)', maxWidth: '600px', margin: '0 auto' }}>
-          {t.products.subtitle}
-        </p>
-      </div>
+      <SectionHeading
+        spacious
+        icon={<Layers size={32} />}
+        title={t.products.title}
+        subtitle={t.products.subtitle}
+      />
 
       <div className="products-grid">
         {products.map((p, i) => {

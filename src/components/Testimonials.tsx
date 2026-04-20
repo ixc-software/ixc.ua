@@ -1,6 +1,7 @@
 import React from 'react';
 import { Quote } from 'lucide-react';
 import { useLanguage } from '../i18n/LanguageProvider';
+import { SectionHeading } from './SectionHeading';
 
 interface Testimonial {
   company: string;
@@ -31,12 +32,12 @@ export const Testimonials: React.FC = () => {
   const { t } = useLanguage();
   return (
     <section id="testimonials" className="section container">
-      <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-        <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>{t.testimonials.title}</h2>
-        <p style={{ color: 'var(--text-secondary)', maxWidth: '600px', margin: '0 auto' }}>
-          {t.testimonials.subtitle}
-        </p>
-      </div>
+      <SectionHeading
+        spacious
+        icon={<Quote size={32} />}
+        title={t.testimonials.title}
+        subtitle={t.testimonials.subtitle}
+      />
 
       <div className="testimonials-grid">
         {testimonials.map((t_item, i) => {

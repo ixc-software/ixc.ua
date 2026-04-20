@@ -1,15 +1,13 @@
 import React from 'react';
 import { Users, Mail, Send, MessageSquare } from 'lucide-react';
 import { useLanguage } from '../i18n/LanguageProvider';
+import { SectionHeading } from './SectionHeading';
 
 export const Team: React.FC = () => {
   const { t } = useLanguage();
   return (
     <section id="team" className="section container">
-      <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '2rem' }}>
-        <Users size={32} color="var(--accent-color)" />
-        <h2 style={{ fontSize: '2.5rem' }}>{t.team.title}</h2>
-      </div>
+      <SectionHeading icon={<Users size={32} />} title={t.team.title} />
 
       <div className="glass" style={{ padding: '2rem', display: 'flex', flexWrap: 'wrap', gap: '2rem', alignItems: 'center', borderRadius: '16px' }}>
         <img 

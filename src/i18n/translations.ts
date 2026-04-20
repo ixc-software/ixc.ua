@@ -70,7 +70,12 @@ export interface Translations {
   };
   news: {
     title: string;
+    subtitle: string;
     readMore: string;
+  };
+  contactSection: {
+    title: string;
+    subtitle: string;
   };
   team: {
     title: string;
@@ -187,7 +192,13 @@ const en: Translations = {
   },
   news: {
     title: 'Latest Updates',
+    subtitle: 'Product updates, releases, and announcements from IXC.',
     readMore: 'Read More'
+  },
+  contactSection: {
+    title: 'Get in Touch',
+    subtitle:
+      "Have questions about IXC Softswitch? Looking for a demo or pricing details? Drop us a message and we'll get back to you shortly."
   },
   team: {
     title: 'Our Team',
@@ -315,7 +326,13 @@ const ru: Translations = {
   },
   news: {
     title: 'Последние обновления',
+    subtitle: 'Обновления продуктов, релизы и новости от IXC.',
     readMore: 'Подробнее'
+  },
+  contactSection: {
+    title: 'Свяжитесь с нами',
+    subtitle:
+      'Вопросы по IXC Softswitch? Нужно демо или коммерческое предложение? Напишите нам — ответим в ближайшее время.'
   },
   team: {
     title: 'Наша команда',
@@ -443,7 +460,13 @@ const uk: Translations = {
   },
   news: {
     title: 'Останні оновлення',
+    subtitle: 'Оновлення продуктів, релізи та новини від IXC.',
     readMore: 'Детальніше'
+  },
+  contactSection: {
+    title: "Зв'яжіться з нами",
+    subtitle:
+      "Питання щодо IXC Softswitch? Потрібне демо чи комерційна пропозиція? Напишіть нам — відповімо найближчим часом."
   },
   team: {
     title: 'Наша команда',

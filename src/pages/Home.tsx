@@ -19,7 +19,9 @@ export const Home = () => {
         <News />
       </div>
       <Team />
-      <Contact />
+      <div className="section-alt">
+        <Contact />
+      </div>
     </>
   );
 };

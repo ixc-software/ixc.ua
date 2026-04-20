@@ -2,9 +2,10 @@ import { useParams, Link } from 'react-router-dom';
 import { HashScrollLink } from '../components/HashScrollLink';
 import { 
   Server, Shield, Activity, Bot, MessageSquare, Code,
-  ArrowRight, CheckCircle2, ArrowLeft
+  ArrowRight, CheckCircle2, ArrowLeft, FileText
 } from 'lucide-react';
 import { useLanguage } from '../i18n/LanguageProvider';
+import { SectionHeading } from '../components/SectionHeading';
 
 interface ProductData {
   slug: string;
@@ -178,9 +179,9 @@ export const ProductPage = () => {
 
       {/* Description + Features */}
       <section className="section container">
-        <div className="product-detail-grid">
+        <SectionHeading spacious icon={<FileText size={32} />} title={t.productPage.overview} />
+        <div className="product-detail-grid product-detail-grid--with-heading">
           <div className="product-description">
-            <h2>{t.productPage.overview}</h2>
             <p>{product.description}</p>
             <div style={{ display: 'flex', gap: '1rem', marginTop: '2rem', flexWrap: 'wrap' }}>
               <HashScrollLink to={{ pathname: '/', hash: 'get-in-touch' }} className="btn btn-primary">

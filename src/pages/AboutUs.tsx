@@ -1,9 +1,10 @@
 import { 
   Shield, Clock, Zap, HeadphonesIcon, Target, Code, 
-  ArrowRight, CheckCircle2 
+  ArrowRight, CheckCircle2, Briefcase, Award, MessageCircle
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../i18n/LanguageProvider';
+import { SectionHeading } from '../components/SectionHeading';
 
 const strengthIcons = [
   <Clock size={28} />,
@@ -36,25 +37,20 @@ export const AboutUs = () => {
 
       {/* Mission Banner */}
       <section className="section container">
-        <div className="glass mission-banner">
-          <div className="mission-icon">
-            <Target size={40} />
-          </div>
-          <div>
-            <h2>{t.about.missionTitle}</h2>
-            <p>{t.about.missionText}</p>
-          </div>
+        <SectionHeading spacious icon={<Target size={32} />} title={t.about.missionTitle} />
+        <div className="glass mission-banner mission-banner--solo">
+          <p>{t.about.missionText}</p>
         </div>
       </section>
 
       {/* What We Do */}
       <section className="section container">
-        <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-          <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>{t.about.whatWeDoTitle}</h2>
-          <p style={{ color: 'var(--text-secondary)', maxWidth: '600px', margin: '0 auto' }}>
-            {t.about.whatWeDoSubtitle}
-          </p>
-        </div>
+        <SectionHeading
+          spacious
+          icon={<Briefcase size={32} />}
+          title={t.about.whatWeDoTitle}
+          subtitle={t.about.whatWeDoSubtitle}
+        />
 
         <div className="capabilities-grid">
           {t.about.capabilities.map((cap, i) => (
@@ -69,12 +65,12 @@ export const AboutUs = () => {
 
       {/* Why IXC */}
       <section className="section container">
-        <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-          <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>{t.about.whyTitle}</h2>
-          <p style={{ color: 'var(--text-secondary)', maxWidth: '600px', margin: '0 auto' }}>
-            {t.about.whySubtitle}
-          </p>
-        </div>
+        <SectionHeading
+          spacious
+          icon={<Award size={32} />}
+          title={t.about.whyTitle}
+          subtitle={t.about.whySubtitle}
+        />
 
         <div className="strengths-grid">
           {t.about.strengths.map((s, i) => (
@@ -88,11 +84,10 @@ export const AboutUs = () => {
       </section>
 
       {/* CTA */}
-      <section className="section container" style={{ textAlign: 'center' }}>
-        <div className="glass cta-block">
-          <h2>{t.about.ctaTitle}</h2>
-          <p>{t.about.ctaText}</p>
-          <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', marginTop: '2rem' }}>
+      <section className="section container">
+        <SectionHeading spacious icon={<MessageCircle size={32} />} title={t.about.ctaTitle} subtitle={t.about.ctaText} />
+        <div className="glass cta-block cta-block--actions">
+          <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
             <a href="mailto:sales@ixc.ua" className="btn btn-primary">
               {t.about.ctaContactSales} <ArrowRight size={18} />
             </a>

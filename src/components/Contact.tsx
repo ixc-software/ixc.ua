@@ -1,9 +1,12 @@
 import React, { useState, useRef } from 'react';
 import { Mail, Send, CheckCircle, AlertCircle, User, MessageSquare } from 'lucide-react';
+import { useLanguage } from '../i18n/LanguageProvider';
+import { SectionHeading } from './SectionHeading';
 
 type FormStatus = 'idle' | 'submitting' | 'success' | 'error';
 
 export const Contact: React.FC = () => {
+  const { t } = useLanguage();
   const [status, setStatus] = useState<FormStatus>('idle');
   const [errorMessage, setErrorMessage] = useState('');
   const formRef = useRef<HTMLFormElement>(null);
@@ -40,13 +43,12 @@ export const Contact: React.FC = () => {
 
   return (
     <section id="get-in-touch" className="section container section-glow section-glow-right" style={{ scrollMarginTop: '6rem' }}>
-      <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1rem' }}>
-        <Mail size={32} color="var(--accent-color)" />
-        <h2 style={{ fontSize: '2.5rem' }}>Get in Touch</h2>
-      </div>
-      <p style={{ color: 'var(--text-secondary)', fontSize: '1.15rem', marginBottom: '3rem', maxWidth: '600px' }}>
-        Have questions about IXC Softswitch? Looking for a demo or pricing details? Drop us a message and we'll get back to you shortly.
-      </p>
+      <SectionHeading
+        spacious
+        icon={<Mail size={32} />}
+        title={t.contactSection.title}
+        subtitle={t.contactSection.subtitle}
+      />
 
       <div className="contact-layout">
         {/* Form */}

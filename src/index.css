@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
 
 :root {
+  /* Vertical padding inside `.section` (top to first content, bottom after last block) */
+  --section-pad-y: 6rem;
+
   /* Light Theme Variables */
   --bg-color: #f4f7f9;
   --bg-card: rgba(255, 255, 255, 0.8);
@@ -248,7 +251,65 @@ a:hover {
 }
 
 .section {
-  padding: 6rem 0;
+  padding: var(--section-pad-y) 0;
+}
+
+/* Unified section titles: centered icon + heading + optional subtitle */
+.section-heading {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.section-heading--spacious {
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --section-pad-y: 3rem;
+  }
+
+  /* Same gap under heading + before following grid/cards on every section */
+  .section-heading,
+  .section-heading--spacious {
+    margin-bottom: 1.75rem;
+  }
+}
+
+.section-heading-icon-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  color: var(--accent-color);
+}
+
+.section-heading-icon-wrap svg {
+  flex-shrink: 0;
+}
+
+.section-heading-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+  margin: 0 0 0.5rem 0;
+}
+
+.section-heading-subtitle {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  max-width: min(650px, 100%);
+  margin: 0 auto;
+}
+
+.section-heading-toolbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.25rem;
 }
 
 /* Animations */

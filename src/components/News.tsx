@@ -1,7 +1,8 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { ArrowLeft, ArrowRight, Calendar } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Calendar, Newspaper } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../i18n/LanguageProvider';
+import { SectionHeading } from './SectionHeading';
 import newsData from '../newsData.json';
 
 export const News: React.FC = () => {
@@ -37,26 +38,30 @@ export const News: React.FC = () => {
 
   return (
     <section id="news" className="section container">
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '2rem' }}>
-        <h2 style={{ fontSize: '2.5rem' }}>{t.news.title}</h2>
-        
-        <div className="carousel-nav">
-          <button 
-            className={`carousel-btn ${!canScrollLeft ? 'disabled' : ''}`} 
-            onClick={() => scroll('left')}
-            aria-label="Previous news"
-          >
-            <ArrowLeft size={20} />
-          </button>
-          <button 
-            className={`carousel-btn ${!canScrollRight ? 'disabled' : ''}`} 
-            onClick={() => scroll('right')}
-            aria-label="Next news"
-          >
-            <ArrowRight size={20} />
-          </button>
-        </div>
-      </div>
+      <SectionHeading
+        spacious
+        icon={<Newspaper size={32} />}
+        title={t.news.title}
+        subtitle={t.news.subtitle}
+        toolbar={
+          <div className="carousel-nav">
+            <button
+              className={`carousel-btn ${!canScrollLeft ? 'disabled' : ''}`}
+              onClick={() => scroll('left')}
+              aria-label="Previous news"
+            >
+              <ArrowLeft size={20} />
+            </button>
+            <button
+              className={`carousel-btn ${!canScrollRight ? 'disabled' : ''}`}
+              onClick={() => scroll('right')}
+              aria-label="Next news"
+            >
+              <ArrowRight size={20} />
+            </button>
+          </div>
+        }
+      />
 
       <div className="news-carousel-wrapper">
         <div 

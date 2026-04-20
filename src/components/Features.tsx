@@ -6,6 +6,7 @@ import {
   Database, Headphones
 } from 'lucide-react';
 import { useLanguage } from '../i18n/LanguageProvider';
+import { SectionHeading } from './SectionHeading';
 
 const features = [
   {
@@ -109,12 +110,12 @@ export const Features: React.FC = () => {
   const { t } = useLanguage();
   return (
     <section id="features" className="section container section-glow section-glow-left">
-      <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-        <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>{t.features.title}</h2>
-        <p style={{ color: 'var(--text-secondary)', maxWidth: '650px', margin: '0 auto' }}>
-          {t.features.subtitle}
-        </p>
-      </div>
+      <SectionHeading
+        spacious
+        icon={<Cpu size={32} />}
+        title={t.features.title}
+        subtitle={t.features.subtitle}
+      />
 
       <div className="features-grid">
         {features.map((f, i) => {

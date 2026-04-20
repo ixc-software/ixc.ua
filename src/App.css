@@ -328,12 +328,12 @@
   100% { transform: translateX(-50%); }
 }
 
-/* Alternating section background */
+/* Alternating section background — vertical inset comes only from `.section` inside */
 .section-alt {
   background: var(--bg-card);
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
-  padding: 1rem 0;
+  padding: 0;
 }
 
 /* Platform Features Section */
@@ -766,6 +766,16 @@
   line-height: 1.6;
 }
 
+.mission-banner--solo {
+  justify-content: center;
+  text-align: center;
+}
+
+.mission-banner--solo p {
+  margin: 0 auto;
+  max-width: 720px;
+}
+
 /* About Us - Capabilities */
 .capabilities-grid {
   display: grid;
@@ -868,6 +878,10 @@
   line-height: 1.6;
 }
 
+.cta-block--actions {
+  padding: 2rem 2.5rem;
+}
+
 /* Product Detail Page */
 .product-hero-layout {
   display: flex;
@@ -892,6 +906,10 @@
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
   align-items: start;
+}
+
+.product-detail-grid--with-heading {
+  margin-top: 0;
 }
 
 .product-description h2 {
@@ -1205,8 +1223,10 @@
     display: flex;
   }
 
+  /* Horizontal inset only — do not use `padding` shorthand here or it overrides `.section` top/bottom */
   .container {
-    padding: 0 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   /* More specific than .header .container default — frees space so actions are not clipped */
@@ -1320,15 +1340,6 @@
   .contact-submit {
     width: 100%;
     justify-content: center;
-  }
-
-  /* Home: clear gap between Team card and "Get in Touch" (section padding alone read as ~zero on narrow viewports) */
-  #team.section {
-    padding-bottom: calc(6rem + 2.75rem);
-  }
-
-  #get-in-touch.section {
-    padding-top: calc(6rem + 2.75rem);
   }
 }
 
