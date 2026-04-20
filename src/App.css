@@ -1321,6 +1321,15 @@
     width: 100%;
     justify-content: center;
   }
+
+  /* Home: clear gap between Team card and "Get in Touch" (section padding alone read as ~zero on narrow viewports) */
+  #team.section {
+    padding-bottom: calc(6rem + 2.75rem);
+  }
+
+  #get-in-touch.section {
+    padding-top: calc(6rem + 2.75rem);
+  }
 }
 
 @media (max-width: 420px) {
