@@ -1,4 +1,5 @@
 import { useParams, Link } from 'react-router-dom';
+import { HashScrollLink } from '../components/HashScrollLink';
 import { 
   Server, Shield, Activity, Bot, MessageSquare, Code,
   ArrowRight, CheckCircle2, ArrowLeft
@@ -182,9 +183,9 @@ export const ProductPage = () => {
             <h2>{t.productPage.overview}</h2>
             <p>{product.description}</p>
             <div style={{ display: 'flex', gap: '1rem', marginTop: '2rem', flexWrap: 'wrap' }}>
-              <a href="mailto:sales@ixc.ua" className="btn btn-primary">
+              <HashScrollLink to={{ pathname: '/', hash: 'get-in-touch' }} className="btn btn-primary">
                 {t.productPage.requestDemo} <ArrowRight size={18} />
-              </a>
+              </HashScrollLink>
               <a href="mailto:sales@ixc.ua" className="btn btn-outline">
                 {t.productPage.contactSales}
               </a>
