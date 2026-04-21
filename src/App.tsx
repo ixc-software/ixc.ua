@@ -1,5 +1,6 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
+import { DocumentMeta } from './components/DocumentMeta';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { MeshBackground } from './components/MeshBackground';
@@ -28,6 +29,7 @@ function ScrollToTop() {
 function App() {
   return (
     <>
+      <DocumentMeta />
       <MeshBackground />
       <ScrollToTop />
       <div className="app-container">

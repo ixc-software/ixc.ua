@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useEffect, useState } from 'react';
 import { Language, Translations, translations } from './translations';
 
 interface LanguageContextType {
@@ -30,6 +30,10 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     try { localStorage.setItem('language', lang); } catch { /* */ }
     document.documentElement.setAttribute('lang', lang);
   };
+
+  useEffect(() => {
+    document.documentElement.setAttribute('lang', language);
+  }, [language]);
 
   const t = translations[language];
 
