@@ -1,8 +1,8 @@
 import { useParams, Link } from 'react-router-dom';
 import { HashScrollLink } from '../components/HashScrollLink';
-import { 
+import {
   Server, Shield, Activity, Bot, MessageSquare, Code,
-  ArrowRight, CheckCircle2, ArrowLeft, FileText
+  ArrowRight, CheckCircle2, ArrowLeft, FileText, Download
 } from 'lucide-react';
 import { useLanguage } from '../i18n/LanguageProvider';
 import { SectionHeading } from '../components/SectionHeading';
@@ -14,6 +14,9 @@ interface ProductData {
   description: string;
   features: string[];
   icon: React.ReactNode;
+  /** Separate glass sections on the technical specifications page */
+  realTimeReporting?: string[];
+  callRoutingDepending?: string[];
 }
 
 const products: ProductData[] = [
@@ -128,6 +131,63 @@ const products: ProductData[] = [
       'Custom integrations available upon request',
       'Zero manual effort — fully automated sync'
     ]
+  },
+  {
+    slug: 'technical-specifications',
+    title: 'Product Technical Specifications',
+    subtitle: 'Technical specification overview',
+    icon: <FileText size={40} />,
+    description:
+      'Consolidated technical highlights of the IXC platform: network protocols, scale, routing intelligence, security, media and codecs, APIs, billing and reporting, customer experience, and operations support. For the full printable document, use the PDF below.',
+    features: [
+      'Deployable in SIP and H.323 VoIP networks with protocol transcoding',
+      'Up to 4,000 VoIP channels per server with CPS up to 200',
+      'Unlimited scalability',
+      'Advanced security',
+      'Call re-route even after SIP 180/183',
+      'G.711, G.723.1, G.726, G.729A/B/AB and GSM codec support',
+      'SMS SMPP 3.4 ready',
+      'Most platform functions available via JSON API',
+      'Intelligent routing (LCR, ACD/ASR, PDD, priority, and more)',
+      'Traffic distribution on a percentage basis',
+      'Proprietary firewall for SIP spam prevention',
+      'RTP handling (signaling and full proxy mode)',
+      'Multiple authentication methods',
+      'Unlimited calling routes table',
+      'Online billing and reporting',
+      'Active calls template with extensive display fields',
+      'Automatic data backup',
+      'Powerful user management',
+      'Customer portal with active calls',
+      'Codec conversion and interoperability with Cisco, Lucent, Quintum',
+      'Intuitive, user-friendly GUI with customization options',
+      'Auto-route tester with live voice recordings for route quality and FAS detection',
+      '24/7 NOC with multilingual support (EN, RU)',
+    ],
+    realTimeReporting: [
+      'Detailed statistics report',
+      'Traffic flow report',
+      'Profitability report and graphs',
+      'ASR/ACD reports and graphs',
+      'Disconnect causes report',
+      'Payment report',
+      'Incomes and expenditures report',
+      'Expenditures by category',
+      'Auto invoice generation',
+      'Statement report and concurrent call limits',
+      'System configuration report for a given terminator',
+      'Top/target destination report',
+    ],
+    callRoutingDepending: [
+      'Percent allocation',
+      'Minute cost (least cost routing)',
+      'ASR/ACD/PDD-based routing',
+      'Called party number',
+      'Calling party group',
+      'Quality routing',
+      'Priority routing',
+      'Easy managed routing trees',
+    ],
   }
 ];
 
@@ -190,6 +250,11 @@ export const ProductPage = () => {
               <a href="mailto:sales@ixc.ua" className="btn btn-outline">
                 {t.productPage.contactSales}
               </a>
+              {product.slug === 'technical-specifications' ? (
+                <a href="/ixc_specifications.pdf" className="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                  <Download size={18} /> {t.productPage.downloadSpecPdf}
+                </a>
+              ) : null}
             </div>
           </div>
 
@@ -205,6 +270,33 @@ export const ProductPage = () => {
             </ul>
           </div>
         </div>
+
+        {product.realTimeReporting && product.callRoutingDepending ? (
+          <div className="product-spec-extra-grid">
+            <div className="product-features glass">
+              <h3>{t.productPage.realTimeReporting}</h3>
+              <ul className="feature-list">
+                {product.realTimeReporting.map((f, i) => (
+                  <li key={i}>
+                    <CheckCircle2 size={18} color="var(--accent-color)" />
+                    <span>{f}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="product-features glass">
+              <h3>{t.productPage.callRoutingDepending}</h3>
+              <ul className="feature-list">
+                {product.callRoutingDepending.map((f, i) => (
+                  <li key={i}>
+                    <CheckCircle2 size={18} color="var(--accent-color)" />
+                    <span>{f}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        ) : null}
       </section>
 
       {/* Product Navigation */}

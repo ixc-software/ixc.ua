@@ -1,5 +1,5 @@
 import React from 'react';
-import { Server, Shield, Activity, Bot, MessageSquare, Code, Layers } from 'lucide-react';
+import { Server, Shield, Activity, Bot, MessageSquare, Code, Layers, FileText } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../i18n/LanguageProvider';
 import { SectionHeading } from './SectionHeading';
@@ -40,6 +40,12 @@ const products = [
     title: 'Google API Integration',
     description: 'Enhance your operations with extended integration points mapping to leading enterprise services.',
     icon: <Code size={32} />
+  },
+  {
+    slug: 'technical-specifications',
+    title: 'Product Technical Specifications',
+    description: 'Protocols, capacity, routing, security, codecs, billing, reporting, and 24/7 NOC—consolidated in one reference.',
+    icon: <FileText size={32} />
   }
 ];
 

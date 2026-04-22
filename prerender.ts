@@ -47,6 +47,7 @@ const routes = [
   '/products/ixc-autotester',
   '/products/sms-platform',
   '/products/google-api',
+  '/products/technical-specifications',
   ...newsData.map((n) => `/news/${n.slug}`)
 ];
 

@@ -110,8 +110,11 @@ export interface Translations {
   productPage: {
     overview: string;
     keyFeatures: string;
+    realTimeReporting: string;
+    callRoutingDepending: string;
     requestDemo: string;
     contactSales: string;
+    downloadSpecPdf: string;
     previous: string;
     next: string;
     notFoundTitle: string;
@@ -155,6 +158,7 @@ const en: Translations = {
       { title: 'Autotester', description: 'Ensure route quality by proactively generating automated test calls and analyzing the results.' },
       { title: 'SMS Platform', description: 'An integrated bulk messaging solution ready to manage fast transit and optimal delivery paths.' },
       { title: 'Google API Integration', description: 'Enhance your operations with extended integration points mapping to leading enterprise services.' },
+      { title: 'Product Technical Specifications', description: 'Protocols, capacity, routing, security, codecs, billing, reporting, and 24/7 NOC—consolidated in one reference.' },
     ]
   },
   features: {
@@ -244,8 +248,11 @@ const en: Translations = {
   productPage: {
     overview: 'Overview',
     keyFeatures: 'Key Features',
+    realTimeReporting: 'Real Time Reporting',
+    callRoutingDepending: 'Call Routing Depending on:',
     requestDemo: 'Request a Demo',
     contactSales: 'Contact Sales',
+    downloadSpecPdf: 'Download PDF specification',
     previous: 'Previous',
     next: 'Next',
     notFoundTitle: 'Product Not Found',
@@ -289,6 +296,7 @@ const ru: Translations = {
       { title: 'Автотестер', description: 'Обеспечение качества маршрутов путём автоматической генерации тестовых вызовов и анализа результатов.' },
       { title: 'SMS Платформа', description: 'Интегрированное решение для массовой рассылки SMS с поддержкой быстрого транзита и оптимальных путей доставки.' },
       { title: 'Интеграция Google API', description: 'Расширение операций с помощью интеграции с ведущими корпоративными сервисами.' },
+      { title: 'Технические спецификации', description: 'Протоколы, ёмкость, маршрутизация, безопасность, кодеки, биллинг, отчётность и NOC 24/7 — в одном справочнике.' },
     ]
   },
   features: {
@@ -378,8 +386,11 @@ const ru: Translations = {
   productPage: {
     overview: 'Обзор',
     keyFeatures: 'Ключевые функции',
+    realTimeReporting: 'Отчётность в реальном времени',
+    callRoutingDepending: 'Маршрутизация вызовов в зависимости от:',
     requestDemo: 'Запросить демо',
     contactSales: 'Связаться',
+    downloadSpecPdf: 'Скачать PDF спецификацию',
     previous: 'Предыдущий',
     next: 'Следующий',
     notFoundTitle: 'Продукт не найден',
@@ -423,6 +434,7 @@ const uk: Translations = {
       { title: 'Автотестер', description: 'Забезпечення якості маршрутів шляхом автоматичної генерації тестових дзвінків та аналізу результатів.' },
       { title: 'SMS Платформа', description: 'Інтегроване рішення для масової розсилки SMS з підтримкою швидкого транзиту та оптимальних шляхів доставки.' },
       { title: 'Інтеграція Google API', description: 'Розширення операцій за допомогою інтеграції з провідними корпоративними сервісами.' },
+      { title: 'Технічні специфікації продукту', description: 'Протоколи, ємність, маршрутизація, безпека, кодеки, білінг, звітність та NOC 24/7 — у одному довіднику.' },
     ]
   },
   features: {
@@ -512,8 +524,11 @@ const uk: Translations = {
   productPage: {
     overview: 'Огляд',
     keyFeatures: 'Ключові функції',
+    realTimeReporting: 'Звітність у реальному часі',
+    callRoutingDepending: 'Маршрутизація викликів залежно від:',
     requestDemo: 'Запросити демо',
     contactSales: "Зв'язатися",
+    downloadSpecPdf: 'Завантажити PDF специфікацію',
     previous: 'Попередній',
     next: 'Наступний',
     notFoundTitle: 'Продукт не знайдено',

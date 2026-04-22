@@ -140,6 +140,23 @@ export const seoRoutes = {
         description:
           'Автоматичне оновлення статистики та даних IXC в Google Таблицях і Документах — спільний доступ до метрик.'
       }
+    } satisfies SeoPagePair,
+    'technical-specifications': {
+      en: {
+        title: 'Product Technical Specifications — IXC VoIP Platform',
+        description:
+          'SIP/H.323, channel capacity, intelligent routing, codecs, SMPP, APIs, billing, real-time reports, security, customer portal, autotester, and 24/7 NOC (EN, RU).'
+      },
+      ru: {
+        title: 'Технические спецификации — платформа IXC VoIP',
+        description:
+          'SIP/H.323, ёмкость, интеллектуальная маршрутизация, кодеки, SMPP, API, биллинг, отчёты в реальном времени, безопасность, портал, автотестер и NOC 24/7 (EN, RU).'
+      },
+      uk: {
+        title: 'Технічні специфікації — платформа IXC VoIP',
+        description:
+          'SIP/H.323, ємність, інтелектуальна маршрутизація, кодеки, SMPP, API, білінг, звіти в реальному часі, безпека, портал, автотестер та NOC 24/7 (EN, RU).'
+      }
     } satisfies SeoPagePair
   },
   newsTitleSuffix: {

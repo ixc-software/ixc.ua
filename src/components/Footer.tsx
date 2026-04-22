@@ -36,6 +36,7 @@ export const Footer: React.FC = () => {
               <li><Link to="/products/ixc-autotester">Autotester</Link></li>
               <li><Link to="/products/white-black-list">White/Black List</Link></li>
               <li><Link to="/products/google-api">Google API</Link></li>
+              <li><Link to="/products/technical-specifications">Technical specifications</Link></li>
             </ul>
           </div>
           <div>

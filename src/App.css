@@ -912,6 +912,14 @@
   margin-top: 0;
 }
 
+.product-spec-extra-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-top: 3rem;
+  align-items: start;
+}
+
 .product-description h2 {
   font-size: 2rem;
   margin-bottom: 1.25rem;
@@ -1308,6 +1316,10 @@
   }
 
   .product-detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-spec-extra-grid {
     grid-template-columns: 1fr;
   }
 
