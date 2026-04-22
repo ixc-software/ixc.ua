@@ -38,6 +38,23 @@ export const seoRoutes = {
         'IXC розробляє голосові платформи операторського класу для оптового та роздрібного VoIP: маршрутизація, білінг, аналітика та інтеграції — з 1999 року.'
     }
   } satisfies SeoPagePair,
+  platformBrochure: {
+    en: {
+      title: 'IXC Softswitch — Platform walkthrough (screens & reports) | IXC',
+      description:
+        'Tour the IXC UI: main dashboard, traffic and CDR reports, access lists, balance and profit, auto rate import, live balance, routing, monitoring, autotester, and 24/7 NOC — with product screenshots.'
+    },
+    ru: {
+      title: 'IXC Softswitch — обзор платформы (скриншоты и отчёты) | IXC',
+      description:
+        'Интерфейс IXC: дашборд, traffic flow и CDR, access list, баланс и profit, авто-тарифы, live balance, маршрутизация, мониторинг, автотестер и NOC 24/7 — со скриншотами.'
+    },
+    uk: {
+      title: 'IXC Softswitch — огляд платформи (скріни та звіти) | IXC',
+      description:
+        'Інтерфейс IXC: дашборд, traffic flow і CDR, access list, баланс і profit, авто-тарифи, live balance, маршрутизація, моніторинг, автотестер і NOC 24/7 — зі скріншотами.'
+    }
+  } satisfies SeoPagePair,
   products: {
     softswitch: {
       en: {

@@ -61,6 +61,7 @@ export interface Translations {
   features: {
     title: string;
     subtitle: string;
+    learnMore: string;
     items: FeatureTranslation[];
   };
   testimonials: {
@@ -164,6 +165,7 @@ const en: Translations = {
   features: {
     title: 'Platform Features',
     subtitle: 'A comprehensive set of capabilities engineered for the demands of modern wholesale and retail VoIP operations.',
+    learnMore: 'Learn more',
     items: [
       { title: 'High Capacity', desc: 'Up to 4,000 VoIP channels per server, CPS up to 800, unlimited horizontal scalability.' },
       { title: 'Intelligent Routing', desc: 'LCR, ASR/ACD, PDD, priority, percentage-based, A/B-number, time-based, and inheriting routing.' },
@@ -302,6 +304,7 @@ const ru: Translations = {
   features: {
     title: 'Возможности платформы',
     subtitle: 'Комплексный набор функций, разработанный для требований современных оптовых и розничных VoIP операций.',
+    learnMore: 'Подробнее',
     items: [
       { title: 'Высокая ёмкость', desc: 'До 4 000 VoIP каналов на сервер, CPS до 800, неограниченное горизонтальное масштабирование.' },
       { title: 'Интеллектуальная маршрутизация', desc: 'LCR, ASR/ACD, PDD, приоритетная, процентная, по A/B-номеру, временная и наследуемая маршрутизация.' },
@@ -440,6 +443,7 @@ const uk: Translations = {
   features: {
     title: 'Можливості платформи',
     subtitle: 'Комплексний набір функцій, розроблений для вимог сучасних оптових та роздрібних VoIP операцій.',
+    learnMore: 'Детальніше',
     items: [
       { title: 'Висока ємність', desc: 'До 4 000 VoIP каналів на сервер, CPS до 800, необмежене горизонтальне масштабування.' },
       { title: 'Інтелектуальна маршрутизація', desc: 'LCR, ASR/ACD, PDD, пріоритетна, відсоткова, за A/B-номером, часова та успадкована маршрутизація.' },

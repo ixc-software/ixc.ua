@@ -41,6 +41,7 @@ const { render } = await import('./dist/server/entry-server.js');
 const routes = [
   '/',
   '/about-us',
+  '/platform-brochure',
   '/products/softswitch',
   '/products/white-black-list',
   '/products/monitoring-tool',

@@ -30,6 +30,9 @@ export function getPageSeo(pathname: string, lang: Language, options?: GetPageSe
   if (path === '/about-us') {
     return seoRoutes.about[lang];
   }
+  if (path === '/platform-brochure') {
+    return seoRoutes.platformBrochure[lang];
+  }
 
   const productMatch = path.match(/^\/products\/([^/]+)$/);
   if (productMatch) {

@@ -9,6 +9,7 @@ import { Home } from './pages/Home';
 import { AboutUs } from './pages/AboutUs';
 import { ProductPage } from './pages/ProductPage';
 import { NewsArticle } from './pages/NewsArticle';
+import { PlatformBrochurePage } from './pages/PlatformBrochurePage';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { hashToId, scrollToElementById } from './utils/scrollToElementId';
@@ -38,6 +39,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about-us" element={<AboutUs />} />
+            <Route path="/platform-brochure" element={<PlatformBrochurePage />} />
             <Route path="/products/:slug" element={<ProductPage />} />
             <Route path="/news/:slug" element={<NewsArticle />} />
           </Routes>

@@ -1366,3 +1366,155 @@
   }
 }
 
+/* Platform brochure (docs walkthrough) */
+.platform-brochure .section:first-of-type {
+  padding-top: 0;
+}
+
+.brochure-key-features {
+  padding: 2rem 2.25rem;
+  border-radius: 16px;
+  margin-top: 0.5rem;
+}
+
+.brochure-block-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.5rem;
+  margin: 0 0 1.25rem 0;
+}
+
+.brochure-block-title-icon {
+  color: var(--accent-color);
+  flex-shrink: 0;
+}
+
+.brochure-feature-list {
+  margin: 0;
+  padding-left: 1.25rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  font-size: 0.95rem;
+}
+
+.brochure-feature-list li {
+  margin-bottom: 0.5rem;
+}
+
+.brochure-feature-list li strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.brochure-section-h2 {
+  font-size: 1.65rem;
+  margin: 0 0 1rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.brochure-lead {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  margin: 0 0 1rem 0;
+}
+
+.brochure-figure-wrap {
+  max-width: 100%;
+  margin: 0 0 1.25rem 0;
+}
+
+.brochure-figure-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+  gap: 1rem;
+  margin: 0 0 1.25rem 0;
+}
+
+.brochure-figure {
+  margin: 0;
+  padding: 0.75rem;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.brochure-shot {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.brochure-p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0 0 1rem 0;
+  max-width: 800px;
+}
+
+.brochure-subsection {
+  margin-top: 1.5rem;
+}
+
+.brochure-section-h3 {
+  font-size: 1.15rem;
+  margin: 0 0 0.75rem 0;
+  color: var(--text-primary);
+}
+
+.brochure-detail-list {
+  margin: 0;
+  padding-left: 1.25rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.brochure-detail-list li {
+  margin-bottom: 0.45rem;
+}
+
+.brochure-detail-list li strong {
+  color: var(--text-primary);
+}
+
+.brochure-extra {
+  margin-top: 1.25rem;
+  padding: 1.25rem 1.5rem;
+  border-radius: 12px;
+}
+
+.brochure-extra .brochure-p {
+  margin-bottom: 0;
+}
+
+.brochure-cta-h {
+  font-size: 1.5rem;
+  margin: 0 0 0.5rem 0;
+  text-align: center;
+}
+
+.brochure-cta-p {
+  text-align: center;
+  color: var(--text-secondary);
+  margin: 0 0 1.5rem 0;
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.brochure-cta-row {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.features-cta {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+

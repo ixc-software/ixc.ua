@@ -3,8 +3,9 @@ import {
   Cpu, GitBranch, Radio, Shield, TestTube, Music2,
   Lock, Plug, Settings, Gauge, Receipt, Monitor,
   Upload, Activity, Route, UserCircle, Beaker,
-  Database, Headphones
+  Database, Headphones, ArrowRight
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { useLanguage } from '../i18n/LanguageProvider';
 import { SectionHeading } from './SectionHeading';
 
@@ -130,6 +131,12 @@ export const Features: React.FC = () => {
           </div>
           );
         })}
+      </div>
+
+      <div className="features-cta">
+        <Link to="/platform-brochure" className="btn btn-outline">
+          {t.features.learnMore} <ArrowRight size={18} />
+        </Link>
       </div>
     </section>
   );
