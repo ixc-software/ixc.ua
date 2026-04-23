@@ -65,10 +65,6 @@ const clients = [
     "url": "https://voip.globalrap.net/"
   },
   {
-    "name": "Hetzner",
-    "url": "https://www.hetzner.com"
-  },
-  {
     "name": "Invescotel",
     "url": "https://www.invescotel.com"
   },
