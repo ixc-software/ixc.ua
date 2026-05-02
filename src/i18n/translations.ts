@@ -192,8 +192,8 @@ const en: Translations = {
     title: 'What Our Clients Say',
     subtitle: 'Trusted by leading telecom operators and wholesale VoIP providers worldwide.',
     items: [
-      { quote: 'IXC Softswitch has been a reliable backbone for our VoIP operations. The platform\'s stability and the team\'s responsiveness have exceeded our expectations over the years.', author: 'Technical Team', role: 'Kyivstar Mobile Carrier' },
-      { quote: 'Switching to IXC gave us carrier-grade routing and billing in one solution. The monitoring tools and Telegram integration keep us on top of traffic quality 24/7.', author: 'Operations Team', role: 'NGN Telecom' },
+      { quote: 'Our company is going and henceforth actively to introduce the hi-tech program complexes adequate to the highest international standards owing to which efficiency of our operational activity as a whole will be considerably raised.', author: 'Igor Litovchenko', role: 'President, Joint-Stock Company "Kyivstar G.S.M."' },
+      { quote: 'Switching to IXC gave us carrier-grade routing and billing in one solution. The monitoring tools and Telegram integration keep us on top of traffic quality 24/7.', author: 'Gilbert Abboud', role: 'CTO - VoIP | Messaging · NGN Telecom' },
     ]
   },
   news: {
@@ -331,8 +331,8 @@ const ru: Translations = {
     title: 'Отзывы клиентов',
     subtitle: 'Нам доверяют ведущие телеком-операторы и оптовые VoIP провайдеры по всему миру.',
     items: [
-      { quote: 'IXC Softswitch стал надёжной основой наших VoIP-операций. Стабильность платформы и отзывчивость команды превзошли наши ожидания за все годы работы.', author: 'Техническая команда', role: 'Мобильный оператор Kyivstar' },
-      { quote: 'Переход на IXC дал нам маршрутизацию и биллинг операторского класса в одном решении. Инструменты мониторинга и интеграция с Telegram позволяют контролировать качество трафика 24/7.', author: 'Операционная команда', role: 'NGN Telecom' },
+      { quote: 'Наша компания намерена и впредь активно внедрять высокотехнологичные программные комплексы, соответствующие высшим международным стандартам, благодаря чему эффективность нашей операционной деятельности в целом будет значительно повышена.', author: 'Игорь Литовченко', role: 'Президент, акционерное общество «Киевстар GSM»' },
+      { quote: 'Переход на IXC дал нам маршрутизацию и биллинг операторского класса в одном решении. Инструменты мониторинга и интеграция с Telegram позволяют контролировать качество трафика 24/7.', author: 'Gilbert Abboud', role: 'CTO — VoIP | обмен сообщениями · NGN Telecom' },
     ]
   },
   news: {
@@ -470,8 +470,8 @@ const uk: Translations = {
     title: 'Відгуки клієнтів',
     subtitle: 'Нам довіряють провідні телеком-оператори та оптові VoIP провайдери по всьому світу.',
     items: [
-      { quote: 'IXC Softswitch став надійною основою наших VoIP-операцій. Стабільність платформи та чуйність команди перевершили наші очікування за всі роки роботи.', author: 'Технічна команда', role: 'Мобільний оператор Kyivstar' },
-      { quote: 'Перехід на IXC дав нам маршрутизацію та білінг операторського класу в одному рішенні. Інструменти моніторингу та інтеграція з Telegram дозволяють контролювати якість трафіку 24/7.', author: 'Операційна команда', role: 'NGN Telecom' },
+      { quote: 'Наша компанія й надалі активно впроваджуватиме високотехнологічні програмні комплекси, що відповідають найвищим міжнародним стандартам, завдяки чому ефективність нашої операційної діяльності в цілому буде істотно підвищена.', author: 'Ігор Литовченко', role: 'Президент, АТ «Київстар GSM»' },
+      { quote: 'Перехід на IXC дав нам маршрутизацію та білінг операторського класу в одному рішенні. Інструменти моніторингу та інтеграція з Telegram дозволяють контролювати якість трафіку 24/7.', author: 'Gilbert Abboud', role: 'CTO — VoIP | обмін повідомленнями · NGN Telecom' },
     ]
   },
   news: {
