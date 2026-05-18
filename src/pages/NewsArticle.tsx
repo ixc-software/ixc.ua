@@ -4,6 +4,7 @@ import {
 } from 'lucide-react';
 import { useLanguage } from '../i18n/LanguageProvider';
 import newsData from '../newsData.json';
+import { RichNewsBody } from '../components/RichNewsBody';
 
 export const NewsArticle = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -55,18 +56,28 @@ export const NewsArticle = () => {
             <img 
               src={`${import.meta.env.BASE_URL}${article.local_image.startsWith('/') ? article.local_image.slice(1) : article.local_image}`} 
               alt={article.en.title}
-              style={{ width: '100%', borderRadius: '16px', marginBottom: '3rem', maxHeight: '500px', objectFit: 'cover' }}
+              style={{
+                width: '100%',
+                borderRadius: '16px',
+                marginBottom: '3rem',
+                maxHeight: (article as { image_object_fit?: string }).image_object_fit === 'contain' ? 'none' : '500px',
+                objectFit: (article as { image_object_fit?: string }).image_object_fit === 'contain' ? 'contain' : 'cover'
+              }}
             />
           )}
 
-          <div style={{ 
-            fontSize: '1.125rem', 
-            lineHeight: '1.8', 
-            color: 'var(--text-primary)',
-            whiteSpace: 'pre-wrap'
-          }}>
-            {(article as any)[language]?.content || article.en.content}
-          </div>
+          {(article as { rich_news?: boolean }).rich_news ? (
+            <RichNewsBody content={(article as any)[language]?.content || article.en.content} />
+          ) : (
+            <div style={{ 
+              fontSize: '1.125rem', 
+              lineHeight: '1.8', 
+              color: 'var(--text-primary)',
+              whiteSpace: 'pre-wrap'
+            }}>
+              {(article as any)[language]?.content || article.en.content}
+            </div>
+          )}
           
           <div style={{ marginTop: '4rem', paddingTop: '2rem', borderTop: '1px solid var(--border-color)', textAlign: 'center' }}>
              <Link to="/#news" className="btn btn-outline">
