@@ -243,7 +243,7 @@
   right: 0;
   transform: translate(24%, -46%) rotate(-5deg);
   font-family: 'Outfit', sans-serif;
-  font-size: clamp(0.58rem, 1.35vw, 0.7rem);
+  font-size: clamp(0.65rem, 1.55vw, 0.78rem);
   font-weight: 800;
   letter-spacing: 0.055em;
   text-transform: uppercase;
@@ -1309,9 +1309,9 @@
 
   .hero-ai-badge {
     transform: translate(8%, -44%) rotate(-4deg);
-    font-size: 0.56rem;
-    padding: 0.26rem 0.4rem 0.22rem;
-    max-width: 8.5rem;
+    font-size: 0.62rem;
+    padding: 0.28rem 0.45rem 0.22rem;
+    max-width: 9.5rem;
   }
 
   .hero h1 {

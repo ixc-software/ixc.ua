@@ -134,13 +134,13 @@ const en: Translations = {
     aboutUs: 'About Us',
     contactUs: 'Contact Us',
     getFreeDemo: 'Get free demo',
-    bannerAnnouncement: 'Version 6 are coming... With AI business assistant'
+    bannerAnnouncement: 'IXC Softswitch V6 is released'
   },
   hero: {
     title: 'Carrier-style VoIP infrastructure—proven in production since 1999',
     subtitle:
       'Run wholesale and retail voice on a single high-capacity stack: advanced LCR and policy routing, automated billing, route testing and FAS detection, APIs and alerts—backed by 24/7 multilingual NOC support.',
-    aiStamp: 'Now with AI',
+    aiStamp: 'V6 released',
     exploreProducts: 'Explore Products',
     contactSales: 'Contact Sales'
   },
@@ -273,13 +273,13 @@ const ru: Translations = {
     aboutUs: 'О нас',
     contactUs: 'Контакты',
     getFreeDemo: 'Бесплатное демо',
-    bannerAnnouncement: 'Скоро версия 6... С ИИ бизнес-ассистентом'
+    bannerAnnouncement: 'Вышел IXC Softswitch V6'
   },
   hero: {
     title: 'Инфраструктура VoIP операторского класса — в продакшене с 1999 года',
     subtitle:
       'Оптовый и розничный голос на одной высоконагруженной платформе: продвинутая LCR и маршрутизация на основе политик, автоматический биллинг, тест маршрутов и выявление FAS, API и оповещения — с круглосуточной многоязычной поддержкой NOC.',
-    aiStamp: 'Теперь с ИИ',
+    aiStamp: 'V6 released',
     exploreProducts: 'Наши продукты',
     contactSales: 'Связаться с нами'
   },
@@ -412,13 +412,13 @@ const uk: Translations = {
     aboutUs: 'Про нас',
     contactUs: 'Контакти',
     getFreeDemo: 'Безкоштовне демо',
-    bannerAnnouncement: 'Скоро версія 6... З ШІ бізнес-асистентом'
+    bannerAnnouncement: 'Випущено IXC Softswitch V6'
   },
   hero: {
     title: 'Інфраструктура VoIP операторського класу — у продакшені з 1999 року',
     subtitle:
       'Оптовий і роздрібний голос на одній високонавантаженій платформі: розширена LCR і маршрутизація на основі політик, автоматичний білінг, тест маршрутів і виявлення FAS, API та сповіщення — із цілодобовою багатомовною підтримкою NOC.',
-    aiStamp: 'Тепер з ШІ',
+    aiStamp: 'V6 released',
     exploreProducts: 'Наші продукти',
     contactSales: "Зв'язатися з нами"
   },
