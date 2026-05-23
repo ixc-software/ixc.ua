@@ -32,6 +32,13 @@ export interface StrengthTranslation {
   description: string;
 }
 
+export interface CertificateDocumentTranslation {
+  title: string;
+  description: string;
+  certificateNo: string;
+  registeredDate: string;
+}
+
 export interface Translations {
   nav: {
     home: string;
@@ -107,6 +114,13 @@ export interface Translations {
     ctaExploreProducts: string;
     capabilities: CapabilityTranslation[];
     strengths: StrengthTranslation[];
+    certificatesTitle: string;
+    certificatesSubtitle: string;
+    certificatesNoLabel: string;
+    certificatesDateLabel: string;
+    certificatesPageLabel: string;
+    certificatesViewFull: string;
+    certificatesDocuments: CertificateDocumentTranslation[];
   };
   productPage: {
     overview: string;
@@ -245,7 +259,33 @@ const en: Translations = {
       { title: 'Carrier-Grade Reliability', description: 'Architected for high availability, scalability, and predictable performance.' },
       { title: 'Fast Time-to-Value', description: 'Practical features, sensible defaults, and a team that understands real-world operations.' },
       { title: 'Support That Cares 24/7', description: 'Over 25 years of live multilingual support (EN, RU). Our experienced team stays with you from design to day-two operations.' },
-    ]
+    ],
+    certificatesTitle: 'Certificates & Trademarks',
+    certificatesSubtitle: 'Official registrations of IXC brands and software with the State Department of Intellectual Property of Ukraine.',
+    certificatesNoLabel: 'Certificate No.',
+    certificatesDateLabel: 'Registered',
+    certificatesPageLabel: 'Page {n}',
+    certificatesViewFull: 'View full size',
+    certificatesDocuments: [
+      {
+        title: 'Trademark: IXC',
+        description: 'Ukrainian trademark registration for the IXC brand (Nice classes 9, 38, 42).',
+        certificateNo: '44583',
+        registeredDate: '15.11.2004',
+      },
+      {
+        title: 'Trademark: InterExchange Carrier',
+        description: 'Ukrainian trademark registration for InterExchange Carrier telecommunications products (Class 9).',
+        certificateNo: '43606',
+        registeredDate: '15.09.2004',
+      },
+      {
+        title: 'Copyright: IXC Billing Center',
+        description: 'State registration of copyright for the IXC Billing Center software suite (Softswitch Plus, Prepaid platform, Dialer, Switch Statistics, Softswitch Super).',
+        certificateNo: '9378',
+        registeredDate: '18.02.2004',
+      },
+    ],
   },
   productPage: {
     overview: 'Overview',
@@ -384,7 +424,33 @@ const ru: Translations = {
       { title: 'Надёжность операторского класса', description: 'Архитектура для высокой доступности, масштабируемости и предсказуемой производительности.' },
       { title: 'Быстрый старт', description: 'Практичные функции, разумные настройки по умолчанию и команда, понимающая реальные операции.' },
       { title: 'Поддержка 24/7', description: 'Более 25 лет многоязычной поддержки (EN, RU). Наша команда с вами от проектирования до ежедневных операций.' },
-    ]
+    ],
+    certificatesTitle: 'Сертификаты и товарные знаки',
+    certificatesSubtitle: 'Официальная регистрация брендов и программного обеспечения IXC в Государственном департаменте интеллектуальной собственности Украины.',
+    certificatesNoLabel: '№ свидетельства',
+    certificatesDateLabel: 'Дата регистрации',
+    certificatesPageLabel: 'Страница {n}',
+    certificatesViewFull: 'Открыть в полном размере',
+    certificatesDocuments: [
+      {
+        title: 'Товарный знак: IXC',
+        description: 'Регистрация товарного знака IXC в Украине (классы МКТУ 9, 38, 42).',
+        certificateNo: '44583',
+        registeredDate: '15.11.2004',
+      },
+      {
+        title: 'Товарный знак: InterExchange Carrier',
+        description: 'Регистрация товарного знака InterExchange Carrier для телекоммуникационной продукции (класс 9).',
+        certificateNo: '43606',
+        registeredDate: '15.09.2004',
+      },
+      {
+        title: 'Авторское право: IXC Billing Center',
+        description: 'Государственная регистрация авторского права на программный комплекс IXC Billing Center (Softswitch Plus, Prepaid platform, Dialer, Switch Statistics, Softswitch Super).',
+        certificateNo: '9378',
+        registeredDate: '18.02.2004',
+      },
+    ],
   },
   productPage: {
     overview: 'Обзор',
@@ -523,7 +589,33 @@ const uk: Translations = {
       { title: 'Надійність операторського класу', description: 'Архітектура для високої доступності, масштабованості та передбачуваної продуктивності.' },
       { title: 'Швидкий старт', description: 'Практичні функції, розумні налаштування за замовчуванням та команда, що розуміє реальні операції.' },
       { title: 'Підтримка 24/7', description: 'Понад 25 років багатомовної підтримки (EN, RU). Наша команда з вами від проектування до щоденних операцій.' },
-    ]
+    ],
+    certificatesTitle: 'Сертифікати та торгові марки',
+    certificatesSubtitle: 'Офіційна реєстрація брендів і програмного забезпечення IXC у Державному департаменті інтелектуальної власності України.',
+    certificatesNoLabel: '№ свідоцтва',
+    certificatesDateLabel: 'Дата реєстрації',
+    certificatesPageLabel: 'Сторінка {n}',
+    certificatesViewFull: 'Відкрити в повному розмірі',
+    certificatesDocuments: [
+      {
+        title: 'Торгова марка: IXC',
+        description: 'Реєстрація торгової марки IXC в Україні (класи Ніцці 9, 38, 42).',
+        certificateNo: '44583',
+        registeredDate: '15.11.2004',
+      },
+      {
+        title: 'Торгова марка: InterExchange Carrier',
+        description: 'Реєстрація торгової марки InterExchange Carrier для телекомунікаційної продукції (клас 9).',
+        certificateNo: '43606',
+        registeredDate: '15.09.2004',
+      },
+      {
+        title: 'Авторське право: IXC Billing Center',
+        description: 'Державна реєстрація авторського права на програмний комплекс IXC Billing Center (Softswitch Plus, Prepaid platform, Dialer, Switch Statistics, Softswitch Super).',
+        certificateNo: '9378',
+        registeredDate: '18.02.2004',
+      },
+    ],
   },
   productPage: {
     overview: 'Огляд',

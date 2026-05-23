@@ -5,6 +5,7 @@ import {
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../i18n/LanguageProvider';
 import { SectionHeading } from '../components/SectionHeading';
+import { CertificatesAndTrademarks } from '../components/CertificatesAndTrademarks';
 
 const strengthIcons = [
   <Clock size={28} />,
@@ -82,6 +83,8 @@ export const AboutUs = () => {
           ))}
         </div>
       </section>
+
+      <CertificatesAndTrademarks />
 
       {/* CTA */}
       <section className="section container">
