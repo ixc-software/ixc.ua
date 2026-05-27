@@ -1,4 +1,5 @@
 import type { Language } from '../i18n/translations';
+import { DEFAULT_OG_IMAGE, getPageUrl } from './siteMeta';
 import { seoRoutes, type ProductSlug } from './seoRoutes';
 
 function isProductSlug(slug: string): slug is ProductSlug {
@@ -16,68 +17,108 @@ function normalizePathname(pathname: string): string {
   return withoutTrailing;
 }
 
+type SeoPair = { title: string; description: string };
+
+export interface PageSeoMeta {
+  title: string;
+  description: string;
+  url: string;
+  image: string;
+  imageAlt?: string;
+  ogType: 'website' | 'article';
+}
+
 export interface GetPageSeoOptions {
   /** Localized news headline for `/news/:slug` */
   newsArticleTitle?: string;
+  /** Absolute OG image URL for a news article */
+  newsArticleImage?: string;
 }
 
-export function getPageSeo(pathname: string, lang: Language, options?: GetPageSeoOptions) {
+function withDefaults(
+  pair: SeoPair,
+  path: string,
+  overrides?: Partial<Pick<PageSeoMeta, 'image' | 'imageAlt' | 'ogType'>>
+): PageSeoMeta {
+  return {
+    title: pair.title,
+    description: pair.description,
+    url: getPageUrl(path),
+    image: overrides?.image ?? DEFAULT_OG_IMAGE,
+    imageAlt: overrides?.imageAlt,
+    ogType: overrides?.ogType ?? 'website'
+  };
+}
+
+export function getPageSeo(pathname: string, lang: Language, options?: GetPageSeoOptions): PageSeoMeta {
   const path = normalizePathname(pathname);
 
   if (path === '/' || path === '') {
-    return seoRoutes.home[lang];
+    return withDefaults(seoRoutes.home[lang], path);
   }
   if (path === '/about-us') {
-    return seoRoutes.about[lang];
+    return withDefaults(seoRoutes.about[lang], path);
   }
   if (path === '/platform-brochure') {
-    return seoRoutes.platformBrochure[lang];
+    return withDefaults(seoRoutes.platformBrochure[lang], path);
   }
 
   const productMatch = path.match(/^\/products\/([^/]+)$/);
   if (productMatch) {
     const slug = productMatch[1];
-    if (isProductSlug(slug)) return seoRoutes.products[slug][lang];
-    return seoRoutes.notFound[lang];
+    if (isProductSlug(slug)) return withDefaults(seoRoutes.products[slug][lang], path);
+    return withDefaults(seoRoutes.notFound[lang], path);
   }
 
   const newsMatch = path.match(/^\/news\/([^/]+)$/);
   if (newsMatch) {
     const titleFromArticle = options?.newsArticleTitle?.trim();
     if (titleFromArticle) {
-      return {
-        title: `${titleFromArticle}${seoRoutes.newsTitleSuffix[lang]}`,
-        description: seoRoutes.newsFallbackDescription[lang]
-      };
+      return withDefaults(
+        {
+          title: `${titleFromArticle}${seoRoutes.newsTitleSuffix[lang]}`,
+          description: seoRoutes.newsFallbackDescription[lang]
+        },
+        path,
+        {
+          image: options?.newsArticleImage ?? DEFAULT_OG_IMAGE,
+          imageAlt: titleFromArticle,
+          ogType: 'article'
+        }
+      );
     }
-    return seoRoutes.notFound[lang];
+    return withDefaults(seoRoutes.notFound[lang], path);
   }
 
-  return seoRoutes.home[lang];
+  return withDefaults(seoRoutes.home[lang], path);
 }
 
-export function setDocumentSeo(meta: { title: string; description: string }) {
+export function setDocumentSeo(meta: PageSeoMeta) {
   if (typeof document === 'undefined') return;
   document.title = meta.title;
 
-  let el = document.querySelector('meta[name="description"]');
-  if (!el) {
-    el = document.createElement('meta');
-    el.setAttribute('name', 'description');
-    document.head.appendChild(el);
-  }
-  el.setAttribute('content', meta.description);
-
-  const setOg = (property: string, content: string) => {
-    let og = document.querySelector(`meta[property="${property}"]`);
-    if (!og) {
-      og = document.createElement('meta');
-      og.setAttribute('property', property);
-      document.head.appendChild(og);
+  const setMeta = (selector: string, attr: 'name' | 'property', key: string, content: string) => {
+    let el = document.querySelector<HTMLMetaElement>(`${selector}[${attr}="${key}"]`);
+    if (!el) {
+      el = document.createElement('meta');
+      el.setAttribute(attr, key);
+      document.head.appendChild(el);
     }
-    og.setAttribute('content', content);
+    el.setAttribute('content', content);
   };
 
-  setOg('og:title', meta.title);
-  setOg('og:description', meta.description);
+  setMeta('meta', 'name', 'description', meta.description);
+  setMeta('meta', 'property', 'og:title', meta.title);
+  setMeta('meta', 'property', 'og:description', meta.description);
+  setMeta('meta', 'property', 'og:url', meta.url);
+  setMeta('meta', 'property', 'og:type', meta.ogType);
+  setMeta('meta', 'property', 'og:image', meta.image);
+  setMeta('meta', 'name', 'twitter:card', 'summary_large_image');
+  setMeta('meta', 'name', 'twitter:title', meta.title);
+  setMeta('meta', 'name', 'twitter:description', meta.description);
+  setMeta('meta', 'name', 'twitter:image', meta.image);
+
+  if (meta.imageAlt) {
+    setMeta('meta', 'property', 'og:image:alt', meta.imageAlt);
+  }
 }

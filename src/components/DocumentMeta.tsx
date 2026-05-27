@@ -2,12 +2,17 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useLanguage } from '../i18n/LanguageProvider';
 import { getPageSeo, setDocumentSeo } from '../seo/getPageSeo';
+import { getNewsOgImage } from '../seo/siteMeta';
 import newsData from '../newsData.json';
 import type { Language } from '../i18n/translations';
 
-function newsTitleForSlug(slug: string | undefined, language: Language): string | undefined {
+function newsArticleForSlug(slug: string | undefined) {
   if (!slug) return undefined;
-  const article = newsData.find((n) => n.slug === slug);
+  return newsData.find((n) => n.slug === slug);
+}
+
+function newsTitleForSlug(slug: string | undefined, language: Language): string | undefined {
+  const article = newsArticleForSlug(slug);
   if (!article) return undefined;
   const loc = article as Record<string, { title?: string } | undefined>;
   return loc[language]?.title || article.en.title;
@@ -20,8 +25,10 @@ export function DocumentMeta() {
 
   useEffect(() => {
     const newsSlug = pathname.match(/^\/news\/([^/]+)\/?$/)?.[1];
+    const article = newsArticleForSlug(newsSlug);
     const meta = getPageSeo(pathname, language, {
-      newsArticleTitle: newsTitleForSlug(newsSlug, language)
+      newsArticleTitle: newsTitleForSlug(newsSlug, language),
+      newsArticleImage: article ? getNewsOgImage(article) : undefined
     });
     setDocumentSeo(meta);
   }, [pathname, language]);
