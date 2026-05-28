@@ -50,6 +50,7 @@ export const Footer: React.FC = () => {
             <h4 style={{ marginBottom: '1rem' }}>{t.footer.companyTitle}</h4>
             <ul style={{ listStyle: 'none', color: 'var(--text-secondary)', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
               <li><Link to="/about-us">{t.nav.aboutUs}</Link></li>
+              <li><Link to="/privacy-policy">{t.nav.privacyPolicy}</Link></li>
               <li><a href="mailto:sales@ixc.ua">{t.nav.contactUs}</a></li>
             </ul>
           </div>
@@ -64,7 +65,10 @@ export const Footer: React.FC = () => {
         
         <div className="footer-bottom">
           <p>© IXC Software Distribution Inc, 1999–{new Date().getFullYear()}. {t.footer.copyright}</p>
-          <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem', marginTop: '0.5rem' }}>7950 NW 53rd Street, Suite 337, Miami, Florida 33166</p>
+          <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem', marginTop: '0.5rem' }}>
+            7950 NW 53rd Street, Suite 337, Miami, Florida 33166 ·{' '}
+            <Link to="/privacy-policy">{t.nav.privacyPolicy}</Link>
+          </p>
         </div>
       </div>
     </footer>

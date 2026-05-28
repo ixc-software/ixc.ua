@@ -38,6 +38,23 @@ export const seoRoutes = {
         'IXC розробляє голосові платформи операторського класу для оптового та роздрібного VoIP: маршрутизація, білінг, аналітика та інтеграції — з 1999 року.'
     }
   } satisfies SeoPagePair,
+  privacyPolicy: {
+    en: {
+      title: 'Privacy Policy | IXC Softswitch',
+      description:
+        'Privacy Policy for ixc.ua — how IXC Software Distribution Corp. (Miami, FL) collects, uses, and protects your personal information.',
+    },
+    ru: {
+      title: 'Политика конфиденциальности | IXC Softswitch',
+      description:
+        'Политика конфиденциальности ixc.ua — как IXC Software Distribution Corp. (Майами, США) обрабатывает персональные данные.',
+    },
+    uk: {
+      title: 'Політика конфіденційності | IXC Softswitch',
+      description:
+        'Політика конфіденційності ixc.ua — як IXC Software Distribution Corp. (Маямі, США) обробляє персональні дані.',
+    },
+  } satisfies SeoPagePair,
   platformBrochure: {
     en: {
       title: 'IXC Softswitch — Platform walkthrough (screens & reports) | IXC',

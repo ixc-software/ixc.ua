@@ -766,6 +766,59 @@
   line-height: 1.7;
 }
 
+.legal-updated {
+  margin-top: 1.25rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.legal-document {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2.5rem;
+  border-radius: 16px;
+  line-height: 1.75;
+  color: var(--text-secondary);
+}
+
+.legal-entity-block {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-primary);
+}
+
+.legal-section {
+  margin-bottom: 2rem;
+}
+
+.legal-section h2 {
+  font-size: 1.35rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-primary);
+}
+
+.legal-section p {
+  margin-bottom: 0.75rem;
+}
+
+.legal-section ul {
+  margin: 0 0 1rem 1.25rem;
+  padding-left: 0.5rem;
+}
+
+.legal-section li {
+  margin-bottom: 0.5rem;
+}
+
+.legal-contact {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+  font-style: normal;
+  color: var(--text-primary);
+}
+
 /* About Us - Mission */
 .mission-banner {
   padding: 2.5rem;

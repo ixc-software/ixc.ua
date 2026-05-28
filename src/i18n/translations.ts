@@ -45,8 +45,14 @@ export interface Translations {
     products: string;
     aboutUs: string;
     contactUs: string;
+    privacyPolicy: string;
     getFreeDemo: string;
     bannerAnnouncement: string;
+  };
+  privacyPolicy: {
+    title: string;
+    subtitle: string;
+    lastUpdated: string;
   };
   hero: {
     title: string;
@@ -147,8 +153,15 @@ const en: Translations = {
     products: 'Products',
     aboutUs: 'About Us',
     contactUs: 'Contact Us',
+    privacyPolicy: 'Privacy Policy',
     getFreeDemo: 'Get free demo',
     bannerAnnouncement: 'IXC Softswitch V6 is released'
+  },
+  privacyPolicy: {
+    title: 'Privacy Policy',
+    subtitle:
+      'How IXC Software Distribution Corp. collects, uses, and protects personal information on ixc.ua.',
+    lastUpdated: 'Last updated',
   },
   hero: {
     title: 'Carrier-style VoIP infrastructure—proven in production since 1999',
@@ -312,8 +325,15 @@ const ru: Translations = {
     products: 'Продукты',
     aboutUs: 'О нас',
     contactUs: 'Контакты',
+    privacyPolicy: 'Политика конфиденциальности',
     getFreeDemo: 'Бесплатное демо',
     bannerAnnouncement: 'Вышел IXC Softswitch V6'
+  },
+  privacyPolicy: {
+    title: 'Политика конфиденциальности',
+    subtitle:
+      'Как IXC Software Distribution Corp. собирает, использует и защищает персональные данные на сайте ixc.ua.',
+    lastUpdated: 'Последнее обновление',
   },
   hero: {
     title: 'Инфраструктура VoIP операторского класса — в продакшене с 1999 года',
@@ -477,8 +497,15 @@ const uk: Translations = {
     products: 'Продукти',
     aboutUs: 'Про нас',
     contactUs: 'Контакти',
+    privacyPolicy: 'Політика конфіденційності',
     getFreeDemo: 'Безкоштовне демо',
     bannerAnnouncement: 'Випущено IXC Softswitch V6'
+  },
+  privacyPolicy: {
+    title: 'Політика конфіденційності',
+    subtitle:
+      'Як IXC Software Distribution Corp. збирає, використовує та захищає персональні дані на сайті ixc.ua.',
+    lastUpdated: 'Останнє оновлення',
   },
   hero: {
     title: 'Інфраструктура VoIP операторського класу — у продакшені з 1999 року',
