@@ -1,7 +1,7 @@
 export const SITE_ORIGIN = 'https://ixc.ua';
 
 /** Default share image when a page has no dedicated OG image. */
-export const DEFAULT_OG_IMAGE = `${SITE_ORIGIN}/logo.png`;
+export const DEFAULT_OG_IMAGE = `${SITE_ORIGIN}/og-banner.jpg`;
 
 export function getPageUrl(pathname: string): string {
   const path = pathname.replace(/\/+$/, '') || '/';
