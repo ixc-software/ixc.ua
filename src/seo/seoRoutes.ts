@@ -72,6 +72,28 @@ export const seoRoutes = {
         'Інтерфейс IXC: дашборд, traffic flow і CDR, access list, баланс і profit, авто-тарифи, live balance, маршрутизація, моніторинг, автотестер і NOC 24/7 — зі скріншотами.'
     }
   } satisfies SeoPagePair,
+  blog: {
+    en: {
+      title: 'VoIP Blog — Softswitch Guides, Routing & Billing',
+      description:
+        'Neutral guides on VoIP softswitch technology: Class 4/5 routing, LCR, billing, monitoring, anti-fraud, and FAS detection.'
+    },
+    ru: {
+      title: 'VoIP-блог — гайды по софтсвитчу, маршрутизации и биллингу',
+      description:
+        'Нейтральные руководства по VoIP-софтсвитчу: маршрутизация класса 4/5, LCR, биллинг, мониторинг, антифрод и FAS.'
+    },
+    uk: {
+      title: 'VoIP-блог — гайди з софтсвічем, маршрутизації та білінгу',
+      description:
+        'Нейтральні посібники з VoIP-софтсвічем: маршрутизація класу 4/5, LCR, білінг, моніторинг, антифрод і FAS.'
+    }
+  } satisfies SeoPagePair,
+  blogTitleSuffix: {
+    en: ' | VoIP Blog',
+    ru: ' | VoIP-блог',
+    uk: ' | VoIP-блог'
+  } satisfies Record<Language, string>,
   products: {
     softswitch: {
       en: {

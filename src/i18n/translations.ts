@@ -46,6 +46,7 @@ export interface Translations {
     aboutUs: string;
     contactUs: string;
     privacyPolicy: string;
+    blog: string;
     getFreeDemo: string;
     bannerAnnouncement: string;
   };
@@ -53,6 +54,20 @@ export interface Translations {
     title: string;
     subtitle: string;
     lastUpdated: string;
+  };
+  blog: {
+    title: string;
+    subtitle: string;
+    readMore: string;
+    viewAll: string;
+    backToBlog: string;
+    minRead: string;
+    faqTitle: string;
+    ctaTitle: string;
+    ctaText: string;
+    ctaButton: string;
+    notFoundTitle: string;
+    notFoundText: string;
   };
   hero: {
     title: string;
@@ -154,6 +169,7 @@ const en: Translations = {
     aboutUs: 'About Us',
     contactUs: 'Contact Us',
     privacyPolicy: 'Privacy Policy',
+    blog: 'Blog',
     getFreeDemo: 'Get free demo',
     bannerAnnouncement: 'IXC Softswitch V6 is released'
   },
@@ -222,6 +238,20 @@ const en: Translations = {
       { quote: 'Our company is going and henceforth actively to introduce the hi-tech program complexes adequate to the highest international standards owing to which efficiency of our operational activity as a whole will be considerably raised.', author: 'Igor Litovchenko', role: 'President, Joint-Stock Company "Kyivstar G.S.M."' },
       { quote: 'Switching to IXC gave us carrier-grade routing and billing in one solution. The monitoring tools and Telegram integration keep us on top of traffic quality 24/7.', author: 'Gilbert Abboud', role: 'CTO - VoIP | Messaging · NGN Telecom' },
     ]
+  },
+  blog: {
+    title: 'Blog',
+    subtitle: 'Practical guides on VoIP softswitch technology — routing, billing, monitoring, and security.',
+    readMore: 'Read article',
+    viewAll: 'View all articles',
+    backToBlog: 'Back to Blog',
+    minRead: 'min read',
+    faqTitle: 'Frequently asked questions',
+    ctaTitle: 'See IXC Softswitch on your own traffic',
+    ctaText: 'Carrier-grade Class 4/5 routing, real-time billing, monitoring, and anti-fraud — proven in production since 1999.',
+    ctaButton: 'Explore the softswitch',
+    notFoundTitle: 'Article not found',
+    notFoundText: "The article you're looking for doesn't exist or may have been moved."
   },
   news: {
     title: 'Latest Updates',
@@ -326,6 +356,7 @@ const ru: Translations = {
     aboutUs: 'О нас',
     contactUs: 'Контакты',
     privacyPolicy: 'Политика конфиденциальности',
+    blog: 'Блог',
     getFreeDemo: 'Бесплатное демо',
     bannerAnnouncement: 'Вышел IXC Softswitch V6'
   },
@@ -394,6 +425,20 @@ const ru: Translations = {
       { quote: 'Наша компания намерена и впредь активно внедрять высокотехнологичные программные комплексы, соответствующие высшим международным стандартам, благодаря чему эффективность нашей операционной деятельности в целом будет значительно повышена.', author: 'Игорь Литовченко', role: 'Президент, акционерное общество «Киевстар GSM»' },
       { quote: 'Переход на IXC дал нам маршрутизацию и биллинг операторского класса в одном решении. Инструменты мониторинга и интеграция с Telegram позволяют контролировать качество трафика 24/7.', author: 'Gilbert Abboud', role: 'CTO — VoIP | обмен сообщениями · NGN Telecom' },
     ]
+  },
+  blog: {
+    title: 'Блог',
+    subtitle: 'Практические руководства по технологии VoIP-софтсвитча — маршрутизация, биллинг, мониторинг и безопасность.',
+    readMore: 'Читать статью',
+    viewAll: 'Все статьи блога',
+    backToBlog: 'Назад в блог',
+    minRead: 'мин чтения',
+    faqTitle: 'Частые вопросы',
+    ctaTitle: 'Посмотрите IXC Softswitch на своём трафике',
+    ctaText: 'Маршрутизация класса 4/5 операторского уровня, биллинг в реальном времени, мониторинг и антифрод — в продакшене с 1999 года.',
+    ctaButton: 'Перейти к софтсвитчу',
+    notFoundTitle: 'Статья не найдена',
+    notFoundText: 'Статья, которую вы ищете, не существует или была перемещена.'
   },
   news: {
     title: 'Последние обновления',
@@ -498,6 +543,7 @@ const uk: Translations = {
     aboutUs: 'Про нас',
     contactUs: 'Контакти',
     privacyPolicy: 'Політика конфіденційності',
+    blog: 'Блог',
     getFreeDemo: 'Безкоштовне демо',
     bannerAnnouncement: 'Випущено IXC Softswitch V6'
   },
@@ -566,6 +612,20 @@ const uk: Translations = {
       { quote: 'Наша компанія й надалі активно впроваджуватиме високотехнологічні програмні комплекси, що відповідають найвищим міжнародним стандартам, завдяки чому ефективність нашої операційної діяльності в цілому буде істотно підвищена.', author: 'Ігор Литовченко', role: 'Президент, АТ «Київстар GSM»' },
       { quote: 'Перехід на IXC дав нам маршрутизацію та білінг операторського класу в одному рішенні. Інструменти моніторингу та інтеграція з Telegram дозволяють контролювати якість трафіку 24/7.', author: 'Gilbert Abboud', role: 'CTO — VoIP | обмін повідомленнями · NGN Telecom' },
     ]
+  },
+  blog: {
+    title: 'Блог',
+    subtitle: 'Практичні посібники з технології VoIP-софтсвіча — маршрутизація, білінг, моніторинг і безпека.',
+    readMore: 'Читати статтю',
+    viewAll: 'Усі статті блогу',
+    backToBlog: 'Назад до блогу',
+    minRead: 'хв читання',
+    faqTitle: 'Часті запитання',
+    ctaTitle: 'Подивіться IXC Softswitch на своєму трафіку',
+    ctaText: 'Маршрутизація класу 4/5 операторського рівня, білінг у реальному часі, моніторинг та антифрод — у продакшені з 1999 року.',
+    ctaButton: 'Перейти до софтсвіча',
+    notFoundTitle: 'Статтю не знайдено',
+    notFoundText: 'Стаття, яку ви шукаєте, не існує або була переміщена.'
   },
   news: {
     title: 'Останні оновлення',

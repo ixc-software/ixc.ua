@@ -9,6 +9,7 @@ export type SectionHeadingProps = {
   /** Adds extra space before the following content (major sections with grids) */
   spacious?: boolean;
   className?: string;
+  subtitleClassName?: string;
 };
 
 export function SectionHeading({
@@ -18,6 +19,7 @@ export function SectionHeading({
   toolbar,
   spacious,
   className,
+  subtitleClassName,
 }: SectionHeadingProps) {
   return (
     <header
@@ -28,7 +30,9 @@ export function SectionHeading({
       </div>
       <h2 className="section-heading-title">{title}</h2>
       {subtitle != null && subtitle !== '' ? (
-        <p className="section-heading-subtitle">{subtitle}</p>
+        <p className={['section-heading-subtitle', subtitleClassName].filter(Boolean).join(' ')}>
+          {subtitle}
+        </p>
       ) : null}
       {toolbar != null ? <div className="section-heading-toolbar">{toolbar}</div> : null}
     </header>

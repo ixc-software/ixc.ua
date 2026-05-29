@@ -2,8 +2,9 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import newsData from './src/newsData.json' assert { type: 'json' };
+import { blogPosts, getLocalizedPost, getPostPath } from './src/content/blogPosts.ts';
 import { getPageSeo, type PageSeoMeta } from './src/seo/getPageSeo.ts';
-import { getNewsOgImage } from './src/seo/siteMeta.ts';
+import { getNewsOgImage, SITE_ORIGIN } from './src/seo/siteMeta.ts';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const toAbsolute = (p: string) => path.resolve(__dirname, p);
@@ -12,14 +13,21 @@ function escapeAttr(text: string): string {
   return text.replace(/&/g, '&amp;').replace(/"/g, '&quot;');
 }
 
+/** Escape so the JSON-LD payload can't terminate the <script> element. */
+function jsonLdSafe(obj: unknown): string {
+  return JSON.stringify(obj).replace(/</g, '\\u003c');
+}
+
 function injectSeoFull(html: string, meta: PageSeoMeta): string {
   const title = escapeAttr(meta.title);
   const desc = escapeAttr(meta.description);
   const url = escapeAttr(meta.url);
+  const canonical = escapeAttr(meta.canonical);
   const image = escapeAttr(meta.image);
   const ogType = escapeAttr(meta.ogType);
   let out = html.replace(/<title>[^<]*<\/title>/, `<title>${title}</title>`);
   out = out.replace(/<meta name="description" content="[^"]*"/, `<meta name="description" content="${desc}"`);
+  out = out.replace(/<link rel="canonical" href="[^"]*"/, `<link rel="canonical" href="${canonical}"`);
   out = out.replace(
     /<meta property="og:title" content="[^"]*"/,
     `<meta property="og:title" content="${title}"`
@@ -57,26 +65,37 @@ function injectSeoFull(html: string, meta: PageSeoMeta): string {
       );
     }
   }
+
+  // Page-specific structured data
+  const jsonLdScripts = meta.jsonLd
+    .map((block) => `<script type="application/ld+json">${jsonLdSafe(block)}</script>`)
+    .join('\n    ');
+  out = out.replace('<!--seo-jsonld-->', jsonLdScripts);
+
   return out;
 }
 
 const template = fs.readFileSync(toAbsolute('dist/index.html'), 'utf-8');
 const { render } = await import('./dist/server/entry-server.js');
 
-const routes = [
+const staticRoutes = [
   '/',
   '/about-us',
   '/privacy-policy',
   '/platform-brochure',
+  '/blog',
   '/products/softswitch',
   '/products/white-black-list',
   '/products/monitoring-tool',
   '/products/ixc-autotester',
   '/products/sms-platform',
   '/products/google-api',
-  '/products/technical-specifications',
-  ...newsData.map((n) => `/news/${n.slug}`)
+  '/products/technical-specifications'
 ];
+
+const blogRoutes = blogPosts.map((p) => getPostPath(p));
+const newsRoutes = newsData.map((n) => `/news/${n.slug}`);
+const routes = [...staticRoutes, ...blogRoutes, ...newsRoutes];
 
 for (const route of routes) {
   const appHtml = render(route);
@@ -92,16 +111,90 @@ for (const route of routes) {
         newsArticleImage: getNewsOgImage(article)
       });
     }
+  } else {
+    const post = blogPosts.find((p) => getPostPath(p) === route);
+    if (post) {
+      const loc = getLocalizedPost(post, 'en');
+      pageMeta = getPageSeo(route, 'en', {
+        blogPost: {
+          title: loc.title,
+          description: loc.description,
+          image: loc.image,
+          imageAlt: loc.title,
+          datePublished: loc.date,
+          dateModified: loc.updated,
+          author: loc.author,
+          faq: loc.faq?.map((f) => ({ q: f.q, a: f.a }))
+        }
+      });
+    }
   }
   html = injectSeoFull(html, pageMeta);
 
-  const filePath =
-    route === '/' ? 'dist/index.html' : `dist${route}/index.html`;
-
+  const filePath = route === '/' ? 'dist/index.html' : `dist${route}/index.html`;
   const dirPath = path.dirname(toAbsolute(filePath));
   fs.mkdirSync(dirPath, { recursive: true });
   fs.writeFileSync(toAbsolute(filePath), html);
   console.log(`Prerendered: ${route} → ${filePath}`);
 }
+
+// ---------------------------------------------------------------------------
+// sitemap.xml + robots.txt — generated from the same route list (single source)
+// ---------------------------------------------------------------------------
+const today = new Date().toISOString().slice(0, 10);
+
+interface SitemapEntry {
+  loc: string;
+  lastmod: string;
+  changefreq: string;
+  priority: string;
+}
+
+function entry(route: string, lastmod: string, changefreq: string, priority: string): SitemapEntry {
+  const loc = route === '/' ? `${SITE_ORIGIN}/` : `${SITE_ORIGIN}${route}`;
+  return { loc, lastmod, changefreq, priority };
+}
+
+const staticPriority: Record<string, [string, string]> = {
+  '/': ['weekly', '1.0'],
+  '/about-us': ['monthly', '0.8'],
+  '/privacy-policy': ['yearly', '0.3'],
+  '/platform-brochure': ['monthly', '0.7'],
+  '/blog': ['weekly', '0.8'],
+  '/products/softswitch': ['monthly', '0.9']
+};
+
+const sitemapEntries: SitemapEntry[] = [];
+for (const route of staticRoutes) {
+  const [changefreq, priority] = staticPriority[route] ?? ['monthly', '0.7'];
+  sitemapEntries.push(entry(route, today, changefreq, priority));
+}
+for (const post of blogPosts) {
+  sitemapEntries.push(entry(getPostPath(post), post.updated ?? post.date, 'monthly', '0.7'));
+}
+for (const n of newsData) {
+  sitemapEntries.push(entry(`/news/${n.slug}`, n.date ?? today, 'monthly', '0.6'));
+}
+
+const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${sitemapEntries
+  .map(
+    (e) =>
+      `  <url><loc>${e.loc}</loc><lastmod>${e.lastmod}</lastmod><changefreq>${e.changefreq}</changefreq><priority>${e.priority}</priority></url>`
+  )
+  .join('\n')}
+</urlset>
+`;
+fs.writeFileSync(toAbsolute('dist/sitemap.xml'), sitemapXml);
+console.log(`Generated: dist/sitemap.xml (${sitemapEntries.length} URLs)`);
+
+const robotsTxt = `User-agent: *
+Allow: /
+
+Sitemap: ${SITE_ORIGIN}/sitemap.xml
+`;
+fs.writeFileSync(toAbsolute('dist/robots.txt'), robotsTxt);
+console.log('Generated: dist/robots.txt');
 
 console.log('Prerender completed successfully.');

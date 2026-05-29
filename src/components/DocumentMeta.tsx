@@ -1,9 +1,10 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useLanguage } from '../i18n/LanguageProvider';
-import { getPageSeo, setDocumentSeo } from '../seo/getPageSeo';
+import { getPageSeo, setDocumentSeo, type BlogPostSeo } from '../seo/getPageSeo';
 import { getNewsOgImage } from '../seo/siteMeta';
 import newsData from '../newsData.json';
+import { findBlogPost, findBlogPostByPath, getLocalizedPost } from '../content/blogPosts';
 import type { Language } from '../i18n/translations';
 
 function newsArticleForSlug(slug: string | undefined) {
@@ -18,6 +19,26 @@ function newsTitleForSlug(slug: string | undefined, language: Language): string 
   return loc[language]?.title || article.en.title;
 }
 
+function blogSeoFor(
+  slug: string | undefined,
+  pathname: string,
+  language: Language
+): BlogPostSeo | undefined {
+  const post = slug ? findBlogPost(slug) : findBlogPostByPath(pathname);
+  if (!post) return undefined;
+  const loc = getLocalizedPost(post, language);
+  return {
+    title: loc.title,
+    description: loc.description,
+    image: loc.image,
+    imageAlt: loc.title,
+    datePublished: loc.date,
+    dateModified: loc.updated,
+    author: loc.author,
+    faq: loc.faq?.map((f) => ({ q: f.q, a: f.a }))
+  };
+}
+
 /** Updates document title and meta tags for the current route and language (SPA + hydration). */
 export function DocumentMeta() {
   const { pathname } = useLocation();
@@ -25,10 +46,12 @@ export function DocumentMeta() {
 
   useEffect(() => {
     const newsSlug = pathname.match(/^\/news\/([^/]+)\/?$/)?.[1];
+    const blogSlug = pathname.match(/^\/blog\/([^/]+)\/?$/)?.[1];
     const article = newsArticleForSlug(newsSlug);
     const meta = getPageSeo(pathname, language, {
       newsArticleTitle: newsTitleForSlug(newsSlug, language),
-      newsArticleImage: article ? getNewsOgImage(article) : undefined
+      newsArticleImage: article ? getNewsOgImage(article) : undefined,
+      blogPost: blogSeoFor(blogSlug, pathname, language)
     });
     setDocumentSeo(meta);
   }, [pathname, language]);
