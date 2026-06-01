@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashScrollLink } from './HashScrollLink';
+import { Link } from 'react-router-dom';
 import { ArrowRight, PhoneCall } from 'lucide-react';
 import { useLanguage } from '../i18n/LanguageProvider';
 
@@ -250,10 +250,10 @@ export const Hero: React.FC = () => {
         <h1>{t.hero.title}</h1>
         <p className="hero-subtitle">{t.hero.subtitle}</p>
         <div className="hero-actions">
-          <HashScrollLink to={{ pathname: '/', hash: 'products' }} className="btn btn-primary hero-explore-btn">
+          <Link to="/news/ixc-webv7" className="btn btn-primary hero-explore-btn">
             <span className="hero-ai-badge">{t.hero.aiStamp}</span>
             {t.hero.exploreProducts} <ArrowRight size={18} />
-          </HashScrollLink>
+          </Link>
           <a href="mailto:sales@ixc.ua" className="btn btn-outline">
             {t.hero.contactSales} <PhoneCall size={18} />
           </a>

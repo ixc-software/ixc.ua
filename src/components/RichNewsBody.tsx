@@ -1,6 +1,13 @@
 import React, { Fragment } from 'react';
 
 const EMAIL_RE = /([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/g;
+const IMAGE_LINE_RE = /^!\[(.*?)\]\((.*?)\)\s*$/;
+
+function resolveNewsImageSrc(src: string): string {
+  if (src.startsWith('http://') || src.startsWith('https://')) return src;
+  const path = src.startsWith('/') ? src.slice(1) : src;
+  return `${import.meta.env.BASE_URL}${path}`;
+}
 
 /** Turn bare emails into mailto links (safe: no raw HTML). */
 function linkifyEmails(s: string, keyPrefix: string): React.ReactNode[] {
@@ -65,6 +72,35 @@ function parseSectionBody(body: string, baseKey: string): React.ReactNode[] {
     }
 
     const trimmed = line.trimStart();
+    const imageMatch = trimmed.match(IMAGE_LINE_RE);
+    if (imageMatch) {
+      const figures: { alt: string; src: string }[] = [
+        { alt: imageMatch[1], src: imageMatch[2] },
+      ];
+      i++;
+      while (i < lines.length) {
+        const next = lines[i].trim();
+        const nextImage = next.match(IMAGE_LINE_RE);
+        if (!nextImage) break;
+        figures.push({ alt: nextImage[1], src: nextImage[2] });
+        i++;
+      }
+      out.push(
+        <div
+          key={`fig-${baseKey}-${out.length}`}
+          className={`news-rich-figures${figures.length > 1 ? ' news-rich-figures--row' : ''}`}
+        >
+          {figures.map((fig, j) => (
+            <figure key={j} className="news-rich-figure">
+              <img src={resolveNewsImageSrc(fig.src)} alt={fig.alt} loading="lazy" />
+              {fig.alt ? <figcaption>{fig.alt}</figcaption> : null}
+            </figure>
+          ))}
+        </div>
+      );
+      continue;
+    }
+
     if (trimmed.startsWith('- ') || trimmed.startsWith('• ')) {
       const items: string[] = [];
       while (i < lines.length) {
@@ -108,7 +144,7 @@ function parseSectionBody(body: string, baseKey: string): React.ReactNode[] {
       const t = lines[i];
       const ts = t.trimStart();
       if (!t.trim()) break;
-      if (ts.startsWith('- ') || ts.startsWith('• ') || ts.startsWith('> ')) break;
+      if (IMAGE_LINE_RE.test(ts) || ts.startsWith('- ') || ts.startsWith('• ') || ts.startsWith('> ')) break;
       para.push(t.trim());
       i++;
     }

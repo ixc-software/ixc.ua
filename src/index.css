@@ -593,3 +593,34 @@ a:hover {
 .news-rich-orphan {
   margin-top: 1.5rem;
 }
+
+.news-rich-figures {
+  margin: 0 0 1.5rem;
+}
+
+.news-rich-figures--row {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.news-rich-figure {
+  margin: 0;
+}
+
+.news-rich-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow);
+}
+
+.news-rich-figure figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: var(--text-secondary);
+  text-align: center;
+}

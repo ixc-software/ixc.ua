@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import newsData from './src/newsData.json' assert { type: 'json' };
+import newsData from './src/newsData';
 import { blogPosts, getLocalizedPost, getPostPath } from './src/content/blogPosts.ts';
 import { getPageSeo, type PageSeoMeta } from './src/seo/getPageSeo.ts';
 import { getNewsOgImage, SITE_ORIGIN } from './src/seo/siteMeta.ts';

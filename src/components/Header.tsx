@@ -71,9 +71,9 @@ export const Header: React.FC = () => {
           </button>
         </div>
       </div>
-      <div className="announcement-banner">
+      <Link to="/news/ixc-webv7" className="announcement-banner">
         {t.nav.bannerAnnouncement}
-      </div>
+      </Link>
     </header>
   );
 };

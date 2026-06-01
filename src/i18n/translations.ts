@@ -171,7 +171,7 @@ const en: Translations = {
     privacyPolicy: 'Privacy Policy',
     blog: 'Blog',
     getFreeDemo: 'Get free demo',
-    bannerAnnouncement: 'IXC Softswitch V6 is released'
+    bannerAnnouncement: 'IXC Billing WebV7 is available — see what’s new for operators'
   },
   privacyPolicy: {
     title: 'Privacy Policy',
@@ -183,8 +183,8 @@ const en: Translations = {
     title: 'Carrier-style VoIP infrastructure—proven in production since 1999',
     subtitle:
       'Run wholesale and retail voice on a single high-capacity stack: advanced LCR and policy routing, automated billing, route testing and FAS detection, APIs and alerts—backed by 24/7 multilingual NOC support.',
-    aiStamp: 'V6 released',
-    exploreProducts: 'Explore Products',
+    aiStamp: 'V7 released',
+    exploreProducts: 'See what’s new',
     contactSales: 'Contact Sales'
   },
   trust: {
@@ -358,7 +358,7 @@ const ru: Translations = {
     privacyPolicy: 'Политика конфиденциальности',
     blog: 'Блог',
     getFreeDemo: 'Бесплатное демо',
-    bannerAnnouncement: 'Вышел IXC Softswitch V6'
+    bannerAnnouncement: 'Доступен IXC Billing WebV7 — узнайте, что нового для операторов'
   },
   privacyPolicy: {
     title: 'Политика конфиденциальности',
@@ -370,8 +370,8 @@ const ru: Translations = {
     title: 'Инфраструктура VoIP операторского класса — в продакшене с 1999 года',
     subtitle:
       'Оптовый и розничный голос на одной высоконагруженной платформе: продвинутая LCR и маршрутизация на основе политик, автоматический биллинг, тест маршрутов и выявление FAS, API и оповещения — с круглосуточной многоязычной поддержкой NOC.',
-    aiStamp: 'V6 released',
-    exploreProducts: 'Наши продукты',
+    aiStamp: 'V7 released',
+    exploreProducts: 'Что нового',
     contactSales: 'Связаться с нами'
   },
   trust: {
@@ -545,7 +545,7 @@ const uk: Translations = {
     privacyPolicy: 'Політика конфіденційності',
     blog: 'Блог',
     getFreeDemo: 'Безкоштовне демо',
-    bannerAnnouncement: 'Випущено IXC Softswitch V6'
+    bannerAnnouncement: 'Доступний IXC Billing WebV7 — дізнайтеся, що нового для операторів'
   },
   privacyPolicy: {
     title: 'Політика конфіденційності',
@@ -557,8 +557,8 @@ const uk: Translations = {
     title: 'Інфраструктура VoIP операторського класу — у продакшені з 1999 року',
     subtitle:
       'Оптовий і роздрібний голос на одній високонавантаженій платформі: розширена LCR і маршрутизація на основі політик, автоматичний білінг, тест маршрутів і виявлення FAS, API та сповіщення — із цілодобовою багатомовною підтримкою NOC.',
-    aiStamp: 'V6 released',
-    exploreProducts: 'Наші продукти',
+    aiStamp: 'V7 released',
+    exploreProducts: 'Що нового',
     contactSales: "Зв'язатися з нами"
   },
   trust: {

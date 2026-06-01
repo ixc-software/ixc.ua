@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 import { useLanguage } from '../i18n/LanguageProvider';
 import { getPageSeo, setDocumentSeo, type BlogPostSeo } from '../seo/getPageSeo';
 import { getNewsOgImage } from '../seo/siteMeta';
-import newsData from '../newsData.json';
+import newsData from '../newsData';
 import { findBlogPost, findBlogPostByPath, getLocalizedPost } from '../content/blogPosts';
 import type { Language } from '../i18n/translations';
 

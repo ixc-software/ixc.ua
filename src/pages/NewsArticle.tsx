@@ -3,7 +3,7 @@ import {
   ArrowLeft, Calendar 
 } from 'lucide-react';
 import { useLanguage } from '../i18n/LanguageProvider';
-import newsData from '../newsData.json';
+import newsData from '../newsData';
 import { RichNewsBody } from '../components/RichNewsBody';
 
 export const NewsArticle = () => {
@@ -51,7 +51,12 @@ export const NewsArticle = () => {
 
       {/* Article Content */}
       <section className="section container">
-        <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+        <div
+          style={{
+            maxWidth: (article as { rich_news?: boolean }).rich_news ? '960px' : '800px',
+            margin: '0 auto',
+          }}
+        >
           {article.local_image && (
             <img 
               src={`${import.meta.env.BASE_URL}${article.local_image.startsWith('/') ? article.local_image.slice(1) : article.local_image}`} 

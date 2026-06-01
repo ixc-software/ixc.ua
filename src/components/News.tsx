@@ -3,7 +3,7 @@ import { ArrowLeft, ArrowRight, Calendar, Newspaper } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../i18n/LanguageProvider';
 import { SectionHeading } from './SectionHeading';
-import newsData from '../newsData.json';
+import newsData from '../newsData';
 
 export const News: React.FC = () => {
   const { language, t } = useLanguage();
