@@ -17,7 +17,7 @@ export const FloatingContact: React.FC = () => {
           <Send size={18} /> Telegram
         </a>
         <a
-          href="https://wa.me/380674878717"
+          href="https://wa.me/13056806411"
           target="_blank"
           rel="noopener noreferrer"
           className="fab-option fab-option-whatsapp"
