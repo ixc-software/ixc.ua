@@ -237,6 +237,7 @@ const en: Translations = {
     items: [
       { quote: 'Our company is going and henceforth actively to introduce the hi-tech program complexes adequate to the highest international standards owing to which efficiency of our operational activity as a whole will be considerably raised.', author: 'Igor Litovchenko', role: 'President, Joint-Stock Company "Kyivstar G.S.M."' },
       { quote: 'Switching to IXC gave us carrier-grade routing and billing in one solution. The monitoring tools and Telegram integration keep us on top of traffic quality 24/7.', author: 'Gilbert Abboud', role: 'CTO - VoIP | Messaging · NGN Telecom' },
+      { quote: 'We put IXC Softswitch V7 into production from day one — no staging phase, straight into live traffic. The platform has carried our wholesale operations reliably since the first call.', author: 'Andrew Lujansky', role: 'Sales · Valor DBA Lukovitel' },
     ]
   },
   blog: {
@@ -424,6 +425,7 @@ const ru: Translations = {
     items: [
       { quote: 'Наша компания намерена и впредь активно внедрять высокотехнологичные программные комплексы, соответствующие высшим международным стандартам, благодаря чему эффективность нашей операционной деятельности в целом будет значительно повышена.', author: 'Игорь Литовченко', role: 'Президент, акционерное общество «Киевстар GSM»' },
       { quote: 'Переход на IXC дал нам маршрутизацию и биллинг операторского класса в одном решении. Инструменты мониторинга и интеграция с Telegram позволяют контролировать качество трафика 24/7.', author: 'Gilbert Abboud', role: 'CTO — VoIP | обмен сообщениями · NGN Telecom' },
+      { quote: 'Мы запустили IXC Softswitch V7 в продакшен с первого дня — без тестового этапа, сразу на боевой трафик. Платформа стабильно обслуживает наш оптовый бизнес с первого звонка.', author: 'Андрей Лужанский', role: 'Продажи · Valor DBA Lukovitel' },
     ]
   },
   blog: {
@@ -611,6 +613,7 @@ const uk: Translations = {
     items: [
       { quote: 'Наша компанія й надалі активно впроваджуватиме високотехнологічні програмні комплекси, що відповідають найвищим міжнародним стандартам, завдяки чому ефективність нашої операційної діяльності в цілому буде істотно підвищена.', author: 'Ігор Литовченко', role: 'Президент, АТ «Київстар GSM»' },
       { quote: 'Перехід на IXC дав нам маршрутизацію та білінг операторського класу в одному рішенні. Інструменти моніторингу та інтеграція з Telegram дозволяють контролювати якість трафіку 24/7.', author: 'Gilbert Abboud', role: 'CTO — VoIP | обмін повідомленнями · NGN Telecom' },
+      { quote: 'Ми запустили IXC Softswitch V7 у продакшн з першого дня — без тестового етапу, одразу на бойовий трафік. Платформа стабільно обслуговує наш оптовий бізнес із першого дзвінка.', author: 'Андрій Лужанський', role: 'Продажі · Valor DBA Lukovitel' },
     ]
   },
   blog: {

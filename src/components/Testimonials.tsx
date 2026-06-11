@@ -36,6 +36,17 @@ const testimonials: Testimonial[] = [
     photoSrc: '/testimonials/gilbert-abboud-ngn.png',
     photoAlt: 'Gilbert Abboud, CTO - VoIP | Messaging at NGN Telecom',
     photoHref: 'https://www.linkedin.com/in/gilbert-abboud-b7b90613/'
+  },
+  {
+    company: 'Lukovitel',
+    url: 'https://lukovitel.interexc.com/',
+    quote:
+      'We put IXC Softswitch V7 into production from day one — no staging phase, straight into live traffic. The platform has carried our wholesale operations reliably since the first call.',
+    author: 'Andrew Lujansky',
+    role: 'Sales · Valor DBA Lukovitel',
+    photoSrc: '/testimonials/andrew-lujansky-lukovitel.png',
+    photoAlt: 'Andrew Lujansky, Sales at Valor DBA Lukovitel',
+    photoHref: 'https://www.linkedin.com/in/andrew-lujansky-360a44314/'
   }
 ];
 
