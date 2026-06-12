@@ -5,6 +5,7 @@ import newsData from './src/newsData';
 import { blogPosts, getLocalizedPost, getPostPath } from './src/content/blogPosts.ts';
 import { getPageSeo, type PageSeoMeta } from './src/seo/getPageSeo.ts';
 import { getNewsOgImage, SITE_ORIGIN } from './src/seo/siteMeta.ts';
+import { LEGACY_REDIRECTS, writeLegacyRedirects } from './legacyRedirects.ts';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const toAbsolute = (p: string) => path.resolve(__dirname, p);
@@ -217,5 +218,8 @@ Sitemap: ${SITE_ORIGIN}/sitemap.xml
 `;
 fs.writeFileSync(toAbsolute('dist/robots.txt'), robotsTxt);
 console.log('Generated: dist/robots.txt');
+
+writeLegacyRedirects(toAbsolute);
+console.log(`Generated: ${LEGACY_REDIRECTS.length} legacy redirect(s)`);
 
 console.log('Prerender completed successfully.');
