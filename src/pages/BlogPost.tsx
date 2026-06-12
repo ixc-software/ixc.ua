@@ -1,7 +1,7 @@
-import { useParams, useLocation, Link } from 'react-router-dom';
+import { useParams, useLocation, Link, Navigate } from 'react-router-dom';
 import { ArrowLeft, Calendar, Clock, User } from 'lucide-react';
 import { useLanguage } from '../i18n/LanguageProvider';
-import { findBlogPost, findBlogPostByPath, getLocalizedPost } from '../content/blogPosts';
+import { findBlogPost, findBlogPostByPath, getLocalizedPost, getPostPath } from '../content/blogPosts';
 import { RichArticleBody } from '../components/RichArticleBody';
 import { formatPostDate } from '../utils/formatDate';
 
@@ -15,6 +15,10 @@ export const BlogPost = () => {
   const { pathname } = useLocation();
   const { language, t } = useLanguage();
   const post = slug ? findBlogPost(slug) : findBlogPostByPath(pathname);
+
+  if (post?.path && pathname.startsWith('/blog/')) {
+    return <Navigate to={getPostPath(post)} replace />;
+  }
 
   if (!post) {
     return (

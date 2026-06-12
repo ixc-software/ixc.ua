@@ -75,6 +75,32 @@ function injectSeoFull(html: string, meta: PageSeoMeta): string {
   return out;
 }
 
+/**
+ * Write prerendered HTML for a route. For non-root routes, also writes a sibling
+ * `.html` file so GitHub Pages serves no-trailing-slash URLs with 200 (no 301).
+ * @see dealoagent.ai scripts/generate-static-pages.js
+ */
+function writeRouteArtifacts(route: string, html: string): void {
+  if (route === '/') {
+    fs.writeFileSync(toAbsolute('dist/index.html'), html);
+    console.log(`Prerendered: ${route} → dist/index.html`);
+    return;
+  }
+
+  const segments = route.replace(/^\//, '').split('/');
+  const indexPath = `dist/${segments.join('/')}/index.html`;
+  fs.mkdirSync(path.dirname(toAbsolute(indexPath)), { recursive: true });
+  fs.writeFileSync(toAbsolute(indexPath), html);
+  console.log(`Prerendered: ${route} → ${indexPath}`);
+
+  const fileName = `${segments[segments.length - 1]}.html`;
+  const parentDir = segments.length > 1 ? `dist/${segments.slice(0, -1).join('/')}` : 'dist';
+  const siblingPath = `${parentDir}/${fileName}`;
+  fs.mkdirSync(toAbsolute(parentDir), { recursive: true });
+  fs.writeFileSync(toAbsolute(siblingPath), html);
+  console.log(`Prerendered: ${route} → ${siblingPath} (no-redirect)`);
+}
+
 const template = fs.readFileSync(toAbsolute('dist/index.html'), 'utf-8');
 const { render } = await import('./dist/server/entry-server.js');
 
@@ -130,12 +156,7 @@ for (const route of routes) {
     }
   }
   html = injectSeoFull(html, pageMeta);
-
-  const filePath = route === '/' ? 'dist/index.html' : `dist${route}/index.html`;
-  const dirPath = path.dirname(toAbsolute(filePath));
-  fs.mkdirSync(dirPath, { recursive: true });
-  fs.writeFileSync(toAbsolute(filePath), html);
-  console.log(`Prerendered: ${route} → ${filePath}`);
+  writeRouteArtifacts(route, html);
 }
 
 // ---------------------------------------------------------------------------
