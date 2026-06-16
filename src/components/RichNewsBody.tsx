@@ -1,7 +1,60 @@
 import React, { Fragment } from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+import { HashScrollLink } from './HashScrollLink';
 
 const EMAIL_RE = /([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/g;
 const IMAGE_LINE_RE = /^!\[(.*?)\]\((.*?)\)\s*$/;
+const BTN_LINE_RE = /^@btn\s+(.+?)\s*\|\s*(\S+)\s*$/;
+
+function isTableSeparator(line: string): boolean {
+  const t = line.trim();
+  if (!t.startsWith('|') || !t.endsWith('|')) return false;
+  return t.replace(/\|/g, '').replace(/[-:\s]/g, '').length === 0;
+}
+
+function isTableRow(line: string): boolean {
+  const t = line.trim();
+  return t.startsWith('|') && t.endsWith('|') && !isTableSeparator(t);
+}
+
+function parseTableRow(line: string): string[] {
+  return line
+    .trim()
+    .replace(/^\|/, '')
+    .replace(/\|$/, '')
+    .split('|')
+    .map((cell) => cell.trim());
+}
+
+function renderNewsTable(rows: string[][], key: string) {
+  if (!rows.length) return null;
+  const [header, ...body] = rows;
+  return (
+    <div key={key} className="news-rich-table-wrap">
+      <table className="news-rich-table">
+        <thead>
+          <tr>
+            {header.map((cell, j) => (
+              <th key={j} scope="col">
+                {cell ? parseBold(cell, `${key}-h-${j}`) : null}
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {body.map((row, ri) => (
+            <tr key={ri}>
+              {row.map((cell, ci) => (
+                <td key={ci}>{parseBold(cell, `${key}-r-${ri}-c-${ci}`)}</td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
 
 function resolveNewsImageSrc(src: string): string {
   if (src.startsWith('http://') || src.startsWith('https://')) return src;
@@ -33,6 +86,41 @@ function linkifyEmails(s: string, keyPrefix: string): React.ReactNode[] {
     nodes.push(<Fragment key={`${keyPrefix}-x-${k++}`}>{s.slice(last)}</Fragment>);
   }
   return nodes.length ? nodes : [<Fragment key={keyPrefix}>{s}</Fragment>];
+}
+
+function renderNewsBtn(label: string, href: string, key: string) {
+  const external = href.startsWith('http://') || href.startsWith('https://');
+  const className = 'btn btn-primary news-rich-cta';
+  const content = (
+    <>
+      {label} <ArrowRight size={18} />
+    </>
+  );
+  const hashIndex = href.indexOf('#');
+  const hasHash = hashIndex >= 0;
+  return (
+    <div key={key} className="news-rich-cta-wrap">
+      {external ? (
+        <a href={href} className={className} target="_blank" rel="noopener noreferrer">
+          {content}
+        </a>
+      ) : hasHash ? (
+        <HashScrollLink
+          to={{
+            pathname: hashIndex > 0 ? href.slice(0, hashIndex) || '/' : '/',
+            hash: href.slice(hashIndex + 1),
+          }}
+          className={className}
+        >
+          {content}
+        </HashScrollLink>
+      ) : (
+        <Link to={href} className={className}>
+          {content}
+        </Link>
+      )}
+    </div>
+  );
 }
 
 /** Inline **bold** (no nesting) + clickable emails. */
@@ -72,6 +160,31 @@ function parseSectionBody(body: string, baseKey: string): React.ReactNode[] {
     }
 
     const trimmed = line.trimStart();
+    const btnMatch = trimmed.match(BTN_LINE_RE);
+    if (btnMatch) {
+      out.push(renderNewsBtn(btnMatch[1].trim(), btnMatch[2].trim(), `btn-${baseKey}-${out.length}`));
+      i++;
+      continue;
+    }
+
+    if (isTableRow(trimmed)) {
+      const rows: string[][] = [];
+      while (i < lines.length) {
+        const t = lines[i].trim();
+        if (!t) break;
+        if (isTableSeparator(t)) {
+          i++;
+          continue;
+        }
+        if (!isTableRow(t)) break;
+        rows.push(parseTableRow(t));
+        i++;
+      }
+      const table = renderNewsTable(rows, `tbl-${baseKey}-${out.length}`);
+      if (table) out.push(table);
+      continue;
+    }
+
     const imageMatch = trimmed.match(IMAGE_LINE_RE);
     if (imageMatch) {
       const figures: { alt: string; src: string }[] = [
@@ -144,7 +257,15 @@ function parseSectionBody(body: string, baseKey: string): React.ReactNode[] {
       const t = lines[i];
       const ts = t.trimStart();
       if (!t.trim()) break;
-      if (IMAGE_LINE_RE.test(ts) || ts.startsWith('- ') || ts.startsWith('• ') || ts.startsWith('> ')) break;
+      if (
+        IMAGE_LINE_RE.test(ts) ||
+        BTN_LINE_RE.test(ts) ||
+        isTableRow(ts) ||
+        isTableSeparator(ts) ||
+        ts.startsWith('- ') ||
+        ts.startsWith('• ') ||
+        ts.startsWith('> ')
+      ) break;
       para.push(t.trim());
       i++;
     }
@@ -165,14 +286,21 @@ function parseLead(lead: string): React.ReactNode[] {
     .trim()
     .split(/\n\n+/)
     .filter(Boolean)
-    .map((para, i) => (
+    .map((para, i) => {
+      const text = para.replace(/\n/g, ' ').trim();
+      const btnMatch = text.match(BTN_LINE_RE);
+      if (btnMatch) {
+        return renderNewsBtn(btnMatch[1].trim(), btnMatch[2].trim(), `lead-btn-${i}`);
+      }
+      return (
       <p
         key={`lead-${i}`}
         className={i === 0 ? 'news-rich-kicker' : i === 1 ? 'news-rich-dateline' : 'news-rich-lead'}
       >
-        {parseBold(para.replace(/\n/g, ' '), `lead-${i}`)}
+        {parseBold(text, `lead-${i}`)}
       </p>
-    ));
+      );
+    });
 }
 
 export function RichNewsBody({ content }: { content: string }) {

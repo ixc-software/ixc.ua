@@ -38,6 +38,7 @@ export const Footer: React.FC = () => {
             <h4 style={{ marginBottom: '1rem' }}>{t.footer.productsTitle}</h4>
             <ul style={{ listStyle: 'none', color: 'var(--text-secondary)', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
               <li><Link to="/products/softswitch">Softswitch</Link></li>
+              <li><Link to="/products/ai-automation">AI Automation</Link></li>
               <li><Link to="/products/sms-platform">SMS Platform</Link></li>
               <li><Link to="/products/monitoring-tool">Monitoring Tool</Link></li>
               <li><Link to="/products/ixc-autotester">Autotester</Link></li>

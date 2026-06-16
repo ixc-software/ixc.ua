@@ -112,6 +112,7 @@ const staticRoutes = [
   '/platform-brochure',
   '/blog',
   '/products/softswitch',
+  '/products/ai-automation',
   '/products/white-black-list',
   '/products/monitoring-tool',
   '/products/ixc-autotester',

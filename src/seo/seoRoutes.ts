@@ -112,6 +112,23 @@ export const seoRoutes = {
           'Високонавантажений VoIP-софтсвіч: LCR, передоплата/постоплата, SIP/H.323, JSON API, SIP firewall — замовте демо.'
       }
     } satisfies SeoPagePair,
+    'ai-automation': {
+      en: {
+        title: 'AI Automation for Voice & SMS Carriers — IXC ↔ DealoAgent',
+        description:
+          'Native-language AI for carrier ops: batch IXC softswitch updates, deep analytics, Teams/Telegram/Gmail dispatch — scale from 5–10 to 100+ accounts per manager.'
+      },
+      ru: {
+        title: 'AI-автоматизация для голосовых и SMS-операторов — IXC ↔ DealoAgent',
+        description:
+          'AI на родном языке для операторов: пакетные изменения в IXC, глубокая аналитика, рассылка в Teams/Telegram/Gmail — от 5–10 до 100+ контрактов на менеджера.'
+      },
+      uk: {
+        title: 'AI-автоматизація для голосових та SMS-операторів — IXC ↔ DealoAgent',
+        description:
+          'AI рідною мовою для операторів: пакетні зміни в IXC, глибока аналітика, розсилка в Teams/Telegram/Gmail — від 5–10 до 100+ контрактів на менеджера.'
+      }
+    } satisfies SeoPagePair,
     'white-black-list': {
       en: {
         title: 'White/Black List Module — Access Lists for VoIP Routing | IXC',

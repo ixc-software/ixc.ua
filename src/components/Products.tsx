@@ -1,5 +1,5 @@
 import React from 'react';
-import { Server, Shield, Activity, Bot, MessageSquare, Code, Layers, FileText } from 'lucide-react';
+import { Server, Shield, Activity, Bot, MessageSquare, Code, Layers, FileText, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../i18n/LanguageProvider';
 import { SectionHeading } from './SectionHeading';
@@ -10,6 +10,12 @@ const products = [
     title: 'Softswitch',
     description: 'A Class 4/5 VoIP platform designed for maximum throughput, detailed billing, and advanced routing intelligence.',
     icon: <Server size={32} />
+  },
+  {
+    slug: 'ai-automation',
+    title: 'AI Automation',
+    description: 'IXC ↔ DealoAgent: native-language commands, batch softswitch updates, and messenger dispatch—scale from 5–10 to 100+ accounts per manager.',
+    icon: <Sparkles size={32} />
   },
   {
     slug: 'white-black-list',

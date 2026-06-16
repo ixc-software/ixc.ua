@@ -80,6 +80,17 @@ export interface Translations {
     since: string;
     clients: string;
   };
+  aiIntegration: {
+    title: string;
+    subtitle: string;
+    footer: string;
+    partnership: string;
+    oldApproach: string;
+    newApproach: string;
+    oldApproachCaption: string;
+    newApproachCaption: string;
+    learnMore: string;
+  };
   products: {
     title: string;
     subtitle: string;
@@ -171,7 +182,7 @@ const en: Translations = {
     privacyPolicy: 'Privacy Policy',
     blog: 'Blog',
     getFreeDemo: 'Get free demo',
-    bannerAnnouncement: 'IXC Billing WebV7 is available — see what’s new for operators'
+    bannerAnnouncement: 'AI Automation for carriers is here — IXC ↔ DealoAgent, scale to 100+ accounts per manager'
   },
   privacyPolicy: {
     title: 'Privacy Policy',
@@ -183,13 +194,26 @@ const en: Translations = {
     title: 'Carrier-style VoIP infrastructure—proven in production since 1999',
     subtitle:
       'Run wholesale and retail voice on a single high-capacity stack: advanced LCR and policy routing, automated billing, route testing and FAS detection, APIs and alerts—backed by 24/7 multilingual NOC support.',
-    aiStamp: 'V7 released',
-    exploreProducts: 'See what’s new',
+    aiStamp: 'AI released',
+    exploreProducts: 'Explore AI Automation',
     contactSales: 'Contact Sales'
   },
   trust: {
     since: 'Building Trust Since',
     clients: 'clients globally in the wholesale VoIP business.'
+  },
+  aiIntegration: {
+    title: 'AI Automation for Voice & SMS Carriers',
+    subtitle:
+      'A carrier manager tops out at 5–10 accounts when routing, rate checks, partner chats, and spreadsheets all run on copy‑paste and manual analysis. AI scales that to 100+ on the same payroll—up to 10× profit from the same salary budget and a lasting edge over competitors still doing it by hand.',
+    footer:
+      'Managers still read and write email and messengers, click through the softswitch for every route and rate, and copy‑paste between both. Ask in your native language — add destinations to carriers 1–3, change Cuba Mobile routing, or work out how to fill a commitment with carrier X from a 30‑line Excel — and IXC changes land in batch without multi‑step UI, while AI runs deep analysis. Teams and messengers get the reply; the switch is already updated.',
+    partnership: 'IXC ↔ DealoAgent',
+    oldApproach: 'OLD APPROACH',
+    newApproach: 'NEW APPROACH',
+    oldApproachCaption: 'Max 5–10 accounts per manager',
+    newApproachCaption: '100+ accounts per manager, same payroll',
+    learnMore: 'Learn more →',
   },
   products: {
     title: 'Our Core Products',
@@ -197,6 +221,7 @@ const en: Translations = {
     learnMore: 'Learn more →',
     cards: [
       { title: 'Softswitch', description: 'A Class 4/5 VoIP platform designed for maximum throughput, detailed billing, and advanced routing intelligence.' },
+      { title: 'AI Automation', description: 'IXC ↔ DealoAgent: native-language commands, batch softswitch updates, and messenger dispatch—scale from 5–10 to 100+ accounts per manager.' },
       { title: 'White/Black List', description: 'Dynamic protection and flexible routing rules to ensure unparalleled security and spam call prevention.' },
       { title: 'Monitoring Tool', description: 'Real-time analytics and dynamic graphs allowing you to trace SIP data for immediate troubleshooting.' },
       { title: 'Autotester', description: 'Ensure route quality by proactively generating automated test calls and analyzing the results.' },
@@ -359,7 +384,7 @@ const ru: Translations = {
     privacyPolicy: 'Политика конфиденциальности',
     blog: 'Блог',
     getFreeDemo: 'Бесплатное демо',
-    bannerAnnouncement: 'Доступен IXC Billing WebV7 — узнайте, что нового для операторов'
+    bannerAnnouncement: 'AI-автоматизация для операторов — IXC ↔ DealoAgent, до 100+ контрактов на менеджера'
   },
   privacyPolicy: {
     title: 'Политика конфиденциальности',
@@ -371,13 +396,26 @@ const ru: Translations = {
     title: 'Инфраструктура VoIP операторского класса — в продакшене с 1999 года',
     subtitle:
       'Оптовый и розничный голос на одной высоконагруженной платформе: продвинутая LCR и маршрутизация на основе политик, автоматический биллинг, тест маршрутов и выявление FAS, API и оповещения — с круглосуточной многоязычной поддержкой NOC.',
-    aiStamp: 'V7 released',
-    exploreProducts: 'Что нового',
+    aiStamp: 'AI релиз',
+    exploreProducts: 'Об AI-автоматизации',
     contactSales: 'Связаться с нами'
   },
   trust: {
     since: 'Доверие с',
     clients: 'клиентов по всему миру в сфере оптового VoIP.'
+  },
+  aiIntegration: {
+    title: 'AI-автоматизация для голосовых и SMS-операторов',
+    subtitle:
+      'Один менеджер оператора реально ведёт 5–10 контрактов, когда маршрутизация, анализ тарифов, переписка с партнёрами и отчёты сводятся к копированию и ручному разбору. AI расширяет это до 100+ при тех же зарплатных расходах — до 10× прибыли и ощутимое конкурентное преимущество.',
+    footer:
+      'Менеджеры по-прежнему читают и пишут в почте и мессенджерах, вручную проходят софтсвитч по каждому маршруту и тарифу и копируют данные между ними. Спросите на родном языке — добавить направления операторам 1–3, изменить маршрутизацию Cuba Mobile или заполнить commitment с оператором X по Excel на 30 строк — и изменения в IXC применяются пакетом без многошагового UI, пока AI проводит глубокий анализ. Teams и мессенджеры получают ответ; софтсвитч уже обновлён.',
+    partnership: 'IXC ↔ DealoAgent',
+    oldApproach: 'СТАРЫЙ ПОДХОД',
+    newApproach: 'НОВЫЙ ПОДХОД',
+    oldApproachCaption: 'Макс. 5–10 контрактов на менеджера',
+    newApproachCaption: '100+ контрактов на менеджера при тех же затратах',
+    learnMore: 'Подробнее →',
   },
   products: {
     title: 'Наши основные продукты',
@@ -385,6 +423,7 @@ const ru: Translations = {
     learnMore: 'Подробнее →',
     cards: [
       { title: 'Софтсвитч', description: 'Платформа VoIP класса 4/5 для максимальной пропускной способности, детального биллинга и интеллектуальной маршрутизации.' },
+      { title: 'AI-автоматизация', description: 'IXC ↔ DealoAgent: команды на родном языке, пакетные изменения в софтсвитче и рассылка в мессенджеры — от 5–10 до 100+ контрактов на менеджера.' },
       { title: 'Белый/Чёрный список', description: 'Динамическая защита и гибкие правила маршрутизации для обеспечения безопасности и предотвращения спам-звонков.' },
       { title: 'Инструмент мониторинга', description: 'Аналитика в реальном времени и динамические графики для отслеживания SIP-данных и быстрого устранения неполадок.' },
       { title: 'Автотестер', description: 'Обеспечение качества маршрутов путём автоматической генерации тестовых вызовов и анализа результатов.' },
@@ -547,7 +586,7 @@ const uk: Translations = {
     privacyPolicy: 'Політика конфіденційності',
     blog: 'Блог',
     getFreeDemo: 'Безкоштовне демо',
-    bannerAnnouncement: 'Доступний IXC Billing WebV7 — дізнайтеся, що нового для операторів'
+    bannerAnnouncement: 'AI-автоматизація для операторів — IXC ↔ DealoAgent, до 100+ контрактів на менеджера'
   },
   privacyPolicy: {
     title: 'Політика конфіденційності',
@@ -559,13 +598,26 @@ const uk: Translations = {
     title: 'Інфраструктура VoIP операторського класу — у продакшені з 1999 року',
     subtitle:
       'Оптовий і роздрібний голос на одній високонавантаженій платформі: розширена LCR і маршрутизація на основі політик, автоматичний білінг, тест маршрутів і виявлення FAS, API та сповіщення — із цілодобовою багатомовною підтримкою NOC.',
-    aiStamp: 'V7 released',
-    exploreProducts: 'Що нового',
+    aiStamp: 'AI реліз',
+    exploreProducts: 'Про AI-автоматизацію',
     contactSales: "Зв'язатися з нами"
   },
   trust: {
     since: 'Довіра з',
     clients: 'клієнтів по всьому світу в оптовому VoIP бізнесі.'
+  },
+  aiIntegration: {
+    title: 'AI-автоматизація для голосових та SMS-операторів',
+    subtitle:
+      'Один менеджер оператора реально веде 5–10 контрактів, коли маршрутизація, аналіз тарифів, листування з партнерами та звіти зводяться до копіювання й ручного розбору. AI розширює це до 100+ за тих самих зарплатних витрат — до 10× прибутку та відчутну конкурентну перевагу.',
+    footer:
+      'Менеджери досі читають і пишуть у пошті та месенджерах, вручну проходять софтсвітч по кожному маршруту та тарифу й копіюють дані між ними. Запитайте рідною мовою — додати напрямки операторам 1–3, змінити маршрутизацію Cuba Mobile або заповнити commitment з оператором X за Excel на 30 рядків — і зміни в IXC застосовуються пакетом без багатокрокового UI, поки AI проводить глибокий аналіз. Teams і месенджери отримують відповідь; софтсвітч уже оновлено.',
+    partnership: 'IXC ↔ DealoAgent',
+    oldApproach: 'СТАРИЙ ПІДХІД',
+    newApproach: 'НОВИЙ ПІДХІД',
+    oldApproachCaption: 'Макс. 5–10 контрактів на менеджера',
+    newApproachCaption: '100+ контрактів на менеджера за тих самих витрат',
+    learnMore: 'Детальніше →',
   },
   products: {
     title: 'Наші основні продукти',
@@ -573,6 +625,7 @@ const uk: Translations = {
     learnMore: 'Детальніше →',
     cards: [
       { title: 'Софтсвітч', description: 'VoIP платформа класу 4/5 для максимальної пропускної здатності, детального білінгу та інтелектуальної маршрутизації.' },
+      { title: 'AI-автоматизація', description: 'IXC ↔ DealoAgent: команди рідною мовою, пакетні зміни в софтсвітчі та розсилка в месенджери — від 5–10 до 100+ контрактів на менеджера.' },
       { title: 'Білий/Чорний список', description: 'Динамічний захист і гнучкі правила маршрутизації для забезпечення безпеки та запобігання спам-дзвінкам.' },
       { title: 'Інструмент моніторингу', description: 'Аналітика в реальному часі та динамічні графіки для відстеження SIP-даних та швидкого усунення неполадок.' },
       { title: 'Автотестер', description: 'Забезпечення якості маршрутів шляхом автоматичної генерації тестових дзвінків та аналізу результатів.' },

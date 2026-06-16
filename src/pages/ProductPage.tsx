@@ -2,7 +2,7 @@ import { useParams, Link } from 'react-router-dom';
 import { HashScrollLink } from '../components/HashScrollLink';
 import {
   Server, Shield, Activity, Bot, MessageSquare, Code,
-  ArrowRight, CheckCircle2, ArrowLeft, FileText, Download
+  ArrowRight, CheckCircle2, ArrowLeft, FileText, Download, Sparkles
 } from 'lucide-react';
 import { useLanguage } from '../i18n/LanguageProvider';
 import { SectionHeading } from '../components/SectionHeading';
@@ -50,6 +50,28 @@ const products: ProductData[] = [
       'Current Routes Tool — analyze routing for any destination with supplier rates, traffic volumes, quality, and pending rate increases',
       'Live Balance Checks — intelligent algorithm ensuring balances don\'t exceed credit limits with Telegram alerts for quick top-up',
       'Multi-level permission system for maximum security',
+    ]
+  },
+  {
+    slug: 'ai-automation',
+    title: 'AI Automation',
+    subtitle: 'IXC ↔ DealoAgent — Voice & SMS Carrier Operations at Scale',
+    icon: <Sparkles size={40} />,
+    description:
+      'AI Automation connects IXC Softswitch with DealoAgent AI so carrier managers stop living in copy‑paste loops between email, messengers, and the billing UI. Ask in your native language — add destinations to carriers 1–3, change Cuba Mobile routing, or work out a commitment with carrier X from a 30‑line Excel — and IXC changes land in batch without multi‑step clicks, with full read, write, and delete coverage across every softswitch capability. Set periodic tasks to run every day or on your own schedule: batch updates in IXC, then push top destinations, traffic alerts, and balance notices to all carrier channels automatically. Deep analytics run on complex targets while Teams, Telegram, Gmail, and WhatsApp get the partner reply. Same payroll; up to 10× profit and 100+ accounts per manager instead of 5–10.',
+    features: [
+      'IXC ↔ DealoAgent partnership — AI reads and writes the softswitch, not just messengers',
+      'Native-language commands — no rigid syntax; describe routing, rates, or commitments naturally',
+      'Batch IXC updates — destinations, rates, and routing applied in one shot, skipping multi-step UI',
+      'Deep analytics — commitments, target lists, and multi-line Excel imports analyzed automatically',
+      'Channel orchestration — Gmail, Telegram, WhatsApp, MS Teams, and IXC in one flow',
+      'Full IXC coverage — read, write, and delete across every softswitch capability the platform exposes, not just billing screens or manual exports',
+      'Scheduled write-back — automate batch changes in IXC on a daily or custom cadence, then push results to every carrier channel',
+      'Scheduled dispatch — top destinations, traffic alerts, and balance notices sent to all partners on a recurring timetable (e.g. every morning)',
+      'Partner notifications — “All set — prices sent” or routing confirmations in Teams and messengers',
+      'Scale per manager — from 5–10 accounts (manual) to 100+ on the same salary budget',
+      'Competitive edge — up to 10× profit from the same headcount vs. copy‑paste workflows',
+      'Built for wholesale voice & SMS carriers — routing, billing, and partner ops in one AI layer',
     ]
   },
   {
