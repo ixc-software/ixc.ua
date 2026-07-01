@@ -1,0 +1,17 @@
+Professional B2B telecom product update hero image, 16:9 landscape (1920×1080), dark navy blue gradient background (#0a1118 to #1c3249).
+
+Three-panel composition:
+
+LEFT — IXC Softswitch WebV7 billing dashboard UI card: clean carrier tables, route names, traffic mini-chart, subtle blue accent #4f7cac. Small version badge pill in corner: "WebV7 v7.0.66". Tiny feature chips below: "REST API v2", "CDR filters", "Quick Setup".
+
+CENTER — glowing bidirectional arrow ↔ in accent blue, connecting left and right panels.
+
+RIGHT — DealoAgent AI assistant panel with purple accent (#7c3aed), friendly robot avatar, chat bubbles. Four messenger icons orbit the panel with thin connection lines into the IXC card: WhatsApp (green), Telegram (blue), Microsoft Teams (purple), email envelope (white/gray). Visual metaphor: messengers in, softswitch updates out.
+
+TOP — green pill badge: "June 2026 update". Secondary small badge: "2 new clients".
+
+Style: clean enterprise telecom SaaS, glassmorphism cards, soft depth shadows, no clutter, no stock photos, no real people, no copyrighted logos. Only stylized wordmarks "IXC" and "DealoAgent". Mood: carrier-grade, innovative, trustworthy wholesale VoIP.
+
+High resolution, marketing website hero quality.
+
+Save output as: public/news/june-2026-latest-update.png

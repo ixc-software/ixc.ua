@@ -538,6 +538,22 @@ a:hover {
   color: var(--text-primary);
 }
 
+.news-rich-subsection-title {
+  font-family: Outfit, system-ui, sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.35;
+  margin: 1.25rem 0 0.65rem;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.news-rich-em {
+  font-style: italic;
+  color: var(--text-secondary);
+}
+
 .news-rich-strong {
   color: var(--text-primary);
   font-weight: 700;

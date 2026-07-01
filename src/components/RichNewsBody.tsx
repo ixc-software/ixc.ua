@@ -37,7 +37,7 @@ function renderNewsTable(rows: string[][], key: string) {
           <tr>
             {header.map((cell, j) => (
               <th key={j} scope="col">
-                {cell ? parseBold(cell, `${key}-h-${j}`) : null}
+                {cell ? parseInline(cell, `${key}-h-${j}`) : null}
               </th>
             ))}
           </tr>
@@ -46,7 +46,7 @@ function renderNewsTable(rows: string[][], key: string) {
           {body.map((row, ri) => (
             <tr key={ri}>
               {row.map((cell, ci) => (
-                <td key={ci}>{parseBold(cell, `${key}-r-${ri}-c-${ci}`)}</td>
+                <td key={ci}>{parseInline(cell, `${key}-r-${ri}-c-${ci}`)}</td>
               ))}
             </tr>
           ))}
@@ -123,22 +123,42 @@ function renderNewsBtn(label: string, href: string, key: string) {
   );
 }
 
-/** Inline **bold** (no nesting) + clickable emails. */
-function parseBold(str: string, keyPrefix: string): React.ReactNode {
-  const parts = str.split(/\*\*(.+?)\*\*/g);
+/** Inline **bold**, *italic*, and clickable emails. */
+function parseItalic(str: string, keyPrefix: string): React.ReactNode {
+  const parts = str.split(/\*(.+?)\*/g);
   if (parts.length === 1) return <>{linkifyEmails(parts[0], keyPrefix)}</>;
   const out: React.ReactNode[] = [];
   for (let i = 0; i < parts.length; i++) {
+    if (!parts[i]) continue;
     if (i % 2 === 0) {
-      if (parts[i]) {
-        out.push(
-          <Fragment key={`${keyPrefix}-t-${i}`}>{linkifyEmails(parts[i], `${keyPrefix}-t-${i}`)}</Fragment>
-        );
-      }
+      out.push(
+        <Fragment key={`${keyPrefix}-t-${i}`}>{linkifyEmails(parts[i], `${keyPrefix}-t-${i}`)}</Fragment>
+      );
+    } else {
+      out.push(
+        <em key={`${keyPrefix}-i-${i}`} className="news-rich-em">
+          {linkifyEmails(parts[i], `${keyPrefix}-i-${i}-in`)}
+        </em>
+      );
+    }
+  }
+  return <>{out}</>;
+}
+
+function parseInline(str: string, keyPrefix: string): React.ReactNode {
+  const parts = str.split(/\*\*(.+?)\*\*/g);
+  if (parts.length === 1) return parseItalic(parts[0], keyPrefix);
+  const out: React.ReactNode[] = [];
+  for (let i = 0; i < parts.length; i++) {
+    if (!parts[i]) continue;
+    if (i % 2 === 0) {
+      out.push(
+        <Fragment key={`${keyPrefix}-t-${i}`}>{parseItalic(parts[i], `${keyPrefix}-t-${i}`)}</Fragment>
+      );
     } else {
       out.push(
         <strong key={`${keyPrefix}-b-${i}`} className="news-rich-strong">
-          {linkifyEmails(parts[i], `${keyPrefix}-b-${i}-in`)}
+          {parseItalic(parts[i], `${keyPrefix}-b-${i}-in`)}
         </strong>
       );
     }
@@ -214,6 +234,16 @@ function parseSectionBody(body: string, baseKey: string): React.ReactNode[] {
       continue;
     }
 
+    if (trimmed.startsWith('### ')) {
+      out.push(
+        <h3 key={`h3-${baseKey}-${out.length}`} className="news-rich-subsection-title">
+          {parseInline(trimmed.slice(4).trim(), `${baseKey}-h3-${out.length}`)}
+        </h3>
+      );
+      i++;
+      continue;
+    }
+
     if (trimmed.startsWith('- ') || trimmed.startsWith('• ')) {
       const items: string[] = [];
       while (i < lines.length) {
@@ -226,7 +256,7 @@ function parseSectionBody(body: string, baseKey: string): React.ReactNode[] {
       out.push(
         <ul key={`ul-${baseKey}-${out.length}`} className="news-rich-list">
           {items.map((item, j) => (
-            <li key={j}>{parseBold(item, `${baseKey}-li-${j}`)}</li>
+            <li key={j}>{parseInline(item, `${baseKey}-li-${j}`)}</li>
           ))}
         </ul>
       );
@@ -245,7 +275,7 @@ function parseSectionBody(body: string, baseKey: string): React.ReactNode[] {
       out.push(
         <blockquote key={`q-${baseKey}-${out.length}`} className="news-rich-quote">
           {quotes.map((q, j) => (
-            <p key={j}>{parseBold(q, `${baseKey}-q-${j}`)}</p>
+            <p key={j}>{parseInline(q, `${baseKey}-q-${j}`)}</p>
           ))}
         </blockquote>
       );
@@ -262,6 +292,7 @@ function parseSectionBody(body: string, baseKey: string): React.ReactNode[] {
         BTN_LINE_RE.test(ts) ||
         isTableRow(ts) ||
         isTableSeparator(ts) ||
+        ts.startsWith('### ') ||
         ts.startsWith('- ') ||
         ts.startsWith('• ') ||
         ts.startsWith('> ')
@@ -272,7 +303,7 @@ function parseSectionBody(body: string, baseKey: string): React.ReactNode[] {
     if (para.length) {
       out.push(
         <p key={`p-${baseKey}-${out.length}`} className="news-rich-para">
-          {parseBold(para.join(' '), `${baseKey}-p-${out.length}`)}
+          {parseInline(para.join(' '), `${baseKey}-p-${out.length}`)}
         </p>
       );
     }
@@ -282,25 +313,31 @@ function parseSectionBody(body: string, baseKey: string): React.ReactNode[] {
 }
 
 function parseLead(lead: string): React.ReactNode[] {
-  return lead
-    .trim()
-    .split(/\n\n+/)
-    .filter(Boolean)
-    .map((para, i) => {
-      const text = para.replace(/\n/g, ' ').trim();
-      const btnMatch = text.match(BTN_LINE_RE);
+  const blocks = lead.trim().split(/\n\n+/).filter(Boolean);
+  const out: React.ReactNode[] = [];
+  let textBlockIndex = 0;
+
+  for (const block of blocks) {
+    const lines = block.split('\n').map((l) => l.trim()).filter(Boolean);
+    for (const line of lines) {
+      const btnMatch = line.match(BTN_LINE_RE);
       if (btnMatch) {
-        return renderNewsBtn(btnMatch[1].trim(), btnMatch[2].trim(), `lead-btn-${i}`);
+        out.push(renderNewsBtn(btnMatch[1].trim(), btnMatch[2].trim(), `lead-btn-${out.length}`));
       }
-      return (
+    }
+    const prose = lines.filter((l) => !BTN_LINE_RE.test(l)).join(' ').trim();
+    if (!prose) continue;
+    const i = textBlockIndex++;
+    out.push(
       <p
-        key={`lead-${i}`}
+        key={`lead-${out.length}`}
         className={i === 0 ? 'news-rich-kicker' : i === 1 ? 'news-rich-dateline' : 'news-rich-lead'}
       >
-        {parseBold(text, `lead-${i}`)}
+        {parseInline(prose, `lead-${i}`)}
       </p>
-      );
-    });
+    );
+  }
+  return out;
 }
 
 export function RichNewsBody({ content }: { content: string }) {
@@ -332,7 +369,7 @@ export function RichNewsBody({ content }: { content: string }) {
     const rest = lines.slice(1).join('\n').trim();
     nodes.push(
       <section key={`sec-${ci}`} className="news-rich-section">
-        <h2 className="news-rich-section-title">{parseBold(title, `sec-${ci}-h`)}</h2>
+        <h2 className="news-rich-section-title">{parseInline(title, `sec-${ci}-h`)}</h2>
         {rest ? parseSectionBody(rest, `sec-${ci}`) : null}
       </section>
     );
