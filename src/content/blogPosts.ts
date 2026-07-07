@@ -1,4 +1,5 @@
 import type { Language } from '../i18n/translations';
+import { softswitchAiAutomationPost } from './posts/softswitch-ai-automation';
 import { class4VsClass5Post } from './posts/class-4-vs-class-5-softswitch';
 import { lcrRoutingPost } from './posts/lcr-routing-voip';
 import { voipBillingPost } from './posts/voip-billing-softswitch';
@@ -17,7 +18,7 @@ export interface BlogPostLocale {
   description: string;
   /** Short summary for listing cards. */
   excerpt: string;
-  /** Markdown-ish body: ## / ### headings, - lists, > quotes, **bold**, [links](/path). */
+  /** Markdown-ish body: ## / ### headings, - lists, > quotes, **bold**, *italic*, [links](/path). */
   content: string;
   /** Optional FAQ block — rendered on the page and emitted as FAQPage JSON-LD. */
   faq?: BlogFaqItem[];
@@ -393,6 +394,7 @@ export const blogPosts: BlogPost[] = [
       ]
     }
   },
+  softswitchAiAutomationPost,
   class4VsClass5Post,
   lcrRoutingPost,
   voipBillingPost,

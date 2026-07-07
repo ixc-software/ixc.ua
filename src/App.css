@@ -2093,6 +2093,11 @@
   font-weight: 600;
 }
 
+.blog-rich-em {
+  font-style: italic;
+  color: var(--text-secondary);
+}
+
 .blog-rich-list {
   margin: 0 0 1.5rem 1.25rem;
   padding-left: 0.75rem;

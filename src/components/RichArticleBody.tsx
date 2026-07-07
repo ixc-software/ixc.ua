@@ -48,7 +48,46 @@ function renderLink(label: string, href: string, key: string): React.ReactNode {
   );
 }
 
-/** Inline parsing: [links](url), then **bold**, then bare emails. */
+/** Inline parsing: [links](url), then **bold**, *italic*, then bare emails. */
+function parseItalic(text: string, keyPrefix: string): React.ReactNode {
+  const parts = text.split(/\*(.+?)\*/g);
+  if (parts.length === 1) return <>{linkifyEmails(parts[0], keyPrefix)}</>;
+  const out: React.ReactNode[] = [];
+  for (let i = 0; i < parts.length; i++) {
+    if (!parts[i]) continue;
+    if (i % 2 === 0) {
+      out.push(<Fragment key={`${keyPrefix}-t-${i}`}>{linkifyEmails(parts[i], `${keyPrefix}-t-${i}`)}</Fragment>);
+    } else {
+      out.push(
+        <em key={`${keyPrefix}-i-${i}`} className="blog-rich-em">
+          {linkifyEmails(parts[i], `${keyPrefix}-i-${i}-in`)}
+        </em>
+      );
+    }
+  }
+  return <>{out}</>;
+}
+
+function parseBold(text: string, keyPrefix: string): React.ReactNode {
+  const parts = text.split(/\*\*(.+?)\*\*/g);
+  if (parts.length === 1) return parseItalic(parts[0], keyPrefix);
+  const out: React.ReactNode[] = [];
+  for (let i = 0; i < parts.length; i++) {
+    if (!parts[i]) continue;
+    if (i % 2 === 0) {
+      out.push(<Fragment key={`${keyPrefix}-t-${i}`}>{parseItalic(parts[i], `${keyPrefix}-t-${i}`)}</Fragment>);
+    } else {
+      out.push(
+        <strong key={`${keyPrefix}-s-${i}`} className="blog-rich-strong">
+          {parseItalic(parts[i], `${keyPrefix}-s-${i}-in`)}
+        </strong>
+      );
+    }
+  }
+  return <>{out}</>;
+}
+
+/** Inline parsing: [links](url), then **bold**, *italic*, then bare emails. */
 function parseInline(text: string, keyPrefix: string): React.ReactNode {
   const out: React.ReactNode[] = [];
   const re = new RegExp(LINK_RE.source, 'g');
@@ -61,25 +100,6 @@ function parseInline(text: string, keyPrefix: string): React.ReactNode {
     last = m.index + m[0].length;
   }
   if (last < text.length) out.push(<Fragment key={`${keyPrefix}-p-${k++}`}>{parseBold(text.slice(last), `${keyPrefix}-b-${k}`)}</Fragment>);
-  return <>{out}</>;
-}
-
-function parseBold(text: string, keyPrefix: string): React.ReactNode {
-  const parts = text.split(/\*\*(.+?)\*\*/g);
-  if (parts.length === 1) return <>{linkifyEmails(parts[0], keyPrefix)}</>;
-  const out: React.ReactNode[] = [];
-  for (let i = 0; i < parts.length; i++) {
-    if (!parts[i]) continue;
-    if (i % 2 === 0) {
-      out.push(<Fragment key={`${keyPrefix}-t-${i}`}>{linkifyEmails(parts[i], `${keyPrefix}-t-${i}`)}</Fragment>);
-    } else {
-      out.push(
-        <strong key={`${keyPrefix}-s-${i}`} className="blog-rich-strong">
-          {linkifyEmails(parts[i], `${keyPrefix}-s-${i}-in`)}
-        </strong>
-      );
-    }
-  }
   return <>{out}</>;
 }
 
