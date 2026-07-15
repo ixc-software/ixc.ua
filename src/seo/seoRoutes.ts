@@ -38,6 +38,23 @@ export const seoRoutes = {
         'IXC розробляє голосові платформи операторського класу для оптового та роздрібного VoIP: маршрутизація, білінг, аналітика та інтеграції — з 1999 року.'
     }
   } satisfies SeoPagePair,
+  ixcClub: {
+    en: {
+      title: 'IXC Club — Curated Telecom Introductions for IXC Clients',
+      description:
+        'IXC Club helps eligible softswitch clients grow: 3–5 profile-matched voice and SMS interconnection introductions per week via Teams — business development included.',
+    },
+    ru: {
+      title: 'IXC Club — отобранные знакомства в телекоме для клиентов IXC',
+      description:
+        'IXC Club помогает клиентам софтсвитча расти: 3–5 подобранных voice и SMS интерконнектов в неделю через Teams — business development включён.',
+    },
+    uk: {
+      title: 'IXC Club — відібрані знайомства в телекомі для клієнтів IXC',
+      description:
+        'IXC Club допомагає клієнтам софтсвітча рости: 3–5 підібраних voice і SMS інтерконектів на тиждень через Teams — business development включено.',
+    },
+  } satisfies SeoPagePair,
   privacyPolicy: {
     en: {
       title: 'Privacy Policy | IXC Softswitch',

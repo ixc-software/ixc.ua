@@ -48,6 +48,7 @@ export const Footer: React.FC = () => {
             <h4 style={{ marginBottom: '1rem' }}>{t.footer.companyTitle}</h4>
             <ul style={{ listStyle: 'none', color: 'var(--text-secondary)', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
               <li><Link to="/about-us">{t.nav.aboutUs}</Link></li>
+              <li><Link to="/ixc-club">{t.ixcClub.title}</Link></li>
               <li><Link to="/blog">{t.nav.blog}</Link></li>
               <li><Link to="/privacy-policy">{t.nav.privacyPolicy}</Link></li>
               <li><a href="mailto:sales@ixc.ua">{t.nav.contactUs}</a></li>

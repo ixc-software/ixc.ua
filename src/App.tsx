@@ -6,6 +6,7 @@ import { Footer } from './components/Footer';
 import { MeshBackground } from './components/MeshBackground';
 import { FloatingContact } from './components/FloatingContact';
 import { Home } from './pages/Home';
+import { IxcClubPage } from './pages/IxcClubPage';
 import { AboutUs } from './pages/AboutUs';
 import { ProductPage } from './pages/ProductPage';
 import { NewsArticle } from './pages/NewsArticle';
@@ -43,6 +44,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about-us" element={<AboutUs />} />
+            <Route path="/ixc-club" element={<IxcClubPage />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/platform-brochure" element={<PlatformBrochurePage />} />
             <Route path="/blog" element={<Blog />} />

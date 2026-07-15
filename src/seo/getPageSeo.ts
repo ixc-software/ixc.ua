@@ -186,6 +186,9 @@ export function getPageSeo(pathname: string, lang: Language, options?: GetPageSe
   if (path === '/about-us') {
     return withDefaults(seoRoutes.about[lang], path);
   }
+  if (path === '/ixc-club') {
+    return withDefaults(seoRoutes.ixcClub[lang], path);
+  }
   if (path === '/privacy-policy') {
     return withDefaults(seoRoutes.privacyPolicy[lang], path);
   }

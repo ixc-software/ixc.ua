@@ -18,8 +18,8 @@ export const Header: React.FC = () => {
     <header className="header glass">
       <div className="container header-content">
         <Link to="/" className="logo">
-          <img src={`${import.meta.env.BASE_URL}logo.png`} alt="IXC Softswitch Logo" className="logo-img" />
-          <h2 className="logo-text">IXC Softswitch</h2>
+          <img src={`${import.meta.env.BASE_URL}logo.png`} alt="IXC Logo" className="logo-img" />
+          <h2 className="logo-text">IXC</h2>
         </Link>
         
         <nav className={`nav-links ${menuOpen ? 'nav-open' : ''}`}>

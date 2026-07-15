@@ -217,10 +217,6 @@ const clients = [
     "url": "https://www.unibuilders.com"
   },
   {
-    "name": "Userbasicsoftware",
-    "url": "https://www.userbasicsoftware.com"
-  },
-  {
     "name": "Voicekings",
     "url": "https://www.voicekings.co.uk"
   },

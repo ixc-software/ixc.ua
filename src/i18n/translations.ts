@@ -97,6 +97,28 @@ export interface Translations {
     learnMore: string;
     cards: ProductCardTranslation[];
   };
+  ixcClub: {
+    title: string;
+    subtitle: string;
+    learnMore: string;
+    joinCta: string;
+    pageTitle: string;
+    pageSubtitle: string;
+    problemTitle: string;
+    problemIntro: string;
+    problemCosts: CapabilityTranslation[];
+    problemFooter: string;
+    solutionTitle: string;
+    solutionText: string;
+    flowTitle: string;
+    flowSubtitle: string;
+    flowSteps: CapabilityTranslation[];
+    highlightTitle: string;
+    highlightText: string;
+    ctaTitle: string;
+    ctaText: string;
+    benefits: CapabilityTranslation[];
+  };
   features: {
     title: string;
     subtitle: string;
@@ -229,6 +251,91 @@ const en: Translations = {
       { title: 'Google API Integration', description: 'Enhance your operations with extended integration points mapping to leading enterprise services.' },
       { title: 'Product Technical Specifications', description: 'Protocols, capacity, routing, security, codecs, billing, reporting, and 24/7 NOC—consolidated in one reference.' },
     ]
+  },
+  ixcClub: {
+    title: 'IXC Club',
+    subtitle: 'Business development for IXC clients — curated telecom introductions that turn into new voice and SMS interconnections.',
+    learnMore: 'How IXC Club works',
+    joinCta: 'Join IXC Club',
+    pageTitle: 'IXC Club',
+    pageSubtitle: 'Curated carrier introductions for IXC clients — new interconnections, direct deals, growing profit.',
+    problemTitle: 'Why finding new telecom contacts is expensive',
+    problemIntro:
+      'Wholesale voice and SMS growth means constantly meeting new operators. When you build that pipeline yourself, the bill adds up fast:',
+    problemCosts: [
+      {
+        title: 'Exhibition and trade-show fees',
+        description: 'Booth space, sponsorships, and event packages at ITW, Capacity, and regional telecom shows.',
+      },
+      {
+        title: 'Flights and accommodation',
+        description: 'Travel for your sales and BD team to meet prospects face to face across regions.',
+      },
+      {
+        title: 'Business development salaries',
+        description: 'Full-time managers hunting leads, following up, and qualifying interconnect partners.',
+      },
+      {
+        title: 'The real cost of growth',
+        description: 'Months of spend before one signed route — growth can cost more than the margin it brings.',
+      },
+    ],
+    problemFooter: 'For many carriers, building a contact network from scratch is one of the largest hidden costs in the business.',
+    solutionTitle: 'IXC already built the network — grow without the huge expense',
+    solutionText:
+      'IXC sales managers maintain thousands of live relationships with operators open to voice and SMS interconnection. IXC Club gives eligible clients curated, profile-matched introductions — the exhibitions, travel, and outreach are already done. You talk to qualified partners, sign agreements, and grow profit while IXC helps your business development without a separate club fee.',
+    flowTitle: 'How IXC Club works',
+    flowSubtitle: 'From membership to new routes — a simple flow built around your business profile.',
+    flowSteps: [
+      {
+        title: 'You are an IXC client on an eligible tier',
+        description:
+          'Active IXC Softswitch customers on qualifying service tiers are automatically part of IXC Club — no separate subscription.',
+      },
+      {
+        title: 'We map your business profile',
+        description:
+          'Voice or SMS, wholesale or retail, regions, originator/terminator focus, and capacity needs — so introductions fit how you actually trade.',
+      },
+      {
+        title: '3–5 curated contacts per week via Microsoft Teams',
+        description:
+          'Our team selects hot prospects from thousands of live relationships and delivers introductions to you on Teams — typically three to five times per week.',
+      },
+      {
+        title: 'You talk, sign, and interconnect directly',
+        description:
+          'You hold the commercial conversation, negotiate terms, and sign agreements. IXC does not sit in the middle of your deal — we open the door.',
+      },
+      {
+        title: 'New routes, more profit — IXC supports growth for free',
+        description:
+          'Successful interconnections increase your traffic and margin. IXC Club is part of how we help clients grow — business development included with your IXC partnership.',
+      },
+    ],
+    highlightTitle: 'Why IXC runs the club',
+    highlightText:
+      'When our clients grow, the network gets stronger for everyone. IXC Club connects your switch and operations to real commercial opportunity — without charging a separate introduction fee.',
+    ctaTitle: 'Ready to join?',
+    ctaText: 'Contact us to confirm your tier, update your business profile, and start receiving curated introductions.',
+    benefits: [
+      {
+        title: 'Thousands of live contacts',
+        description: 'IXC sales managers maintain an active network of voice and SMS operators worldwide.',
+      },
+      {
+        title: 'Voice & SMS interconnection',
+        description: 'Introductions aimed at operators who want to set up new wholesale or retail routes with you.',
+      },
+      {
+        title: '3–5 hot leads weekly',
+        description: 'Curated prospects matched to your profile — not a static directory dump.',
+      },
+      {
+        title: 'Growth support, no club fee',
+        description: 'IXC invests in your business development so you can focus on signing and scaling interconnections.',
+      },
+    ],
   },
   features: {
     title: 'Platform Features',
@@ -432,6 +539,91 @@ const ru: Translations = {
       { title: 'Технические спецификации', description: 'Протоколы, ёмкость, маршрутизация, безопасность, кодеки, биллинг, отчётность и NOC 24/7 — в одном справочнике.' },
     ]
   },
+  ixcClub: {
+    title: 'IXC Club',
+    subtitle: 'Развитие бизнеса для клиентов IXC — отобранные знакомства в телекоме, которые превращаются в новые voice и SMS интерконнекты.',
+    learnMore: 'Как работает IXC Club',
+    joinCta: 'Вступить в IXC Club',
+    pageTitle: 'IXC Club',
+    pageSubtitle: 'Отобранные знакомства для клиентов IXC — новые интерконнекты, прямые сделки, рост прибыли.',
+    problemTitle: 'Почему поиск новых telecom-контактов дорогой',
+    problemIntro:
+      'Рост оптового voice и SMS означает постоянные встречи с новыми операторами. Если строить воронку самостоятельно, счёт растёт быстро:',
+    problemCosts: [
+      {
+        title: 'Выставки и trade-show',
+        description: 'Стенды, спонсорство и пакеты на ITW, Capacity и региональных telecom-ивентах.',
+      },
+      {
+        title: 'Перелёты и проживание',
+        description: 'Командировки sales и BD-команды для личных встреч с prospects в разных регионах.',
+      },
+      {
+        title: 'Зарплаты BD-менеджеров',
+        description: 'Штатные менеджеры на поиск лидов, follow-up и квалификацию interconnect-партнёров.',
+      },
+      {
+        title: 'Реальная цена роста',
+        description: 'Месяцы расходов до одного подписанного маршрута — рост может стоить дороже маржи.',
+      },
+    ],
+    problemFooter: 'Для многих операторов построение контактной сети с нуля — одна из крупнейших скрытых статей расходов.',
+    solutionTitle: 'IXC уже построил сеть — растите без огромных затрат',
+    solutionText:
+      'Менеджеры IXC ведут тысячи живых связей с операторами, готовыми к voice и SMS интерконнекту. IXC Club даёт клиентам отобранные знакомства под профиль — выставки, поездки и outreach уже сделаны. Вы общаетесь с квалифицированными партнёрами, подписываете соглашения и растите прибыль, пока IXC помогает business development без отдельной платы за клуб.',
+    flowTitle: 'Как работает IXC Club',
+    flowSubtitle: 'От членства до новых маршрутов — простой процесс вокруг вашего бизнес-профиля.',
+    flowSteps: [
+      {
+        title: 'Вы — клиент IXC на подходящем тарифе',
+        description:
+          'Активные клиенты IXC Softswitch на квалифицирующих уровнях сервиса автоматически входят в IXC Club — отдельная подписка не нужна.',
+      },
+      {
+        title: 'Мы строим ваш бизнес-профиль',
+        description:
+          'Voice или SMS, опт или розница, регионы, фокус originator/terminator и ёмкость — чтобы знакомства соответствовали тому, как вы реально торгуете.',
+      },
+      {
+        title: '3–5 отобранных контактов в неделю через Microsoft Teams',
+        description:
+          'Команда выбирает горячих prospects из тысяч живых связей и передаёт вам знакомства в Teams — обычно три–пять раз в неделю.',
+      },
+      {
+        title: 'Вы общаетесь, подписываете и интерконнектитесь напрямую',
+        description:
+          'Коммерческий диалог, переговоры и договор — между вами и партнёром. IXC не стоит посередине сделки — мы открываем дверь.',
+      },
+      {
+        title: 'Новые маршруты, больше прибыли — IXC поддерживает рост бесплатно',
+        description:
+          'Успешные интерконнекты увеличивают трафик и маржу. IXC Club — часть того, как мы помогаем клиентам расти; business development включён в партнёрство с IXC.',
+      },
+    ],
+    highlightTitle: 'Зачем IXC ведёт клуб',
+    highlightText:
+      'Когда растут наши клиенты, крепнет сеть для всех. IXC Club связывает ваш софтсвитч и операции с реальными коммерческими возможностями — без отдельной платы за интро.',
+    ctaTitle: 'Готовы вступить?',
+    ctaText: 'Свяжитесь с нами — подтвердим тариф, обновим профиль и запустим отобранные знакомства.',
+    benefits: [
+      {
+        title: 'Тысячи живых контактов',
+        description: 'Менеджеры IXC поддерживают активную сеть voice и SMS операторов по всему миру.',
+      },
+      {
+        title: 'Voice и SMS интерконнект',
+        description: 'Знакомства с операторами, готовыми к новым оптовым или розничным маршрутам с вами.',
+      },
+      {
+        title: '3–5 горячих лидов в неделю',
+        description: 'Отобранные prospects под ваш профиль — не статичный список из справочника.',
+      },
+      {
+        title: 'Поддержка роста без платы за клуб',
+        description: 'IXC инвестирует в ваше business development — вы фокусируетесь на подписании и масштабе.',
+      },
+    ],
+  },
   features: {
     title: 'Возможности платформы',
     subtitle: 'Комплексный набор функций, разработанный для требований современных оптовых и розничных VoIP операций.',
@@ -633,6 +825,91 @@ const uk: Translations = {
       { title: 'Інтеграція Google API', description: 'Розширення операцій за допомогою інтеграції з провідними корпоративними сервісами.' },
       { title: 'Технічні специфікації продукту', description: 'Протоколи, ємність, маршрутизація, безпека, кодеки, білінг, звітність та NOC 24/7 — у одному довіднику.' },
     ]
+  },
+  ixcClub: {
+    title: 'IXC Club',
+    subtitle: 'Розвиток бізнесу для клієнтів IXC — відібрані знайомства в телекомі, що перетворюються на нові voice і SMS інтерконекти.',
+    learnMore: 'Як працює IXC Club',
+    joinCta: 'Вступити в IXC Club',
+    pageTitle: 'IXC Club',
+    pageSubtitle: 'Відібрані знайомства для клієнтів IXC — нові інтерконекти, прямі угоди, зростання прибутку.',
+    problemTitle: 'Чому пошук нових telecom-контактів дорогий',
+    problemIntro:
+      'Зростання оптового voice і SMS означає постійні зустрічі з новими операторами. Якщо будувати воронку самостійно, рахунок зростає швидко:',
+    problemCosts: [
+      {
+        title: 'Виставки та trade-show',
+        description: 'Стенди, спонсорство та пакети на ITW, Capacity і регіональних telecom-івентах.',
+      },
+      {
+        title: 'Перельоти та проживання',
+        description: 'Відрядження sales і BD-команди для особистих зустрічей з prospects у різних регіонах.',
+      },
+      {
+        title: 'Зарплати BD-менеджерів',
+        description: 'Штатні менеджери на пошук лідів, follow-up і кваліфікацію interconnect-партнерів.',
+      },
+      {
+        title: 'Реальна ціна зростання',
+        description: 'Місяці витрат до одного підписаного маршруту — зростання може коштувати дорожче маржі.',
+      },
+    ],
+    problemFooter: 'Для багатьох операторів побудова контактної мережі з нуля — одна з найбільших прихованих статей витрат.',
+    solutionTitle: 'IXC уже побудував мережу — ростіть без величезних витрат',
+    solutionText:
+      'Менеджери IXC ведуть тисячі живих зв’язків з операторами, готовими до voice і SMS інтерконекту. IXC Club дає клієнтам відібрані знайомства під профіль — виставки, поїздки та outreach уже зроблені. Ви спілкуєтесь із кваліфікованими партнерами, підписуєте угоди й зростаєте прибуток, поки IXC допомагає business development без окремої плати за клуб.',
+    flowTitle: 'Як працює IXC Club',
+    flowSubtitle: 'Від членства до нових маршрутів — простий процес навколо вашого бізнес-профілю.',
+    flowSteps: [
+      {
+        title: 'Ви — клієнт IXC на відповідному тарифі',
+        description:
+          'Активні клієнти IXC Softswitch на кваліфікуючих рівнях сервісу автоматично входять в IXC Club — окрема підписка не потрібна.',
+      },
+      {
+        title: 'Ми будуємо ваш бізнес-профіль',
+        description:
+          'Voice або SMS, опт чи роздріб, регіони, фокус originator/terminator і ємність — щоб знайомства відповідали тому, як ви реально торгуєте.',
+      },
+      {
+        title: '3–5 відібраних контактів на тиждень через Microsoft Teams',
+        description:
+          'Команда обирає гарячих prospects з тисяч живих зв’язків і передає вам знайомства в Teams — зазвичай три–п’ять разів на тиждень.',
+      },
+      {
+        title: 'Ви спілкуєтесь, підписуєте й інтерконектитесь напряму',
+        description:
+          'Комерційний діалог, переговори й договір — між вами та партнером. IXC не стоїть посередині угоди — ми відкриваємо двері.',
+      },
+      {
+        title: 'Нові маршрути, більше прибутку — IXC підтримує зростання безкоштовно',
+        description:
+          'Успішні інтерконекти збільшують трафік і маржу. IXC Club — частина того, як ми допомагаємо клієнтам рости; business development включено в партнерство з IXC.',
+      },
+    ],
+    highlightTitle: 'Навіщо IXC веде клуб',
+    highlightText:
+      'Коли ростуть наші клієнти, міцнішає мережа для всіх. IXC Club з’єднує ваш софтсвіч і операції з реальними комерційними можливостями — без окремої плати за інтро.',
+    ctaTitle: 'Готові вступити?',
+    ctaText: 'Зв’яжіться з нами — підтвердимо тариф, оновимо профіль і запустимо відібрані знайомства.',
+    benefits: [
+      {
+        title: 'Тисячі живих контактів',
+        description: 'Менеджери IXC підтримують активну мережу voice і SMS операторів у всьому світі.',
+      },
+      {
+        title: 'Voice і SMS інтерконект',
+        description: 'Знайомства з операторами, готовими до нових оптових або роздрібних маршрутів з вами.',
+      },
+      {
+        title: '3–5 гарячих лідів на тиждень',
+        description: 'Відібрані prospects під ваш профіль — не статичний список із довідника.',
+      },
+      {
+        title: 'Підтримка зростання без плати за клуб',
+        description: 'IXC інвестує у ваше business development — ви фокусуєтесь на підписанні та масштабі.',
+      },
+    ],
   },
   features: {
     title: 'Можливості платформи',

@@ -1,5 +1,6 @@
 import { Hero } from '../components/Hero';
 import { AiIntegration } from '../components/AiIntegration';
+import { IxcClub } from '../components/IxcClub';
 import { Features } from '../components/Features';
 import { Products } from '../components/Products';
 import { Testimonials } from '../components/Testimonials';
@@ -13,6 +14,7 @@ export const Home = () => {
     <>
       <Hero />
       <AiIntegration />
+      <IxcClub />
       <Products />
       <div className="section-alt">
         <Features />

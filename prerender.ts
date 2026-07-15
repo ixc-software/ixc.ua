@@ -108,6 +108,7 @@ const { render } = await import('./dist/server/entry-server.js');
 const staticRoutes = [
   '/',
   '/about-us',
+  '/ixc-club',
   '/privacy-policy',
   '/platform-brochure',
   '/blog',
@@ -181,6 +182,7 @@ function entry(route: string, lastmod: string, changefreq: string, priority: str
 const staticPriority: Record<string, [string, string]> = {
   '/': ['weekly', '1.0'],
   '/about-us': ['monthly', '0.8'],
+  '/ixc-club': ['monthly', '0.75'],
   '/privacy-policy': ['yearly', '0.3'],
   '/platform-brochure': ['monthly', '0.7'],
   '/blog': ['weekly', '0.8'],
