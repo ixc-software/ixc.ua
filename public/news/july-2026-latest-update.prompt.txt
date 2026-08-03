@@ -1,0 +1,18 @@
+Professional B2B telecom product update hero image, 16:9 landscape (1920×1080), dark navy background with subtle green circuit-board glow like a carrier NOC marketing graphic.
+
+IMPORTANT branding rules:
+- Use the EXACT attached corporate logo icon (blue rounded square with the 3D light-blue stylized V / stacked curved bars emblem). Place that logo badge prominently near the top center between the two UI panels. Do NOT invent a different logo. Do NOT redraw the mark as text.
+- Do NOT put any "IXC", "iXC", or "Wholesale VoIP" wordmark / text in the top-left corner or anywhere as a floating brand label. No top-left corner branding text at all.
+- Add a large distressed orange rubber-stamp graphic reading "1 new client" (double rectangular border, ink stamp texture), overlaid near the center like a seal of approval — same style as a "2 new clients" stamp on similar product update art.
+
+Composition:
+- TOP CENTER: small green pill badge "July 2026 report" and a secondary dark pill "18 releases".
+- LEFT glass UI card: WebV7 CDR detail with SIP sequence diagram (A-leg / B-leg), green "PCAP available" status, version pill "WebV7 v7.0.84", feature chips "SIP PCAP", "CDR diagram", "PNG export". No product name text like "IXC Softswitch" in the card header corner.
+- RIGHT glass UI card: Tariff & compliance with Merge / Replace / Schedule / Wipe chips and an A-number daily cap gauge.
+- CENTER: glowing blue bidirectional arrow between the two cards; corporate logo above the arrow; orange "1 new client" stamp overlapping the center area.
+- Bottom feature chips optional and subtle.
+
+Style: clean enterprise telecom SaaS, glassmorphism cards, soft depth shadows, no stock photos, no real people, no copyrighted third-party logos. Mood: carrier-grade, precise, trustworthy.
+
+Save output as: public/news/july-2026-latest-update.png
+Reference: public/logo.png (corporate mark) + public/news/june-2026-latest-update.png (layout / stamp style)
