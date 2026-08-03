@@ -1,7 +1,8 @@
 /**
  * Latest Updates entry: July 2026 WebV7 report — v7.0.67 → v7.0.84.
  *
- * Hero image: save generated asset as `public/news/july-2026-latest-update.png`
+ * Hero image: `public/news/july-2026-latest-update.jpg` (on-page)
+ * OG / X card: `public/news/july-2026-og.jpg` (1200×630 JPEG — keep under ~500KB for X)
  * Prompt: `public/news/july-2026-latest-update.prompt.txt`
  */
 export const july2026NewsImagePrompt = `Professional B2B telecom product update hero image, 16:9 landscape (1920×1080), dark navy background with subtle green circuit-board glow.
@@ -19,8 +20,8 @@ export const ixcJuly2026News = {
   slug: 'ixc-july-2026-update',
   date: '2026-07-31',
   link: 'https://ixc.ua/news/ixc-july-2026-update',
-  image: 'https://ixc.ua/news/july-2026-latest-update.png',
-  local_image: '/news/july-2026-latest-update.png',
+  image: 'https://ixc.ua/news/july-2026-og.jpg',
+  local_image: '/news/july-2026-latest-update.jpg',
   image_object_fit: 'contain' as const,
   rich_news: true,
   en: {

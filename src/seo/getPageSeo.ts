@@ -266,6 +266,13 @@ export function setDocumentSeo(meta: PageSeoMeta) {
     setMeta('meta', 'property', 'og:image:alt', meta.imageAlt);
   }
 
+  // Help X/LinkedIn pick a stable card when the crawler is picky about large PNGs.
+  if (meta.image.endsWith('.jpg') || meta.image.endsWith('.jpeg')) {
+    setMeta('meta', 'property', 'og:image:type', 'image/jpeg');
+  } else if (meta.image.endsWith('.png')) {
+    setMeta('meta', 'property', 'og:image:type', 'image/png');
+  }
+
   // Canonical link
   let canonical = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
   if (!canonical) {
