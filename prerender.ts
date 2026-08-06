@@ -5,7 +5,7 @@ import newsData from './src/newsData';
 import { blogPosts, getLocalizedPost, getPostPath } from './src/content/blogPosts.ts';
 import { getPageSeo, type PageSeoMeta } from './src/seo/getPageSeo.ts';
 import { getNewsOgImage, SITE_ORIGIN } from './src/seo/siteMeta.ts';
-import { LEGACY_REDIRECTS, writeLegacyRedirects } from './legacyRedirects.ts';
+import { LEGACY_REDIRECTS, writeLegacyRedirects, buildRedirectHtml } from './legacyRedirects.ts';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const toAbsolute = (p: string) => path.resolve(__dirname, p);
@@ -77,9 +77,9 @@ function injectSeoFull(html: string, meta: PageSeoMeta): string {
 }
 
 /**
- * Write prerendered HTML for a route. For non-root routes, also writes a sibling
- * `.html` file so GitHub Pages serves no-trailing-slash URLs with 200 (no 301).
- * @see dealoagent.ai scripts/generate-static-pages.js
+ * Canonical URL is the no-trailing-slash form (matches sitemap + siteMeta).
+ * Full HTML → `{route}.html` (200 at /about-us).
+ * Trailing-slash path → `{route}/index.html` redirects to canonical (avoids GSC duplicate alternates).
  */
 function writeRouteArtifacts(route: string, html: string): void {
   if (route === '/') {
@@ -89,17 +89,19 @@ function writeRouteArtifacts(route: string, html: string): void {
   }
 
   const segments = route.replace(/^\//, '').split('/');
+  const redirectHtml = buildRedirectHtml(route);
+
   const indexPath = `dist/${segments.join('/')}/index.html`;
   fs.mkdirSync(path.dirname(toAbsolute(indexPath)), { recursive: true });
-  fs.writeFileSync(toAbsolute(indexPath), html);
-  console.log(`Prerendered: ${route} → ${indexPath}`);
+  fs.writeFileSync(toAbsolute(indexPath), redirectHtml);
+  console.log(`Prerendered: ${route} → ${indexPath} (redirect to canonical)`);
 
   const fileName = `${segments[segments.length - 1]}.html`;
   const parentDir = segments.length > 1 ? `dist/${segments.slice(0, -1).join('/')}` : 'dist';
   const siblingPath = `${parentDir}/${fileName}`;
   fs.mkdirSync(toAbsolute(parentDir), { recursive: true });
   fs.writeFileSync(toAbsolute(siblingPath), html);
-  console.log(`Prerendered: ${route} → ${siblingPath} (no-redirect)`);
+  console.log(`Prerendered: ${route} → ${siblingPath} (canonical)`);
 }
 
 const template = fs.readFileSync(toAbsolute('dist/index.html'), 'utf-8');

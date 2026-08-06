@@ -32,12 +32,13 @@ function escapeAttr(text: string): string {
   return text.replace(/&/g, '&amp;').replace(/"/g, '&quot;');
 }
 
-function canonicalForTarget(target: string): string {
+export function canonicalForTarget(target: string): string {
   if (target.startsWith('/#')) return `${SITE_ORIGIN}${target}`;
   return `${SITE_ORIGIN}${target.startsWith('/') ? target : `/${target}`}`;
 }
 
-function buildRedirectHtml(target: string): string {
+/** Static redirect page for GitHub Pages (noindex; canonical points at the real URL). */
+export function buildRedirectHtml(target: string): string {
   const href = escapeAttr(target);
   const canonical = escapeAttr(canonicalForTarget(target));
   const label = target.startsWith('/#') ? `Homepage${target}` : target;
