@@ -4,8 +4,10 @@
  * Core story: Recording is the foundation for AI traffic analysis, FAS & voicemail
  * detection — not a ticket/dispute tool. Audience: non-technical / non-IXC readers.
  *
- * Hero image: `public/news/ixc-recording-latest-update.png`
+ * Hero (on-page): `public/news/ixc-recording-latest-update.jpg`
+ * OG / X card: `public/news/ixc-recording-og.jpg` (1200×630 JPEG, keep under ~300KB)
  * Prompt: `public/news/ixc-recording-latest-update.prompt.txt`
+ * Source PNG (optional archive): `public/news/ixc-recording-latest-update.png` — never use large PNGs as `image` / og:image
  */
 export const ixcRecordingNewsImagePrompt = `Professional B2B telecom product update hero image, 16:9 landscape (1920×1080), dark navy background with subtle teal audio waveform glow.
 
@@ -28,8 +30,8 @@ export const ixcRecordingNews = {
   slug: 'ixc-recording',
   date: '2026-08-07',
   link: 'https://ixc.ua/news/ixc-recording',
-  image: 'https://ixc.ua/news/ixc-recording-latest-update.png',
-  local_image: '/news/ixc-recording-latest-update.png',
+  image: 'https://ixc.ua/news/ixc-recording-og.jpg',
+  local_image: '/news/ixc-recording-latest-update.jpg',
   image_object_fit: 'contain' as const,
   rich_news: true,
   en: {
