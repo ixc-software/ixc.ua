@@ -2,7 +2,7 @@ import React from 'react';
 import {
   Cpu, GitBranch, Radio, Shield, TestTube, Music2,
   Lock, Plug, Settings, Gauge, Receipt, Monitor,
-  Upload, Activity, Route, UserCircle, Beaker,
+  Upload, Activity, Route, Mic, UserCircle, Beaker,
   Database, Headphones, ArrowRight
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -84,6 +84,11 @@ const features = [
     icon: <Route size={22} />,
     title: 'Call Routing History',
     desc: 'Full callpath analysis at CDRs report with all routing attempts and disconnect codes.'
+  },
+  {
+    icon: <Mic size={22} />,
+    title: 'IXC Recording',
+    desc: 'Softswitch captures call media; Billing 7 browses, searches, plays, and manages recordings by hour — with one-click access from Originator and Terminator call reports.'
   },
   {
     icon: <UserCircle size={22} />,

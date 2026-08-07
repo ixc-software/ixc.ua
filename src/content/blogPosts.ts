@@ -5,6 +5,8 @@ import { lcrRoutingPost } from './posts/lcr-routing-voip';
 import { voipBillingPost } from './posts/voip-billing-softswitch';
 import { voipFraudPost } from './posts/voip-fraud-prevention';
 import { telecomIndustryConceptsPost } from './posts/telecom-industry-concepts';
+import { ixcRecordingPost } from './posts/ixc-recording';
+import { voipCallAnalysisAiPost } from './posts/voip-call-analysis-ai';
 
 export interface BlogFaqItem {
   q: string;
@@ -293,6 +295,8 @@ const whatIsASoftswitchUk = `**Софтсвіч** — це програмне я
 Софтсвіч — ядро керування та білінгу сучасного VoIP. Оптовикам потрібен транзит класу 4 і LCR; роздрібу — функції класу 5. Поєднання на одному стеку вирівнює маршрутизацію, CDR і моніторинг. Порівнюючи платформи, оцінюйте масштаб, глибину білінгу, безпеку, API та операційну прозорість — не лише ціну хвилини.`;
 
 export const blogPosts: BlogPost[] = [
+  ixcRecordingPost,
+  voipCallAnalysisAiPost,
   {
     slug: 'what-is-a-softswitch',
     date: '2026-05-29',

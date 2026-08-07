@@ -246,7 +246,7 @@ export const Hero: React.FC = () => {
         <h1>{t.hero.title}</h1>
         <p className="hero-subtitle">{t.hero.subtitle}</p>
         <div className="hero-actions">
-          <Link to="/products/ai-automation" className="btn btn-primary hero-explore-btn">
+          <Link to="/news/ixc-recording" className="btn btn-primary hero-explore-btn">
             <span className="hero-ai-badge">{t.hero.aiStamp}</span>
             {t.hero.exploreProducts} <ArrowRight size={18} />
           </Link>

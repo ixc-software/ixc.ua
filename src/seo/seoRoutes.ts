@@ -129,6 +129,23 @@ export const seoRoutes = {
           'Високонавантажений VoIP-софтсвіч: LCR, передоплата/постоплата, SIP/H.323, JSON API, SIP firewall — замовте демо.'
       }
     } satisfies SeoPagePair,
+    'ixc-recording': {
+      en: {
+        title: 'IXC Recording — Call Archive, AI Analysis & FAS Detection',
+        description:
+          'Softswitch captures call media; Billing 7 organises the archive. Mark calls for AI traffic profiles, voice quality, coaching, and post-recorded FAS/voicemail fingerprints.'
+      },
+      ru: {
+        title: 'IXC Recording — архив звонков, AI-анализ и детекция FAS',
+        description:
+          'Софтсвитч пишет медиа; Billing 7 упорядочивает архив. Отметьте вызовы для AI-профиля трафика, качества голоса, коучинга и post-recorded FAS/voicemail fingerprints.'
+      },
+      uk: {
+        title: 'IXC Recording — архів дзвінків, AI-аналіз і детекція FAS',
+        description:
+          'Софтсвіч пише медіа; Billing 7 впорядковує архів. Позначте виклики для AI-профілю трафіку, якості голосу, коучингу та post-recorded FAS/voicemail fingerprints.'
+      }
+    } satisfies SeoPagePair,
     'ai-automation': {
       en: {
         title: 'AI Automation for Voice & SMS Carriers — IXC ↔ DealoAgent',

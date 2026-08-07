@@ -68,6 +68,10 @@ export const platformBrochureEn: BrochureData = {
       text: 'Inspect call path (callpath) from CDR reports.'
     },
     {
+      label: 'IXC Recording',
+      text: 'Softswitch captures call media; Billing 7 browses, searches, plays, and manages recordings by hour — with one-click access from Originator and Terminator call reports.'
+    },
+    {
       label: 'Customer portal',
       text: 'Active calls and report overview for clients in real time.'
     },

@@ -71,7 +71,7 @@ export const Header: React.FC = () => {
           </button>
         </div>
       </div>
-      <Link to="/products/ai-automation" className="announcement-banner">
+      <Link to="/news/ixc-recording" className="announcement-banner">
         {t.nav.bannerAnnouncement}
       </Link>
     </header>

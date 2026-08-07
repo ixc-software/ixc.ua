@@ -1,0 +1,19 @@
+Professional B2B telecom product update hero image, 16:9 landscape (1920×1080), dark navy background with subtle teal audio waveform glow.
+
+CRITICAL branding (must follow exactly):
+- Use the EXACT attached corporate logo icon ONLY: blue rounded square with the 3D light-blue stylized V / stacked curved bars emblem (public/logo.png). Place that logo badge prominently at top center.
+- Do NOT invent any other logo. Do NOT use wifi bars, signal waves, circuit E-marks, or any alternate icon.
+- Do NOT put "IXC", "iXC", or "Billing 7" as a floating wordmark next to a fake logo.
+- Sidebar app icon inside the mock UI must also be the same attached logo badge (scaled small), not a different mark.
+
+Composition:
+- TOP CENTER: exact IXC logo badge from reference.
+- LEFT green pill badge: "Voice recordings" with small waveform icon.
+- CENTER: large glass UI window "Troubleshooting → Recordings" showing hour buckets table (e.g. 2026-08-05 09, call counts, disk size bars) and an expanded row with audio waveform player.
+- RIGHT: floating translucent Call report card with green Answered badge and prominent "Recording · view" button.
+- Background: glowing cyan sine-wave patterns, glassmorphism, soft depth shadows.
+
+Style: enterprise VoIP SaaS marketing, carrier-grade, no people, no stock photos, no third-party logos. High resolution.
+
+Reference: public/logo.png
+Save as: public/news/ixc-recording-latest-update.png (also copy to public/blog/ixc-recording.png)

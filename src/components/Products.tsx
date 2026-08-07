@@ -1,5 +1,5 @@
 import React from 'react';
-import { Server, Shield, Activity, Bot, MessageSquare, Code, Layers, FileText, Sparkles } from 'lucide-react';
+import { Server, Shield, Activity, Bot, MessageSquare, Code, Layers, FileText, Sparkles, Mic } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../i18n/LanguageProvider';
 import { SectionHeading } from './SectionHeading';
@@ -10,6 +10,13 @@ const products = [
     title: 'Softswitch',
     description: 'A Class 4/5 VoIP platform designed for maximum throughput, detailed billing, and advanced routing intelligence.',
     icon: <Server size={32} />
+  },
+  {
+    slug: 'ixc-recording',
+    title: 'IXC Recording',
+    description:
+      'Softswitch captures call media; Billing 7 organises the archive — plus AI call analysis, traffic profiles, voice quality, and FAS/voicemail detect and drop.',
+    icon: <Mic size={32} />
   },
   {
     slug: 'ai-automation',

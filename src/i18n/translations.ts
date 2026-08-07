@@ -204,7 +204,7 @@ const en: Translations = {
     privacyPolicy: 'Privacy Policy',
     blog: 'Blog',
     getFreeDemo: 'Get free demo',
-    bannerAnnouncement: 'AI Automation for carriers is here — IXC ↔ DealoAgent, scale to 100+ accounts per manager'
+    bannerAnnouncement: 'IXC Recording — foundation for AI call analysis, FAS & voicemail detection'
   },
   privacyPolicy: {
     title: 'Privacy Policy',
@@ -216,8 +216,8 @@ const en: Translations = {
     title: 'Carrier-style VoIP infrastructure—proven in production since 1999',
     subtitle:
       'Run wholesale and retail voice on a single high-capacity stack: advanced LCR and policy routing, automated billing, route testing and FAS detection, APIs and alerts—backed by 24/7 multilingual NOC support.',
-    aiStamp: 'AI released',
-    exploreProducts: 'Explore AI Automation',
+    aiStamp: 'Recording',
+    exploreProducts: 'Explore IXC Recording',
     contactSales: 'Contact Sales'
   },
   trust: {
@@ -243,6 +243,7 @@ const en: Translations = {
     learnMore: 'Learn more →',
     cards: [
       { title: 'Softswitch', description: 'A Class 4/5 VoIP platform designed for maximum throughput, detailed billing, and advanced routing intelligence.' },
+      { title: 'IXC Recording', description: 'Softswitch captures call media; Billing 7 organises the archive — plus AI call analysis, traffic profiles, voice quality, and FAS/voicemail detect and drop.' },
       { title: 'AI Automation', description: 'IXC ↔ DealoAgent: native-language commands, batch softswitch updates, and messenger dispatch—scale from 5–10 to 100+ accounts per manager.' },
       { title: 'White/Black List', description: 'Dynamic protection and flexible routing rules to ensure unparalleled security and spam call prevention.' },
       { title: 'Monitoring Tool', description: 'Real-time analytics and dynamic graphs allowing you to trace SIP data for immediate troubleshooting.' },
@@ -357,6 +358,7 @@ const en: Translations = {
       { title: 'Auto Rate Management', desc: 'Automatic rate upload from IMAP with Telegram confirmation for rate increases.' },
       { title: 'Traffic Monitoring', desc: 'Continuous traffic quality monitoring, alerting, and auto-blocking.' },
       { title: 'Call Routing History', desc: 'Full callpath analysis at CDRs report with all routing attempts and disconnect codes.' },
+      { title: 'IXC Recording', desc: 'Softswitch captures call media; Billing 7 browses, searches, plays, and manages recordings by hour — with one-click access from Originator and Terminator call reports.' },
       { title: 'Customer Portal', desc: 'Real-time active calls and reports overview for your clients.' },
       { title: 'Testing Tools', desc: 'Built-in SIP generation utility for testing any kind of scenario.' },
       { title: 'Data Protection', desc: 'Automatic backup system and two-factor authentication for enhanced security.' },
@@ -491,7 +493,7 @@ const ru: Translations = {
     privacyPolicy: 'Политика конфиденциальности',
     blog: 'Блог',
     getFreeDemo: 'Бесплатное демо',
-    bannerAnnouncement: 'AI-автоматизация для операторов — IXC ↔ DealoAgent, до 100+ контрактов на менеджера'
+    bannerAnnouncement: 'IXC Recording — основа для AI-анализа звонков, FAS и голосовой почты'
   },
   privacyPolicy: {
     title: 'Политика конфиденциальности',
@@ -503,8 +505,8 @@ const ru: Translations = {
     title: 'Инфраструктура VoIP операторского класса — в продакшене с 1999 года',
     subtitle:
       'Оптовый и розничный голос на одной высоконагруженной платформе: продвинутая LCR и маршрутизация на основе политик, автоматический биллинг, тест маршрутов и выявление FAS, API и оповещения — с круглосуточной многоязычной поддержкой NOC.',
-    aiStamp: 'AI релиз',
-    exploreProducts: 'Об AI-автоматизации',
+    aiStamp: 'Recording',
+    exploreProducts: 'Об IXC Recording',
     contactSales: 'Связаться с нами'
   },
   trust: {
@@ -530,6 +532,7 @@ const ru: Translations = {
     learnMore: 'Подробнее →',
     cards: [
       { title: 'Софтсвитч', description: 'Платформа VoIP класса 4/5 для максимальной пропускной способности, детального биллинга и интеллектуальной маршрутизации.' },
+      { title: 'IXC Recording', description: 'Софтсвитч пишет медиа вызова; Billing 7 упорядочивает архив — плюс AI-анализ, профили трафика, качество голоса и detect and drop FAS/голосовой почты.' },
       { title: 'AI-автоматизация', description: 'IXC ↔ DealoAgent: команды на родном языке, пакетные изменения в софтсвитче и рассылка в мессенджеры — от 5–10 до 100+ контрактов на менеджера.' },
       { title: 'Белый/Чёрный список', description: 'Динамическая защита и гибкие правила маршрутизации для обеспечения безопасности и предотвращения спам-звонков.' },
       { title: 'Инструмент мониторинга', description: 'Аналитика в реальном времени и динамические графики для отслеживания SIP-данных и быстрого устранения неполадок.' },
@@ -644,6 +647,7 @@ const ru: Translations = {
       { title: 'Автозагрузка тарифов', desc: 'Автоматическая загрузка тарифов из IMAP с подтверждением повышений через Telegram.' },
       { title: 'Мониторинг трафика', desc: 'Непрерывный мониторинг качества трафика, оповещения и автоблокировка.' },
       { title: 'История маршрутизации', desc: 'Полный анализ маршрута (callpath) в отчёте CDR с попытками и кодами отключения.' },
+      { title: 'IXC Recording', desc: 'Софтсвитч захватывает медиа вызова; Billing 7 даёт просмотр, поиск, воспроизведение и управление записями по часам — с одним кликом из отчётов Originator и Terminator.' },
       { title: 'Портал клиента', desc: 'Обзор активных вызовов и отчётов для клиентов в реальном времени.' },
       { title: 'Инструменты тестирования', desc: 'Встроенная утилита SIP-генерации для тестирования любых сценариев.' },
       { title: 'Защита данных', desc: 'Автоматическое резервное копирование и двухфакторная аутентификация.' },
@@ -778,7 +782,7 @@ const uk: Translations = {
     privacyPolicy: 'Політика конфіденційності',
     blog: 'Блог',
     getFreeDemo: 'Безкоштовне демо',
-    bannerAnnouncement: 'AI-автоматизація для операторів — IXC ↔ DealoAgent, до 100+ контрактів на менеджера'
+    bannerAnnouncement: 'IXC Recording — основа для AI-аналізу дзвінків, FAS і голосової пошти'
   },
   privacyPolicy: {
     title: 'Політика конфіденційності',
@@ -790,8 +794,8 @@ const uk: Translations = {
     title: 'Інфраструктура VoIP операторського класу — у продакшені з 1999 року',
     subtitle:
       'Оптовий і роздрібний голос на одній високонавантаженій платформі: розширена LCR і маршрутизація на основі політик, автоматичний білінг, тест маршрутів і виявлення FAS, API та сповіщення — із цілодобовою багатомовною підтримкою NOC.',
-    aiStamp: 'AI реліз',
-    exploreProducts: 'Про AI-автоматизацію',
+    aiStamp: 'Recording',
+    exploreProducts: 'Про IXC Recording',
     contactSales: "Зв'язатися з нами"
   },
   trust: {
@@ -817,6 +821,7 @@ const uk: Translations = {
     learnMore: 'Детальніше →',
     cards: [
       { title: 'Софтсвітч', description: 'VoIP платформа класу 4/5 для максимальної пропускної здатності, детального білінгу та інтелектуальної маршрутизації.' },
+      { title: 'IXC Recording', description: 'Софтсвіч пише медіа виклику; Billing 7 впорядковує архів — плюс AI-аналіз, профілі трафіку, якість голосу та detect and drop FAS/голосової пошти.' },
       { title: 'AI-автоматизація', description: 'IXC ↔ DealoAgent: команди рідною мовою, пакетні зміни в софтсвітчі та розсилка в месенджери — від 5–10 до 100+ контрактів на менеджера.' },
       { title: 'Білий/Чорний список', description: 'Динамічний захист і гнучкі правила маршрутизації для забезпечення безпеки та запобігання спам-дзвінкам.' },
       { title: 'Інструмент моніторингу', description: 'Аналітика в реальному часі та динамічні графіки для відстеження SIP-даних та швидкого усунення неполадок.' },
@@ -931,6 +936,7 @@ const uk: Translations = {
       { title: 'Автозавантаження тарифів', desc: 'Автоматичне завантаження тарифів з IMAP з підтвердженням підвищень через Telegram.' },
       { title: 'Моніторинг трафіку', desc: 'Безперервний моніторинг якості трафіку, оповіщення та автоблокування.' },
       { title: 'Історія маршрутизації', desc: 'Повний аналіз маршруту (callpath) у звіті CDR зі спробами та кодами відключення.' },
+      { title: 'IXC Recording', desc: 'Софтсвіч захоплює медіа виклику; Billing 7 дає перегляд, пошук, відтворення й керування записами за годинами — з одним кліком зі звітів Originator і Terminator.' },
       { title: 'Портал клієнта', desc: 'Огляд активних дзвінків та звітів для клієнтів у реальному часі.' },
       { title: 'Інструменти тестування', desc: 'Вбудована утиліта SIP-генерації для тестування будь-яких сценаріїв.' },
       { title: 'Захист даних', desc: 'Автоматичне резервне копіювання та двофакторна автентифікація.' },

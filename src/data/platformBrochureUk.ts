@@ -68,6 +68,10 @@ export const platformBrochureUk: BrochureData = {
       text: 'Перевірка call path у CDR-звітах.'
     },
     {
+      label: 'IXC Recording',
+      text: 'Софтсвіч захоплює медіа виклику; Billing 7 — перегляд, пошук, відтворення й керування записами за годинами; доступ в один клік зі звітів Originator і Terminator.'
+    },
+    {
       label: 'Портал клієнта',
       text: 'Активні виклики та звіти в реальному часі.'
     },

@@ -68,6 +68,10 @@ export const platformBrochureRu: BrochureData = {
       text: 'Проверка call path в CDR-отчётах.'
     },
     {
+      label: 'IXC Recording',
+      text: 'Софтсвитч захватывает медиа вызова; Billing 7 — просмотр, поиск, воспроизведение и управление записями по часам; доступ в один клик из отчётов Originator и Terminator.'
+    },
+    {
       label: 'Портал клиента',
       text: 'Активные вызовы и отчёты в реальном времени.'
     },

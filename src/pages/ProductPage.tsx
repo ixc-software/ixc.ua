@@ -2,7 +2,7 @@ import { useParams, Link } from 'react-router-dom';
 import { HashScrollLink } from '../components/HashScrollLink';
 import {
   Server, Shield, Activity, Bot, MessageSquare, Code,
-  ArrowRight, CheckCircle2, ArrowLeft, FileText, Download, Sparkles
+  ArrowRight, CheckCircle2, ArrowLeft, FileText, Download, Sparkles, Mic
 } from 'lucide-react';
 import { useLanguage } from '../i18n/LanguageProvider';
 import { SectionHeading } from '../components/SectionHeading';
@@ -40,6 +40,9 @@ const products: ProductData[] = [
       'Modern Web Interface — intuitive UI with detailed financial, operational, and management reports, dark/light theme',
       'Customer Portal — real-time active calls and reports overview for clients',
       'Call Routing History — check call routing (callpath) at CDRs report with full routing attempts and disconnect codes',
+      'IXC Recording — softswitch captures call media; Billing 7 browses, searches, plays, and manages recordings by hour with one-click access from Originator and Terminator call reports',
+      'AI Call Analysis — mark recorded calls in IXC; automatic reports for traffic profile (scam, gambling, casino, and more), emotion/agent/transcript, voice quality, and on-demand detections',
+      'Post-recorded FAS & voicemail detection — mark detections on stored audio and build speech fingerprints for later ML matching',
       'Data Protection — automatic backup system and two-factor authentication',
       'Traffic Flow Report — general stats grouped by destinations with color filter rules and export to XLS/CSV',
       'Balance Report — complete financial overview per customer: traffic, invoices, payments, debts, credit limits, real-time balance',
@@ -50,6 +53,28 @@ const products: ProductData[] = [
       'Current Routes Tool — analyze routing for any destination with supplier rates, traffic volumes, quality, and pending rate increases',
       'Live Balance Checks — intelligent algorithm ensuring balances don\'t exceed credit limits with Telegram alerts for quick top-up',
       'Multi-level permission system for maximum security',
+    ]
+  },
+  {
+    slug: 'ixc-recording',
+    title: 'IXC Recording',
+    subtitle: 'Call Media Archive · AI Analysis · Post-recorded FAS & Voicemail',
+    icon: <Mic size={40} />,
+    description:
+      'IXC Recording is the media layer on Softswitch and Billing 7: softswitch captures call audio; Billing 7 organises the archive by hour with search, playback, and one-click access from Originator and Terminator reports. Mark recorded calls in IXC to receive automatic AI analysis reports — traffic profiles, coaching, real voice quality, post-recorded FAS/voicemail marks with speech fingerprints, and on-demand detections clients request.',
+    features: [
+      'Softswitch media capture — voice recording written on the switch for enabled traffic',
+      'Billing 7 archive — browse by hour, search, play, export, and manage retention',
+      'One-click from call reports — open recordings from Originator and Terminator the same way as PCAP',
+      'AI call analysis — mark calls in IXC, get automatic reports back in the platform',
+      'High-level traffic profile — ML/transcription review for call-centre, scam, gambling, casino, and other verticals',
+      'Know your traffic — sell more competitively with a readable profile of what you actually carry',
+      'Real voice quality — clarity, cleared minutes, noise, one-way audio, and media issues from the recording itself',
+      'Emotion & coaching insight — agent and customer scores for call-centre operations',
+      'Post-recorded FAS detection — mark false-answer candidates on stored audio',
+      'Post-recorded voicemail / IVR detection — mark non-human answer candidates',
+      'Speech fingerprints — store FAS/voicemail signatures for later ML matching on new batches',
+      'On-demand detections — custom issue packs clients need (compliance phrases, supplier silence thresholds, regional fingerprint packs, and more)',
     ]
   },
   {

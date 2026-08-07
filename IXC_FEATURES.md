@@ -15,6 +15,7 @@
 *   **Automated Rate Management**: Automatic rate upload and distribution directly from an IMAP mail server, with notification to Telegram bot
 *   **Traffic Monitoring**: Continuous traffic quality monitoring and alerting.
 *   **Call Routing History**: Allow to check call routing (callpath) at CDRs report.
+*   **IXC Recording**: Softswitch captures call media; Billing 7 browses, searches, plays, and manages voice recordings by hour bucket — with one-click access from Originator and Terminator call reports (same workflow as PCAP).
 *   **Customer Portal**: Real-time active calls and reports overview for clients.
 *   **Testing Tools**: Built-in SIP generation utility for test any kinds of scenarios.
 *   **Data Protection**: Automatic backup system and two-factor authentication for enhanced security.
