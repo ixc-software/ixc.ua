@@ -58,10 +58,10 @@ const products: ProductData[] = [
   {
     slug: 'ixc-recording',
     title: 'IXC Recording',
-    subtitle: 'Call Media Archive · AI Analysis · Post-recorded FAS & Voicemail',
+    subtitle: 'Call Media Archive · AI Analysis · Detect & Drop · SMS Post-call',
     icon: <Mic size={40} />,
     description:
-      'IXC Recording is the media layer on Softswitch and Billing 7: softswitch captures call audio; Billing 7 organises the archive by hour with search, playback, and one-click access from Originator and Terminator reports. Mark recorded calls in IXC to receive automatic AI analysis reports — traffic profiles, coaching, real voice quality, post-recorded FAS/voicemail marks with speech fingerprints, and on-demand detections clients request.',
+      'IXC Recording is the media layer on Softswitch and Billing 7: softswitch captures call audio; Billing 7 organises the archive by hour with search, playback, and one-click access from Originator and Terminator reports. Mark recorded calls in IXC to receive automatic AI analysis reports — traffic profiles, coaching, real voice quality, FAS/voicemail detect and drop with speech fingerprints, on-demand detections, and call-centre paths such as personalised SMS post-call campaigns from the transcript.',
     features: [
       'Softswitch media capture — voice recording written on the switch for enabled traffic',
       'Billing 7 archive — browse by hour, search, play, export, and manage retention',
@@ -71,8 +71,8 @@ const products: ProductData[] = [
       'Know your traffic — sell more competitively with a readable profile of what you actually carry',
       'Real voice quality — clarity, cleared minutes, noise, one-way audio, and media issues from the recording itself',
       'Emotion & coaching insight — agent and customer scores for call-centre operations',
-      'Post-recorded FAS detection — mark false-answer candidates on stored audio',
-      'Post-recorded voicemail / IVR detection — mark non-human answer candidates',
+      'SMS post-call campaigns — 100% personalised messages from the call transcript that follow the conversation',
+      'FAS/voicemail detect and drop — mark bad answers and act before minutes burn',
       'Speech fingerprints — store FAS/voicemail signatures for later ML matching on new batches',
       'On-demand detections — custom issue packs clients need (compliance phrases, supplier silence thresholds, regional fingerprint packs, and more)',
     ]

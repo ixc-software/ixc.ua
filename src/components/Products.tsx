@@ -15,7 +15,7 @@ const products = [
     slug: 'ixc-recording',
     title: 'IXC Recording',
     description:
-      'Softswitch captures call media; Billing 7 organises the archive — plus AI call analysis, traffic profiles, voice quality, and FAS/voicemail detect and drop.',
+      'Softswitch captures call media; Billing 7 organises the archive — plus AI call analysis, traffic profiles, voice quality, FAS/voicemail detect and drop, and personalised SMS post-call campaigns.',
     icon: <Mic size={32} />
   },
   {

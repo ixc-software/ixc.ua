@@ -243,7 +243,7 @@ const en: Translations = {
     learnMore: 'Learn more →',
     cards: [
       { title: 'Softswitch', description: 'A Class 4/5 VoIP platform designed for maximum throughput, detailed billing, and advanced routing intelligence.' },
-      { title: 'IXC Recording', description: 'Softswitch captures call media; Billing 7 organises the archive — plus AI call analysis, traffic profiles, voice quality, and FAS/voicemail detect and drop.' },
+      { title: 'IXC Recording', description: 'Softswitch captures call media; Billing 7 organises the archive — plus AI call analysis, traffic profiles, voice quality, FAS/voicemail detect and drop, and personalised SMS post-call campaigns.' },
       { title: 'AI Automation', description: 'IXC ↔ DealoAgent: native-language commands, batch softswitch updates, and messenger dispatch—scale from 5–10 to 100+ accounts per manager.' },
       { title: 'White/Black List', description: 'Dynamic protection and flexible routing rules to ensure unparalleled security and spam call prevention.' },
       { title: 'Monitoring Tool', description: 'Real-time analytics and dynamic graphs allowing you to trace SIP data for immediate troubleshooting.' },
@@ -532,7 +532,7 @@ const ru: Translations = {
     learnMore: 'Подробнее →',
     cards: [
       { title: 'Софтсвитч', description: 'Платформа VoIP класса 4/5 для максимальной пропускной способности, детального биллинга и интеллектуальной маршрутизации.' },
-      { title: 'IXC Recording', description: 'Софтсвитч пишет медиа вызова; Billing 7 упорядочивает архив — плюс AI-анализ, профили трафика, качество голоса и detect and drop FAS/голосовой почты.' },
+      { title: 'IXC Recording', description: 'Софтсвитч пишет медиа вызова; Billing 7 упорядочивает архив — плюс AI-анализ, профили трафика, качество голоса, detect and drop FAS/голосовой почты и персонализированные SMS post-call кампании.' },
       { title: 'AI-автоматизация', description: 'IXC ↔ DealoAgent: команды на родном языке, пакетные изменения в софтсвитче и рассылка в мессенджеры — от 5–10 до 100+ контрактов на менеджера.' },
       { title: 'Белый/Чёрный список', description: 'Динамическая защита и гибкие правила маршрутизации для обеспечения безопасности и предотвращения спам-звонков.' },
       { title: 'Инструмент мониторинга', description: 'Аналитика в реальном времени и динамические графики для отслеживания SIP-данных и быстрого устранения неполадок.' },
@@ -821,7 +821,7 @@ const uk: Translations = {
     learnMore: 'Детальніше →',
     cards: [
       { title: 'Софтсвітч', description: 'VoIP платформа класу 4/5 для максимальної пропускної здатності, детального білінгу та інтелектуальної маршрутизації.' },
-      { title: 'IXC Recording', description: 'Софтсвіч пише медіа виклику; Billing 7 впорядковує архів — плюс AI-аналіз, профілі трафіку, якість голосу та detect and drop FAS/голосової пошти.' },
+      { title: 'IXC Recording', description: 'Софтсвіч пише медіа виклику; Billing 7 впорядковує архів — плюс AI-аналіз, профілі трафіку, якість голосу, detect and drop FAS/голосової пошти та персоналізовані SMS post-call кампанії.' },
       { title: 'AI-автоматизація', description: 'IXC ↔ DealoAgent: команди рідною мовою, пакетні зміни в софтсвітчі та розсилка в месенджери — від 5–10 до 100+ контрактів на менеджера.' },
       { title: 'Білий/Чорний список', description: 'Динамічний захист і гнучкі правила маршрутизації для забезпечення безпеки та запобігання спам-дзвінкам.' },
       { title: 'Інструмент моніторингу', description: 'Аналітика в реальному часі та динамічні графіки для відстеження SIP-даних та швидкого усунення неполадок.' },

@@ -110,9 +110,17 @@ Analysis is not a fixed checklist. Clients request **on-demand detections** for 
 
 Tell IXC what to look for; mark the sample set; get the report back in the platform.
 
+## Call-centre traffic — possible next features
+
+For call-centre flows, transcripts unlock more than coaching scores. One high-value path:
+
+- **SMS post-call campaigns** — messages generated from the call transcript, **100% personalised**, that **follow the call** (offer, reminder, next step, satisfaction ask — tied to what was actually said)
+- Triggered after the conversation ends, not generic blast templates
+- Same Recording + analysis stack: mark the traffic, get transcript insight, then act on the outcome
+
 ## Who benefits
 
-- **Call centres** — CSAT/NPS coaching from emotion and transcript scores
+- **Call centres** — CSAT/NPS coaching from emotion and transcript scores; path to personalised SMS follow-ups after each call
 - **Traffic-profile / commercial** — high-level reports that classify scam, gambling, casino, call-centre, and other verticals from ML transcription review
 - **Wholesale NOC / quality** — post-recorded FAS and voicemail marks, voice-quality insight, supplier rollups
 - **Compliance** — searchable transcripts and audit-friendly evidence
@@ -126,7 +134,7 @@ Tell IXC what to look for; mark the sample set; get the report back in the platf
 
 ## Summary
 
-**IXC Recording** stores the audio. **IXC call analysis** reviews it after the fact: mark calls, get automatic reports — traffic profile, coaching, real voice quality, and post-recorded FAS/voicemail detections with speech fingerprints for later ML. Custom detections on demand for what each client needs. Start with recording on Billing **7.0.90+**, then analyse the same files from inside IXC.`;
+**IXC Recording** stores the audio. **IXC call analysis** reviews it after the fact: mark calls, get automatic reports — traffic profile, coaching, real voice quality, and post-recorded FAS/voicemail detections with speech fingerprints for later ML. Custom detections on demand for what each client needs. For call-centre traffic, transcripts also open **personalised SMS post-call campaigns** that follow the conversation. Start with recording on Billing **7.0.90+**, then analyse the same files from inside IXC.`;
 
 const ru = `Организованные **голосовые записи** на [IXC Softswitch](/products/softswitch) и в [IXC Billing 7](/blog/ixc-recording) открывают следующий слой, который IXC даёт клиентам: **AI-анализ звонков** по **уже записанному** медиа — отчёты профиля трафика, коучинг, качество голоса и детекция FAS/голосовой почты после сохранения вызова.
 
@@ -238,9 +246,17 @@ Wholesale и retail теряют деньги на:
 
 Скажите IXC, что искать; отметьте выборку; получите отчёт в платформе.
 
+## Call-centre трафик — возможные следующие функции
+
+Для call-centre потоков транскрипты дают больше, чем коучинг. Один сильный сценарий:
+
+- **SMS post-call кампании** — сообщения по транскрипту звонка, **на 100% персонализированные**, которые **следуют за звонком** (офер, напоминание, следующий шаг, опрос удовлетворённости — по тому, что реально сказали)
+- Запуск после окончания разговора, а не generic blast-шаблоны
+- Тот же стек Recording + анализ: отметьте трафик, получите инсайт по транскрипту, затем действуйте по итогу
+
 ## Кому это нужно
 
-- **Call centres** — CSAT/NPS-коучинг по эмоциям и транскриптам
+- **Call centres** — CSAT/NPS-коучинг по эмоциям и транскриптам; путь к персонализированным SMS follow-up после каждого звонка
 - **Профиль трафика / коммерция** — high-level отчёты: scam, gambling, casino, call-centre и другие вертикали из ML-разбора транскриптов
 - **Wholesale NOC / качество** — post-recorded метки FAS и voicemail, качество голоса, сводки по поставщикам
 - **Compliance** — searchable транскрипты и evidence
@@ -254,7 +270,7 @@ Wholesale и retail теряют деньги на:
 
 ## Итог
 
-**IXC Recording** хранит аудио. **Анализ звонков IXC** разбирает его после записи: отметьте вызовы, получите автоматические отчёты — профиль трафика, коучинг, реальное качество голоса и post-recorded FAS/voicemail с speech fingerprints для дальнейшего ML. Кастомные детекции по запросу клиента. Начните с записи в Billing **7.0.90+**, затем анализируйте те же файлы внутри IXC.`;
+**IXC Recording** хранит аудио. **Анализ звонков IXC** разбирает его после записи: отметьте вызовы, получите автоматические отчёты — профиль трафика, коучинг, реальное качество голоса и post-recorded FAS/voicemail с speech fingerprints для дальнейшего ML. Кастомные детекции по запросу клиента. Для call-centre трафика транскрипты также открывают **персонализированные SMS post-call кампании**, которые следуют за разговором. Начните с записи в Billing **7.0.90+**, затем анализируйте те же файлы внутри IXC.`;
 
 const uk = `Організовані **голосові записи** на [IXC Softswitch](/products/softswitch) і в [IXC Billing 7](/blog/ixc-recording) відкривають наступний шар, який IXC дає клієнтам: **AI-аналіз дзвінків** за **вже записаним** медіа — звіти профілю трафіку, коучинг, якість голосу та детекція FAS/голосової пошти після збереження виклику.
 
@@ -366,9 +382,17 @@ Wholesale і retail втрачають гроші на:
 
 Скажіть IXC, що шукати; позначте вибірку; отримайте звіт у платформі.
 
+## Call-centre трафік — можливі наступні функції
+
+Для call-centre потоків транскрипти дають більше, ніж коучинг. Один сильний сценарій:
+
+- **SMS post-call кампанії** — повідомлення за транскриптом дзвінка, **на 100% персоналізовані**, які **йдуть за дзвінком** (офер, нагадування, наступний крок, опитування задоволеності — за тим, що реально сказали)
+- Запуск після закінчення розмови, а не generic blast-шаблони
+- Той самий стек Recording + аналіз: позначте трафік, отримайте інсайт за транскриптом, потім дійте за підсумком
+
 ## Кому це потрібно
 
-- **Call centres** — CSAT/NPS-коучинг за емоціями й транскриптами
+- **Call centres** — CSAT/NPS-коучинг за емоціями й транскриптами; шлях до персоналізованих SMS follow-up після кожного дзвінка
 - **Профіль трафіку / комерція** — high-level звіти: scam, gambling, casino, call-centre та інші вертикалі з ML-розбору транскриптів
 - **Wholesale NOC / якість** — post-recorded мітки FAS і voicemail, якість голосу, зведення за постачальниками
 - **Compliance** — searchable транскрипти й evidence
@@ -382,7 +406,7 @@ Wholesale і retail втрачають гроші на:
 
 ## Підсумок
 
-**IXC Recording** зберігає аудіо. **Аналіз дзвінків IXC** розбирає його після запису: позначте виклики, отримайте автоматичні звіти — профіль трафіку, коучинг, реальна якість голосу та post-recorded FAS/voicemail із speech fingerprints для подальшого ML. Кастомні детекції на запит клієнта. Почніть із запису в Billing **7.0.90+**, потім аналізуйте ті самі файли всередині IXC.`;
+**IXC Recording** зберігає аудіо. **Аналіз дзвінків IXC** розбирає його після запису: позначте виклики, отримайте автоматичні звіти — профіль трафіку, коучинг, реальна якість голосу та post-recorded FAS/voicemail із speech fingerprints для подальшого ML. Кастомні детекції на запит клієнта. Для call-centre трафіку транскрипти також відкривають **персоналізовані SMS post-call кампанії**, які йдуть за розмовою. Почніть із запису в Billing **7.0.90+**, потім аналізуйте ті самі файли всередині IXC.`;
 
 export const voipCallAnalysisAiPost: BlogPost = {
   slug: 'voip-call-analysis-ai',
