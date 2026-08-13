@@ -32,11 +32,11 @@ export const Contact: React.FC = () => {
         formRef.current?.reset();
       } else {
         const data = await response.json();
-        setErrorMessage(data?.errors?.map((err: { message: string }) => err.message).join(', ') || 'Something went wrong. Please try again.');
+        setErrorMessage(data?.errors?.map((err: { message: string }) => err.message).join(', ') || t.contactForm.errorGeneric);
         setStatus('error');
       }
     } catch {
-      setErrorMessage('Network error. Please check your connection and try again.');
+      setErrorMessage(t.contactForm.errorNetwork);
       setStatus('error');
     }
   };
@@ -51,21 +51,20 @@ export const Contact: React.FC = () => {
       />
 
       <div className="contact-layout">
-        {/* Form */}
         <div className="glass contact-form-card">
           {status === 'success' ? (
             <div className="contact-success">
               <div className="contact-success-icon">
                 <CheckCircle size={48} />
               </div>
-              <h3>Message Sent!</h3>
-              <p>Thank you for reaching out. We'll get back to you within 24 hours.</p>
+              <h3>{t.contactForm.successTitle}</h3>
+              <p>{t.contactForm.successText}</p>
               <button
                 className="btn btn-outline"
                 onClick={() => setStatus('idle')}
                 style={{ marginTop: '1.5rem' }}
               >
-                Send Another Message
+                {t.contactForm.sendAnother}
               </button>
             </div>
           ) : (
@@ -73,14 +72,14 @@ export const Contact: React.FC = () => {
               <div className="contact-form-group">
                 <label htmlFor="contact-name" className="contact-label">
                   <User size={16} />
-                  Name
+                  {t.contactForm.name}
                 </label>
                 <input
                   type="text"
                   id="contact-name"
                   name="name"
                   required
-                  placeholder="Your name"
+                  placeholder={t.contactForm.namePlaceholder}
                   className="contact-input"
                   disabled={status === 'submitting'}
                 />
@@ -89,7 +88,7 @@ export const Contact: React.FC = () => {
               <div className="contact-form-group">
                 <label htmlFor="contact-email" className="contact-label">
                   <Mail size={16} />
-                  Email
+                  {t.contactForm.email}
                 </label>
                 <input
                   type="email"
@@ -104,14 +103,14 @@ export const Contact: React.FC = () => {
 
               <div className="contact-form-group">
                 <label htmlFor="contact-company" className="contact-label">
-                  Company
-                  <span style={{ color: 'var(--text-muted)', fontWeight: 400, fontSize: '0.8rem' }}> (optional)</span>
+                  {t.contactForm.company}
+                  <span style={{ color: 'var(--text-muted)', fontWeight: 400, fontSize: '0.8rem' }}> {t.contactForm.optional}</span>
                 </label>
                 <input
                   type="text"
                   id="contact-company"
                   name="company"
-                  placeholder="Your company name"
+                  placeholder={t.contactForm.companyPlaceholder}
                   className="contact-input"
                   disabled={status === 'submitting'}
                 />
@@ -120,14 +119,14 @@ export const Contact: React.FC = () => {
               <div className="contact-form-group">
                 <label htmlFor="contact-message" className="contact-label">
                   <MessageSquare size={16} />
-                  Message
+                  {t.contactForm.message}
                 </label>
                 <textarea
                   id="contact-message"
                   name="message"
                   required
                   rows={5}
-                  placeholder="Tell us about your project or ask a question..."
+                  placeholder={t.contactForm.messagePlaceholder}
                   className="contact-input contact-textarea"
                   disabled={status === 'submitting'}
                 />
@@ -148,12 +147,12 @@ export const Contact: React.FC = () => {
                 {status === 'submitting' ? (
                   <>
                     <span className="contact-spinner" />
-                    Sending...
+                    {t.contactForm.sending}
                   </>
                 ) : (
                   <>
                     <Send size={18} />
-                    Send Message
+                    {t.contactForm.send}
                   </>
                 )}
               </button>
@@ -161,14 +160,13 @@ export const Contact: React.FC = () => {
           )}
         </div>
 
-        {/* Contact Info Sidebar */}
         <div className="contact-info">
           <div className="glass contact-info-card">
             <div className="contact-info-icon" style={{ background: 'rgba(79, 124, 172, 0.15)' }}>
               <Mail size={22} color="var(--accent-color)" />
             </div>
             <div>
-              <h4>Email Us</h4>
+              <h4>{t.contactForm.emailUs}</h4>
               <a href="mailto:sales@ixc.ua">sales@ixc.ua</a>
             </div>
           </div>
@@ -178,7 +176,7 @@ export const Contact: React.FC = () => {
               <Send size={22} color="#24a1de" />
             </div>
             <div>
-              <h4>Telegram</h4>
+              <h4>{t.common.telegram}</h4>
               <a href="https://t.me/alex12alex" target="_blank" rel="noopener noreferrer">@alex12alex</a>
             </div>
           </div>
@@ -191,7 +189,7 @@ export const Contact: React.FC = () => {
               </svg>
             </div>
             <div>
-              <h4>Office</h4>
+              <h4>{t.common.office}</h4>
               <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', lineHeight: '1.5' }}>
                 7950 NW 53rd Street, Suite 337<br />
                 Miami, Florida 33166

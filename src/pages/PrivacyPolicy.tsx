@@ -60,7 +60,7 @@ export const PrivacyPolicy = () => {
             <br />
             {COMPANY_ADDRESS_LINE}
             <br />
-            Email:{' '}
+            {t.common.email}:{' '}
             <a href={`mailto:${COMPANY_PRIVACY_EMAIL}`}>{COMPANY_PRIVACY_EMAIL}</a>
           </address>
         </article>

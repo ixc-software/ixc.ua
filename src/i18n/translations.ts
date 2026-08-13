@@ -145,10 +145,49 @@ export interface Translations {
     title: string;
     subtitle: string;
     readMore: string;
+    breadcrumb: string;
+    backToNews: string;
+    notFoundTitle: string;
+    notFoundText: string;
+    previous: string;
+    next: string;
   };
   contactSection: {
     title: string;
     subtitle: string;
+  };
+  contactForm: {
+    name: string;
+    namePlaceholder: string;
+    email: string;
+    company: string;
+    optional: string;
+    companyPlaceholder: string;
+    message: string;
+    messagePlaceholder: string;
+    send: string;
+    sending: string;
+    successTitle: string;
+    successText: string;
+    sendAnother: string;
+    emailUs: string;
+    errorGeneric: string;
+    errorNetwork: string;
+  };
+  common: {
+    email: string;
+    telegram: string;
+    whatsapp: string;
+    teams: string;
+    office: string;
+    sales: string;
+    changeLanguage: string;
+    toggleTheme: string;
+    menu: string;
+    contactUs: string;
+    needHelp: string;
+    previousTestimonial: string;
+    nextTestimonial: string;
   };
   team: {
     title: string;
@@ -163,6 +202,7 @@ export interface Translations {
     contactTitle: string;
     contactText: string;
     copyright: string;
+    salesLabel: string;
   };
   about: {
     title: string;
@@ -402,12 +442,51 @@ const en: Translations = {
   news: {
     title: 'Latest Updates',
     subtitle: 'Product updates, releases, and announcements from IXC.',
-    readMore: 'Read More'
+    readMore: 'Read More',
+    breadcrumb: 'News',
+    backToNews: 'Back to News',
+    notFoundTitle: 'News not found',
+    notFoundText: "The article you're looking for doesn't exist.",
+    previous: 'Previous news',
+    next: 'Next news'
   },
   contactSection: {
     title: 'Get in Touch',
     subtitle:
       "Have questions about IXC Softswitch? Looking for a demo or pricing details? Drop us a message and we'll get back to you shortly."
+  },
+  contactForm: {
+    name: 'Name',
+    namePlaceholder: 'Your name',
+    email: 'Email',
+    company: 'Company',
+    optional: '(optional)',
+    companyPlaceholder: 'Your company name',
+    message: 'Message',
+    messagePlaceholder: 'Tell us about your project or ask a question...',
+    send: 'Send Message',
+    sending: 'Sending...',
+    successTitle: 'Message Sent!',
+    successText: "Thank you for reaching out. We'll get back to you within 24 hours.",
+    sendAnother: 'Send Another Message',
+    emailUs: 'Email Us',
+    errorGeneric: 'Something went wrong. Please try again.',
+    errorNetwork: 'Network error. Please check your connection and try again.'
+  },
+  common: {
+    email: 'Email',
+    telegram: 'Telegram',
+    whatsapp: 'WhatsApp',
+    teams: 'Teams',
+    office: 'Office',
+    sales: 'Sales',
+    changeLanguage: 'Change language',
+    toggleTheme: 'Toggle theme',
+    menu: 'Menu',
+    contactUs: 'Contact us',
+    needHelp: 'Need help?',
+    previousTestimonial: 'Previous testimonial',
+    nextTestimonial: 'Next testimonial'
   },
   team: {
     title: 'Our Team',
@@ -421,7 +500,8 @@ const en: Translations = {
     companyTitle: 'Company',
     contactTitle: 'Contact',
     contactText: 'Got questions? Get in touch with our team.',
-    copyright: 'All rights Reserved.'
+    copyright: 'All rights Reserved.',
+    salesLabel: 'Sales'
   },
   about: {
     title: 'About IXC Softswitch',
@@ -691,12 +771,51 @@ const ru: Translations = {
   news: {
     title: 'Последние обновления',
     subtitle: 'Обновления продуктов, релизы и новости от IXC.',
-    readMore: 'Подробнее'
+    readMore: 'Подробнее',
+    breadcrumb: 'Новости',
+    backToNews: 'Назад к новостям',
+    notFoundTitle: 'Новость не найдена',
+    notFoundText: 'Статья, которую вы ищете, не существует.',
+    previous: 'Предыдущие новости',
+    next: 'Следующие новости'
   },
   contactSection: {
     title: 'Свяжитесь с нами',
     subtitle:
       'Вопросы по IXC Softswitch? Нужно демо или коммерческое предложение? Напишите нам — ответим в ближайшее время.'
+  },
+  contactForm: {
+    name: 'Имя',
+    namePlaceholder: 'Ваше имя',
+    email: 'Email',
+    company: 'Компания',
+    optional: '(необязательно)',
+    companyPlaceholder: 'Название компании',
+    message: 'Сообщение',
+    messagePlaceholder: 'Расскажите о проекте или задайте вопрос...',
+    send: 'Отправить',
+    sending: 'Отправка...',
+    successTitle: 'Сообщение отправлено!',
+    successText: 'Спасибо за обращение. Ответим в течение 24 часов.',
+    sendAnother: 'Отправить ещё одно',
+    emailUs: 'Написать нам',
+    errorGeneric: 'Что-то пошло не так. Попробуйте ещё раз.',
+    errorNetwork: 'Ошибка сети. Проверьте подключение и попробуйте снова.'
+  },
+  common: {
+    email: 'Email',
+    telegram: 'Telegram',
+    whatsapp: 'WhatsApp',
+    teams: 'Teams',
+    office: 'Офис',
+    sales: 'Продажи',
+    changeLanguage: 'Сменить язык',
+    toggleTheme: 'Переключить тему',
+    menu: 'Меню',
+    contactUs: 'Связаться с нами',
+    needHelp: 'Нужна помощь?',
+    previousTestimonial: 'Предыдущий отзыв',
+    nextTestimonial: 'Следующий отзыв'
   },
   team: {
     title: 'Наша команда',
@@ -710,7 +829,8 @@ const ru: Translations = {
     companyTitle: 'Компания',
     contactTitle: 'Контакты',
     contactText: 'Есть вопросы? Свяжитесь с нашей командой.',
-    copyright: 'Все права защищены.'
+    copyright: 'Все права защищены.',
+    salesLabel: 'Продажи'
   },
   about: {
     title: 'Об IXC Softswitch',
@@ -980,12 +1100,51 @@ const uk: Translations = {
   news: {
     title: 'Останні оновлення',
     subtitle: 'Оновлення продуктів, релізи та новини від IXC.',
-    readMore: 'Детальніше'
+    readMore: 'Детальніше',
+    breadcrumb: 'Новини',
+    backToNews: 'Назад до новин',
+    notFoundTitle: 'Новину не знайдено',
+    notFoundText: 'Стаття, яку ви шукаєте, не існує.',
+    previous: 'Попередні новини',
+    next: 'Наступні новини'
   },
   contactSection: {
     title: "Зв'яжіться з нами",
     subtitle:
       "Питання щодо IXC Softswitch? Потрібне демо чи комерційна пропозиція? Напишіть нам — відповімо найближчим часом."
+  },
+  contactForm: {
+    name: "Ім'я",
+    namePlaceholder: "Ваше ім'я",
+    email: 'Email',
+    company: 'Компанія',
+    optional: '(необов’язково)',
+    companyPlaceholder: 'Назва компанії',
+    message: 'Повідомлення',
+    messagePlaceholder: 'Розкажіть про проєкт або поставте запитання...',
+    send: 'Надіслати',
+    sending: 'Надсилання...',
+    successTitle: 'Повідомлення надіслано!',
+    successText: 'Дякуємо за звернення. Відповімо протягом 24 годин.',
+    sendAnother: 'Надіслати ще одне',
+    emailUs: 'Написати нам',
+    errorGeneric: 'Щось пішло не так. Спробуйте ще раз.',
+    errorNetwork: 'Помилка мережі. Перевірте з’єднання і спробуйте знову.'
+  },
+  common: {
+    email: 'Email',
+    telegram: 'Telegram',
+    whatsapp: 'WhatsApp',
+    teams: 'Teams',
+    office: 'Офіс',
+    sales: 'Продажі',
+    changeLanguage: 'Змінити мову',
+    toggleTheme: 'Перемкнути тему',
+    menu: 'Меню',
+    contactUs: "Зв'язатися з нами",
+    needHelp: 'Потрібна допомога?',
+    previousTestimonial: 'Попередній відгук',
+    nextTestimonial: 'Наступний відгук'
   },
   team: {
     title: 'Наша команда',
@@ -999,7 +1158,8 @@ const uk: Translations = {
     companyTitle: 'Компанія',
     contactTitle: 'Контакти',
     contactText: "Маєте запитання? Зв'яжіться з нашою командою.",
-    copyright: 'Всі права захищені.'
+    copyright: 'Всі права захищені.',
+    salesLabel: 'Продажі'
   },
   about: {
     title: 'Про IXC Softswitch',
@@ -1269,12 +1429,51 @@ const zh: Translations = {
   news: {
     title: '最新动态',
     subtitle: 'IXC 的产品更新、版本发布与公告。',
-    readMore: '阅读更多'
+    readMore: '阅读更多',
+    breadcrumb: '新闻',
+    backToNews: '返回新闻',
+    notFoundTitle: '未找到新闻',
+    notFoundText: '您查找的文章不存在。',
+    previous: '上一条新闻',
+    next: '下一条新闻'
   },
   contactSection: {
     title: '联系我们',
     subtitle:
       '对 IXC Softswitch 有疑问？需要演示或报价？请留言，我们会尽快回复。'
+  },
+  contactForm: {
+    name: '姓名',
+    namePlaceholder: '您的姓名',
+    email: '邮箱',
+    company: '公司',
+    optional: '（选填）',
+    companyPlaceholder: '公司名称',
+    message: '留言',
+    messagePlaceholder: '介绍您的项目或提出问题…',
+    send: '发送留言',
+    sending: '发送中…',
+    successTitle: '留言已发送！',
+    successText: '感谢联系。我们将在 24 小时内回复。',
+    sendAnother: '再发一条',
+    emailUs: '发邮件给我们',
+    errorGeneric: '出了点问题，请再试一次。',
+    errorNetwork: '网络错误。请检查连接后重试。'
+  },
+  common: {
+    email: '邮箱',
+    telegram: 'Telegram',
+    whatsapp: 'WhatsApp',
+    teams: 'Teams',
+    office: '办公室',
+    sales: '销售',
+    changeLanguage: '切换语言',
+    toggleTheme: '切换主题',
+    menu: '菜单',
+    contactUs: '联系我们',
+    needHelp: '需要帮助？',
+    previousTestimonial: '上一条评价',
+    nextTestimonial: '下一条评价'
   },
   team: {
     title: '我们的团队',
@@ -1288,7 +1487,8 @@ const zh: Translations = {
     companyTitle: '公司',
     contactTitle: '联系',
     contactText: '有问题？请联系我们的团队。',
-    copyright: '保留所有权利。'
+    copyright: '保留所有权利。',
+    salesLabel: '销售'
   },
   about: {
     title: '关于 IXC Softswitch',

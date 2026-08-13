@@ -48,14 +48,14 @@ export const News: React.FC = () => {
             <button
               className={`carousel-btn ${!canScrollLeft ? 'disabled' : ''}`}
               onClick={() => scroll('left')}
-              aria-label="Previous news"
+              aria-label={t.news.previous}
             >
               <ArrowLeft size={20} />
             </button>
             <button
               className={`carousel-btn ${!canScrollRight ? 'disabled' : ''}`}
               onClick={() => scroll('right')}
-              aria-label="Next news"
+              aria-label={t.news.next}
             >
               <ArrowRight size={20} />
             </button>
@@ -75,7 +75,7 @@ export const News: React.FC = () => {
                 {item.local_image ? (
                   <img 
                     src={`${import.meta.env.BASE_URL}${item.local_image.startsWith('/') ? item.local_image.slice(1) : item.local_image}`} 
-                    alt={item.en.title} 
+                    alt={(item as any)[language]?.title || item.en.title} 
                     className="news-image" 
                     loading="lazy" 
                   />

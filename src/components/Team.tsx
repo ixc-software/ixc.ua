@@ -49,7 +49,7 @@ export const Team: React.FC = () => {
               style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '0.5rem 1rem' }}
             >
               <Mail size={20} />
-              Email
+              {t.common.email}
             </a>
             <a 
               href="https://t.me/alex12alex" 
@@ -59,7 +59,7 @@ export const Team: React.FC = () => {
               style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '0.5rem 1rem' }}
             >
               <Send size={20} />
-              Telegram
+              {t.common.telegram}
             </a>
             <a 
               href="https://teams.microsoft.com/l/chat/0/0?users=alex@ixc.ua" 
@@ -69,7 +69,7 @@ export const Team: React.FC = () => {
               style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '0.5rem 1rem' }}
             >
               <MessageSquare size={20} />
-              Teams
+              {t.common.teams}
             </a>
           </div>
         </div>

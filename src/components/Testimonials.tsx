@@ -94,7 +94,7 @@ export const Testimonials: React.FC = () => {
               type="button"
               className={`carousel-btn ${!canScrollLeft ? 'disabled' : ''}`}
               onClick={() => scroll('left')}
-              aria-label="Previous testimonial"
+              aria-label={t.common.previousTestimonial}
             >
               <ArrowLeft size={20} />
             </button>
@@ -102,7 +102,7 @@ export const Testimonials: React.FC = () => {
               type="button"
               className={`carousel-btn ${!canScrollRight ? 'disabled' : ''}`}
               onClick={() => scroll('right')}
-              aria-label="Next testimonial"
+              aria-label={t.common.nextTestimonial}
             >
               <ArrowRight size={20} />
             </button>

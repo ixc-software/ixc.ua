@@ -17,10 +17,10 @@ export const NewsArticle = () => {
       <div className="page-content">
         <section className="page-hero">
           <div className="container" style={{ textAlign: 'center' }}>
-            <h1>{t.productPage?.notFoundTitle || "News Not Found"}</h1>
-            <p className="page-hero-subtitle">{t.productPage?.notFoundText || "The article you're looking for doesn't exist."}</p>
+            <h1>{t.news.notFoundTitle}</h1>
+            <p className="page-hero-subtitle">{t.news.notFoundText}</p>
             <Link to="/" className="btn btn-primary" style={{ marginTop: '2rem' }}>
-              <ArrowLeft size={18} /> {t.productPage?.backHome || "Back to Home"}
+              <ArrowLeft size={18} /> {t.productPage.backHome}
             </Link>
           </div>
         </section>
@@ -36,7 +36,7 @@ export const NewsArticle = () => {
       <section className="page-hero">
         <div className="container">
           <p className="page-breadcrumb">
-            <Link to="/">{t.nav.home}</Link> / <Link to="/#news">News</Link> / {article.en.title}
+            <Link to="/">{t.nav.home}</Link> / <Link to="/#news">{t.news.breadcrumb}</Link> / {(article as any)[language]?.title || article.en.title}
           </p>
           <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
             <h1 style={{ fontSize: '2.5rem', marginBottom: '1rem', color: 'var(--text-primary)' }}>
@@ -61,7 +61,7 @@ export const NewsArticle = () => {
           {article.local_image && (
             <img 
               src={`${import.meta.env.BASE_URL}${article.local_image.startsWith('/') ? article.local_image.slice(1) : article.local_image}`} 
-              alt={article.en.title}
+              alt={(article as any)[language]?.title || article.en.title}
               style={{
                 width: '100%',
                 borderRadius: '16px',
@@ -87,7 +87,7 @@ export const NewsArticle = () => {
           
           <div style={{ marginTop: '4rem', paddingTop: '2rem', borderTop: '1px solid var(--border-color)', textAlign: 'center' }}>
              <Link to="/#news" className="btn btn-outline">
-                <ArrowLeft size={18} /> Back to News
+                <ArrowLeft size={18} /> {t.news.backToNews}
              </Link>
           </div>
         </div>

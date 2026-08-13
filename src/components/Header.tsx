@@ -36,7 +36,7 @@ export const Header: React.FC = () => {
             <button
               className="lang-btn"
               onClick={() => setLangOpen(!langOpen)}
-              aria-label="Change language"
+              aria-label={t.common.changeLanguage}
             >
               <Globe size={16} />
               <span>{languageNames[language]}</span>
@@ -56,7 +56,7 @@ export const Header: React.FC = () => {
             </div>
           </div>
 
-          <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle theme" title="Toggle Theme">
+          <button className="theme-toggle" onClick={toggleTheme} aria-label={t.common.toggleTheme} title={t.common.toggleTheme}>
             {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
           </button>
           <HashScrollLink
@@ -66,7 +66,7 @@ export const Header: React.FC = () => {
           >
             {t.nav.getFreeDemo}
           </HashScrollLink>
-          <button className="menu-toggle" aria-label="Menu" onClick={() => setMenuOpen(!menuOpen)}>
+          <button className="menu-toggle" aria-label={t.common.menu} onClick={() => setMenuOpen(!menuOpen)}>
             {menuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>

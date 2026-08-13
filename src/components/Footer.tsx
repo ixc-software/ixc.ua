@@ -1,6 +1,7 @@
 import React from 'react';
 import { LocaleLink as Link } from './LocaleLink';
 import { useLanguage } from '../i18n/LanguageProvider';
+import { PRODUCT_SLUGS, productCardTitle } from '../data/productCatalog';
 
 export const Footer: React.FC = () => {
   const { t } = useLanguage();
@@ -34,15 +35,11 @@ export const Footer: React.FC = () => {
           <div>
             <h4 style={{ marginBottom: '1rem' }}>{t.footer.productsTitle}</h4>
             <ul style={{ listStyle: 'none', color: 'var(--text-secondary)', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-              <li><Link to="/products/softswitch">Softswitch</Link></li>
-              <li><Link to="/products/ixc-recording">IXC Recording</Link></li>
-              <li><Link to="/products/ai-automation">AI Automation</Link></li>
-              <li><Link to="/products/sms-platform">SMS Platform</Link></li>
-              <li><Link to="/products/monitoring-tool">Monitoring Tool</Link></li>
-              <li><Link to="/products/ixc-autotester">Autotester</Link></li>
-              <li><Link to="/products/white-black-list">White/Black List</Link></li>
-              <li><Link to="/products/google-api">Google API</Link></li>
-              <li><Link to="/products/technical-specifications">Technical specifications</Link></li>
+              {PRODUCT_SLUGS.map((slug) => (
+                <li key={slug}>
+                  <Link to={`/products/${slug}`}>{productCardTitle(t, slug)}</Link>
+                </li>
+              ))}
             </ul>
           </div>
           <div>
@@ -59,11 +56,11 @@ export const Footer: React.FC = () => {
             <h4 style={{ marginBottom: '1rem' }}>{t.footer.contactTitle}</h4>
             <p style={{ color: 'var(--text-secondary)' }}>
               {t.footer.contactText}<br/><br/>
-              <strong>Sales:</strong> <a href="mailto:sales@ixc.ua">sales@ixc.ua</a>
+              <strong>{t.footer.salesLabel}:</strong> <a href="mailto:sales@ixc.ua">sales@ixc.ua</a>
             </p>
           </div>
         </div>
-        
+
         <div className="footer-bottom">
           <p>© IXC Software Distribution Inc, 1999–{new Date().getFullYear()}. {t.footer.copyright}</p>
           <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem', marginTop: '0.5rem' }}>
