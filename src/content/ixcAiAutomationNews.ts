@@ -224,4 +224,75 @@ DealoAgent читає **Gmail, Telegram, WhatsApp, Teams**, бере дані з
 
 IXC — операторський VoIP софтсвітч у продакшені з 1999 року. **Офіс:** 7950 NW 53rd Street, Suite 337, Miami, Florida 33166. **ЗМІ:** alex@ixc.ua`,
   },
+  zh: {
+    title: '面向语音与 SMS 运营商的 AI 自动化 — IXC ↔ DealoAgent 发布',
+    content: `产品公告
+
+2026 年 6 月 — IXC Software Distribution Corp.
+
+**AI 自动化**现已面向 IXC Softswitch 客户开放：与 **DealoAgent AI** 联合提供的能力，将您的软交换连接到 email、Telegram、WhatsApp 和 MS Teams——运营商经理无需再在即时通讯与计费界面之间复制粘贴。
+
+当每条路由、费率、伙伴沟通和表格更新都靠人工完成时，一名经理实际只能覆盖 **5–10 个账户**。有了 AI 自动化，同一团队可在同等薪资预算下运营 **100+ 个账户**——利润最高可达 **10×**。
+
+@btn 阅读产品概览 | /products/ai-automation
+
+---
+## 1. 用母语提问 — IXC 批量落地变更
+
+**变化：** 无需再点开十个界面才能添加目的地或调整 LCR。用自然语言描述需求——*"给运营商 1、2、3 添加 India Mobile，使用今日费率"* 或 *"为运营商 1–3 的 Cuba Mobile 添加 terminator SipRoute-B"* ——**IXC 变更即可批量落地**，无需多步 UI。覆盖平台开放的全部软交换能力：**读、写、删**。
+
+---
+## 2. 面向真实运营商工作的深度分析
+
+**变化：** AI 处理过去依赖 Excel 和经验口口相传的工作——例如 *如何根据运营商 X 发来的 30 行表格填满承诺量*。话务增量、余额阈值与目标目的地复核会在发给伙伴前完成分析与摘要。
+
+---
+## 3. 渠道 + 软交换，一条流程
+
+**变化：** DealoAgent 从 **Gmail、Telegram、WhatsApp 和 Teams** 读取伙伴请求，从 **IXC Billing** 拉取数据，在 **IXC Softswitch** 执行更新，并在正确渠道发出回复。当伙伴在 Teams 收到 *"已完成——价格已发送"* 或路由确认时，交换机已经更新。
+
+---
+## 4. 定时任务 — 设置后自动运行
+
+**变化：** 按每日或自定义节奏定义 **周期性任务**：批量回写 IXC，然后自动向所有运营商渠道推送 **top destinations**、**traffic alerts** 和 **balance notices**——无需每天早上手动触发。
+
+---
+## 5. 传统方式 vs 新方式
+
+| | 人工 | AI 自动化 |
+|---|---|---|
+| 每名经理账户数 | 5–10 | 100+ |
+| 工作流 | 即时通讯 → 计费 UI → 复制粘贴 | 一条指令 → IXC 批量 → 自动回复 |
+| 语言 | 英文操作文档 | 母语指令 |
+| 调度 | 每天手动 | 周期性自动分发 |
+
+---
+## 6. 基于您已在运行的 IXC Softswitch
+
+AI 自动化将 **IXC Softswitch**（Class 4/5 路由、计费、LCR、承诺量、API）与 **DealoAgent** 配对——现有权限与计费数据保持不变。
+
+---
+## 7. DealoAgent — 面向运营商的全功能 AI-native CRM
+
+**您获得：** DealoAgent 不仅是自动化。它是专为批发语音与 SMS 运营商打造的 **全功能 AI-native CRM**——在一处管理 **运营商状态**、**类型**、**线索** 与 **外联**（冷触达与热跟进），同时 IXC 在后台处理交换机操作。
+
+- **运营商状态与类型** — 跟踪每位伙伴所处阶段，按 wholesale/retail、originator/terminator 与商务阶段细分
+- **线索** — 捕获、评分与分配潜在客户，无需单独的表格管道
+- **外联** — 在邮件与即时通讯上开展 **冷** 开拓与 **热** 跟进，由 AI 起草并与实时 IXC 数据绑定的上下文消息
+
+自动化在 IXC 执行；DealoAgent 是团队 **端到端管理运营商关系** 的地方。
+
+---
+## 可用性
+
+**AI 自动化**可用于 IXC Softswitch 部署。申请演示或升级规划：**sales@ixc.ua** · **noc@ixc.ua**
+
+@btn 阅读产品概览 | /products/ai-automation
+@btn 联系我们 | /#get-in-touch
+
+---
+## 关于 IXC Software Distribution Corp. (™ IXC Softswitch)
+
+IXC 提供自 1999 年起在生产环境验证的运营商级 VoIP 基础设施。**办公地址：** 7950 NW 53rd Street, Suite 337, Miami, Florida 33166. **媒体：** alex@ixc.ua`,
+  },
 };

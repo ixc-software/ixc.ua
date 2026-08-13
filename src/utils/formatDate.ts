@@ -3,7 +3,8 @@ import type { Language } from '../i18n/translations';
 const LOCALES: Record<Language, string> = {
   en: 'en-US',
   ru: 'ru-RU',
-  uk: 'uk-UA'
+  uk: 'uk-UA',
+  zh: 'zh-CN'
 };
 
 /** Format an ISO date (YYYY-MM-DD) into a localized, human-readable string. */

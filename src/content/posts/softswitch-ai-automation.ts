@@ -318,6 +318,128 @@ AI перекладає намір у **пакетний запис** в IXC.
 
 [IXC Softswitch](/products/softswitch) · [AI-автоматизація](/products/ai-automation) · [Оновлення за червень 2026](/news/ixc-june-2026-update)`;
 
+const zh = `**VoIP 软交换**路由、评级并计费您网络上的每一通呼叫。到 2026 年，下一层利润不是更多硬件——而是交换机之上的 **AI 自动化**：更少点击、更快的伙伴回复，以及过去要一小时的批量更新在数分钟内完成。
+
+本指南说明 **软交换上的 AI** 对批发与零售运营商意味着什么，以及**如何在实践中使用**——从自然语言命令与即时通讯集成，到按计划从您的 **软交换 REST API** 拉取实时话务报告。
+
+## 为何给软交换加 AI？
+
+运营商经理仍把时间耗在同一循环：伙伴消息 → 打开计费 UI → 找到正确屏幕 → 复制费率或路由 → 在另一个应用里回复。**软交换**已经保存路由、LCR、费率、余额与 CDR。AI 应当读写这些数据——而不是取而代之。
+
+**IXC Softswitch** 与 **DealoAgent AI** 搭配后，运营商通常从每位经理 **5–10 个账户**提升到同一团队上的 **100+**——因为交换机批量更新，同时伙伴在 WhatsApp、Telegram、MS Teams 或邮件上得到答复。
+
+## AI 自动化为软交换增加什么
+
+AI 并不取代您的**软交换软件**。它连接到您已在运行的同一计费数据库、权限与 API：
+
+- **自然语言命令** — 描述路由或费率变更；平台跨运营商应用**批量更新**，无需点开十个屏幕。
+- **即时通讯 + 邮件渠道** — 读取伙伴请求，并在他们使用的渠道上发送回复。
+- **实时软交换数据** — 来自 **IXC Softswitch REST API** 的话务、tops、targets 与余额，而不是过时的电子表格。
+- **定时派发** — 每日或自定义节奏，用于热门目的地、话务告警与余额通知。
+- **分析** — 在任何内容发给伙伴之前，汇总 commitment、话务增量与目标目的地审阅。
+
+[IXC Softswitch](/products/softswitch) 覆盖 4/5 类路由、LCR、计费与 API。[AI 自动化](/products/ai-automation) 是通过对话与即时通讯操作它的 DealoAgent 层。
+
+## 如何在软交换上使用 AI——分步
+
+### 第 1 步 — 连接您的渠道
+
+关联运营商已经在用的渠道：
+
+- **Email**（Gmail 与费率邮件工作流）
+- **Telegram**
+- **WhatsApp**
+- **Microsoft Teams**
+
+DealoAgent 从这些渠道读取入站伙伴话务，从 **IXC Billing** 拉取上下文，并可在同一线程回复。您的团队不再把消息复制进计费 UI。
+
+### 第 2 步 — 用您的语言下达命令
+
+不必在菜单中导航，直接告诉系统您需要什么。映射到真实**软交换**操作的示例：
+
+- *"Add India Mobile to carriers 1, 2, and 3 with today's rates."*
+- *"Add terminator SipRoute-B for Cuba Mobile on carriers 1–3."*
+- *"Show ASR and margin for Vietnam Mobile last 24 hours."*
+
+AI 将意图转译为 IXC 上的**批量回写**——路由、费率行、Terminator 及相关对象——对已暴露的软交换能力提供完整的读、写与删除覆盖。
+
+### 第 3 步 — 端到端处理入站伙伴请求
+
+典型流程：
+
+- 伙伴在 **Teams** 或 **WhatsApp** 中请求费率变更或新目的地。
+- DealoAgent 从 **IXC Softswitch** 拉取当前费率与路由。
+- 更新批量落地到交换机。
+- 伙伴在同一渠道收到确认——例如 *"All set — prices sent"*。
+
+**软交换已经更新**，然后才发出回复。即时通讯与计费之间无需手动复制粘贴。
+
+### 第 4 步 — 定时 tops、targets 与话务报告
+
+设置**周期性任务**（每日或自定义）：
+
+- 从**软交换 API** 拉取话务与利润
+- 自动向伙伴渠道推送 **top destinations**、**target reviews** 与 **balance notices**
+- 先运行批量 IXC 更新，再派发——无需手动晨间触发
+
+这正是 API v2（**IXC Billing WebV7** 上数百条已文档化路由）重要的原因：AI 与自动化需要可靠、有范围的实时交换机数据访问。
+
+### 第 5 步 — 用 AI 做分析，而不只是点击
+
+AI 处理过去意味着 Excel 与口口相传知识的工作：
+
+- 当伙伴发来 30 行目标电子表格时填写 **commitment**
+- 在商务通话前汇总话务增量
+- 在信用敞口扩大前标记余额阈值
+
+审阅摘要，必要时批准，然后让自动化按计划推送给伙伴。
+
+## 软交换运营商的示例工作流
+
+这些是运营商最先采用的工作流——**从实时软交换数据分析 tops 与 targets**，**按计划推送摘要**，然后在数字表明需要时**应用费率更新**。
+
+### 实时 top & target 目的地分析
+
+- **旧方式：** 导出 CDR，在 Excel 中做透视，与 commitment 或目标表对比，再决定告诉伙伴什么。
+- **软交换上的 AI：** DealoAgent 从 **IXC Softswitch REST API** 拉取**实时话务、热门目的地与 target 缺口**——ASR、利润、相对昨日的增量、余额敞口——并在您打开即时通讯或计费屏幕**之前**汇总需要关注的内容。
+
+### 定时周期性派发（即时通讯与邮件）
+
+- **旧方式：** 每天早晨——导出、排版，把同一份话务摘要复制粘贴到每个运营商的 **Telegram**、**WhatsApp**、**Teams** 或 **email**。
+- **软交换上的 AI：** **周期性任务**按您的节奏运行（每日、每周或自定义）。它针对实时软交换数据执行，构建 **top destinations**、**target reviews** 与 **balance notices**，并**自动发送**到每位伙伴偏好的渠道——无需手动触发。
+
+### 分析之后的费率更新
+
+- **旧方式：** 离线审阅 tops/targets 后，按运营商打开计费 UI，上传或编辑费率，再单独发邮件或聊天消息。
+- **软交换上的 AI：** 一旦分析标记需要变更，一条命令在**软交换**上应用**批量费率与路由更新**——例如 *"Add India Mobile to carriers 1, 2, and 3 with today's rates"* ——DealoAgent 在同一**即时通讯或邮件**线程中回复确认与更新后的费率表。
+
+### 伙伴回复 target 摘要
+
+- **旧方式：** 伙伴在聊天中回复一份 30 行目标电子表格；您对照 Excel 中的 commitment 与计费 UI 手动对账。
+- **软交换上的 AI：** 从 **WhatsApp**、**Telegram**、**Teams** 或 **email** 读取入站消息；AI 解析 targets，对照 **IXC** commitment 与实时话务，提出填充或路由变更，并在同一渠道派发答复。
+
+## 谁最受益
+
+- 拥有大量 Originator/Terminator 关系的**批发语音**运营商
+- 每天回答费率与路由问题的**零售 VoIP** 提供商
+- 有并行商务负荷的 **SMS 运营商**（在适用 IXC SMS 模块时）
+- 希望**一位经理对应 100+ 账户**而不是 5–10 的团队
+
+## 从 IXC Softswitch + DealoAgent 起步
+
+- 运行 **IXC Softswitch**（或升级到当前 **V6** / **WebV7** 计费 UI）。
+- 启用 **AI 自动化**，并将 DealoAgent 连接到您的即时通讯与邮件账户。
+- 映射权限，使 AI 使用与您 NOC 相同的角色与计费范围。
+- 从一个工作流开始——向即时通讯**定时派发 top & target**，再加入实时分析与批量费率更新。
+
+申请演示或升级规划：**sales@ixc.ua** · **noc@ixc.ua**
+
+## 小结
+
+**软交换**仍是路由与计费的记录系统。**AI 自动化**是现代运营商操作它的方式：用您的语言下达命令，伙伴在其偏好渠道上沟通，数据来自交换机实时数据——而不是重复的电子表格。如果您在 2026 年评估**软交换软件**，请询问 **REST API** 开放程度，以及 AI 能否在现有权限之上安全运行批量更新。
+
+[了解 IXC Softswitch](/products/softswitch) · [AI 自动化概览](/products/ai-automation) · [2026 年 6 月产品更新](/news/ixc-june-2026-update)`;
+
 export const softswitchAiAutomationPost: BlogPost = {
   slug: 'softswitch-ai-automation',
   date: '2026-07-06',
@@ -422,6 +544,36 @@ export const softswitchAiAutomationPost: BlogPost = {
       {
         q: 'Скільки контрактів на менеджера з AI?',
         a: 'Вручну часто 5–10; з AI на IXC + DealoAgent — орієнтир 100+ контрактів на менеджера.',
+      },
+    ],
+  },
+  zh: {
+    title: 'VoIP 软交换 AI：如何在运营商交换机上使用 AI 自动化（2026）',
+    description:
+      '如何在 VoIP 软交换上使用 AI：自然语言批量更新、WhatsApp/Telegram/Teams 集成、定时话务报告，以及 IXC + DealoAgent 工作流。',
+    excerpt:
+      'VoIP 软交换上的 AI 实践指南——命令、即时通讯集成、来自 REST API 的定时 tops/targets，以及运营商如何扩展到每位经理 100+ 账户。',
+    content: zh,
+    faq: [
+      {
+        q: 'AI 能否取代 VoIP 软交换？',
+        a: '不能。AI 自动化运行在软交换之上——通过 API 读写路由、费率与余额，交换机仍是记录系统。',
+      },
+      {
+        q: '软交换 AI 自动化支持哪些渠道？',
+        a: 'IXC ↔ DealoAgent 支持 email、Telegram、WhatsApp 与 Microsoft Teams，用于入站伙伴请求与出站回复。',
+      },
+      {
+        q: '软交换上的自然语言命令如何工作？',
+        a: '您用自然语言描述变更；AI 将其转译为 IXC Softswitch 上的批量更新——路由、费率、Terminator——无需在多个计费屏幕之间导航。',
+      },
+      {
+        q: 'AI 能自动拉取哪些软交换数据？',
+        a: '话务、热门目的地、targets、余额、ASR/ACD 指标，以及通过 IXC Softswitch REST API 的 commitment 上下文——用于定时报告或按需回复。',
+      },
+      {
+        q: '有了 AI，一位经理能管理多少运营商账户？',
+        a: '手动工作流往往把经理限制在 5–10 个账户；IXC + DealoAgent 上的 AI 自动化旨在支持同一团队上每位经理 100+ 账户。',
       },
     ],
   },

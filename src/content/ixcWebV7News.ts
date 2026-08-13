@@ -274,4 +274,93 @@ IXC delivers carrier-style VoIP infrastructure proven in production since 1999. 
 
 Операторський VoIP софтсвіч з 1999 року. **Офіс:** 7950 NW 53rd Street, Suite 337, Miami, Florida 33166. **ЗМІ:** alex@ixc.ua`,
   },
+  zh: {
+    title: 'IXC Billing WebV7 — 运营商新功能（对比旧版 v6 界面）',
+    content: `产品更新
+
+2026 年 6 月 — IXC Software Distribution Corp.
+
+**IXC Billing WebV7** 是新一代 IXC 计费与交换机管理界面。同一套计费数据库、同一套权限模型——但比 **旧版 v6 计费 UI** 更干净、更快、更有引导。
+
+我们还在每个主要选择器中加入了 **快速搜索**——destinations、payees、codes、originators 和 terminators——无需滚动长下拉列表即可找到正确行。
+
+---
+## 1. 可全天使用的现代工作区
+
+**变化：** 旧版 v6 UI 使用密集表格、嵌套侧边栏分区，以及顶栏中单独的「Show advanced menu」开关。WebV7 打开即是宽敞仪表盘：持久左侧边栏、清晰分区标签（Management、Reports、Finance、System、Troubleshooting），内容在宽屏显示器上扩展而不显得拥挤。
+
+![旧版 v6 计费界面 — 密集侧边栏与仪表盘表格](/news/webv7-ui-v6-was.png)
+![WebV7 浅色主题 — 仪表盘与导航](/news/webv7-ui-v7-light.png)
+![WebV7 深色主题 — 夜间同一工作区](/news/webv7-ui-v7-dark.png)
+
+---
+## 2. 数秒内找到任意屏幕 — 搜索 + 收藏
+
+**变化：** 在 v6 中您滚动长侧边栏列表或开关「advanced menu」。WebV7 在侧边栏顶部加入 **菜单搜索**（输入屏幕名称，直接跳转）以及 **★ Favorites**——将日常使用的屏幕（Active Calls、Tariff Plans、Reload config 等）固定到顶部。无需 cookie 技巧，也没有隐藏菜单。
+
+---
+## 3. 每个页面与字段内置帮助
+
+**变化：** 旧版界面依赖外部手册和口口相传的经验。WebV7 在页面标题、表格列、表单字段、选项卡和操作按钮上放置上下文帮助 **(?)**。可从页头开关帮助。新操作员在配置 originators、路由或 CDR 模板时可边做边学——无需离开当前屏幕。
+
+---
+## 4. 浅色、深色与自动主题
+
+**变化：** 旧版 v6 UI 提供浅色/深色切换，但没有统一的主题系统。WebV7 允许每位用户从顶栏选择 **Light**、**Dark** 或 **Auto**（跟随操作系统）——所有屏幕观感一致，包括 NOC 夜班。
+
+---
+## 5. Quick Setup — 在一条流程中接入客户或供应商
+
+**变化：** 旧版界面主菜单没有对等功能。WebV7 增加 **Quick setup**——分步向导（payee → originator/terminator → 路由 → 价格 → reload → 可选 call-path 测试），引导您建立可用路由，无需在十个不同屏幕间跳转。
+
+---
+## 6. 更智能的费率表导入 — 上线前预览
+
+**变化：** 旧版费率上传往往像「上传然后碰运气」。WebV7 在客户/供应商 tariff plans 上的 **Smart upload** 提供多步流程：选择文件 → 表头不同时映射列 → 预览行数与警告 → 确认导入。价格进入交换机之前，您就能看到激活通知与解析问题。
+
+---
+## 7. 客户费率邮件 — 从 tariff plan 发送、入池并确认
+
+**变化：** 旧版费率邮件分散在 tariff UI、手工邮件和有限跟踪中。在客户 tariff plan 上，WebV7 为每个 payee 显示 **Customer rate email** 面板：可发信状态、交换机上的待处理池、**Send updates**、**Apply pool now**、confirm-mode 标志，以及明确阻断项（「set payee Email」「enable rates mailbox」）。客户收到费率表之前，操作员就能看到将发生什么。
+
+---
+## 8. Email Setup 中心 — 模板、收件箱与供应商费率审批
+
+**变化：** 旧版界面把邮件散落在 System → Mailing 和更旧的服务器配置中。WebV7 **System → Email setup** 是选项卡式中心：通用账户、邮件模板、消息收件箱、费率审批（供应商费率表队列）和解析模板——每个选项卡带公司范围与权限。审批供应商导入无需翻找隐藏屏幕。
+
+---
+## 9. 重要系统工具回到主菜单
+
+**变化：** 在 v6 中，CDR templates、Manage currencies 和 Manage interfaces 等项经常从侧边栏注释掉——只有知道 URL 才能进入。WebV7 将它们公开列在 **System** 下，与 codec profiles、signalling profiles、translate rules 和 black lists 并列——上线后操作员需要的屏幕。
+
+---
+## 10. 角色与权限 — 分组、可搜索、可审计
+
+**变化：** 旧版角色编辑是一长串扁平复选框。WebV7 **Roles / permissions** 使用模块手风琴（Originators、Routing、Reports、…），带筛选、按模块全选，以及每条权限的 **(?)** 帮助。**Permission Report** 是矩阵：顶部为角色，侧边为权限——在一个视图中编辑多个角色并一次保存。
+
+---
+## 11. 仪表盘与报表 — 监控更清晰，干扰更少
+
+**变化：** v6 主页堆叠大量 HTML 表格和旧版图表嵌入。WebV7 **Main page** 以卡片布局保留熟悉的组件（softswitch 状态、CPS、余额告警、话务增量、价格变更），并按角色控制可见性，另加干净加载的 active calls 图表。报表使用一致的筛选、分页，以及与 WebV7 其余部分相同的帮助模式。
+
+---
+## 12. 面向值班检查的移动友好导航
+
+**变化：** v6 侧边栏以桌面为先。WebV7 在较窄宽度折叠为汉堡菜单——可从平板打开 Active Calls 或 Reload config，无需横向滚动旧版表格。
+
+---
+## 13. 选择器内快速搜索 — destinations、payees、codes 等
+
+**变化：** 忙碌屏幕上 **destinations**、**payees**、**codes**、**originators** 和 **terminators** 的长下拉列表很难用。WebV7 在 **每个选择器内加入快速搜索**——输入几个字符，立即过滤列表，选中正确行。同一套计费数据；在 route rules、tariff plans 和报表上更少翻找。
+
+---
+## 可用性
+
+**IXC Billing WebV7** 正在向现有 IXC Softswitch 部署逐步推出。请向客户团队或 **noc@ixc.ua** 咨询升级规划与培训。
+
+---
+## 关于 IXC Software Distribution Corp. (™ IXC Softswitch)
+
+IXC 提供自 1999 年起在生产环境验证的运营商级 VoIP 基础设施。**办公地址：** 7950 NW 53rd Street, Suite 337, Miami, Florida 33166. **媒体：** alex@ixc.ua`,
+  },
 };

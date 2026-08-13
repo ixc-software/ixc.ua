@@ -259,4 +259,81 @@ IXC delivers carrier-style VoIP infrastructure proven in production since 1999. 
 
 Операторський VoIP софтсвіч у продакшені з 1999 року. **Офіс:** 7950 NW 53rd Street, Suite 337, Miami, Florida 33166. **ЗМІ:** alex@ixc.ua`,
   },
+  zh: {
+    title: '2026 年 6 月 — 新客户、DealoAgent 渠道上线、WebV7 v7.0.66',
+    content: `产品更新
+
+2026 年 6 月 — IXC Software Distribution Corp.
+
+IXC 侧忙碌的一个月：**两家新运营商客户**完成入网，**IXC Softswitch** 与 **DealoAgent AI** 之间的 **全渠道即时通讯集成**上线，以及一轮重大 **WebV7** 发布列车——**v7.0.18 → v7.0.66**。
+
+@btn AI 自动化 | /products/ai-automation
+@btn WebV7 更新 | /news/ixc-webv7
+
+---
+## 1. 欢迎 — 两家新客户
+
+**变化：** IXC 在 6 月迎来 **两家新的批发语音客户**：
+
+- **新 IXC Softswitch 客户** — 在运营商级栈上完成生产路由、计费与 NOC 入网。
+- **新 IXC ↔ DealoAgent AI Automation 客户** — 从第一天起同时使用软交换与 AI 自动化，在不增加编制的情况下扩大账户覆盖。
+
+欢迎加入网络。
+
+---
+## 2. DealoAgent + IXC — 全渠道已连通
+
+**变化：** **IXC ↔ DealoAgent** 集成现已端到端覆盖运营商通信栈：
+
+- **WhatsApp**、**Telegram**、**MS Teams** 和 **email** — 按各运营商偏好的渠道接收伙伴请求并回复。
+- 来自 DealoAgent + IXC 的 **定时与按需分发**：**top destinations**、**target reviews** 和 **traffic summaries** 自动推送给伙伴。
+- 从 **IXC Softswitch REST API** 拉取的 **实时话务上下文**——真实交换机数据，而非表格副本。
+
+经理无需在即时通讯与计费 UI 之间来回切换；伙伴在 Teams 或 WhatsApp 收到 *"已完成——价格已发送"* 之前，交换机已经更新。
+
+@btn 了解 AI 自动化如何运作 | /products/ai-automation
+
+---
+## 3. WebV7 发布列车 — v7.0.18 → v7.0.66
+
+**变化：** **IXC Billing WebV7** 在 2026 年 6 月发布了 **48 个点版本**——安全加固、操作员 UX、API v2 以及 DealoAgent 内嵌改进。
+
+### 新增
+
+- **REST API v2 registry** — **458 条路由**，含生成文档与 scoped API keys
+- 费率 **「merge ratesheets」** 导入模式 + **effective date** 解析
+- **Quick Setup** 向导增强 — peer/price 卡片、reload 进度
+- **CDR & Traffic Flow** 高级筛选，支持 **按用户收藏**
+- **CDR Excel 导出**，单元格已格式化
+- **配置 reload 进度**指示器 — 页头、Quick Setup、导航搜索
+- 仪表盘显示 **Softswitch 最近一次 reload 时间**
+- **Active calls：** disconnect cause enrichment + translate code groups UI
+- **Terminator priority** 字段；**payee responsibleId**
+- **DealoAgent** 内嵌分栏布局 + 品牌
+
+### 修复
+
+- **安全审计：** 移除遗留 API handlers；数据库变更自动审计
+- JWT/session 与邮件 confirm-token 加固
+- Bill 屏幕崩溃；特定崩溃
+- 价格上传与 route-rule 创建缺陷
+- CDR 模板命名；API 日期范围筛选
+- Docker 部署与 Alloy 日志投递
+
+### 变更
+
+- 迁移至 registry 后，API 文档面板简化
+
+---
+## 可用性
+
+**IXC Softswitch** 与 **WebV7** 更新通过您的客户团队发布。规划升级与 AI 自动化入网：**sales@ixc.ua** · **noc@ixc.ua**
+
+@btn 联系我们 | /#get-in-touch
+
+---
+## 关于 IXC Software Distribution Corp. (™ IXC Softswitch)
+
+IXC 提供自 1999 年起在生产环境验证的运营商级 VoIP 基础设施。**办公地址：** 7950 NW 53rd Street, Suite 337, Miami, Florida 33166. **媒体：** alex@ixc.ua`,
+  },
 };

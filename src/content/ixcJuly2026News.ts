@@ -444,4 +444,144 @@ Route scenarios і A-number caps працюють на background reconcile sche
 
 Операторський VoIP софтсвіч у продакшені з 1999 року. **Офіс:** 7950 NW 53rd Street, Suite 337, Miami, Florida 33166. **ЗМІ:** alex@ixc.ua`,
   },
+  zh: {
+    title: '2026 年 7 月报告 — WebV7 v7.0.67 → v7.0.84（SIP PCAP、A-number 上限、费率导入）',
+    content: `产品更新
+
+2026 年 7 月 — IXC Software Distribution Corp.
+
+**周期：** 2026 年 7 月 1–31 日 · **发布版本：** **v7.0.67 → v7.0.84**（**18 个版本**）· **范围：** IXC 软交换计费与路由的现代 React 操作员界面。
+
+7 月对 V7 是强势月份：重大排障工具、更深的费率与路由工作流，以及对多租户安装和旧计费数据库的持续改进。
+
+7 月 V7 带来 **CDR 报表内的 SIP 排障**、面向 CLI 合规的 **A-number 每日上限**，以及 **更智能的费率导入**——外加 18 个版本的路由、财务与多租户修复。
+
+@btn Softswitch 产品 | /products/softswitch
+@btn 2026 年 6 月更新 | /news/ixc-june-2026-update
+
+---
+## 1. CDR 报表中的 SIP PCAP 查看器（v7.0.84）
+
+**变化：** 操作员可直接从 CDR 详单报表打开 **呼叫级 packet captures**——无需 SSH，无需手工翻找文件。
+
+![SIP 呼叫流程 — 带 CDR 呼叫上下文的 PCAP 时序图](/news/july-2026-sip-pcap-viewer.jpg)
+
+- CDR call detail 表新增 **PCAP** 列
+- 一键打开 **SIP sequence diagram**，支持 **A-leg / B-leg** 筛选
+- **呼叫上下文面板：** originator、terminator、disconnect cause，以及相关记录的快捷链接
+- **下载 PCAP**，或将图表导出为 **PNG** / 复制到剪贴板
+- 清晰状态：**unavailable**、**wait**（捕获仍在写入）、**available**、**missing**
+- 面向采用 **pcapsipdump** 布局的 Linux 部署；与 pack 主机上的 troubleshooting file store 集成
+
+PCAP 分析将 A/B-leg 捕获合并为带 CDR 上下文的 SIP sequence diagrams。
+
+---
+## 2. Translate A-number daily cap（v7.0.82）
+
+**变化：** 面向合规的限制——同一 CLI 在滚动窗口内可呈现的次数。
+
+- 按组与公司范围的 **global cap** 模式
+- 可配置 **rolling window** 与 reconcile 间隔
+- 已封顶号码的实时视图，支持 **手动 uncap**
+- 后台 reconcile 任务使有效号池与 CDR usage 保持同步
+- 达到阈值时的告警任务
+- Range 规则不再受人为 expand limit 阻挡
+
+---
+## 3. Route item scenarios — 定时 enable / disable / switch（v7.0.70）
+
+**变化：** 针对单个 route items 的基于时间的自动化。
+
+- 每个 build rule 上的 scenarios 对话框：**daily** 或 **one-shot UTC** 计划
+- 动作：**Enable**、**Disable** 或 **Switch**（toggle）
+- **History** 选项卡，用于已应用变更的审计
+- 每小时后台任务应用到期 scenarios，并在需要时触发 config reload
+
+---
+## 4. 费率计划导入模式与 smart upload（v7.0.81、v7.0.83）
+
+**变化：** 运营商费率表更易处理，且不破坏线上价格。
+
+四种导入模式：
+
+| 模式 | 适用场景 |
+| --- | --- |
+| **Merge (partial)** | 仅更新文件中的 codes；可选向 future-sheet 传播 |
+| **Replace full deck** | 用今日文件重建 live + scheduled sheets |
+| **Schedule full deck** | 未来激活，不触碰今日 live rates |
+| **New plan wipe** | 全新计划 — 删除所有现有 sheets |
+
+另在 **v7.0.83** 中：
+
+- 添加 route items 时的 **Allow all codes** 选项卡（一步为 terminator 设置 catch-all）
+- 更智能的 activation-notice 处理与累计 future price lists
+- 跨 customer/vendor plans 的价格变更 future batch scheduling
+
+费率上传区分 merge、replace 与 scheduled future decks。
+
+---
+## 5. 路由与运营
+
+- **Originator daily calls fill（v7.0.69）** — cron 回填 routes 表「today's traffic」列的 traffic stats
+- 在 route items 上丰富 dial code，使 build-rules 显示更清晰
+- **Translate A-numbers — prefix rules（v7.0.71）：** 批量导入 \`prefix;real_prefix\`、文件上传、可选 replace-before-import
+- Terminator 地址导出以及 originator/terminator 表单清理（**v7.0.80**）
+- Route items 的 criterion 校验（UI 中的 **All / Exclude**）
+
+---
+## 6. 财务与报表
+
+- **发票付款对话框重构（v7.0.73）：** 针对剩余余额记录付款；若不存在则可内联创建 money account
+- Active calls 报表模板保存修复
+- 仪表盘、active calls 与报表中的 partition-aware softswitch 标签（**v7.0.72**）
+
+---
+## 7. 平台、安全与兼容性
+
+- **API key 公司隔离（v7.0.75）** — 集成密钥按 company/partition 限定范围
+- **遗留计费库支持（v7.0.76）** — 通过 \`/api/health\` 进行能力检测；缺少列/表时 UI 自适应
+- 稳定性专项（**v7.0.67–77**）：崩溃修复、短暂 PostgreSQL 重连、拒绝畸形 JSON
+- 后台任务：balance payee emails、countries reference fill、buffer-number purge、RI scenario apply、A-number cap reconcile/alerts、originator daily calls
+
+Route scenarios 与 A-number caps 在后台 reconcile 计划上运行。
+
+---
+## 数字一览
+
+| 指标 | 数值 |
+| --- | --- |
+| 发布版本 | **18**（v7.0.67 → v7.0.84） |
+| Commits（non-merge） | **21** |
+| 变更行数 | 约 **14.5k** added，约 **1.3k** removed |
+| 主要新 UI | PCAP call dialog、A-number cap admin |
+
+---
+## 版本 changelog（精简）
+
+| 日期 | 版本 | 主题 |
+| --- | --- | --- |
+| 2 Jul | v7.0.67–68 | 崩溃修复、API 稳定性 |
+| 3 Jul | v7.0.69–70 | Route traffic fill；RI scenarios + jobs |
+| 7 Jul | v7.0.71 | Translate A-number prefix import |
+| 8 Jul | v7.0.72–74 | Partition display；invoice payments |
+| 9 Jul | v7.0.75 | API key partition isolation |
+| 13 Jul | v7.0.76 | Legacy DB capability detection |
+| 14 Jul | v7.0.77 | Stability |
+| 19–20 Jul | v7.0.78–80 | Rules、A-number selection 修复 |
+| 24 Jul | v7.0.81–82 | Future price batch；A-number daily cap |
+| 30 Jul | v7.0.83 | Routing + tariff import modes |
+| 31 Jul | v7.0.84 | CDR 中的 PCAP 提取 |
+
+---
+## 可用性
+
+**IXC Softswitch** 与 **WebV7** 更新通过您的客户团队发布。规划升级与入网：**sales@ixc.ua** · **noc@ixc.ua**
+
+@btn 联系我们 | /#get-in-touch
+
+---
+## 关于 IXC Software Distribution Corp. (™ IXC Softswitch)
+
+IXC 提供自 1999 年起在生产环境验证的运营商级 VoIP 基础设施。**办公地址：** 7950 NW 53rd Street, Suite 337, Miami, Florida 33166. **媒体：** alex@ixc.ua`,
+  },
 };

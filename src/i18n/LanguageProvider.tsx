@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
-import { Language, Translations, translations } from './translations';
+import { htmlLang, Language, languages, Translations, translations } from './translations';
 
 interface LanguageContextType {
   language: Language;
@@ -9,16 +9,20 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
+function isLanguage(value: string | null): value is Language {
+  return languages.includes(value as Language);
+}
+
 function getInitialLanguage(): Language {
   if (typeof window === 'undefined') return 'en';
   try {
     const saved = localStorage.getItem('language');
-    if (saved === 'en' || saved === 'ru' || saved === 'uk') return saved;
+    if (isLanguage(saved)) return saved;
   } catch { /* */ }
-  // Auto-detect from browser
-  const browserLang = navigator.language?.slice(0, 2);
-  if (browserLang === 'ru') return 'ru';
-  if (browserLang === 'uk') return 'uk';
+  const browserLang = navigator.language?.toLowerCase() ?? '';
+  if (browserLang.startsWith('zh')) return 'zh';
+  if (browserLang.startsWith('ru')) return 'ru';
+  if (browserLang.startsWith('uk')) return 'uk';
   return 'en';
 }
 
@@ -28,11 +32,11 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   const setLanguage = (lang: Language) => {
     setLanguageState(lang);
     try { localStorage.setItem('language', lang); } catch { /* */ }
-    document.documentElement.setAttribute('lang', lang);
+    document.documentElement.setAttribute('lang', htmlLang[lang]);
   };
 
   useEffect(() => {
-    document.documentElement.setAttribute('lang', language);
+    document.documentElement.setAttribute('lang', htmlLang[language]);
   }, [language]);
 
   const t = translations[language];

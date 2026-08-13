@@ -177,6 +177,65 @@ PSTN маршрутизувала виклики через пропрієтар
 
 Сучасні VoIP-мережі живуть усередині регуляторної та нумераційної структури PSTN — LATA, міжоператорські оператори й коди операторів — але працюють на ПЗ. Софтсвіч пов'язує ці світи: маршрутизує виклики з LCR, з'єднує VoIP із застарілими мережами та обліковує кожну секунду в CDR для білінгу.`;
 
+const zh = `电信行业有自己的词汇——**LATA**、**interexchange carrier**、**软交换**、**LCR**、**CDR**。本指南解释现代 VoIP 运营商需要掌握的核心概念：从仍在塑造监管的传统 PSTN 术语，到支撑今日网络的 IP 技术。
+
+## 电话网络如何构成
+
+传统电话把世界划分为本地服务区以及连接它们的运营商：
+
+- **本地交换运营商（LEC）**处理本地区域内的呼叫——历史上对应一台由区号与前缀（NPA-NXX）标识的**电话交换机**。
+- **interexchange carrier（IXC）**，通常称为长途公司，承载这些区域*之间*的话务。在美国术语中，IXC 在多个 **local access and transport area（LATA）**之间传送呼叫——即 interLATA 话务。
+- 每家运营商被分配四位 **carrier identification code（CIC）**，线路上的默认长途运营商是 **presubscribed interexchange carrier（PIC）**。
+
+这些区分早于 VoIP，但至今仍驱动编号、互联规则，以及呼叫被评为本地、intraLATA 或 interLATA 的方式。
+
+## 从硬件交换机到软交换
+
+PSTN 通过专有硬件交换机路由呼叫。现代网络以**软交换**取而代之——在通用服务器上控制呼叫路由的软件。
+
+对于语音话务传送，运营商现在使用**软交换与 VoIP 协议**，而不再仅依赖汇接交换机与 SS7。**互联网电话服务提供商（ITSP）**借此桥接 VoIP↔POTS、电脑到电话，以及 IP 设备与传统电话业务。
+
+软交换将每通呼叫分为两个平面：
+
+- **信令** — 呼叫建立与拆除，通常通过 **SIP**（或旧网络中的 **H.323**）。
+- **媒体** — 音频本身，以 **RTP** 承载，使用 G.711、G.729 或 Opus 等编解码。
+
+## 4 类与 5 类
+
+PSTN 的交换机层级作为命名约定沿用至今：
+
+- **4 类软交换**处理**批发**运营商之间的过境与落地——大容量、LCR、协议转换与欺诈控制。
+- **5 类软交换**提供**零售**用户功能——IVR、语音信箱、呼叫转移与 DID 管理。
+
+更深入的对比见我们的 [4 类与 5 类指南](/blog/class-4-vs-class-5-softswitch)。
+
+## 路由与 least cost routing (LCR)
+
+当呼叫到达时，软交换按规则选择供应商：优先级、百分比分担、质量，或 **least cost routing (LCR)**——在仍满足质量目标的前提下选择最便宜的可行路由。好的路由在**利润**与 **ASR/ACD/PDD** 质量指标之间取得平衡。详见我们的 [LCR 路由指南](/blog/lcr-routing-voip)。
+
+## 计费与 CDR
+
+每通完成的呼叫产生一条 **CDR（Call Detail Record）**——带时间戳、已评级、用于开票的记录。计费引擎按费率表对每条 CDR 评级，并实时更新**预付**或**后付**余额。这是 [软交换上 VoIP 计费](/blog/voip-billing-softswitch) 的基础。
+
+## 互联、落地与 Origination
+
+- **Origination** — 呼叫进入网络的位置（主叫侧）。
+- **Termination** — 将呼叫送达最终目的网络。
+- **Interconnection** — 使运营商能够交换话务、结算分钟并在网络之间路由的商业与技术协议。
+
+## 关键术语速览
+
+- **PSTN** — 传统公共交换电话网。
+- **VoIP** — 在 IP 上而非电路交换线路上承载的语音。
+- **SIP / RTP** — 现代语音的信令与媒体协议。
+- **DID** — 分配给用户的直接呼入号码。
+- **CLI / CLD** — 用于路由与欺诈规则的主叫与被叫号码标识。
+- **FAS** — false answer supervision，对从未真正接通的呼叫计费。
+
+## 小结
+
+今日的 VoIP 网络仍运行在 PSTN 的监管与编号框架之内——LATA、interexchange carrier 与运营商代码——但运行在软件上。软交换把这两个世界连在一起：用 LCR 路由呼叫，桥接 VoIP 与传统网络，并将每一秒计量写入 CDR 用于计费。`;
+
 export const telecomIndustryConceptsPost: BlogPost = {
   slug: 'telecom-industry-concepts',
   path: '/telecom-industry-concepts',
@@ -263,6 +322,32 @@ export const telecomIndustryConceptsPost: BlogPost = {
       {
         q: 'Що таке CDR у телекомі?',
         a: 'Call Detail Record — це тарифікований запис успішного виклику з мітками часу, за яким білінг списує кошти з передплачених або післяплачених балансів.'
+      }
+    ]
+  },
+  zh: {
+    title: '电信行业概念：IXC、软交换、LCR 与计费',
+    description:
+      'VoIP 运营商的核心电信概念：interexchange carrier（IXC）、LATA、软交换、4/5 类、SIP/RTP、LCR 路由、CDR 与计费——逐一讲解。',
+    excerpt:
+      '从 interexchange carrier 与 LATA 到软交换、LCR 与 CDR——每位 VoIP 运营商都应掌握的核心电信行业概念。',
+    content: zh,
+    faq: [
+      {
+        q: '什么是 interexchange carrier（IXC）？',
+        a: 'Interexchange carrier 是长途电话公司，在本地服务区（LATA）之间承载话务，有别于在单一区域内处理呼叫的本地交换运营商。'
+      },
+      {
+        q: '软交换与 interexchange carrier 有何关系？',
+        a: '现代 interexchange carrier 与 ITSP 使用软交换与 VoIP 协议，取代传统汇接交换机，从而将 VoIP 桥接到 POTS，并在 IP 上路由长途话务。'
+      },
+      {
+        q: '4 类与 5 类有何区别？',
+        a: '4 类软交换处理批发运营商之间的过境与落地，而 5 类软交换提供零售用户功能，如 IVR、语音信箱与呼叫转移。'
+      },
+      {
+        q: '电信中的 CDR 是什么？',
+        a: 'Call Detail Record 是已完成呼叫的带时间戳、已评级记录，计费引擎据此对预付或后付余额扣费。'
       }
     ]
   }

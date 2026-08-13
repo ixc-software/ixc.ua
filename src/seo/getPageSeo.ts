@@ -1,4 +1,4 @@
-import type { Language } from '../i18n/translations';
+import { htmlLang, type Language } from '../i18n/translations';
 import { DEFAULT_OG_IMAGE, SITE_ORIGIN, getPageUrl } from './siteMeta';
 import { seoRoutes, type ProductSlug } from './seoRoutes';
 
@@ -95,7 +95,7 @@ function blogIndexLd(meta: SeoPair, url: string, lang: Language): JsonLd {
     name: meta.title,
     description: meta.description,
     url,
-    inLanguage: lang,
+    inLanguage: htmlLang[lang],
     publisher: {
       '@type': 'Organization',
       name: ORG_NAME,
@@ -120,7 +120,7 @@ function blogPostingLd(post: BlogPostSeo, url: string, image: string, lang: Lang
       logo: { '@type': 'ImageObject', url: ORG_LOGO }
     },
     mainEntityOfPage: { '@type': 'WebPage', '@id': url },
-    inLanguage: lang
+    inLanguage: htmlLang[lang]
   };
 }
 

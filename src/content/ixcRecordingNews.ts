@@ -244,4 +244,74 @@ AI, який скорить розмови, коучить агентів або
 
 IXC delivers carrier-style VoIP infrastructure proven in production since 1999. **Office:** 7950 NW 53rd Street, Suite 337, Miami, Florida 33166. **Media:** alex@ixc.ua`,
   },
+  zh: {
+    title: 'IXC Recording — AI 通话分析、FAS 与语音信箱检测的基础',
+    content: `产品更新
+
+2026 年 8 月 — IXC Software Distribution Corp.
+
+运营商已能在计费与路由报表中看到每一通呼叫。缺失的一层是 **音频本身**——结构化、可搜索，并同时面向人与机器。
+
+**IXC Recording** 就是这一层。开启录音后，Softswitch 采集媒体；**IXC Billing 7** 整理归档。两者合在一起，不是用于工单/争议的终局产品，而是迈向下一代 IXC 能力的 **第一步**：
+
+- **AI 话务与通话分析**，面向呼叫中心与批发流量 — 高层流量画像（scam、gambling、casino 等）、转写、情绪、辅导与真实语音质量
+- **录音后 FAS 与语音信箱检测** — 在已存音频上标记异常应答，并构建 speech fingerprints，供后续 ML 匹配
+- **按需检测** — 客户针对同一录音媒体提出的定制问题包
+
+平台上没有录音音频，这一切都无法规模化。有了 Recording，就可以。
+
+@btn Recording 如何工作 | /blog/ixc-recording
+@btn AI 分析与测量 | /blog/voip-call-analysis-ai
+
+---
+## 1. 为什么先做录音
+
+为对话评分、辅导坐席或标记 FAS 与语音信箱的 AI，需要可靠的媒体流与归档。IXC Softswitch 为您启用的话务写入该音频。Billing 7 让它可查找——按小时、按搜索、从呼叫报表进入——使操作员与未来模型共用同一事实源。
+
+交换机上采集。界面中清晰呈现。一套栈。
+
+---
+## 2. 有组织的音频，而非磁盘上的堆积
+
+高容量网络每小时产生数千个文件。Recordings 按时间分组、展示存储用量，并让您在归档中查找一通呼叫。保留策略控制磁盘占用，使平台随时可用于分析——而不是被未管理的媒体淹没。
+
+---
+## 3. 今天服务人 — 明天服务模型
+
+操作员可以收听、导出干净可播放的文件，并清理不再需要的内容。同样的文件将成为 **通话分析**、**FAS** 和 **语音信箱** 检测器落地时的训练与推理输入。
+
+回放有用。可编程音频才是策略。
+
+---
+## 4. 从呼叫报表进入下一波能力
+
+从 Originator 或 Terminator 呼叫中打开录音，方式与打开 SIP 跟踪相同。这一习惯很重要：音频始终附着在实时话务工作上——正是下一步 AI 辅助质量与欺诈控制将作用的位置。
+
+---
+## 接下来走向何处
+
+| 步骤 | 解锁内容 |
+|---|---|
+| **IXC Recording**（现已提供） | Softswitch 采集 + Billing 7 归档 |
+| **AI 通话分析** | 流量画像、语音质量、转写、情绪、辅导 |
+| **FAS 与语音信箱（录音后）** | 标记 + speech fingerprints，供后续 ML 匹配 |
+
+早期分析运行已表明结构化通话音频在规模上能揭示什么——流量画像、情绪构成、坐席评分、转写洞察。客户工作流仍留在 IXC 内：**标记呼叫**，送去分析，并在平台中获得 **自动回传报告**。Recording 就是这条管道在您交换机上的起点。
+
+@btn 查看分析报告示例 | /blog/voip-call-analysis-ai
+@btn Softswitch 概览 | /products/softswitch
+
+---
+## 可用性
+
+**IXC Recording** 可用于已启用语音录音的软交换版本，操作员体验在 **IXC Billing 7.0.90** 及更高版本中提供。关于开通以及分析与检测路线图，请联系 **sales@ixc.ua** 或 **noc@ixc.ua**。
+
+@btn Recording 如何工作 | /blog/ixc-recording
+@btn 联系我们 | /#get-in-touch
+
+---
+## 关于 IXC Software Distribution Corp. (™ IXC Softswitch)
+
+IXC 提供自 1999 年起在生产环境验证的运营商级 VoIP 基础设施。**办公地址：** 7950 NW 53rd Street, Suite 337, Miami, Florida 33166. **媒体：** alex@ixc.ua`,
+  },
 };

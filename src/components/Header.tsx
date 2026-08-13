@@ -4,9 +4,7 @@ import { Link } from 'react-router-dom';
 import { HashScrollLink } from './HashScrollLink';
 import { useTheme } from '../ThemeProvider';
 import { useLanguage } from '../i18n/LanguageProvider';
-import { Language, languageNames } from '../i18n/translations';
-
-const languages: Language[] = ['en', 'ru', 'uk'];
+import { languageNames, languages } from '../i18n/translations';
 
 export const Header: React.FC = () => {
   const { theme, toggleTheme } = useTheme();
