@@ -1,4 +1,5 @@
 import { htmlLang, type Language } from '../i18n/translations';
+import { hreflangCode, localizePath, stripLangPrefix } from '../i18n/localePath';
 import { DEFAULT_OG_IMAGE, SITE_ORIGIN, getPageUrl } from './siteMeta';
 import { seoRoutes, type ProductSlug } from './seoRoutes';
 
@@ -24,6 +25,11 @@ type SeoPair = { title: string; description: string };
 
 export type JsonLd = Record<string, unknown>;
 
+export interface HreflangLink {
+  hreflang: string;
+  href: string;
+}
+
 export interface PageSeoMeta {
   title: string;
   description: string;
@@ -33,6 +39,8 @@ export interface PageSeoMeta {
   image: string;
   imageAlt?: string;
   ogType: 'website' | 'article';
+  htmlLang: string;
+  hreflang: HreflangLink[];
   /** Page-specific structured data injected as <script type="application/ld+json">. */
   jsonLd: JsonLd[];
 }
@@ -57,12 +65,26 @@ export interface GetPageSeoOptions {
   blogPost?: BlogPostSeo;
 }
 
+export function hreflangAlternates(unprefixedPath: string): HreflangLink[] {
+  const langs: Language[] = ['en', 'ru', 'uk', 'zh'];
+  const links = langs.map((lang) => ({
+    hreflang: hreflangCode[lang],
+    href: getPageUrl(localizePath(unprefixedPath, lang))
+  }));
+  links.push({
+    hreflang: 'x-default',
+    href: getPageUrl(localizePath(unprefixedPath, 'en'))
+  });
+  return links;
+}
+
 function withDefaults(
   pair: SeoPair,
-  path: string,
+  unprefixedPath: string,
+  lang: Language,
   overrides?: Partial<Pick<PageSeoMeta, 'image' | 'imageAlt' | 'ogType' | 'jsonLd'>>
 ): PageSeoMeta {
-  const url = getPageUrl(path);
+  const url = getPageUrl(localizePath(unprefixedPath, lang));
   return {
     title: pair.title,
     description: pair.description,
@@ -71,6 +93,8 @@ function withDefaults(
     image: overrides?.image ?? DEFAULT_OG_IMAGE,
     imageAlt: overrides?.imageAlt,
     ogType: overrides?.ogType ?? 'website',
+    htmlLang: htmlLang[lang],
+    hreflang: hreflangAlternates(unprefixedPath),
     jsonLd: overrides?.jsonLd ?? []
   };
 }
@@ -149,14 +173,14 @@ function faqLd(faq: { q: string; a: string }[]): JsonLd {
   };
 }
 
-function buildBlogPostSeo(post: BlogPostSeo, path: string, lang: Language): PageSeoMeta {
-  const url = getPageUrl(path);
+function buildBlogPostSeo(post: BlogPostSeo, unprefixedPath: string, lang: Language): PageSeoMeta {
+  const url = getPageUrl(localizePath(unprefixedPath, lang));
   const image = post.image ?? DEFAULT_OG_IMAGE;
   const jsonLd: JsonLd[] = [
     blogPostingLd(post, url, image, lang),
     breadcrumbLd([
-      { name: 'Home', url: `${SITE_ORIGIN}/` },
-      { name: 'Blog', url: `${SITE_ORIGIN}/blog` },
+      { name: 'Home', url: getPageUrl(localizePath('/', lang)) },
+      { name: 'Blog', url: getPageUrl(localizePath('/blog', lang)) },
       { name: post.title, url }
     ])
   ];
@@ -166,13 +190,14 @@ function buildBlogPostSeo(post: BlogPostSeo, path: string, lang: Language): Page
       title: `${post.title}${seoRoutes.blogTitleSuffix[lang]}`,
       description: post.description
     },
-    path,
+    unprefixedPath,
+    lang,
     { image, imageAlt: post.imageAlt ?? post.title, ogType: 'article', jsonLd }
   );
 }
 
 export function getPageSeo(pathname: string, lang: Language, options?: GetPageSeoOptions): PageSeoMeta {
-  const path = normalizePathname(pathname);
+  const path = stripLangPrefix(normalizePathname(pathname)).path;
 
   // A post may live at a custom top-level path (e.g. /telecom-industry-concepts),
   // so render article SEO whenever post data is supplied, regardless of the URL.
@@ -181,37 +206,39 @@ export function getPageSeo(pathname: string, lang: Language, options?: GetPageSe
   }
 
   if (path === '/' || path === '') {
-    return withDefaults(seoRoutes.home[lang], path, { jsonLd: [softwareApplicationLd()] });
+    return withDefaults(seoRoutes.home[lang], path, lang, { jsonLd: [softwareApplicationLd()] });
   }
   if (path === '/about-us') {
-    return withDefaults(seoRoutes.about[lang], path);
+    return withDefaults(seoRoutes.about[lang], path, lang);
   }
   if (path === '/ixc-club') {
-    return withDefaults(seoRoutes.ixcClub[lang], path);
+    return withDefaults(seoRoutes.ixcClub[lang], path, lang);
   }
   if (path === '/privacy-policy') {
-    return withDefaults(seoRoutes.privacyPolicy[lang], path);
+    return withDefaults(seoRoutes.privacyPolicy[lang], path, lang);
   }
   if (path === '/platform-brochure') {
-    return withDefaults(seoRoutes.platformBrochure[lang], path);
+    return withDefaults(seoRoutes.platformBrochure[lang], path, lang);
   }
   if (path === '/blog') {
-    const url = getPageUrl(path);
-    return withDefaults(seoRoutes.blog[lang], path, { jsonLd: [blogIndexLd(seoRoutes.blog[lang], url, lang)] });
+    const url = getPageUrl(localizePath(path, lang));
+    return withDefaults(seoRoutes.blog[lang], path, lang, {
+      jsonLd: [blogIndexLd(seoRoutes.blog[lang], url, lang)]
+    });
   }
 
   const productMatch = path.match(/^\/products\/([^/]+)$/);
   if (productMatch) {
     const slug = productMatch[1];
-    if (isProductSlug(slug)) return withDefaults(seoRoutes.products[slug][lang], path);
-    return withDefaults(seoRoutes.notFound[lang], path);
+    if (isProductSlug(slug)) return withDefaults(seoRoutes.products[slug][lang], path, lang);
+    return withDefaults(seoRoutes.notFound[lang], path, lang);
   }
 
   const blogMatch = path.match(/^\/blog\/([^/]+)$/);
   if (blogMatch) {
     const post = options?.blogPost;
     if (post) return buildBlogPostSeo(post, path, lang);
-    return withDefaults(seoRoutes.notFound[lang], path);
+    return withDefaults(seoRoutes.notFound[lang], path, lang);
   }
 
   const newsMatch = path.match(/^\/news\/([^/]+)$/);
@@ -224,6 +251,7 @@ export function getPageSeo(pathname: string, lang: Language, options?: GetPageSe
           description: seoRoutes.newsFallbackDescription[lang]
         },
         path,
+        lang,
         {
           image: options?.newsArticleImage ?? DEFAULT_OG_IMAGE,
           imageAlt: titleFromArticle,
@@ -231,15 +259,16 @@ export function getPageSeo(pathname: string, lang: Language, options?: GetPageSe
         }
       );
     }
-    return withDefaults(seoRoutes.notFound[lang], path);
+    return withDefaults(seoRoutes.notFound[lang], path, lang);
   }
 
-  return withDefaults(seoRoutes.home[lang], path);
+  return withDefaults(seoRoutes.home[lang], path, lang);
 }
 
 export function setDocumentSeo(meta: PageSeoMeta) {
   if (typeof document === 'undefined') return;
   document.title = meta.title;
+  document.documentElement.setAttribute('lang', meta.htmlLang);
 
   const setMeta = (selector: string, attr: 'name' | 'property', key: string, content: string) => {
     let el = document.querySelector<HTMLMetaElement>(`${selector}[${attr}="${key}"]`);
@@ -273,7 +302,6 @@ export function setDocumentSeo(meta: PageSeoMeta) {
     setMeta('meta', 'property', 'og:image:type', 'image/png');
   }
 
-  // Canonical link
   let canonical = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
   if (!canonical) {
     canonical = document.createElement('link');
@@ -282,7 +310,16 @@ export function setDocumentSeo(meta: PageSeoMeta) {
   }
   canonical.setAttribute('href', meta.canonical);
 
-  // Page-specific JSON-LD (replace any previously injected dynamic blocks)
+  document.querySelectorAll('link[data-hreflang], link[rel="alternate"][hreflang]').forEach((el) => el.remove());
+  for (const alt of meta.hreflang) {
+    const link = document.createElement('link');
+    link.setAttribute('rel', 'alternate');
+    link.setAttribute('hreflang', alt.hreflang);
+    link.setAttribute('href', alt.href);
+    link.setAttribute('data-hreflang', 'true');
+    document.head.appendChild(link);
+  }
+
   document.querySelectorAll('script[data-seo-jsonld]').forEach((el) => el.remove());
   for (const block of meta.jsonLd) {
     const script = document.createElement('script');

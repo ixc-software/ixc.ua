@@ -1,5 +1,7 @@
-import React, { createContext, useContext, useEffect, useState } from 'react';
-import { htmlLang, Language, languages, Translations, translations } from './translations';
+import React, { createContext, useContext, useEffect } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { htmlLang, Language, Translations, translations } from './translations';
+import { languageFromPath, localizePath } from './localePath';
 
 interface LanguageContextType {
   language: Language;
@@ -9,34 +11,22 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-function isLanguage(value: string | null): value is Language {
-  return languages.includes(value as Language);
-}
-
-function getInitialLanguage(): Language {
-  if (typeof window === 'undefined') return 'en';
-  try {
-    const saved = localStorage.getItem('language');
-    if (isLanguage(saved)) return saved;
-  } catch { /* */ }
-  const browserLang = navigator.language?.toLowerCase() ?? '';
-  if (browserLang.startsWith('zh')) return 'zh';
-  if (browserLang.startsWith('ru')) return 'ru';
-  if (browserLang.startsWith('uk')) return 'uk';
-  return 'en';
-}
-
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [language, setLanguageState] = useState<Language>(getInitialLanguage);
+  const { pathname, search, hash } = useLocation();
+  const navigate = useNavigate();
+  const language = languageFromPath(pathname);
 
   const setLanguage = (lang: Language) => {
-    setLanguageState(lang);
     try { localStorage.setItem('language', lang); } catch { /* */ }
-    document.documentElement.setAttribute('lang', htmlLang[lang]);
+    const next = localizePath(pathname, lang);
+    if (next !== pathname) {
+      navigate(`${next}${search}${hash}`);
+    }
   };
 
   useEffect(() => {
     document.documentElement.setAttribute('lang', htmlLang[language]);
+    try { localStorage.setItem('language', language); } catch { /* */ }
   }, [language]);
 
   const t = translations[language];

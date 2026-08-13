@@ -1,5 +1,5 @@
 import { ArrowRight, CalendarClock, Handshake, Network, TrendingUp } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { LocaleLink as Link } from './LocaleLink';
 import { useLanguage } from '../i18n/LanguageProvider';
 import { HashScrollLink } from './HashScrollLink';
 import { SectionHeading } from './SectionHeading';

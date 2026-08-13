@@ -1,9 +1,11 @@
-import { useParams, useLocation, Link, Navigate } from 'react-router-dom';
+import { useParams, useLocation, Navigate } from 'react-router-dom';
+import { LocaleLink as Link } from '../components/LocaleLink';
 import { ArrowLeft, Calendar, Clock, User } from 'lucide-react';
 import { useLanguage } from '../i18n/LanguageProvider';
 import { findBlogPost, findBlogPostByPath, getLocalizedPost, getPostPath } from '../content/blogPosts';
 import { RichArticleBody } from '../components/RichArticleBody';
 import { formatPostDate } from '../utils/formatDate';
+import { localizePath, stripLangPrefix } from '../i18n/localePath';
 
 function readingTimeMinutes(text: string): number {
   const words = text.trim().split(/\s+/).filter(Boolean).length;
@@ -15,9 +17,10 @@ export const BlogPost = () => {
   const { pathname } = useLocation();
   const { language, t } = useLanguage();
   const post = slug ? findBlogPost(slug) : findBlogPostByPath(pathname);
+  const { path: unprefixedPath } = stripLangPrefix(pathname);
 
-  if (post?.path && pathname.startsWith('/blog/')) {
-    return <Navigate to={getPostPath(post)} replace />;
+  if (post?.path && unprefixedPath.startsWith('/blog/')) {
+    return <Navigate to={localizePath(getPostPath(post), language)} replace />;
   }
 
   if (!post) {

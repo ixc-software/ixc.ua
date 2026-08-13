@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { Link } from 'react-router-dom';
+import { LocaleLink as Link } from './LocaleLink';
 
 const EMAIL_RE = /([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/g;
 const LINK_RE = /\[([^\]]+)\]\(([^)]+)\)/g;

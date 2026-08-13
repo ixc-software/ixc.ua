@@ -1,4 +1,5 @@
-import { useParams, Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import { LocaleLink as Link } from '../components/LocaleLink';
 import { HashScrollLink } from '../components/HashScrollLink';
 import {
   Server, Shield, Activity, Bot, MessageSquare, Code,

@@ -2,6 +2,8 @@ import React from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import type { LinkProps } from 'react-router-dom';
 import { scrollToElementById } from '../utils/scrollToElementId';
+import { useLanguage } from '../i18n/LanguageProvider';
+import { localizePath, localizeTo, stripLangPrefix } from '../i18n/localePath';
 
 export type HashScrollLinkProps = LinkProps & {
   /** DOM id (no #). If omitted, taken from `to.hash` when `to` is an object. */
@@ -36,29 +38,32 @@ function targetPathname(to: LinkProps['to']): string {
 }
 
 /**
- * Same as {@link Link}, but when already on the home route (`/`) and the link targets that
+ * Same as {@link Link}, but when already on the home route and the link targets that
  * route with a hash, performs scroll manually. React Router can skip real navigations for
  * hash-only updates on the same path, which leaves the page static without this.
+ * Destinations are prefixed for the active language.
  */
 export function HashScrollLink({ scrollTargetId, onClick, to, ...rest }: HashScrollLinkProps) {
   const location = useLocation();
   const navigate = useNavigate();
+  const { language } = useLanguage();
   const id = scrollTargetId ?? parseHashFromTo(to);
+  const localizedTo = localizeTo(to, language);
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     onClick?.(e);
     if (e.defaultPrevented || !id) return;
 
-    const onHome = location.pathname === '/';
-    const dest = targetPathname(to);
+    const onHome = stripLangPrefix(location.pathname).path === '/';
+    const dest = stripLangPrefix(targetPathname(to)).path;
     const goesToHome = dest === '/';
 
     if (onHome && goesToHome) {
       e.preventDefault();
-      void navigate({ pathname: '/', hash: id });
+      void navigate({ pathname: localizePath('/', language), hash: id });
       scrollToElementById(id);
     }
   };
 
-  return <Link to={to} onClick={handleClick} {...rest} />;
+  return <Link to={localizedTo} onClick={handleClick} {...rest} />;
 }

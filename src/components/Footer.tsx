@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { LocaleLink as Link } from './LocaleLink';
 import { useLanguage } from '../i18n/LanguageProvider';
 
 export const Footer: React.FC = () => {

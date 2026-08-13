@@ -3,9 +3,11 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import newsData from './src/newsData';
 import { blogPosts, getLocalizedPost, getPostPath } from './src/content/blogPosts.ts';
-import { getPageSeo, type PageSeoMeta } from './src/seo/getPageSeo.ts';
+import { getPageSeo, hreflangAlternates, type PageSeoMeta } from './src/seo/getPageSeo.ts';
 import { getNewsOgImage, SITE_ORIGIN } from './src/seo/siteMeta.ts';
 import { LEGACY_REDIRECTS, writeLegacyRedirects, buildRedirectHtml } from './legacyRedirects.ts';
+import type { Language } from './src/i18n/translations.ts';
+import { localizePath } from './src/i18n/localePath.ts';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const toAbsolute = (p: string) => path.resolve(__dirname, p);
@@ -73,6 +75,15 @@ function injectSeoFull(html: string, meta: PageSeoMeta): string {
     .join('\n    ');
   out = out.replace('<!--seo-jsonld-->', jsonLdScripts);
 
+  out = out.replace(/<html lang="[^"]*"/, `<html lang="${escapeAttr(meta.htmlLang)}"`);
+  const hreflangTags = meta.hreflang
+    .map(
+      (alt) =>
+        `<link rel="alternate" hreflang="${escapeAttr(alt.hreflang)}" href="${escapeAttr(alt.href)}" data-hreflang="true" />`
+    )
+    .join('\n    ');
+  out = out.replace('</head>', `    ${hreflangTags}\n  </head>`);
+
   return out;
 }
 
@@ -104,6 +115,22 @@ function writeRouteArtifacts(route: string, html: string): void {
   console.log(`Prerendered: ${route} → ${siblingPath} (canonical)`);
 }
 
+function writeRedirectPair(from: string, to: string): void {
+  const html = buildRedirectHtml(to);
+  const segments = from.replace(/^\//, '').split('/');
+  const indexPath = `dist/${segments.join('/')}/index.html`;
+  fs.mkdirSync(path.dirname(toAbsolute(indexPath)), { recursive: true });
+  fs.writeFileSync(toAbsolute(indexPath), html);
+  console.log(`Redirect: ${from} → ${indexPath} → ${to}`);
+
+  const fileName = `${segments[segments.length - 1]}.html`;
+  const parentDir = segments.length > 1 ? `dist/${segments.slice(0, -1).join('/')}` : 'dist';
+  const siblingPath = `${parentDir}/${fileName}`;
+  fs.mkdirSync(toAbsolute(parentDir), { recursive: true });
+  fs.writeFileSync(toAbsolute(siblingPath), html);
+  console.log(`Redirect: ${from} → ${siblingPath} → ${to}`);
+}
+
 const template = fs.readFileSync(toAbsolute('dist/index.html'), 'utf-8');
 const { render } = await import('./dist/server/entry-server.js');
 
@@ -129,40 +156,58 @@ const blogRoutes = blogPosts.map((p) => getPostPath(p));
 const newsRoutes = newsData.map((n) => `/news/${n.slug}`);
 const routes = [...staticRoutes, ...blogRoutes, ...newsRoutes];
 
-for (const route of routes) {
-  const appHtml = render(route);
-  let html = template.replace(`<!--app-html-->`, appHtml);
+const pageLangs: Language[] = ['en', 'ru', 'uk', 'zh'];
 
-  let pageMeta = getPageSeo(route, 'en');
-  if (route.startsWith('/news/')) {
-    const slug = route.slice('/news/'.length);
-    const article = newsData.find((n) => n.slug === slug);
-    if (article) {
-      pageMeta = getPageSeo(route, 'en', {
-        newsArticleTitle: article.en.title,
-        newsArticleImage: getNewsOgImage(article)
-      });
+function newsTitle(
+  article: { en: { title: string }; [key: string]: { title?: string } | unknown },
+  lang: Language
+): string {
+  const loc = article[lang] as { title?: string } | undefined;
+  return loc?.title || article.en.title;
+}
+
+for (const lang of pageLangs) {
+  for (const route of routes) {
+    const localized = localizePath(route, lang);
+    const appHtml = render(localized);
+    let html = template.replace(`<!--app-html-->`, appHtml);
+
+    let pageMeta = getPageSeo(route, lang);
+    if (route.startsWith('/news/')) {
+      const slug = route.slice('/news/'.length);
+      const article = newsData.find((n) => n.slug === slug);
+      if (article) {
+        pageMeta = getPageSeo(route, lang, {
+          newsArticleTitle: newsTitle(article, lang),
+          newsArticleImage: getNewsOgImage(article)
+        });
+      }
+    } else {
+      const post = blogPosts.find((p) => getPostPath(p) === route);
+      if (post) {
+        const loc = getLocalizedPost(post, lang);
+        pageMeta = getPageSeo(route, lang, {
+          blogPost: {
+            title: loc.title,
+            description: loc.description,
+            image: loc.image,
+            imageAlt: loc.title,
+            datePublished: loc.date,
+            dateModified: loc.updated,
+            author: loc.author,
+            faq: loc.faq?.map((f) => ({ q: f.q, a: f.a }))
+          }
+        });
+      }
     }
-  } else {
-    const post = blogPosts.find((p) => getPostPath(p) === route);
-    if (post) {
-      const loc = getLocalizedPost(post, 'en');
-      pageMeta = getPageSeo(route, 'en', {
-        blogPost: {
-          title: loc.title,
-          description: loc.description,
-          image: loc.image,
-          imageAlt: loc.title,
-          datePublished: loc.date,
-          dateModified: loc.updated,
-          author: loc.author,
-          faq: loc.faq?.map((f) => ({ q: f.q, a: f.a }))
-        }
-      });
-    }
+    html = injectSeoFull(html, pageMeta);
+    writeRouteArtifacts(localized, html);
   }
-  html = injectSeoFull(html, pageMeta);
-  writeRouteArtifacts(route, html);
+}
+
+for (const route of routes) {
+  const from = route === '/' ? '/en' : `/en${route}`;
+  writeRedirectPair(from, route);
 }
 
 // ---------------------------------------------------------------------------
@@ -175,11 +220,19 @@ interface SitemapEntry {
   lastmod: string;
   changefreq: string;
   priority: string;
+  unprefixed: string;
 }
 
-function entry(route: string, lastmod: string, changefreq: string, priority: string): SitemapEntry {
+function entry(
+  unprefixed: string,
+  lang: Language,
+  lastmod: string,
+  changefreq: string,
+  priority: string
+): SitemapEntry {
+  const route = localizePath(unprefixed, lang);
   const loc = route === '/' ? `${SITE_ORIGIN}/` : `${SITE_ORIGIN}${route}`;
-  return { loc, lastmod, changefreq, priority };
+  return { loc, lastmod, changefreq, priority, unprefixed };
 }
 
 const staticPriority: Record<string, [string, string]> = {
@@ -193,25 +246,39 @@ const staticPriority: Record<string, [string, string]> = {
 };
 
 const sitemapEntries: SitemapEntry[] = [];
-for (const route of staticRoutes) {
-  const [changefreq, priority] = staticPriority[route] ?? ['monthly', '0.7'];
-  sitemapEntries.push(entry(route, today, changefreq, priority));
+for (const lang of pageLangs) {
+  for (const route of staticRoutes) {
+    const [changefreq, priority] = staticPriority[route] ?? ['monthly', '0.7'];
+    sitemapEntries.push(entry(route, lang, today, changefreq, priority));
+  }
+  for (const post of blogPosts) {
+    sitemapEntries.push(entry(getPostPath(post), lang, post.updated ?? post.date, 'monthly', '0.7'));
+  }
+  for (const n of newsData) {
+    sitemapEntries.push(entry(`/news/${n.slug}`, lang, n.date ?? today, 'monthly', '0.6'));
+  }
 }
-for (const post of blogPosts) {
-  sitemapEntries.push(entry(getPostPath(post), post.updated ?? post.date, 'monthly', '0.7'));
-}
-for (const n of newsData) {
-  sitemapEntries.push(entry(`/news/${n.slug}`, n.date ?? today, 'monthly', '0.6'));
+
+function sitemapUrlXml(e: SitemapEntry): string {
+  const alts = hreflangAlternates(e.unprefixed)
+    .map(
+      (a) =>
+        `    <xhtml:link rel="alternate" hreflang="${a.hreflang}" href="${a.href}"/>`
+    )
+    .join('\n');
+  return `  <url>
+    <loc>${e.loc}</loc>
+    <lastmod>${e.lastmod}</lastmod>
+    <changefreq>${e.changefreq}</changefreq>
+    <priority>${e.priority}</priority>
+${alts}
+  </url>`;
 }
 
 const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${sitemapEntries
-  .map(
-    (e) =>
-      `  <url><loc>${e.loc}</loc><lastmod>${e.lastmod}</lastmod><changefreq>${e.changefreq}</changefreq><priority>${e.priority}</priority></url>`
-  )
-  .join('\n')}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+${sitemapEntries.map(sitemapUrlXml).join('\n')}
 </urlset>
 `;
 fs.writeFileSync(toAbsolute('dist/sitemap.xml'), sitemapXml);

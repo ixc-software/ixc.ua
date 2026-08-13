@@ -1,4 +1,5 @@
 import type { Language } from '../i18n/translations';
+import { stripLangPrefix } from '../i18n/localePath';
 import { softswitchAiAutomationPost } from './posts/softswitch-ai-automation';
 import { class4VsClass5Post } from './posts/class-4-vs-class-5-softswitch';
 import { lcrRoutingPost } from './posts/lcr-routing-voip';
@@ -546,6 +547,7 @@ export function findBlogPost(slug: string | undefined): BlogPost | undefined {
 /** Resolve a post by its canonical site path, ignoring any trailing slash. */
 export function findBlogPostByPath(pathname: string | undefined): BlogPost | undefined {
   if (!pathname) return undefined;
-  const normalized = pathname.replace(/\/+$/, '') || '/';
+  const { path } = stripLangPrefix(pathname);
+  const normalized = path.replace(/\/+$/, '') || '/';
   return blogPosts.find((p) => getPostPath(p) === normalized);
 }

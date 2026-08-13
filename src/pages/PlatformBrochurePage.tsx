@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { LocaleLink as Link } from '../components/LocaleLink';
 import { ArrowRight, BookOpen } from 'lucide-react';
 import { useLanguage } from '../i18n/LanguageProvider';
 import { brochureImageSrc } from '../data/platformBrochureTypes';

@@ -12,7 +12,7 @@ import {
   UserCog,
   Users,
 } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { LocaleLink as Link } from '../components/LocaleLink';
 import { useLanguage } from '../i18n/LanguageProvider';
 import { HashScrollLink } from '../components/HashScrollLink';
 import { SectionHeading } from '../components/SectionHeading';

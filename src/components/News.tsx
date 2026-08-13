@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { ArrowLeft, ArrowRight, Calendar, Newspaper } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { LocaleLink as Link } from './LocaleLink';
 import { useLanguage } from '../i18n/LanguageProvider';
 import { SectionHeading } from './SectionHeading';
 import newsData from '../newsData';

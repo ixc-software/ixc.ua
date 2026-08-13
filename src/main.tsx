@@ -31,11 +31,11 @@ const container = document.getElementById('root')!
 const app = (
   <StrictMode>
     <ThemeProvider>
-      <LanguageProvider>
-        <BrowserRouter basename={import.meta.env.BASE_URL}>
+      <BrowserRouter basename={import.meta.env.BASE_URL}>
+        <LanguageProvider>
           <App />
-        </BrowserRouter>
-      </LanguageProvider>
+        </LanguageProvider>
+      </BrowserRouter>
     </ThemeProvider>
   </StrictMode>
 )

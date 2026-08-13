@@ -9,11 +9,11 @@ export function render(url = '/') {
   const html = renderToString(
     <StrictMode>
       <ThemeProvider>
-        <LanguageProvider>
-          <StaticRouter location={`${import.meta.env.BASE_URL}${url.startsWith('/') ? url.slice(1) : url}`} basename={import.meta.env.BASE_URL}>
+        <StaticRouter location={`${import.meta.env.BASE_URL}${url.startsWith('/') ? url.slice(1) : url}`} basename={import.meta.env.BASE_URL}>
+          <LanguageProvider>
             <App />
-          </StaticRouter>
-        </LanguageProvider>
+          </LanguageProvider>
+        </StaticRouter>
       </ThemeProvider>
     </StrictMode>
   )

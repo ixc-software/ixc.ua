@@ -2,7 +2,7 @@ import {
   Shield, Clock, Zap, HeadphonesIcon, Target, Code, 
   ArrowRight, CheckCircle2, Briefcase, Award, MessageCircle
 } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { LocaleLink as Link } from '../components/LocaleLink';
 import { useLanguage } from '../i18n/LanguageProvider';
 import { SectionHeading } from '../components/SectionHeading';
 import { CertificatesAndTrademarks } from '../components/CertificatesAndTrademarks';

@@ -5,7 +5,7 @@ import {
   Upload, Activity, Route, Mic, UserCircle, Beaker,
   Database, Headphones, ArrowRight
 } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { LocaleLink as Link } from './LocaleLink';
 import { useLanguage } from '../i18n/LanguageProvider';
 import { SectionHeading } from './SectionHeading';
 

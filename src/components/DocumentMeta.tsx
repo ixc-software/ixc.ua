@@ -6,6 +6,7 @@ import { getNewsOgImage } from '../seo/siteMeta';
 import newsData from '../newsData';
 import { findBlogPost, findBlogPostByPath, getLocalizedPost } from '../content/blogPosts';
 import type { Language } from '../i18n/translations';
+import { stripLangPrefix } from '../i18n/localePath';
 
 function newsArticleForSlug(slug: string | undefined) {
   if (!slug) return undefined;
@@ -45,13 +46,14 @@ export function DocumentMeta() {
   const { language } = useLanguage();
 
   useEffect(() => {
-    const newsSlug = pathname.match(/^\/news\/([^/]+)\/?$/)?.[1];
-    const blogSlug = pathname.match(/^\/blog\/([^/]+)\/?$/)?.[1];
+    const { path } = stripLangPrefix(pathname);
+    const newsSlug = path.match(/^\/news\/([^/]+)\/?$/)?.[1];
+    const blogSlug = path.match(/^\/blog\/([^/]+)\/?$/)?.[1];
     const article = newsArticleForSlug(newsSlug);
-    const meta = getPageSeo(pathname, language, {
+    const meta = getPageSeo(path, language, {
       newsArticleTitle: newsTitleForSlug(newsSlug, language),
       newsArticleImage: article ? getNewsOgImage(article) : undefined,
-      blogPost: blogSeoFor(blogSlug, pathname, language)
+      blogPost: blogSeoFor(blogSlug, path, language)
     });
     setDocumentSeo(meta);
   }, [pathname, language]);

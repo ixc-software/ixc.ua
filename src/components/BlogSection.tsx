@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { LocaleLink as Link } from './LocaleLink';
 import { ArrowRight, BookOpen, Calendar } from 'lucide-react';
 import { useLanguage } from '../i18n/LanguageProvider';
 import { SectionHeading } from './SectionHeading';

@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { Link } from 'react-router-dom';
+import { LocaleLink as Link } from './LocaleLink';
 import { ArrowRight } from 'lucide-react';
 import { HashScrollLink } from './HashScrollLink';
 
