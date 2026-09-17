@@ -299,7 +299,7 @@ const en: Translations = {
       { title: 'White/Black List', description: 'Dynamic protection and flexible routing rules to ensure unparalleled security and spam call prevention.' },
       { title: 'Monitoring Tool', description: 'Real-time analytics and dynamic graphs allowing you to trace SIP data for immediate troubleshooting.' },
       { title: 'Autotester', description: 'Ensure route quality by proactively generating automated test calls and analyzing the results.' },
-      { title: 'SMS Platform', description: 'An integrated bulk messaging solution ready to manage fast transit and optimal delivery paths.' },
+      { title: 'SMS Platform', description: 'Wholesale SMS routing, billing, and SMPP 3.4 — plus AI analysis and real-time reject of casino, scam, and blocked A2P before carriers drop your routes.' },
       { title: 'Google API Integration', description: 'Enhance your operations with extended integration points mapping to leading enterprise services.' },
       { title: 'Product Technical Specifications', description: 'Protocols, capacity, routing, security, codecs, billing, reporting, and 24/7 NOC—consolidated in one reference.' },
     ]
@@ -628,7 +628,7 @@ const ru: Translations = {
       { title: 'Белый/Чёрный список', description: 'Динамическая защита и гибкие правила маршрутизации для обеспечения безопасности и предотвращения спам-звонков.' },
       { title: 'Инструмент мониторинга', description: 'Аналитика в реальном времени и динамические графики для отслеживания SIP-данных и быстрого устранения неполадок.' },
       { title: 'Автотестер', description: 'Обеспечение качества маршрутов путём автоматической генерации тестовых вызовов и анализа результатов.' },
-      { title: 'SMS Платформа', description: 'Интегрированное решение для массовой рассылки SMS с поддержкой быстрого транзита и оптимальных путей доставки.' },
+      { title: 'SMS Платформа', description: 'Оптовые SMS: маршрутизация, биллинг и SMPP 3.4 — плюс AI-анализ и realtime reject casino, scam и blocked A2P до снятия с маршрутизации.' },
       { title: 'Интеграция Google API', description: 'Расширение операций с помощью интеграции с ведущими корпоративными сервисами.' },
       { title: 'Технические спецификации', description: 'Протоколы, ёмкость, маршрутизация, безопасность, кодеки, биллинг, отчётность и NOC 24/7 — в одном справочнике.' },
     ]
@@ -957,7 +957,7 @@ const uk: Translations = {
       { title: 'Білий/Чорний список', description: 'Динамічний захист і гнучкі правила маршрутизації для забезпечення безпеки та запобігання спам-дзвінкам.' },
       { title: 'Інструмент моніторингу', description: 'Аналітика в реальному часі та динамічні графіки для відстеження SIP-даних та швидкого усунення неполадок.' },
       { title: 'Автотестер', description: 'Забезпечення якості маршрутів шляхом автоматичної генерації тестових дзвінків та аналізу результатів.' },
-      { title: 'SMS Платформа', description: 'Інтегроване рішення для масової розсилки SMS з підтримкою швидкого транзиту та оптимальних шляхів доставки.' },
+      { title: 'SMS Платформа', description: 'Оптові SMS: маршрутизація, білінг і SMPP 3.4 — плюс AI-аналіз і realtime reject casino, scam та blocked A2P до зняття з маршрутизації.' },
       { title: 'Інтеграція Google API', description: 'Розширення операцій за допомогою інтеграції з провідними корпоративними сервісами.' },
       { title: 'Технічні специфікації продукту', description: 'Протоколи, ємність, маршрутизація, безпека, кодеки, білінг, звітність та NOC 24/7 — у одному довіднику.' },
     ]
@@ -1286,7 +1286,7 @@ const zh: Translations = {
       { title: '白/黑名单', description: '动态防护与灵活路由规则，保障安全并防止垃圾呼叫。' },
       { title: '监控工具', description: '实时分析与动态图表，便于追踪 SIP 数据并立即排障。' },
       { title: '自动测试器', description: '主动生成自动测试呼叫并分析结果，确保路由质量。' },
-      { title: 'SMS 平台', description: '一体化群发短信方案，支持快速过境与最优投递路径。' },
+      { title: 'SMS 平台', description: '批发短信路由、计费与 SMPP 3.4——外加 AI 分析与实时拒绝赌场、诈骗及被拦截 A2P，避免被运营商下线路。' },
       { title: 'Google API 集成', description: '与主流企业服务对接，扩展运营集成能力。' },
       { title: '产品技术规格', description: '协议、容量、路由、安全、编解码、计费、报表与 24/7 NOC——集中于一份参考。' },
     ]

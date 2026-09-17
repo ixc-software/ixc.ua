@@ -125,14 +125,17 @@ const en: Record<ProductSlug, ProductPageCopy> = {
     ]
   },
   'sms-platform': {
-    subtitle: 'All-In-One SMS Wholesale Solution',
+    subtitle: 'All-In-One SMS Wholesale Solution — Routing, Billing & AI Content Control',
     description:
-      'IXC has developed an all-in-one solution for SMS Wholesale companies. The competitively priced IXC SMS Platform is designed to make sending bulk SMS simple — from small companies running a few messages per month to high-volume customers sending thousands of messages per hour. The platform works on the basis of IXC V5 Softswitch but can also be used as a separate module, requiring only one server to run.',
+      'IXC SMS Platform is an all-in-one stack for SMS wholesale companies: routing, billing, and switching from a few messages a month to thousands per hour, on IXC V5 Softswitch or as a separate one-server module. AI content control — batch traffic analysis, real-time detect-and-reject, or both — stops casino, scam, and other blocked A2P before it hits upstream carriers, so your binds stay in routing.',
     features: [
       'SMS Routing, Billing, and Switching in one platform',
       'Scales from low-volume to thousands of messages per hour',
       'Works on the basis of IXC V5 Softswitch or as a separate module',
       'SMPP 3.4 protocol support',
+      'AI SMS analysis — traffic-profile reports on originators (casino, scam, phishing, OTP vs promo, on-demand packs)',
+      'Real-time AI filter — detect and reject high-risk messages before they reach terminator binds',
+      'Combined analysis + realtime — reports tune reject rules so carriers do not drop your routes',
       'Requires only a single server to run',
       'Buy and rent options available',
       '24/7/365 technical support included'
@@ -323,14 +326,17 @@ const ru: Record<ProductSlug, ProductPageCopy> = {
     ]
   },
   'sms-platform': {
-    subtitle: 'Комплексное решение для оптового SMS',
+    subtitle: 'Комплексное решение для оптового SMS — маршрутизация, биллинг и AI-контроль контента',
     description:
-      'IXC SMS Platform — решение «всё в одном» для оптовых SMS-компаний. Конкурентная цена: от нескольких сообщений в месяц до тысяч в час. Работает на базе IXC V5 Softswitch или как отдельный модуль — достаточно одного сервера.',
+      'IXC SMS Platform — стек «всё в одном» для оптовых SMS-компаний: маршрутизация, биллинг и коммутация от нескольких сообщений в месяц до тысяч в час, на базе IXC V5 Softswitch или отдельным модулем на одном сервере. AI-контроль контента — пакетный анализ трафика, realtime detect-and-reject или оба режима — останавливает casino, scam и другой blocked A2P до апстрима, чтобы ваши bind оставались в маршрутизации.',
     features: [
       'Маршрутизация, биллинг и коммутация SMS на одной платформе',
       'Масштаб от малого объёма до тысяч сообщений в час',
       'На базе IXC V5 Softswitch или отдельным модулем',
       'Протокол SMPP 3.4',
+      'AI-анализ SMS — отчёты профиля трафика по originators (casino, scam, phishing, OTP vs promo, on-demand пакеты)',
+      'Realtime AI-фильтр — detect и reject рискованных сообщений до terminator bind',
+      'Анализ + realtime вместе — отчёты настраивают reject, чтобы операторы не снимали ваши routes',
       'Достаточно одного сервера',
       'Варианты покупки и аренды',
       'Техподдержка 24/7/365'
@@ -521,14 +527,17 @@ const uk: Record<ProductSlug, ProductPageCopy> = {
     ]
   },
   'sms-platform': {
-    subtitle: 'Комплексне рішення для оптового SMS',
+    subtitle: 'Комплексне рішення для оптового SMS — маршрутизація, білінг і AI-контроль контенту',
     description:
-      'IXC SMS Platform — рішення «все в одному» для оптових SMS-компаній. Конкурентна ціна: від кількох повідомлень на місяць до тисяч на годину. Працює на базі IXC V5 Softswitch або як окремий модуль — достатньо одного сервера.',
+      'IXC SMS Platform — стек «все в одному» для оптових SMS-компаній: маршрутизація, білінг і комутація від кількох повідомлень на місяць до тисяч на годину, на базі IXC V5 Softswitch або окремим модулем на одному сервері. AI-контроль контенту — пакетний аналіз трафіку, realtime detect-and-reject або обидва режими — зупиняє casino, scam та інший blocked A2P до апстріму, щоб ваші bind лишалися в маршрутизації.',
     features: [
       'Маршрутизація, білінг і комутація SMS на одній платформі',
       'Масштаб від малого обсягу до тисяч повідомлень на годину',
       'На базі IXC V5 Softswitch або окремим модулем',
       'Протокол SMPP 3.4',
+      'AI-аналіз SMS — звіти профілю трафіку по originators (casino, scam, phishing, OTP vs promo, on-demand пакети)',
+      'Realtime AI-фільтр — detect і reject ризикованих повідомлень до terminator bind',
+      'Аналіз + realtime разом — звіти налаштовують reject, щоб оператори не знімали ваші routes',
       'Достатньо одного сервера',
       'Варіанти купівлі та оренди',
       'Техпідтримка 24/7/365'
@@ -719,14 +728,17 @@ const zh: Record<ProductSlug, ProductPageCopy> = {
     ]
   },
   'sms-platform': {
-    subtitle: '一体化批发短信方案',
+    subtitle: '一体化批发短信方案 — 路由、计费与 AI 内容控制',
     description:
-      'IXC 为批发短信公司打造一体化方案。价格有竞争力的 IXC SMS Platform 让群发短信变简单——从每月少量消息的小公司到每小时数千条的大客户。平台基于 IXC V5 Softswitch，也可作为独立模块，仅需一台服务器。',
+      'IXC SMS Platform 是面向批发短信公司的一体化栈：路由、计费与交换，从每月几条到每小时数千条；基于 IXC V5 Softswitch，或作为单服务器独立模块。AI 内容控制——批量话务分析、实时检测拒绝，或两者——在赌场、诈骗及其他被拦截 A2P 到达上游之前拦住它们，让你的 bind 留在路由里。',
     features: [
       '短信路由、计费与交换集于同一平台',
       '从低量扩展到每小时数千条消息',
       '基于 IXC V5 Softswitch 或作为独立模块',
       '支持 SMPP 3.4 协议',
+      'AI 短信分析 — originator 话务画像（赌场、诈骗、钓鱼、OTP vs 营销、按需包）',
+      '实时 AI 过滤 — 在到达 terminator bind 之前检测并拒绝高风险消息',
+      '分析 + 实时并用 — 报告调优拒绝规则，避免运营商把你移出路由',
       '仅需一台服务器即可运行',
       '可购买或租用',
       '含 24/7/365 技术支持'

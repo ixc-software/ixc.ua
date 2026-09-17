@@ -8,6 +8,7 @@ import { voipFraudPost } from './posts/voip-fraud-prevention';
 import { telecomIndustryConceptsPost } from './posts/telecom-industry-concepts';
 import { ixcRecordingPost } from './posts/ixc-recording';
 import { voipCallAnalysisAiPost } from './posts/voip-call-analysis-ai';
+import { wholesaleSmsPlatformPost } from './posts/wholesale-sms-platform';
 
 export interface BlogFaqItem {
   q: string;
@@ -377,6 +378,7 @@ const whatIsASoftswitchZh = `**软交换**是每张现代 VoIP 网络的软件�
 软交换是现代 VoIP 的控制与计费核心。批发运营商依赖 4 类过境与 LCR；零售提供商需要 5 类用户功能。在同一套栈上结合两者，可保持路由、CDR 与监控一致。比较平台时，权衡规模、计费深度、安全、API 与运营可见性——而不只看标价。`;
 
 export const blogPosts: BlogPost[] = [
+  wholesaleSmsPlatformPost,
   ixcRecordingPost,
   voipCallAnalysisAiPost,
   {

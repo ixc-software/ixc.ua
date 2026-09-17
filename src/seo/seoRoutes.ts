@@ -277,24 +277,24 @@ export const seoRoutes = {
     } satisfies SeoPagePair,
     'sms-platform': {
       en: {
-        title: 'SMS Wholesale Platform — Routing & Billing | IXC',
+        title: 'SMS Wholesale Platform — SMPP, Billing & AI Filter | IXC',
         description:
-          'Bulk SMS with routing, billing and SMPP 3.4 — scales from low volume to high throughput on IXC softswitch infrastructure.'
+          'Wholesale SMS: SMPP 3.4 routing and billing, plus AI analysis or real-time reject of casino/scam A2P before carriers drop your routes.'
       },
       ru: {
-        title: 'Платформа SMS wholesale — маршрутизация и биллинг | IXC',
+        title: 'Платформа SMS wholesale — SMPP, биллинг и AI-фильтр | IXC',
         description:
-          'Массовые SMS: маршрутизация, биллинг, SMPP 3.4 — от малых объёмов до высокой нагрузки на базе IXC.'
+          'Оптовые SMS: маршрутизация и биллинг SMPP 3.4 плюс AI-анализ или realtime reject casino/scam A2P до снятия с маршрутизации.'
       },
       uk: {
-        title: 'Платформа SMS wholesale — маршрутизація та білінг | IXC',
+        title: 'Платформа SMS wholesale — SMPP, білінг і AI-фільтр | IXC',
         description:
-          'Масові SMS: маршрутизація, білінг, SMPP 3.4 — від низьких обсягів до високого навантаження на базі IXC.'
+          'Оптові SMS: маршрутизація й білінг SMPP 3.4 плюс AI-аналіз або realtime reject casino/scam A2P до зняття з маршрутизації.'
       },
       zh: {
-        title: 'SMS 批发平台 — 路由与计费 | IXC',
+        title: 'SMS 批发平台 — SMPP、计费与 AI 过滤 | IXC',
         description:
-          '群发短信，含路由、计费与 SMPP 3.4——在 IXC 软交换基础设施上从低量扩展到高吞吐。'
+          '批发短信：SMPP 3.4 路由与计费，外加在运营商下线路之前对赌场/诈骗 A2P 的 AI 分析或实时拒绝。'
       }
     } satisfies SeoPagePair,
     'google-api': {
