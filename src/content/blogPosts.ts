@@ -389,7 +389,7 @@ export const blogPosts: BlogPost[] = [
     category: 'Guides',
     tags: ['softswitch', 'voip', 'class 4 softswitch', 'class 5 softswitch', 'sip', 'lcr'],
     image: 'https://ixc.ua/blog/what-is-a-softswitch.png',
-    localImage: '/blog/what-is-a-softswitch.png',
+    localImage: '/blog/what-is-a-softswitch.webp',
     imageObjectFit: 'contain',
     en: {
       title: 'What Is a Softswitch? A Complete Guide for VoIP Carriers (2026)',

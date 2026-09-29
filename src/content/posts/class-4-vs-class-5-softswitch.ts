@@ -123,7 +123,7 @@ export const class4VsClass5Post: BlogPost = {
   category: 'Guides',
   tags: ['class 4 softswitch', 'class 5 softswitch', 'wholesale voip', 'retail voip', 'softswitch'],
   image: 'https://ixc.ua/blog/class-4-vs-class-5-softswitch.png',
-  localImage: '/blog/class-4-vs-class-5-softswitch.png',
+  localImage: '/blog/class-4-vs-class-5-softswitch.webp',
   imageObjectFit: 'contain',
   en: {
     title: 'Class 4 vs Class 5 Softswitch: What’s the Difference?',

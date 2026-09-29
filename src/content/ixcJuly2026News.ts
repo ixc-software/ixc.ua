@@ -21,7 +21,7 @@ export const ixcJuly2026News = {
   date: '2026-07-31',
   link: 'https://ixc.ua/news/ixc-july-2026-update',
   image: 'https://ixc.ua/news/july-2026-og.jpg',
-  local_image: '/news/july-2026-latest-update.jpg',
+  local_image: '/news/july-2026-latest-update.webp',
   image_object_fit: 'contain' as const,
   rich_news: true,
   en: {
@@ -44,7 +44,7 @@ July V7 brings **SIP troubleshooting from inside CDR reports**, **A-number daily
 
 **What changed:** Operators can open **call-level packet captures** directly from CDR detail reports — no SSH, no manual file hunting.
 
-![SIP call flow — PCAP sequence diagram with call context from CDR](/news/july-2026-sip-pcap-viewer.jpg)
+![SIP call flow — PCAP sequence diagram with call context from CDR](/news/july-2026-sip-pcap-viewer.webp)
 
 - New **PCAP** column on CDR call detail tables
 - One-click **SIP sequence diagram** with **A-leg / B-leg** filtering
@@ -184,7 +184,7 @@ IXC delivers carrier-style VoIP infrastructure proven in production since 1999. 
 
 **Что изменилось:** Операторы открывают **packet capture уровня вызова** прямо из детального CDR — без SSH и ручного поиска файлов.
 
-![SIP call flow — sequence diagram PCAP с контекстом вызова из CDR](/news/july-2026-sip-pcap-viewer.jpg)
+![SIP call flow — sequence diagram PCAP с контекстом вызова из CDR](/news/july-2026-sip-pcap-viewer.webp)
 
 - Новая колонка **PCAP** в таблицах call detail
 - Один клик — **SIP sequence diagram** с фильтрами **A-leg / B-leg**
@@ -324,7 +324,7 @@ Route scenarios и A-number caps работают на background reconcile sche
 
 **Що змінилось:** Оператори відкривають **packet capture рівня дзвінка** прямо з детального CDR — без SSH і ручного пошуку файлів.
 
-![SIP call flow — sequence diagram PCAP з контекстом дзвінка з CDR](/news/july-2026-sip-pcap-viewer.jpg)
+![SIP call flow — sequence diagram PCAP з контекстом дзвінка з CDR](/news/july-2026-sip-pcap-viewer.webp)
 
 - Нова колонка **PCAP** у таблицях call detail
 - Один клік — **SIP sequence diagram** з фільтрами **A-leg / B-leg**
@@ -464,7 +464,7 @@ Route scenarios і A-number caps працюють на background reconcile sche
 
 **变化：** 操作员可直接从 CDR 详单报表打开 **呼叫级 packet captures**——无需 SSH，无需手工翻找文件。
 
-![SIP 呼叫流程 — 带 CDR 呼叫上下文的 PCAP 时序图](/news/july-2026-sip-pcap-viewer.jpg)
+![SIP 呼叫流程 — 带 CDR 呼叫上下文的 PCAP 时序图](/news/july-2026-sip-pcap-viewer.webp)
 
 - CDR call detail 表新增 **PCAP** 列
 - 一键打开 **SIP sequence diagram**，支持 **A-leg / B-leg** 筛选

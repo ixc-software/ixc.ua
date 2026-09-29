@@ -179,7 +179,7 @@ export const voipBillingPost: BlogPost = {
   category: 'Guides',
   tags: ['voip billing', 'cdr', 'prepaid voip', 'softswitch', 'rate deck'],
   image: 'https://ixc.ua/blog/voip-billing-softswitch.png',
-  localImage: '/blog/voip-billing-softswitch.png',
+  localImage: '/blog/voip-billing-softswitch.webp',
   imageObjectFit: 'contain',
   en: {
     title: 'VoIP Billing on a Softswitch: Prepaid, Postpaid & Real-Time CDR',

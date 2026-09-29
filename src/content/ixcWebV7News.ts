@@ -4,7 +4,7 @@ export const ixcWebV7News = {
   date: '2026-06-01',
   link: 'https://ixc.ua/news/ixc-webv7',
   image: 'https://ixc.ua/news/webv7-latest-update.png',
-  local_image: '/news/webv7-latest-update.png',
+  local_image: '/news/webv7-latest-update.webp',
   image_object_fit: 'contain' as const,
   rich_news: true,
   en: {
@@ -22,9 +22,9 @@ We also added **quick search** on every major selector — destinations, payees,
 
 **What changed:** The legacy v6 UI uses dense tables, nested sidebar sections, and a separate “Show advanced menu” toggle in the top bar. WebV7 opens on a spacious dashboard with a persistent left sidebar, clear section labels (Management, Reports, Finance, System, Troubleshooting), and content that scales on wide monitors without feeling cramped.
 
-![Legacy v6 billing UI — dense sidebar and dashboard tables](/news/webv7-ui-v6-was.png)
-![WebV7 light theme — dashboard and navigation](/news/webv7-ui-v7-light.png)
-![WebV7 dark theme — same workspace at night](/news/webv7-ui-v7-dark.png)
+![Legacy v6 billing UI — dense sidebar and dashboard tables](/news/webv7-ui-v6-was.webp)
+![WebV7 light theme — dashboard and navigation](/news/webv7-ui-v7-light.webp)
+![WebV7 dark theme — same workspace at night](/news/webv7-ui-v7-dark.webp)
 
 ---
 ## 2. Find any screen in seconds — search + favorites
@@ -111,9 +111,9 @@ IXC delivers carrier-style VoIP infrastructure proven in production since 1999. 
 
 **Что изменилось:** В v6 — плотные таблицы, вложенное меню и переключатель «Расширенное меню» вверху. WebV7 открывается на просторном дашборде с постоянной боковой панелью, понятными разделами (Management, Reports, Finance, System, Troubleshooting) и масштабированием на широких мониторах.
 
-![Интерфейс v6 — плотное меню и таблицы](/news/webv7-ui-v6-was.png)
-![WebV7, светлая тема](/news/webv7-ui-v7-light.png)
-![WebV7, тёмная тема](/news/webv7-ui-v7-dark.png)
+![Интерфейс v6 — плотное меню и таблицы](/news/webv7-ui-v6-was.webp)
+![WebV7, светлая тема](/news/webv7-ui-v7-light.webp)
+![WebV7, тёмная тема](/news/webv7-ui-v7-dark.webp)
 
 ---
 ## 2. Любой экран за секунды — поиск и избранное
@@ -200,9 +200,9 @@ IXC delivers carrier-style VoIP infrastructure proven in production since 1999. 
 
 **Що змінилось:** У v6 — щільні таблиці, вкладене меню й перемикач «Розширене меню» зверху. WebV7 відкривається на просторому дашборді з постійною бічною панеллю, зрозумілими розділами (Management, Reports, Finance, System, Troubleshooting) і масштабуванням на широких моніторах.
 
-![Інтерфейс v6 — щільне меню та таблиці](/news/webv7-ui-v6-was.png)
-![WebV7, світла тема](/news/webv7-ui-v7-light.png)
-![WebV7, темна тема](/news/webv7-ui-v7-dark.png)
+![Інтерфейс v6 — щільне меню та таблиці](/news/webv7-ui-v6-was.webp)
+![WebV7, світла тема](/news/webv7-ui-v7-light.webp)
+![WebV7, темна тема](/news/webv7-ui-v7-dark.webp)
 
 ---
 ## 2. Будь-який екран за секунди — пошук і обране
@@ -289,9 +289,9 @@ IXC delivers carrier-style VoIP infrastructure proven in production since 1999. 
 
 **变化：** 旧版 v6 UI 使用密集表格、嵌套侧边栏分区，以及顶栏中单独的「Show advanced menu」开关。WebV7 打开即是宽敞仪表盘：持久左侧边栏、清晰分区标签（Management、Reports、Finance、System、Troubleshooting），内容在宽屏显示器上扩展而不显得拥挤。
 
-![旧版 v6 计费界面 — 密集侧边栏与仪表盘表格](/news/webv7-ui-v6-was.png)
-![WebV7 浅色主题 — 仪表盘与导航](/news/webv7-ui-v7-light.png)
-![WebV7 深色主题 — 夜间同一工作区](/news/webv7-ui-v7-dark.png)
+![旧版 v6 计费界面 — 密集侧边栏与仪表盘表格](/news/webv7-ui-v6-was.webp)
+![WebV7 浅色主题 — 仪表盘与导航](/news/webv7-ui-v7-light.webp)
+![WebV7 深色主题 — 夜间同一工作区](/news/webv7-ui-v7-dark.webp)
 
 ---
 ## 2. 数秒内找到任意屏幕 — 搜索 + 收藏

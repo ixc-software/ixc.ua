@@ -455,7 +455,7 @@ export const softswitchAiAutomationPost: BlogPost = {
     'carrier voip',
   ],
   image: 'https://ixc.ua/blog/softswitch-ai-automation.png',
-  localImage: '/blog/softswitch-ai-automation.png',
+  localImage: '/blog/softswitch-ai-automation.webp',
   imageObjectFit: 'contain',
   en: {
     title: 'VoIP Softswitch AI: How to Use AI Automation on Your Carrier Switch (2026)',

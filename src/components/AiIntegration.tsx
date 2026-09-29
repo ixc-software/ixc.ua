@@ -15,8 +15,8 @@ import gmailLogo from '../assets/logo_gmail.svg';
 import gcalLogo from '../assets/logo_gcalendar.svg';
 import telegramLogo from '../assets/logo_telegram.svg';
 import whatsappLogo from '../assets/logo_whatsapp.svg';
-import billingDashboard from '../assets/ixc-billing-dashboard.png';
-import dealoagentLogo from '../assets/dealoagent-logo.png';
+import billingDashboard from '../assets/ixc-billing-dashboard.webp';
+import dealoagentLogo from '../assets/dealoagent-logo.webp';
 
 const ixcLogoUrl = `${import.meta.env.BASE_URL}logo.png`;
 
@@ -259,7 +259,7 @@ function ChannelFlowRail({
     <aside className={`ai-int-channel-rail ${visible ? 'ai-int-channel-rail--active' : ''}`} aria-label="Channel dispatch flow">
       <div className="ai-int-channel-rail-title">Channels</div>
       <div className="ai-int-channel-rail-hub" title="DealoAgent chat">
-        <img src={dealoagentLogo} alt="" className="ai-int-channel-rail-hub-img" />
+        <img src={dealoagentLogo} alt="" className="ai-int-channel-rail-hub-img" width={512} height={512} loading="lazy" decoding="async" />
       </div>
       <div className="ai-int-channel-rail-list">
         {visible && dispatches.map((dispatch, i) => (
@@ -466,12 +466,12 @@ export function AiIntegration() {
 
       <div className="ai-int-partners" aria-label={t.aiIntegration.partnership}>
         <div className="ai-int-partner-item">
-          <img src={ixcLogoUrl} alt="IXC Softswitch" className="ai-int-partner-logo ai-int-partner-logo--ixc" />
+          <img src={ixcLogoUrl} alt="IXC Softswitch" className="ai-int-partner-logo ai-int-partner-logo--ixc" loading="lazy" decoding="async" />
           <span className="ai-int-partner-label">IXC</span>
         </div>
         <span className="ai-int-partner-link" aria-hidden="true">↔</span>
         <div className="ai-int-partner-item">
-          <img src={dealoagentLogo} alt="DealoAgent" className="ai-int-partner-logo ai-int-partner-logo--dealoagent" />
+          <img src={dealoagentLogo} alt="DealoAgent" className="ai-int-partner-logo ai-int-partner-logo--dealoagent" width={512} height={512} loading="lazy" decoding="async" />
           <span className="ai-int-partner-label">DealoAgent</span>
         </div>
       </div>
@@ -501,7 +501,7 @@ export function AiIntegration() {
                   <div className="ai-int-chat-header">
                     <div className="ai-int-chat-user">
                       <div className="ai-int-chat-avatar">
-                        <img src={dealoagentLogo} alt="" className="ai-int-chat-avatar-img" />
+                        <img src={dealoagentLogo} alt="" className="ai-int-chat-avatar-img" width={512} height={512} loading="lazy" decoding="async" />
                       </div>
                       <div>
                         <div className="ai-int-chat-name">DealoAgent AI</div>
@@ -680,6 +680,10 @@ export function AiIntegration() {
                       src={billingDashboard}
                       alt="IXC Billing dashboard — top and target destinations"
                       className="ai-int-billing-screenshot"
+                      width={1024}
+                      height={826}
+                      loading="lazy"
+                      decoding="async"
                     />
                     {isBillingCopying && (
                       <div

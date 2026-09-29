@@ -245,7 +245,7 @@ export const telecomIndustryConceptsPost: BlogPost = {
   category: 'Guides',
   tags: ['telecom', 'interexchange carrier', 'softswitch', 'voip', 'lata', 'pstn', 'lcr'],
   image: 'https://ixc.ua/blog/telecom-industry-concepts.png',
-  localImage: '/blog/telecom-industry-concepts.png',
+  localImage: '/blog/telecom-industry-concepts.webp',
   imageObjectFit: 'contain',
   en: {
     title: 'Telecom Industry Concepts: IXC, Softswitch, LCR & Billing',

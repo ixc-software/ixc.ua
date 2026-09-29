@@ -31,7 +31,7 @@ export const ixcRecordingNews = {
   date: '2026-08-07',
   link: 'https://ixc.ua/news/ixc-recording',
   image: 'https://ixc.ua/news/ixc-recording-og.jpg',
-  local_image: '/news/ixc-recording-latest-update.jpg',
+  local_image: '/news/ixc-recording-latest-update.webp',
   image_object_fit: 'contain' as const,
   rich_news: true,
   en: {

@@ -159,7 +159,7 @@ export const lcrRoutingPost: BlogPost = {
   category: 'Guides',
   tags: ['lcr', 'voip routing', 'least cost routing', 'softswitch', 'wholesale voip'],
   image: 'https://ixc.ua/blog/lcr-routing-voip.png',
-  localImage: '/blog/lcr-routing-voip.png',
+  localImage: '/blog/lcr-routing-voip.webp',
   imageObjectFit: 'contain',
   en: {
     title: 'LCR Routing Explained: How VoIP Carriers Maximize Margin',

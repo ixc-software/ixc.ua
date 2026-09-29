@@ -529,7 +529,7 @@ export const wholesaleSmsPlatformPost: BlogPost = {
     'sms aggregator'
   ],
   image: 'https://ixc.ua/blog/wholesale-sms-platform-og.jpg',
-  localImage: '/blog/wholesale-sms-platform.jpg',
+  localImage: '/blog/wholesale-sms-platform.webp',
   imageObjectFit: 'contain',
   en: {
     title: 'Wholesale SMS Platform: SMPP, A2P Routing, Billing & AI Content Control',

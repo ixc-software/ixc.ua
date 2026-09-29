@@ -24,7 +24,7 @@ export const ixcAugust2026News = {
   date: '2026-08-31',
   link: 'https://ixc.ua/news/ixc-august-2026-update',
   image: 'https://ixc.ua/news/august-2026-og.jpg',
-  local_image: '/news/august-2026-latest-update.jpg',
+  local_image: '/news/august-2026-latest-update.webp',
   image_object_fit: 'contain' as const,
   rich_news: true,
   en: {

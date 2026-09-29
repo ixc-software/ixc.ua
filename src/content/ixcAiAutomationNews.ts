@@ -12,7 +12,7 @@ export const ixcAiAutomationNews = {
   date: '2026-06-16',
   link: 'https://ixc.ua/news/ixc-ai-automation',
   image: 'https://ixc.ua/news/ai-automation-latest-update.png',
-  local_image: '/news/ai-automation-latest-update.png',
+  local_image: '/news/ai-automation-latest-update.webp',
   image_object_fit: 'contain' as const,
   rich_news: true,
   en: {

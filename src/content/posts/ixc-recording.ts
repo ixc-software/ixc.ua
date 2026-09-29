@@ -380,7 +380,7 @@ export const ixcRecordingPost: BlogPost = {
   category: 'Product',
   tags: ['ixc recording', 'voice recordings', 'voip', 'softswitch', 'ixc billing 7', 'pcap', 'cdr'],
   image: 'https://ixc.ua/blog/ixc-recording.png',
-  localImage: '/blog/ixc-recording.png',
+  localImage: '/blog/ixc-recording.webp',
   imageObjectFit: 'contain',
   en: {
     title: 'IXC Recording on Softswitch & Billing 7 — the foundation for AI call analysis',

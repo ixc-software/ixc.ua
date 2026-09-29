@@ -561,7 +561,7 @@ export const voipCallAnalysisAiPost: BlogPost = {
     'softswitch',
   ],
   image: 'https://ixc.ua/blog/voip-call-analysis-ai.png',
-  localImage: '/blog/voip-call-analysis-ai.png',
+  localImage: '/blog/voip-call-analysis-ai.webp',
   imageObjectFit: 'contain',
   en: {
     title: 'IXC call analysis — mark recorded calls, get the report back automatically',

@@ -199,7 +199,7 @@ export const voipFraudPost: BlogPost = {
   category: 'Guides',
   tags: ['voip fraud', 'sip security', 'fas', 'softswitch', 'blacklist'],
   image: 'https://ixc.ua/blog/voip-fraud-prevention.png',
-  localImage: '/blog/voip-fraud-prevention.png',
+  localImage: '/blog/voip-fraud-prevention.webp',
   imageObjectFit: 'contain',
   en: {
     title: 'VoIP Fraud Prevention on a Softswitch: SIP Security & FAS',
