@@ -2,14 +2,14 @@ import { LocaleLink as Link } from './LocaleLink';
 import { ArrowRight, BookOpen, Calendar } from 'lucide-react';
 import { useLanguage } from '../i18n/LanguageProvider';
 import { SectionHeading } from './SectionHeading';
-import { blogPosts, getLocalizedPost, getPostPath } from '../content/blogPosts';
+import { blogCards, getLocalizedBlogCard, getPostPath } from '../content/blogCards';
 import { formatPostDate } from '../utils/formatDate';
 
 const LATEST_COUNT = 3;
 
 export const BlogSection = () => {
   const { language, t } = useLanguage();
-  const posts = [...blogPosts].sort((a, b) => (a.date < b.date ? 1 : -1)).slice(0, LATEST_COUNT);
+  const posts = [...blogCards].sort((a, b) => (a.date < b.date ? 1 : -1)).slice(0, LATEST_COUNT);
 
   if (posts.length === 0) return null;
 
@@ -25,7 +25,7 @@ export const BlogSection = () => {
 
       <div className="blog-grid home-blog-grid">
         {posts.map((post) => {
-          const loc = getLocalizedPost(post, language);
+          const loc = getLocalizedBlogCard(post, language);
           return (
             <Link key={post.slug} to={getPostPath(post)} className="blog-card glass">
               <div

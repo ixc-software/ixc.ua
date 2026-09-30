@@ -2,7 +2,9 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import newsData from './src/newsData';
+import { newsCards } from './src/content/newsCards.ts';
 import { blogPosts, getLocalizedPost, getPostPath } from './src/content/blogPosts.ts';
+import { blogCards } from './src/content/blogCards.ts';
 import { getPageSeo, hreflangAlternates, type PageSeoMeta } from './src/seo/getPageSeo.ts';
 import { getNewsOgImage, SITE_ORIGIN } from './src/seo/siteMeta.ts';
 import { LEGACY_REDIRECTS, writeLegacyRedirects, buildRedirectHtml } from './legacyRedirects.ts';
@@ -158,6 +160,41 @@ const routes = [...staticRoutes, ...blogRoutes, ...newsRoutes];
 
 const pageLangs: Language[] = ['en', 'ru', 'uk', 'zh'];
 
+function assertListingCards(): void {
+  if (newsCards.length !== newsData.length) {
+    throw new Error(`newsCards (${newsCards.length}) out of sync with newsData (${newsData.length})`);
+  }
+  for (const article of newsData) {
+    const card = newsCards.find((item) => item.slug === article.slug);
+    if (!card) throw new Error(`news card missing for ${article.slug}`);
+    for (const lang of pageLangs) {
+      const title = newsTitle(article, lang);
+      if (card[lang].title !== title) {
+        throw new Error(`news card title mismatch for ${article.slug} (${lang})`);
+      }
+    }
+  }
+  if (blogCards.length !== blogPosts.length) {
+    throw new Error(`blogCards (${blogCards.length}) out of sync with blogPosts (${blogPosts.length})`);
+  }
+  for (const post of blogPosts) {
+    const card = blogCards.find((item) => item.slug === post.slug);
+    if (!card) throw new Error(`blog card missing for ${post.slug}`);
+    if ((card.path ?? '') !== (post.path ?? '')) {
+      throw new Error(`blog card path mismatch for ${post.slug}`);
+    }
+    for (const lang of pageLangs) {
+      const loc = getLocalizedPost(post, lang);
+      const cardLoc = card[lang];
+      if (cardLoc.title !== loc.title || cardLoc.excerpt !== loc.excerpt || cardLoc.description !== loc.description) {
+        throw new Error(`blog card copy mismatch for ${post.slug} (${lang})`);
+      }
+    }
+  }
+}
+
+assertListingCards();
+
 function newsTitle(
   article: { en: { title: string }; [key: string]: { title?: string } | unknown },
   lang: Language
@@ -169,7 +206,7 @@ function newsTitle(
 for (const lang of pageLangs) {
   for (const route of routes) {
     const localized = localizePath(route, lang);
-    const appHtml = render(localized);
+    const appHtml = await render(localized);
     let html = template.replace(`<!--app-html-->`, appHtml);
 
     let pageMeta = getPageSeo(route, lang);

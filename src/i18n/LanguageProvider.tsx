@@ -1,7 +1,8 @@
 import React, { createContext, useContext, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { htmlLang, Language, Translations, translations } from './translations';
+import { htmlLang, type Language, type Translations } from './translations';
 import { languageFromPath, localizePath } from './localePath';
+import { loadTranslations, peekTranslations } from './loadLocale';
 
 interface LanguageContextType {
   language: Language;
@@ -16,20 +17,25 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   const navigate = useNavigate();
   const language = languageFromPath(pathname);
 
-  const setLanguage = (lang: Language) => {
-    try { localStorage.setItem('language', lang); } catch { /* */ }
-    const next = localizePath(pathname, lang);
-    if (next !== pathname) {
-      navigate(`${next}${search}${hash}`);
-    }
-  };
-
   useEffect(() => {
     document.documentElement.setAttribute('lang', htmlLang[language]);
     try { localStorage.setItem('language', language); } catch { /* */ }
   }, [language]);
 
-  const t = translations[language];
+  const t = peekTranslations(language);
+  if (!t) {
+    throw loadTranslations(language);
+  }
+
+  const setLanguage = (lang: Language) => {
+    try { localStorage.setItem('language', lang); } catch { /* */ }
+    void loadTranslations(lang).then(() => {
+      const next = localizePath(pathname, lang);
+      if (next !== pathname) {
+        navigate(`${next}${search}${hash}`);
+      }
+    });
+  };
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage, t }}>

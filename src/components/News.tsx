@@ -3,7 +3,7 @@ import { ArrowLeft, ArrowRight, Calendar, Newspaper } from 'lucide-react';
 import { LocaleLink as Link } from './LocaleLink';
 import { useLanguage } from '../i18n/LanguageProvider';
 import { SectionHeading } from './SectionHeading';
-import newsData from '../newsData';
+import { newsCards } from '../content/newsCards';
 
 export const News: React.FC = () => {
   const { language, t } = useLanguage();
@@ -69,13 +69,15 @@ export const News: React.FC = () => {
           ref={carouselRef} 
           onScroll={checkScroll}
         >
-          {newsData.map((item, i) => (
-            <Link key={i} to={`/news/${item.slug}`} className="news-card glass">
+          {newsCards.map((item) => {
+            const title = item[language]?.title || item.en.title;
+            return (
+            <Link key={item.slug} to={`/news/${item.slug}`} className="news-card glass">
               <div className="news-image-wrapper">
                 {item.local_image ? (
                   <img 
                     src={`${import.meta.env.BASE_URL}${item.local_image.startsWith('/') ? item.local_image.slice(1) : item.local_image}`} 
-                    alt={(item as any)[language]?.title || item.en.title} 
+                    alt={title} 
                     className="news-image" 
                     loading="lazy" 
                   />
@@ -90,13 +92,14 @@ export const News: React.FC = () => {
                   <Calendar size={14} />
                   <span>{item.date}</span>
                 </div>
-                <h3>{(item as any)[language]?.title || item.en.title}</h3>
+                <h3>{title}</h3>
                 <span className="news-read-more">
                   {t.news.readMore} <ArrowRight size={14} />
                 </span>
               </div>
             </Link>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

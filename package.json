@@ -4,7 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "generate:listing-cards": "tsx scripts/generate-listing-cards.ts",
+    "predev": "npm run generate:listing-cards",
     "dev": "vite",
+    "prebuild": "npm run generate:listing-cards",
     "build": "tsc -b && npm run build:client && npm run build:server && npm run build:prerender",
     "build:client": "vite build",
     "build:server": "vite build --ssr src/entry-server.tsx --outDir dist/server",

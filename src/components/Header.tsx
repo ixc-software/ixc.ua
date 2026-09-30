@@ -1,17 +1,19 @@
 import React, { useState } from 'react';
 import { Moon, Sun, Menu, X, Globe } from 'lucide-react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { HashScrollLink } from './HashScrollLink';
 import { LocaleLink } from './LocaleLink';
 import { useTheme } from '../ThemeProvider';
 import { useLanguage } from '../i18n/LanguageProvider';
 import { languageNames, languages } from '../i18n/translations';
+import { loadTranslations } from '../i18n/loadLocale';
 import { hreflangCode, localizePath } from '../i18n/localePath';
 
 export const Header: React.FC = () => {
   const { theme, toggleTheme } = useTheme();
   const { language, t } = useLanguage();
   const { pathname, search, hash } = useLocation();
+  const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
 
@@ -48,7 +50,12 @@ export const Header: React.FC = () => {
                   to={`${localizePath(pathname, lang)}${search}${hash}`}
                   hrefLang={hreflangCode[lang]}
                   className={`lang-option ${lang === language ? 'lang-active' : ''}`}
-                  onClick={() => setLangOpen(false)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setLangOpen(false);
+                    const dest = `${localizePath(pathname, lang)}${search}${hash}`;
+                    void loadTranslations(lang).then(() => navigate(dest));
+                  }}
                 >
                   {languageNames[lang]}
                 </Link>

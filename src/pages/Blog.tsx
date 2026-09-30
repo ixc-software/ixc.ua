@@ -1,12 +1,12 @@
 import { LocaleLink as Link } from '../components/LocaleLink';
 import { ArrowRight, BookOpen, Calendar } from 'lucide-react';
 import { useLanguage } from '../i18n/LanguageProvider';
-import { blogPosts, getLocalizedPost, getPostPath } from '../content/blogPosts';
+import { blogCards, getLocalizedBlogCard, getPostPath } from '../content/blogCards';
 import { formatPostDate } from '../utils/formatDate';
 
 export const Blog = () => {
   const { language, t } = useLanguage();
-  const posts = [...blogPosts].sort((a, b) => (a.date < b.date ? 1 : -1));
+  const posts = [...blogCards].sort((a, b) => (a.date < b.date ? 1 : -1));
 
   return (
     <div className="page-content">
@@ -28,7 +28,7 @@ export const Blog = () => {
       <section className="section container">
         <div className="blog-grid blog-index-grid">
           {posts.map((post) => {
-            const loc = getLocalizedPost(post, language);
+            const loc = getLocalizedBlogCard(post, language);
             return (
               <Link key={post.slug} to={getPostPath(post)} className="blog-card glass">
                 <div
