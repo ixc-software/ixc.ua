@@ -37,17 +37,17 @@ export async function render(url = '/') {
     const { pipe, abort } = renderToPipeableStream(app, {
       onAllReady() {
         const pass = new PassThrough()
-        pass.on('data', (chunk) => {
+        pass.on('data', (chunk: Buffer | string) => {
           html += chunk.toString()
         })
         pass.on('end', () => finish(() => resolve(html)))
-        pass.on('error', (err) => finish(() => reject(err)))
+        pass.on('error', (err: Error) => finish(() => reject(err)))
         pipe(pass)
       },
-      onShellError(err) {
+      onShellError(err: unknown) {
         finish(() => reject(err))
       },
-      onError(err) {
+      onError(err: unknown) {
         console.error(err)
       },
     })
