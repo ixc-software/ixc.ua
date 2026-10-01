@@ -1,0 +1,12 @@
+Professional B2B telecom product update hero, 16:9, dark navy with teal circuit glow.
+
+Branding: exact IXC corporate logo badge top-center. No "IXC" wordmark in corners.
+
+TOP — green pill "September 2026 report" + dark pill "G.711 / G.729".
+LEFT — G.711 / G.729 / full transcode.
+RIGHT — Recordings player, Ubuntu 26.04, WebV7 v7.1.3.
+CENTER — orange distressed stamp with huge flashing digits **100** (Voice) and **114** (SMS), label IXC Club.
+
+On-page: public/news/september-2026-latest-update.jpg
+OG / X card: public/news/september-2026-og.jpg (1200×630 JPEG, ≤ ~300KB)
+Reference: public/logo.png

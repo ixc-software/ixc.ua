@@ -15,6 +15,25 @@ export type NewsCard = {
 
 export const newsCards: NewsCard[] = [
   {
+    "slug": "ixc-september-2026-update",
+    "date": "2026-09-30",
+    "link": "https://ixc.ua/news/ixc-september-2026-update",
+    "image": "https://ixc.ua/news/september-2026-og.jpg",
+    "local_image": "/news/september-2026-latest-update.jpg",
+    "en": {
+      "title": "September 2026 report — G.711 / G.729 transcode, Ubuntu 26 recording, IXC Club (100 voice + 114 SMS)"
+    },
+    "ru": {
+      "title": "Отчёт за сентябрь 2026 — транскод G.711 / G.729, recording на Ubuntu 26, IXC Club (100 voice + 114 SMS)"
+    },
+    "uk": {
+      "title": "Звіт за вересень 2026 — транскод G.711 / G.729, recording на Ubuntu 26, IXC Club (100 voice + 114 SMS)"
+    },
+    "zh": {
+      "title": "September 2026 report — G.711 / G.729 transcode, Ubuntu 26 recording, IXC Club (100 voice + 114 SMS)"
+    }
+  },
+  {
     "slug": "ixc-august-2026-update",
     "date": "2026-08-31",
     "link": "https://ixc.ua/news/ixc-august-2026-update",
