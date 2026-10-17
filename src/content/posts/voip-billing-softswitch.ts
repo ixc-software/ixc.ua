@@ -19,7 +19,7 @@ Many platforms support **both** with shared routing and reporting.
 - Rate decks per prefix with effective dates and billing increments (6+6, 1+1)
 - Tariff plans per customer or product line
 - Rounding rules matching commercial terms
-- Automated vendor rate import to avoid manual lag
+- Automated vendor [rate-deck import](/blog/voip-rate-deck-management) to avoid manual lag
 
 ## Operational visibility
 
@@ -62,7 +62,7 @@ const ru = `Точный **биллинг VoIP** превращает минут
 - Тарифы по префиксу с датами и инкрементами (6+6, 1+1)
 - Тарифные планы на клиента
 - Правила округления по договору
-- Автоимпорт тарифов поставщиков
+- Автоимпорт [тарифов поставщиков](/blog/voip-rate-deck-management)
 
 ## Операционная видимость
 
@@ -105,7 +105,7 @@ const uk = `Точний **білінг VoIP** перетворює хвилин
 - Тарифи за префіксом із датами та інкрементами (6+6, 1+1)
 - Тарифні плани на клієнта
 - Правила округлення за договором
-- Автоімпорт тарифів постачальників
+- Автоімпорт [тарифів постачальників](/blog/voip-rate-deck-management)
 
 ## Операційна видимість
 
@@ -148,7 +148,7 @@ const zh = `准确的 **VoIP 计费**把已路由分钟转化为收入。在**�
 - 按前缀的费率表，含生效日期与计费增量（6+6、1+1）
 - 按客户或产品线的资费计划
 - 与商务条款匹配的舍入规则
-- 自动导入供应商费率，避免人工滞后
+- 自动导入[供应商费率表](/blog/voip-rate-deck-management)，避免人工滞后
 
 ## 运营可见性
 

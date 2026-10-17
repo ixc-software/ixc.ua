@@ -37,7 +37,7 @@ Accurate rate sheets with effective dates, live ASR/ACD/PDD per vendor, CPS/chan
 
 ## Summary
 
-LCR drives wholesale margin. Pair cost ranking with quality thresholds, failover, automated rate updates, and route testing before vendors enter the pool.`;
+LCR drives wholesale margin. Pair cost ranking with quality thresholds, failover, [rate-deck updates](/blog/voip-rate-deck-management), and route testing before vendors enter the pool.`;
 
 const ru = `**LCR (Least Cost Routing)** — выбор терминации с минимальной стоимостью при соблюдении правил качества. На **софтсвитче** LCR — живая политика на каждый вызов, а не статичная таблица.
 
@@ -74,7 +74,7 @@ const ru = `**LCR (Least Cost Routing)** — выбор терминации с 
 
 ## Итог
 
-LCR определяет маржу опта. Сочетайте рейтинг стоимости с порогами качества, failover, автообновлением тарифов и тестами маршрутов.`;
+LCR определяет маржу опта. Сочетайте рейтинг стоимости с порогами качества, failover, [обновлением rate deck](/blog/voip-rate-deck-management) и тестами маршрутов.`;
 
 const uk = `**LCR (Least Cost Routing)** — вибір термінації з мінімальною вартістю за дотримання правил якості. На **софтсвічі** LCR — жива політика на кожен виклик, а не статична таблиця.
 
@@ -111,7 +111,7 @@ const uk = `**LCR (Least Cost Routing)** — вибір термінації з 
 
 ## Підсумок
 
-LCR визначає маржу опту. Поєднуйте рейтинг вартості з порогами якості, failover, автооновленням тарифів і тестами маршрутів.`;
+LCR визначає маржу опту. Поєднуйте рейтинг вартості з порогами якості, failover, [оновленням rate deck](/blog/voip-rate-deck-management) і тестами маршрутів.`;
 
 const zh = `**LCR（Least Cost Routing，最低成本路由）**是批发 VoIP 运营商在满足质量规则的前提下，以最低成本选择落地的方式。在**软交换**上，LCR 是每通呼叫上的实时策略——而不是静态电子表格。
 
@@ -150,7 +150,7 @@ const zh = `**LCR（Least Cost Routing，最低成本路由）**是批发 VoIP �
 
 ## 小结
 
-LCR 驱动批发利润。将成本排序与质量阈值、故障转移、自动费率更新以及供应商入池前的路由测试结合起来。`;
+LCR 驱动批发利润。将成本排序与质量阈值、故障转移、[费率表更新](/blog/voip-rate-deck-management)以及供应商入池前的路由测试结合起来。`;
 
 export const lcrRoutingPost: BlogPost = {
   slug: 'lcr-routing-voip',

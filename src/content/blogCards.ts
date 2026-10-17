@@ -24,6 +24,45 @@ export type BlogCard = {
 
 export const blogCards: BlogCard[] = [
   {
+    "slug": "voip-rate-deck-management",
+    "date": "2026-10-17",
+    "author": "Oleksii Vinogradov",
+    "category": "Guides",
+    "tags": [
+      "voip rate deck",
+      "rate sheet",
+      "wholesale voip rates",
+      "lcr",
+      "rate import",
+      "effective date",
+      "softswitch"
+    ],
+    "image": "https://ixc.ua/blog/voip-rate-deck-management-og.jpg",
+    "localImage": "/blog/voip-rate-deck-management.webp",
+    "updated": "2026-10-17",
+    "imageObjectFit": "contain",
+    "en": {
+      "title": "Rate Deck Management for Wholesale VoIP: Import, Effective Dates & Increases",
+      "description": "Wholesale VoIP rate decks: IMAP ingest, Smart upload, merge vs replace vs scheduled, effective dates, and Telegram confirm on vendor increases before LCR.",
+      "excerpt": "How trading desks get vendor XLS onto the switch — IMAP, previewed imports, effective dates, and confirm-before-apply on rate increases."
+    },
+    "ru": {
+      "title": "Rate deck для wholesale VoIP: импорт, effective dates и повышения",
+      "description": "Тарифные листы VoIP: IMAP, Smart upload, merge vs replace vs scheduled, даты вступления и подтверждение повышений в Telegram до LCR.",
+      "excerpt": "Как торговый стол кладёт вендорский XLS на свитч — IMAP, превью импорта, effective dates и confirm до применения повышений."
+    },
+    "uk": {
+      "title": "Rate deck для wholesale VoIP: імпорт, effective dates і підвищення",
+      "description": "Тарифні листи VoIP: IMAP, Smart upload, merge vs replace vs scheduled, дати набрання чинності та підтвердження підвищень у Telegram до LCR.",
+      "excerpt": "Як торговий стіл кладе вендорський XLS на свіч — IMAP, прев’ю імпорту, effective dates і confirm до застосування підвищень."
+    },
+    "zh": {
+      "title": "批发 VoIP 费率表管理：导入、生效日期与涨价控制",
+      "description": "批发 VoIP 费率表：IMAP 收取、Smart upload、merge/replace/scheduled、生效日期，以及在进入 LCR 前用 Telegram 确认供应商涨价。",
+      "excerpt": "交易台如何把供应商 XLS 送上交换机——IMAP、带预览的导入、生效日期，以及涨价先确认再应用。"
+    }
+  },
+  {
     "slug": "wholesale-sms-platform",
     "date": "2026-09-17",
     "author": "Oleksii Vinogradov",
