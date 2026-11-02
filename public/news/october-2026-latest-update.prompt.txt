@@ -1,0 +1,12 @@
+Professional B2B telecom product update hero, 16:9, dark navy with teal circuit glow.
+
+Branding: exact IXC corporate logo badge top-center. No "IXC" wordmark in corners.
+
+TOP — green pill "October 2026 report" + dark pill "43 releases".
+LEFT — embed/crop the real Routing center screenshot (two lists, minutes, attempts, ▲/▼ %).
+RIGHT — IXC Autotester + CDR media quality.
+CENTER — corporate logo, blue ↔ arrow. No Club stamp.
+
+On-page: public/news/october-2026-latest-update.jpg
+OG / X card: public/news/october-2026-og.jpg (1200×630 JPEG, ≤ ~300KB)
+Reference: public/logo.png + public/news/october-2026-routing-center.jpg

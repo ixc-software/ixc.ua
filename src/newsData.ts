@@ -3,6 +3,7 @@ import { ixcAiAutomationNews } from './content/ixcAiAutomationNews';
 import { ixcAugust2026News } from './content/ixcAugust2026News';
 import { ixcJuly2026News } from './content/ixcJuly2026News';
 import { ixcJune2026News } from './content/ixcJune2026News';
+import { ixcOctober2026News } from './content/ixcOctober2026News';
 import { ixcRecordingNews } from './content/ixcRecordingNews';
 import { ixcSeptember2026News } from './content/ixcSeptember2026News';
 import { ixcWebV7News } from './content/ixcWebV7News';
@@ -10,6 +11,7 @@ import { ixcWebV7News } from './content/ixcWebV7News';
 export type NewsItem = (typeof baseNews)[number];
 
 const newsData: NewsItem[] = [
+  ixcOctober2026News as NewsItem,
   ixcSeptember2026News as NewsItem,
   ixcAugust2026News as NewsItem,
   ixcRecordingNews as NewsItem,

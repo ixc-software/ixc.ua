@@ -15,6 +15,25 @@ export type NewsCard = {
 
 export const newsCards: NewsCard[] = [
   {
+    "slug": "ixc-october-2026-update",
+    "date": "2026-10-31",
+    "link": "https://ixc.ua/news/ixc-october-2026-update",
+    "image": "https://ixc.ua/news/october-2026-og.jpg",
+    "local_image": "/news/october-2026-latest-update.jpg",
+    "en": {
+      "title": "October 2026 report — Routing center, Autotester, CDR media quality (WebV7 v7.1.4 → v7.1.47)"
+    },
+    "ru": {
+      "title": "Отчёт за октябрь 2026 — Routing center, Autotester, качество медиа в CDR (WebV7 v7.1.4 → v7.1.47)"
+    },
+    "uk": {
+      "title": "Звіт за жовтень 2026 — Routing center, Autotester, якість медіа в CDR (WebV7 v7.1.4 → v7.1.47)"
+    },
+    "zh": {
+      "title": "October 2026 report — Routing center, Autotester, CDR media quality (WebV7 v7.1.4 → v7.1.47)"
+    }
+  },
+  {
     "slug": "ixc-september-2026-update",
     "date": "2026-09-30",
     "link": "https://ixc.ua/news/ixc-september-2026-update",
