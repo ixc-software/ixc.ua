@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { LocaleLink as Link } from './LocaleLink';
 import { ArrowRight, PhoneCall } from 'lucide-react';
 import { useLanguage } from '../i18n/LanguageProvider';
@@ -238,21 +238,120 @@ const clients = [
   }
 ];
 
+const HERO_VIDEO_DESKTOP = '/media/hero-desktop.mp4?v=3';
+const HERO_VIDEO_MOBILE = '/media/hero-mobile.mp4?v=3';
+
+function skipHeroVideo(): boolean {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return true;
+  const conn = (navigator as Navigator & {
+    connection?: { saveData?: boolean; effectiveType?: string };
+  }).connection;
+  if (!conn) return false;
+  if (conn.saveData) return true;
+  return conn.effectiveType === 'slow-2g' || conn.effectiveType === '2g';
+}
+
+/** Decorative loop. Src is assigned after load so it stays off the critical path. */
+const HeroBackdrop: React.FC = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video || skipHeroVideo()) return;
+
+    const ac = new AbortController();
+    let objectUrl: string | null = null;
+    let idleId = 0;
+    let timeoutId = 0;
+
+    const load = () => {
+      if (ac.signal.aborted) return;
+      const narrow = window.matchMedia('(max-width: 768px)').matches;
+      const src = narrow ? HERO_VIDEO_MOBILE : HERO_VIDEO_DESKTOP;
+      fetch(src, { priority: 'low', signal: ac.signal })
+        .then((res) => {
+          if (!res.ok) throw new Error(String(res.status));
+          return res.blob();
+        })
+        .then((blob) => {
+          if (ac.signal.aborted || !videoRef.current) return;
+          objectUrl = URL.createObjectURL(blob);
+          const el = videoRef.current;
+          el.src = objectUrl;
+          el.addEventListener('playing', () => el.classList.add('is-ready'), { once: true });
+          return el.play();
+        })
+        .catch(() => {
+          /* Decorative. The existing mesh background stays in place. */
+        });
+    };
+
+    const queue = () => {
+      if (ac.signal.aborted) return;
+      const kick = () => {
+        if (ac.signal.aborted) return;
+        if (typeof window.requestIdleCallback === 'function') {
+          idleId = window.requestIdleCallback(load, { timeout: 1500 });
+        } else {
+          load();
+        }
+      };
+      // After the first paint has settled, so the heading stays the largest paint.
+      timeoutId = window.setTimeout(kick, 2500);
+    };
+
+    if (document.readyState === 'complete') queue();
+    else window.addEventListener('load', queue, { once: true });
+
+    return () => {
+      ac.abort();
+      window.removeEventListener('load', queue);
+      if (idleId) window.cancelIdleCallback(idleId);
+      if (timeoutId) window.clearTimeout(timeoutId);
+      const el = videoRef.current;
+      if (el) {
+        el.pause();
+        el.removeAttribute('src');
+        el.load();
+      }
+      if (objectUrl) URL.revokeObjectURL(objectUrl);
+    };
+  }, []);
+
+  return (
+    <div className="hero-media" aria-hidden="true">
+      <video
+        ref={videoRef}
+        className="hero-video"
+        muted
+        playsInline
+        loop
+        preload="none"
+        tabIndex={-1}
+      />
+      <div className="hero-scrim" />
+    </div>
+  );
+};
+
 export const Hero: React.FC = () => {
   const { t } = useLanguage();
   return (
     <>
-      <section className="hero container animate-fade-in">
-        <h1>{t.hero.title}</h1>
-        <p className="hero-subtitle">{t.hero.subtitle}</p>
-        <div className="hero-actions">
-          <Link to="/news/ixc-recording" className="btn btn-primary hero-explore-btn">
-            <span className="hero-ai-badge">{t.hero.aiStamp}</span>
-            {t.hero.exploreProducts} <ArrowRight size={18} />
-          </Link>
-          <a href="mailto:sales@ixc.ua" className="btn btn-outline">
-            {t.hero.contactSales} <PhoneCall size={18} />
-          </a>
+      <section className="hero animate-fade-in">
+        <HeroBackdrop />
+        <div className="container hero-copy">
+          <h1>{t.hero.title}</h1>
+          <p className="hero-subtitle">{t.hero.subtitle}</p>
+          <div className="hero-actions">
+            <Link to="/news/ixc-recording" className="btn btn-primary hero-explore-btn">
+              <span className="hero-ai-badge">{t.hero.aiStamp}</span>
+              {t.hero.exploreProducts} <ArrowRight size={18} />
+            </Link>
+            <a href="mailto:sales@ixc.ua" className="btn btn-outline">
+              {t.hero.contactSales} <PhoneCall size={18} />
+            </a>
+          </div>
         </div>
       </section>
 
