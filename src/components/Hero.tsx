@@ -238,8 +238,8 @@ const clients = [
   }
 ];
 
-const HERO_VIDEO_DESKTOP = '/media/hero-desktop.mp4?v=3';
-const HERO_VIDEO_MOBILE = '/media/hero-mobile.mp4?v=4';
+const HERO_VIDEO_DESKTOP = '/media/hero-aisle-desktop.mp4';
+const HERO_VIDEO_MOBILE = '/media/hero-aisle-mobile.mp4';
 
 function skipHeroVideo(): boolean {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return true;
