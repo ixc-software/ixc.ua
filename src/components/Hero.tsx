@@ -241,6 +241,12 @@ const clients = [
 const HERO_VIDEO_DESKTOP = '/media/hero-aisle-desktop.mp4';
 const HERO_VIDEO_MOBILE = '/media/hero-aisle-mobile.mp4';
 
+function phoneHero(): boolean {
+  const width = Math.min(window.innerWidth, document.documentElement.clientWidth || window.innerWidth);
+  if (width <= 900) return true;
+  return window.matchMedia('(orientation: portrait)').matches;
+}
+
 function skipHeroVideo(): boolean {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return true;
   const conn = (navigator as Navigator & {
@@ -263,18 +269,24 @@ const HeroBackdrop: React.FC = () => {
     let objectUrl: string | null = null;
     let idleId = 0;
     let timeoutId = 0;
+    let generation = 0;
+    let currentKind: 'phone' | 'desktop' | null = null;
 
     const load = () => {
       if (ac.signal.aborted) return;
-      const narrow = window.matchMedia('(max-width: 768px)').matches;
-      const src = narrow ? HERO_VIDEO_MOBILE : HERO_VIDEO_DESKTOP;
+      const kind = phoneHero() ? 'phone' : 'desktop';
+      if (kind === currentKind) return;
+      currentKind = kind;
+      const token = ++generation;
+      const src = kind === 'phone' ? HERO_VIDEO_MOBILE : HERO_VIDEO_DESKTOP;
       fetch(src, { priority: 'low', signal: ac.signal })
         .then((res) => {
           if (!res.ok) throw new Error(String(res.status));
           return res.blob();
         })
         .then((blob) => {
-          if (ac.signal.aborted || !videoRef.current) return;
+          if (ac.signal.aborted || token !== generation || !videoRef.current) return;
+          if (objectUrl) URL.revokeObjectURL(objectUrl);
           objectUrl = URL.createObjectURL(blob);
           const el = videoRef.current;
           el.src = objectUrl;
@@ -282,6 +294,7 @@ const HeroBackdrop: React.FC = () => {
           return el.play();
         })
         .catch(() => {
+          if (token === generation) currentKind = null;
           /* Decorative. The existing mesh background stays in place. */
         });
     };
@@ -303,9 +316,15 @@ const HeroBackdrop: React.FC = () => {
     if (document.readyState === 'complete') queue();
     else window.addEventListener('load', queue, { once: true });
 
+    const onViewport = () => load();
+    window.addEventListener('resize', onViewport);
+    window.addEventListener('orientationchange', onViewport);
+
     return () => {
       ac.abort();
       window.removeEventListener('load', queue);
+      window.removeEventListener('resize', onViewport);
+      window.removeEventListener('orientationchange', onViewport);
       if (idleId) window.cancelIdleCallback(idleId);
       if (timeoutId) window.clearTimeout(timeoutId);
       const el = videoRef.current;
